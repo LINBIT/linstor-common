@@ -1,15 +1,24 @@
 [
         {
+                "blockcomment": "Mask for return codes that describe an error"
+        },
+        {
                 "name": "MASK_ERROR",
                 "value": "0xC000000000000000L",
                 "py": "long",
                 "java": "long"
         },
         {
+                "blockcomment": "Mask for return codes that describe a warning"
+        },
+        {
                 "name": "MASK_WARN",
                 "value": "0x8000000000000000L",
                 "py": "long",
                 "java": "long"
+        },
+        {
+                "blockcomment": "Mask for return codes that describe contain detail information\nabout the result of an operation"
         },
         {
                 "name": "MASK_INFO",
@@ -723,6 +732,9 @@
                 "value": [299, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
+        },
+        {
+                "blockcomment": "Sign in codes"
         },
         {
                 "name": "RC_SIGNIN_PASS",
@@ -2289,5 +2301,710 @@
                 "value": ["MASK_STOR_POOL", "DEL_FAIL_IMPL_ERROR"],
                 "py": "long",
                 "java": "long"
+        },
+        {
+                "blockcomment": "API Keys"
+        },
+        {
+                "name": "API_REPLY",
+                "value": "Reply",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Create object APIs"
+        },
+        {
+                "name": "API_CRT_NODE",
+                "value": "CrtNode",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_CRT_RSC",
+                "value": "CrtRsc",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_CRT_RSC_DFN",
+                "value": "CrtRscDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_CRT_NET_IF",
+                "value": "CrtNetIf",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_CRT_VLM_DFN",
+                "value": "CrtVlmDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_CRT_SNPSHT",
+                "value": "CrtSnpsht",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_CRT_STOR_POOL_DFN",
+                "value": "CrtStorPoolDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_CRT_STOR_POOL",
+                "value": "CrtStorPool",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_CRT_NODE_CONN",
+                "value": "CrtNodeConn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_CRT_RSC_CONN",
+                "value": "CrtRscConn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_CRT_VLM_CONN",
+                "value": "CrtVlmConn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Modify object APIs"
+        },
+        {
+                "name": "API_MFY_NODE",
+                "value": "MfyNode",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_MFY_RSC",
+                "value": "MfyRsc",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_MFY_RSC_DFN",
+                "value": "MfyRscDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_MFY_NET_IF",
+                "value": "MfyNetIf",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_MFY_VLM_DFN",
+                "value": "MfyVlmDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_MFY_SNPSHT",
+                "value": "MfySnpsht",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Delete object APIs"
+        },
+        {
+                "name": "API_DEL_NODE",
+                "value": "DelNode",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_DEL_RSC",
+                "value": "DelRsc",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_DEL_RSC_DFN",
+                "value": "DelRscDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_DEL_NET_IF",
+                "value": "DelNetIf",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_DEL_VLM_DFN",
+                "value": "DelVlmDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_DEL_STOR_POOL_DFN",
+                "value": "DelStorPoolDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_DEL_STOR_POOL",
+                "value": "DelStorPool",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_DEL_NODE_CONN",
+                "value": "DelNodeConn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_DEL_RSC_CONN",
+                "value": "DelRscConn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_DEL_VLM_CONN",
+                "value": "DelVlmConn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_DEL_SNPSHT",
+                "value": "DelSnpsht",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_RST_SNPSHT",
+                "value": "RstSnpsht",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_AUTO_DPLY_RSC",
+                "value": "AutoDplyRsc",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_LOST_NODE",
+                "value": "LostNode",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_CHK_STATE",
+                "value": "ChkState",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Authentication APIs"
+        },
+        {
+                "name": "API_SIGN_IN",
+                "value": "SignIn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Debug APIs"
+        },
+        {
+                "name": "API_CRT_DBG_CNSL",
+                "value": "CrtDbgCnsl",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_DSTR_DBG_CNSL",
+                "value": "DstrDbgCnsl",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "List object APIs"
+        },
+        {
+                "name": "API_LST_NODE",
+                "value": "LstNode",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_LST_RSC",
+                "value": "LstRsc",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_LST_RSC_DFN",
+                "value": "LstRscDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_LST_NET_IF",
+                "value": "LstNetIf",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_LST_VLM_DFN",
+                "value": "LstVlmDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_LST_VLM",
+                "value": "LstVlm",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_LST_SNPSHT",
+                "value": "LstSnpsht",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_LST_STOR_POOL",
+                "value": "LstStorPool",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Subscription APIs"
+        },
+        {
+                "name": "API_CRT_SUBSCR",
+                "value": "CrtSubscr",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_DEL_SUBSCR",
+                "value": "DelSubscr",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_RPT_SPC",
+                "value": "RptSpc",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_PING",
+                "value": "Ping",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_PONG",
+                "value": "Pong",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_MOD_INF",
+                "value": "ModInf",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_VSN_INF",
+                "value": "VsnInf",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_SET_CFG_VAL",
+                "value": "SetCfgVal",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_DEL_CFG_VAL",
+                "value": "DelCfgVal",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_LST_CFG_VAL",
+                "value": "LstCfgVal",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_SHTDWN",
+                "value": "Shtdwn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Object property keys"
+        },
+        {
+                "name": "KEY_UUID",
+                "value": "Uuid",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_NODE",
+                "value": "Node",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_RSC_DFN",
+                "value": "RscDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_STOR_POOL_DFN",
+                "value": "StorPoolDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_1ST_NODE",
+                "value": "FirstNode",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_2ND_NODE",
+                "value": "SecondNode",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_NODE_NAME",
+                "value": "NodeName",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_NODE_TYPE",
+                "value": "NodeType",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_NODE_FLAGS",
+                "value": "NodeFlags",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_NODE_ID",
+                "value": "NodeId",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_1ST_NODE_NAME",
+                "value": "FirstNodeName",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_2ND_NODE_NAME",
+                "value": "SecondNodeName",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_RSC_NAME",
+                "value": "RscName",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_STOR_POOL_NAME",
+                "value": "StorPoolName",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_NET_IF_NAME",
+                "value": "NetIfName",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_SNPSHT_NAME",
+                "value": "SnpshtName",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_VLM_NR",
+                "value": "VlmNr",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_VLM_SIZE",
+                "value": "VlmSize",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_MINOR_NR",
+                "value": "MinorNr",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_PEER_COUNT",
+                "value": "PeerCount",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_AL_SIZE",
+                "value": "AlSize",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_AL_STRIPES",
+                "value": "AlStripes",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_ID",
+                "value": "Id",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_ROLE",
+                "value": "Role",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_MISSING_NAMESPC",
+                "value": "MissingNameSpace",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Property namespaces"
+        },
+        {
+                "name": "NAMESPC_NETCOM",
+                "value": "NetCom",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "NAMESPC_DFLT",
+                "value": "Default",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "NAMESPC_LOGGING",
+                "value": "Logging",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "NAMESPC_ALLOC",
+                "value": "Allocation",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "NAMESPC_NETIF",
+                "value": "NetIf",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Property keys"
+        },
+        {
+                "name": "KEY_PORT_NR",
+                "value": "PortNr",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_IP_ADDR",
+                "value": "IpAddr",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_BIND_ADDR",
+                "value": "BindAddr",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_NETCOM_TYPE",
+                "value": "NetComType",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_NETIF_TYPE",
+                "value": "NetIfType",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_KEYSTORE",
+                "value": "Keystore",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_TRUSTSTORE",
+                "value": "Truststore",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_KEY_PWD",
+                "value": "KeyPwd",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_KEYSTORE_PWD",
+                "value": "KeystorePwd",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_TRUSTSTORE_PWD",
+                "value": "TruststorePwd",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_SSL_PROTO",
+                "value": "SslProto",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Property values"
+        },
+        {
+                "name": "VAL_NETCOM_TYPE_SSL",
+                "value": "Ssl",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "VAL_NETCOM_TYPE_PLAIN",
+                "value": "Plain",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "VAL_SSL_PROTO_TLSv1",
+                "value": "TLSv1",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Node Type values"
+        },
+        {
+                "name": "VAL_NODE_TYPE_CTRL",
+                "value": "Controller",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "VAL_NODE_TYPE_STLT",
+                "value": "Satellite",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "VAL_NODE_TYPE_CMBD",
+                "value": "Combined",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "VAL_NODE_TYPE_AUX",
+                "value": "Auxiliary",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Authentication keys"
+        },
+        {
+                "name": "KEY_SEC_IDENTITY",
+                "value": "SecIdentity",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_SEC_ROLE",
+                "value": "SecRole",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_SEC_TYPE",
+                "value": "SecType",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_SEC_DOMAIN",
+                "value": "SecDomain",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_SEC_PASSWORD",
+                "value": "SecPassword",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Default ports"
+        },
+        {
+                "name": "DM_DFLT_SERVER_PORT_SSL",
+                "value": 6996,
+                "py": "int",
+                "java": "int"
+        },
+        {
+                "name": "DM_DFLT_SERVER_PORT_PLAIN",
+                "value": 6995,
+                "py": "int",
+                "java": "int"
         }
 ]
