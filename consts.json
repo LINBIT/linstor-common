@@ -183,58 +183,65 @@
                 "java": "long"
         },
         {
-                "name": "CRT_FAIL_INVLD_NODE_ID",
+                "name": "CRT_FAIL_INVLD_RSC_PORT",
                 "type": "BOR",
                 "value": [113, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
-                "name": "CRT_FAIL_INVLD_VLM_NR",
+                "name": "CRT_FAIL_INVLD_NODE_ID",
                 "type": "BOR",
                 "value": [114, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
-                "name": "CRT_FAIL_INVLD_VLM_SIZE",
+                "name": "CRT_FAIL_INVLD_VLM_NR",
                 "type": "BOR",
                 "value": [115, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
-                "name": "CRT_FAIL_INVLD_MINOR_NR",
+                "name": "CRT_FAIL_INVLD_VLM_SIZE",
                 "type": "BOR",
                 "value": [116, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
-                "name": "CRT_FAIL_INVLD_STOR_POOL_NAME",
+                "name": "CRT_FAIL_INVLD_MINOR_NR",
                 "type": "BOR",
                 "value": [117, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
-                "name": "CRT_FAIL_INVLD_NET_NAME",
+                "name": "CRT_FAIL_INVLD_STOR_POOL_NAME",
                 "type": "BOR",
                 "value": [118, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
-                "name": "CRT_FAIL_INVLD_NET_PORT",
+                "name": "CRT_FAIL_INVLD_NET_NAME",
                 "type": "BOR",
                 "value": [119, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
-                "name": "CRT_FAIL_INVLD_NET_TYPE",
+                "name": "CRT_FAIL_INVLD_NET_PORT",
                 "type": "BOR",
                 "value": [120, "MASK_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "CRT_FAIL_INVLD_NET_TYPE",
+                "type": "BOR",
+                "value": [121, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
@@ -987,6 +994,13 @@
                 "name": "RC_RSC_DFN_CRT_FAIL_INVLD_RSC_NAME",
                 "type": "BOR",
                 "value": ["MASK_RSC_DFN", "CRT_FAIL_INVLD_RSC_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_RSC_DFN_CRT_FAIL_INVLD_RSC_PORT",
+                "type": "BOR",
+                "value": ["MASK_RSC_DFN", "CRT_FAIL_INVLD_RSC_PORT"],
                 "py": "long",
                 "java": "long"
         },
