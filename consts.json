@@ -479,6 +479,27 @@
                 "java": "long"
         },
         {
+                "name": "CRT_FAIL_MISSING_PROPS_NETCOM_TYPE",
+                "type": "BOR",
+                "value": [181, "MASK_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "CRT_FAIL_MISSING_PROPS_NETCOM_PORT",
+                "type": "BOR",
+                "value": [182, "MASK_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "CRT_FAIL_MISSING_NETCOM",
+                "type": "BOR",
+                "value": [183, "MASK_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "CRT_FAIL_UNKNOWN_ERROR",
                 "type": "BOR",
                 "value": [197, "MASK_ERROR"],
@@ -486,250 +507,260 @@
                 "java": "long"
         },
         {
-                "blockcomment": "Codes 200-299: deletion failures\nsub-codes same as for creation failures, except data exists, which can only yield in IMPL_ERROR"
+                "blockcomment": "Codes 200-299: creation warnings"
+        },
+        {
+                "name": "CRT_WARN_INVLD_OPT_PROP_NETCOM_ENABLED",
+                "type": "BOR",
+                "value": [200, "MASK_WARN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "blockcomment": "Codes 300-399: deletion failures\nsub-codes same as for creation failures, except data exists, which can only yield in IMPL_ERROR"
         },
         {
                 "name": "DEL_FAIL_SQL",
                 "type": "BOR",
-                "value": [200, "MASK_ERROR"],
+                "value": [300, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_SQL_ROLLBACK",
                 "type": "BOR",
-                "value": [201, "MASK_ERROR"],
+                "value": [301, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_INVLD_NODE_NAME",
                 "type": "BOR",
-                "value": [210, "MASK_ERROR"],
+                "value": [310, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_INVLD_NODE_TYPE",
                 "type": "BOR",
-                "value": [211, "MASK_ERROR"],
+                "value": [311, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_INVLD_RSC_NAME",
                 "type": "BOR",
-                "value": [212, "MASK_ERROR"],
+                "value": [312, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_INVLD_NODE_ID",
                 "type": "BOR",
-                "value": [213, "MASK_ERROR"],
+                "value": [313, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_INVLD_VLM_NR",
                 "type": "BOR",
-                "value": [214, "MASK_ERROR"],
+                "value": [314, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_INVLD_VLM_SIZE",
                 "type": "BOR",
-                "value": [215, "MASK_ERROR"],
+                "value": [315, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_INVLD_MINOR_NR",
                 "type": "BOR",
-                "value": [216, "MASK_ERROR"],
+                "value": [316, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_INVLD_STOR_POOL_NAME",
                 "type": "BOR",
-                "value": [217, "MASK_ERROR"],
+                "value": [317, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_INVLD_NET_NAME",
                 "type": "BOR",
-                "value": [218, "MASK_ERROR"],
+                "value": [318, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_NOT_FOUND_NODE",
                 "type": "BOR",
-                "value": [230, "MASK_ERROR"],
+                "value": [330, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_NOT_FOUND_RSC_DFN",
                 "type": "BOR",
-                "value": [231, "MASK_ERROR"],
+                "value": [331, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_NOT_FOUND_RSC",
                 "type": "BOR",
-                "value": [232, "MASK_ERROR"],
+                "value": [332, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_NOT_FOUND_VLM_DFN",
                 "type": "BOR",
-                "value": [233, "MASK_ERROR"],
+                "value": [333, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_NOT_FOUND_VLM",
                 "type": "BOR",
-                "value": [234, "MASK_ERROR"],
+                "value": [334, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_NOT_FOUND_NET_IF",
                 "type": "BOR",
-                "value": [235, "MASK_ERROR"],
+                "value": [335, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_NOT_FOUND_NODE_CONN",
                 "type": "BOR",
-                "value": [236, "MASK_ERROR"],
+                "value": [336, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_NOT_FOUND_RSC_CONN",
                 "type": "BOR",
-                "value": [237, "MASK_ERROR"],
+                "value": [337, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_NOT_FOUND_VLM_CONN",
                 "type": "BOR",
-                "value": [238, "MASK_ERROR"],
+                "value": [338, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_NOT_FOUND_STOR_POOL_DFN",
                 "type": "BOR",
-                "value": [239, "MASK_ERROR"],
+                "value": [339, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_NOT_FOUND_STOR_POOL",
                 "type": "BOR",
-                "value": [240, "MASK_ERROR"],
+                "value": [340, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_ACC_DENIED_NODE",
                 "type": "BOR",
-                "value": [250, "MASK_ERROR"],
+                "value": [350, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_ACC_DENIED_RSC_DFN",
                 "type": "BOR",
-                "value": [251, "MASK_ERROR"],
+                "value": [351, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_ACC_DENIED_RSC",
                 "type": "BOR",
-                "value": [252, "MASK_ERROR"],
+                "value": [352, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_ACC_DENIED_VLM_DFN",
                 "type": "BOR",
-                "value": [253, "MASK_ERROR"],
+                "value": [353, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_ACC_DENIED_VLM",
                 "type": "BOR",
-                "value": [254, "MASK_ERROR"],
+                "value": [354, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_ACC_DENIED_STOR_POOL_DFN",
                 "type": "BOR",
-                "value": [255, "MASK_ERROR"],
+                "value": [355, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_ACC_DENIED_STOR_POOL",
                 "type": "BOR",
-                "value": [256, "MASK_ERROR"],
+                "value": [356, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_ACC_DENIED_NODE_CONN",
                 "type": "BOR",
-                "value": [257, "MASK_ERROR"],
+                "value": [357, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_ACC_DENIED_RSC_CONN",
                 "type": "BOR",
-                "value": [258, "MASK_ERROR"],
+                "value": [358, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_ACC_DENIED_VLM_CONN",
                 "type": "BOR",
-                "value": [259, "MASK_ERROR"],
+                "value": [359, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_UNKNOWN_ERROR",
                 "type": "BOR",
-                "value": [297, "MASK_ERROR"],
+                "value": [397, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_IN_USE",
                 "type": "BOR",
-                "value": [298, "MASK_ERROR"],
+                "value": [398, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "DEL_FAIL_IMPL_ERROR",
                 "type": "BOR",
-                "value": [299, "MASK_ERROR"],
+                "value": [399, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
@@ -739,14 +770,14 @@
         {
                 "name": "RC_SIGNIN_PASS",
                 "type": "BOR",
-                "value": [300, "MASK_SUCCESS"],
+                "value": [400, "MASK_SUCCESS"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "RC_SIGNIN_FAIL",
                 "type": "BOR",
-                "value": [300, "MASK_ERROR"],
+                "value": [400, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
@@ -838,6 +869,27 @@
                 "java": "long"
         },
         {
+                "name": "RC_NODE_CRT_FAIL_MISSING_PROP_NETCOM_TYPE",
+                "type": "BOR",
+                "value": ["MASK_NODE", "CRT_FAIL_MISSING_PROPS_NETCOM_TYPE"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_NODE_CRT_FAIL_MISSING_PROP_NETCOM_PORT",
+                "type": "BOR",
+                "value": ["MASK_NODE", "CRT_FAIL_MISSING_PROPS_NETCOM_PORT"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_NODE_CRT_FAIL_MISSING_NETCOM",
+                "type": "BOR",
+                "value": ["MASK_NODE", "CRT_FAIL_MISSING_NETCOM"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_NODE_CRT_FAIL_ACC_DENIED_NODE",
                 "type": "BOR",
                 "value": ["MASK_NODE", "CRT_FAIL_ACC_DENIED_NODE"],
@@ -855,6 +907,13 @@
                 "name": "RC_NODE_CRT_FAIL_IMPL_ERROR",
                 "type": "BOR",
                 "value": ["MASK_NODE", "CRT_FAIL_IMPL_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_NODE_CRT_WARN_INVLD_OPT_PROP_NETCOM_ENABLED",
+                "type": "BOR",
+                "value": ["MASK_NODE", "CRT_WARN_INVLD_OPT_PROP_NETCOM_ENABLED"],
                 "py": "long",
                 "java": "long"
         },
@@ -2876,6 +2935,12 @@
                 "java": "String"
         },
         {
+                "name": "KEY_NETCOM_ENABLED",
+                "value": "NetComEnabled",
+                "py": "str",
+                "java": "String"
+        },
+        {
                 "name": "KEY_KEYSTORE",
                 "value": "Keystore",
                 "py": "str",
@@ -3006,5 +3071,20 @@
                 "value": 6995,
                 "py": "int",
                 "java": "int"
+        },
+        {
+                "blockcomment": "Boolean values"
+        },
+        {
+                "name": "VAL_TRUE",
+                "value": "True",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "VAL_FALSE",
+                "value": "False",
+                "py": "str",
+                "java": "String"
         }
 ]
