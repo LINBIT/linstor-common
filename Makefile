@@ -35,3 +35,11 @@ $(JAVACONSTS): consts.json
 python: $(PYS) $(PYCONSTS)
 
 java: $(JAVAS) $(JAVACONSTS)
+
+cleanpython:
+	rm -f $(PYS) $(PYCONSTS)
+
+cleanjava:
+	rm -f $(JAVAS) $(JAVACONSTS)
+
+clean: cleanpython cleanjava
