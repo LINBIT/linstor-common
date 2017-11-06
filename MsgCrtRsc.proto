@@ -12,14 +12,11 @@ message MsgCrtRsc
 	// Resource name
 	required string rsc_name = 2;
 
-	// Node id
-	required sint32 node_id = 3;
-
 	// Resource properties map
-	repeated LinStorMapEntry rsc_props = 4;
+	repeated LinStorMapEntry rsc_props = 3;
 
 	// Volume
-	repeated Vlm vlms = 5;
+	repeated Vlm vlms = 4;
 }
 
 // Embedded volume
@@ -35,7 +32,7 @@ message Vlm
 	required string meta_disk = 3;
 
 	// Storage pool name
-	// if null, vlmDfn, rsc and node is asked (in this order)
+	// if null: vlmDfn, rsc and node are asked for default (in this order)
 	required string stor_pool_name = 4;
 
 	// Volume properties map
