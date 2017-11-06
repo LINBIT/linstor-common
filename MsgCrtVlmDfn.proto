@@ -1,32 +1,32 @@
-syntax = "proto3";
+syntax = "proto2";
 
 package com.linbit.drbdmanage.proto;
+import public "LinStorMapEntry.proto";
 
-// drbdmanageNG - Create volume definition
+// linstor - Create volume definition
 message MsgCrtVlmDfn
 {
-    // Resource name
-    string          rsc_name    = 1;
+	// Resource name
+	required string rsc_name = 1;
 
-    // Volume definitions to add to the resource definition
-    repeated VlmDfn vlm_dfns    = 2;
+	// Volume definitions to add to the resource definition
+	repeated VlmDfn vlm_dfns = 2;
 }
 
 // Embedded volume definition
 message VlmDfn
 {
-    // Volume number
-    // -1 for automatic assignment
-    sint32              vlm_nr      = 1;
+	// Volume number
+	// -1 for automatic assignment
+	required sint32 vlm_nr = 1;
 
-    // Volume size (in kiB)
-    int64               vlm_size    = 2;
+	// Volume size (in kiB)
+	required int64 vlm_size = 2;
 
-    // Volume minor number
-    // -1 for automatic assignment
-    sint32              vlm_minor   = 3;
+	// Volume minor number
+	// -1 for automatic assignment
+	required sint32 vlm_minor = 3;
 
-    // Volume definition properties map
-    map<string, string> vlm_props   = 4;
+	// Volume definition properties map
+	repeated LinStorMapEntry vlm_props = 4;
 }
-

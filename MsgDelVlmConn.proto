@@ -1,19 +1,19 @@
-syntax = "proto3";
+syntax = "proto2";
 
 package com.linbit.drbdmanage.proto;
 
-// drbdmanageNG - Delete volume connection
+// linstor - Delete volume connection
 message MsgDelVlmConn
 {
-    // Node 1 name
-    string              node_name_1    = 1;
+	// Node 1 name
+	required string node_name_1 = 1;
 
-    // Node 2 name
-    string              node_name_2    = 2;
+	// Node 2 name
+	required string node_name_2 = 2;
 
-    // Resource name
-    string              resource_name  = 3;
-    
-    // Volume number
-    sint32              volume_nr      = 4;
+	// Resource name
+	required string resource_name = 3;
+
+	// Volume number
+	required sint32 volume_nr = 4;
 }

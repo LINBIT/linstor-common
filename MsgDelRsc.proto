@@ -1,13 +1,13 @@
-syntax = "proto3";
+syntax = "proto2";
 
 package com.linbit.drbdmanage.proto;
 
-// drbdmanageNG - Delete resource 
+// linstor - Delete resource
 message MsgDelRsc
 {
 	// Node name
-	string				node_name 	= 1;
+	required string node_name = 1;
 
-    // Resource name
-    string              rsc_name    = 2;
+	// Resource name
+	required string rsc_name = 2;
 }

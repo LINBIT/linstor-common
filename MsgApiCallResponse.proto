@@ -1,28 +1,29 @@
-syntax = "proto3";
+syntax = "proto2";
 
 package com.linbit.drbdmanage.proto;
+import public "LinStorMapEntry.proto";
 
-// drbdmanageNG - ApiCallResponse
+// linstor - ApiCallResponse
 message MsgApiCallResponse
 {
-    // return code (see ApiCallRcConstants)
-    sint64     			ret_code          = 1;
+	// return code (see ApiCallRcConstants)
+	required sint64 ret_code = 1;
 
-    // object references
-    map<string, string> obj_refs          = 2;
-    
-    // message format
-    string				message_format    = 3;
-    
-    // cause format
-    string				cause_format      = 4;
-    
-    // correction format
-    string 				correction_format = 5;
-    
-    // details format
-    string				details_format    = 6;
-    
-    // referenced variables
-    map<string, string> variables		  = 7;
+	// object references
+	repeated LinStorMapEntry obj_refs = 2;
+
+	// message format
+	required string message_format = 3;
+
+	// cause format
+	required string cause_format = 4;
+
+	// correction format
+	required string correction_format = 5;
+
+	// details format
+	required string details_format = 6;
+
+	// referenced variables
+	repeated LinStorMapEntry variables = 7;
 }

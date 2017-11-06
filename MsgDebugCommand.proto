@@ -1,10 +1,10 @@
-syntax = "proto3";
+syntax = "proto2";
 
 package com.linbit.drbdmanage.proto;
 
 // Remote debug command
 message MsgDebugCommand
 {
-    // Command line for the debug console
-    string  cmd_line    = 1;
+	// Command line for the debug console
+	required string cmd_line = 1;
 }

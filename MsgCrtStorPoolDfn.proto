@@ -1,13 +1,14 @@
-syntax = "proto3";
+syntax = "proto2";
 
 package com.linbit.drbdmanage.proto;
+import public "LinStorMapEntry.proto";
 
-// drbdmanageNG - Create storage pool definition
+// linstor - Create storage pool definition
 message MsgCrtStorPoolDfn
 {
-    // Storage pool name
-    string              stor_pool_name  = 1;
+	// Storage pool name
+	required string stor_pool_name = 1;
 
-    // Storage pool definition properties map
-    map<string, string> stor_pool_dfn_props = 2;
+	// Storage pool definition properties map
+	repeated LinStorMapEntry stor_pool_dfn_props = 2;
 }

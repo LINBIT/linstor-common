@@ -1,42 +1,43 @@
-syntax = "proto3";
+syntax = "proto2";
 
 package com.linbit.drbdmanage.proto;
+import public "LinStorMapEntry.proto";
 
-// drbdmanageNG - Create resource 
+// linstor - Create resource
 message MsgCrtRsc
 {
 	// Node name
-	string				node_name 	= 1;
+	required string node_name = 1;
 
-    // Resource name
-    string              rsc_name    = 2;
+	// Resource name
+	required string rsc_name = 2;
 
-    // Node id
-    sint32              node_id     = 3;
+	// Node id
+	required sint32 node_id = 3;
 
-    // Resource properties map
-    map<string, string> rsc_props   = 4;
-    
-    // Volume 
-    repeated Vlm        vlms        = 5;
+	// Resource properties map
+	repeated LinStorMapEntry rsc_props = 4;
+
+	// Volume
+	repeated Vlm vlms = 5;
 }
 
 // Embedded volume
 message Vlm
 {
-    // Volume number
-    sint32              vlm_nr         = 1;
+	// Volume number
+	required sint32 vlm_nr = 1;
 
-    // Block device path
-    string              block_device   = 2;
+	// Block device path
+	required string block_device = 2;
 
-    // Meta disk path (might be "internal")
-    string              meta_disk      = 3;
+	// Meta disk path (might be "internal")
+	required string meta_disk = 3;
 
-    // Storage pool name
-    // if null, vlmDfn, rsc and node is asked (in this order)
-    string              stor_pool_name = 4;
+	// Storage pool name
+	// if null, vlmDfn, rsc and node is asked (in this order)
+	required string stor_pool_name = 4;
 
-    // Volume properties map
-    map<string, string> vlm_props      = 5;
+	// Volume properties map
+	repeated LinStorMapEntry vlm_props = 5;
 }
