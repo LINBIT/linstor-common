@@ -16,13 +16,13 @@ message MsgApiCallResponse
 	required string message_format = 3;
 
 	// cause format
-	required string cause_format = 4;
+	optional string cause_format = 4;
 
 	// correction format
-	required string correction_format = 5;
+	optional string correction_format = 5;
 
 	// details format
-	required string details_format = 6;
+	optional string details_format = 6;
 
 	// referenced variables
 	repeated LinStorMapEntry variables = 7;
