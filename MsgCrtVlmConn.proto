@@ -6,18 +6,27 @@ import public "LinStorMapEntry.proto";
 // linstor - Create volume connection
 message MsgCrtVlmConn
 {
-	// Node 1 name
-	required string node_name_1 = 1;
+    // UUID
+    optional bytes uuid = 1;
 
-	// Node 2 name
-	required string node_name_2 = 2;
+    // Node 1 name
+    required string node_name_1 = 2;
 
-	// Resource name
-	required string resource_name = 3;
+    // Node 2 name
+    required string node_name_2 = 3;
 
-	// Volume number
-	required sint32 volume_nr = 4;
+    // Resource name
+    required string resource_name = 4;
 
-	// Volume connection properties map
-	repeated LinStorMapEntry volume_conn_props = 5;
+    // Volume number
+    required sint32 volume_nr = 5;
+
+    // Volume 1 uuid
+    optional bytes vlm_1_uuid = 6;
+
+    // Volume 2 uuid
+    optional bytes vlm_2_uuid = 7;
+
+    // Volume connection properties map
+    repeated LinStorMapEntry volume_conn_props = 8;
 }

@@ -5,15 +5,18 @@ package com.linbit.drbdmanage.proto;
 // linstor - Delete volume connection
 message MsgDelVlmConn
 {
-	// Node 1 name
-	required string node_name_1 = 1;
+    // UUID
+    optional bytes uuid = 1;
 
-	// Node 2 name
-	required string node_name_2 = 2;
+    // Node 1 name
+    required string node_name_1 = 2;
 
-	// Resource name
-	required string resource_name = 3;
+    // Node 2 name
+    required string node_name_2 = 3;
 
-	// Volume number
-	required sint32 volume_nr = 4;
+    // Resource name
+    required string resource_name = 4;
+
+    // Volume number
+    required sint32 volume_nr = 5;
 }

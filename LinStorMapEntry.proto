@@ -3,6 +3,6 @@ syntax = "proto2";
 package com.linbit.drbdmanage.proto;
 
 message LinStorMapEntry {
-	required string key = 1;
-	required string value = 2;
+    required string key = 1;
+    required string value = 2;
 }

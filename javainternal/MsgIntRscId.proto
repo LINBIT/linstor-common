@@ -7,7 +7,7 @@ message MsgIntRscId
 {
     // Resource name
     string              resource_name  = 1;
-    
+
     // UUID
     bytes               uuid           = 2;
 }

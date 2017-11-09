@@ -6,24 +6,24 @@ import public "LinStorMapEntry.proto";
 // linstor - ApiCallResponse
 message MsgApiCallResponse
 {
-	// return code (see ApiCallRcConstants)
-	required sint64 ret_code = 1;
+    // return code (see ApiCallRcConstants)
+    required sint64 ret_code = 1;
 
-	// object references
-	repeated LinStorMapEntry obj_refs = 2;
+    // object references
+    repeated LinStorMapEntry obj_refs = 2;
 
-	// message format
-	required string message_format = 3;
+    // message format
+    required string message_format = 3;
 
-	// cause format
-	optional string cause_format = 4;
+    // cause format
+    optional string cause_format = 4;
 
-	// correction format
-	optional string correction_format = 5;
+    // correction format
+    optional string correction_format = 5;
 
-	// details format
-	optional string details_format = 6;
+    // details format
+    optional string details_format = 6;
 
-	// referenced variables
-	repeated LinStorMapEntry variables = 7;
+    // referenced variables
+    repeated LinStorMapEntry variables = 7;
 }

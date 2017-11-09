@@ -5,9 +5,12 @@ package com.linbit.drbdmanage.proto;
 // linstor - Delete storage pool
 message MsgDelStorPool
 {
-	// Node name
-	required string node_name = 1;
+    // UUID
+    optional bytes uuid = 1;
 
-	// Storage pool name
-	required string stor_pool_name = 2;
+    // Node name
+    required string node_name = 2;
+
+    // Storage pool name
+    required string stor_pool_name = 3;
 }
