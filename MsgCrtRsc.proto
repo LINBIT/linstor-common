@@ -50,6 +50,9 @@ message Vlm
     // if null: vlmDfn, rsc and node are asked for default (in this order)
     optional string stor_pool_name = 7;
 
+    // Volume flags
+    optional sint64 vlm_flags = 8;
+
     // Volume properties map
-    repeated LinStorMapEntry vlm_props = 8;
+    repeated LinStorMapEntry vlm_props = 9;
 }
