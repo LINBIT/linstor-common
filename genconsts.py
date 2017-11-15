@@ -41,7 +41,7 @@ def java(consts):
 
     print '/*\n * %s\n * %s */\n' % (hdr, ' * '.join([l.strip()+'\n' for l in license.split('\n')]))
 
-    print 'package com.linbit.drbdmanage;\n'
+    print 'package com.linbit.drbdmanage.api;\n'
     print 'public class ApiConsts\n{'
 
     nl, w = '', 0

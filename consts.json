@@ -524,6 +524,13 @@
                 "java": "long"
         },
         {
+                "name": "CRT_WARN_NOT_CONNECTED",
+                "type": "BOR",
+                "value": [201, "MASK_WARN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "blockcomment": "Codes 300-399: deletion failures\nsub-codes same as for creation failures, except data exists, which can only yield in IMPL_ERROR"
         },
         {
@@ -772,19 +779,29 @@
                 "java": "long"
         },
         {
+                "blockcomment": "Codes 400-499: deletion warnings"
+        },
+        {
+                "name": "DEL_WARN_NOT_CONNECTED",
+                "type": "BOR",
+                "value": [400, "MASK_WARN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "blockcomment": "Sign in codes"
         },
         {
                 "name": "RC_SIGNIN_PASS",
                 "type": "BOR",
-                "value": [400, "MASK_SUCCESS"],
+                "value": [500, "MASK_SUCCESS"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "RC_SIGNIN_FAIL",
                 "type": "BOR",
-                "value": [400, "MASK_ERROR"],
+                "value": [500, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
@@ -1134,9 +1151,23 @@
                 "java": "long"
         },
         {
+                "name": "RC_RSC_CRT_WARN_NOT_CONNECTED",
+                "type": "BOR",
+                "value": ["MASK_RSC", "CRT_WARN_NOT_CONNECTED"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_RSC_DEL_NOT_FOUND",
                 "type": "BOR",
                 "value": ["MASK_RSC", "DEL_NOT_FOUND"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_RSC_DEL_WARN_NOT_CONNECTED",
+                "type": "BOR",
+                "value": ["MASK_RSC", "DEL_WARN_NOT_CONNECTED"],
                 "py": "long",
                 "java": "long"
         },
@@ -2201,9 +2232,23 @@
                 "java": "long"
         },
         {
+                "name": "RC_STOR_POOL_CRT_WARN_NOT_CONNECTED",
+                "type": "BOR",
+                "value": ["MASK_STOR_POOL", "CRT_WARN_NOT_CONNECTED"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_STOR_POOL_DEL_NOT_FOUND",
                 "type": "BOR",
                 "value": ["MASK_STOR_POOL", "DEL_NOT_FOUND"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_STOR_POOL_DEL_WARN_NOT_CONNECTED",
+                "type": "BOR",
+                "value": ["MASK_STOR_POOL", "DEL_WARN_NOT_CONNECTED"],
                 "py": "long",
                 "java": "long"
         },

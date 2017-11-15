@@ -11,7 +11,7 @@ PYCONSTS=../linstor/sharedconsts.py
 JAVAOUT=../src/com/linbit/drbdmanage/proto
 JAVASUFF=OuterClass.java
 JAVAS=$(patsubst %,$(JAVAOUT)/%$(JAVASUFF),$(JAVANOEND))
-JAVACONSTS=../src/com/linbit/drbdmanage/ApiConsts.java
+JAVACONSTS=../src/com/linbit/drbdmanage/api/ApiConsts.java
 
 # make java the default one
 all: java
