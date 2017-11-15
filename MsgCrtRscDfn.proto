@@ -16,9 +16,12 @@ message MsgCrtRscDfn
     // Port
     required sint32 rsc_port = 3;
 
+    // Secret
+    optional string rsc_secret = 4;
+
     // Resource properties map
-    repeated LinStorMapEntry rsc_props = 4;
+    repeated LinStorMapEntry rsc_props = 5;
 
     // Volume definitions list
-    repeated VlmDfn vlm_dfns = 5;
+    repeated VlmDfn vlm_dfns = 6;
 }

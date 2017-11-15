@@ -20,26 +20,29 @@ message MsgIntRscData
     // Resource definition flags
     sint64                            rsc_dfn_flags     = 4;
 
+    // Resource definition secret
+    string                            rsc_dfn_secret    = 5;
+
     // Resource definition properties map
-    repeated LinStorMapEntry          rsc_dfn_props     = 5;
+    repeated LinStorMapEntry          rsc_dfn_props     = 6;
 
     // Resource uuid
-    bytes                             local_rsc_uuid    = 6;
+    bytes                             local_rsc_uuid    = 7;
 
     // Resource flags
-    sint64                            local_rsc_flags   = 7;
+    sint64                            local_rsc_flags   = 8;
 
     // Resource node id
-    sint32                            local_rsc_node_id = 8;
+    sint32                            local_rsc_node_id = 9;
 
     // Resource properties map
-    repeated LinStorMapEntry          local_rsc_props   = 9;
+    repeated LinStorMapEntry          local_rsc_props   = 10;
 
     // Volume definitions
-    repeated VlmDfn                   vlm_dfns          = 10;
+    repeated VlmDfn                   vlm_dfns          = 11;
 
     // Volume
-    repeated Vlm                      local_volumes     = 11;
+    repeated Vlm                      local_volumes     = 12;
 
     // List of nodes (including node-specific resource configuration)
     repeated MsgIntOtherRscData       other_resources   = 13;
