@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package com.linbit.drbdmanage.proto.javainternal;
+import public "LinStorMapEntry.proto";
+
+// linstor - Internal message containing a node
+message MsgIntNodeData
+{
+    // Node uuid
+    bytes                       node_uuid = 1;
+
+    // Node name
+    string                      node_name = 2;
+
+    // Node flags
+    sint64                      node_flags = 3;
+
+    // Node net interfaces
+    repeated NetInterface       node_net_ifs = 4;
+
+    // Node connection properties
+    repeated NodeConnection     node_conn_props = 5;
+
+    // Node properties
+    repeated LinStorMapEntry    node_props = 6;
+}
+
+message NetInterface
+{
+    // Netif uuid
+    bytes   net_if_uuid = 1;
+
+    // Netif name
+    string  net_if_name = 2;
+
+    // Netif address
+    string  net_if_addr = 3;
+
+    // Netif type (IP, RDMA, ...)
+    string  net_if_type = 4;
+
+    // Netif port
+    sint32  net_if_port = 5;
+}
+
+message NodeConnection
+{
+    // Node name of remote node
+    string                      node_name = 1;
+
+    // Node connection properties
+    repeated LinStorMapEntry    node_conn_props = 2;
+}
