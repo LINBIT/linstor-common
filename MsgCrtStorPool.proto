@@ -7,7 +7,7 @@ import public "LinStorMapEntry.proto";
 message MsgCrtStorPool
 {
     // UUID
-    optional bytes uuid = 1;
+    optional bytes stor_pool_uuid = 1;
 
     // UUID
     optional bytes node_uuid = 2;

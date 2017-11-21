@@ -1,0 +1,36 @@
+syntax = "proto2";
+
+package com.linbit.drbdmanage.proto;
+import public "LinStorMapEntry.proto";
+
+// Embedded volume
+message Vlm
+{
+    // UUID
+    optional bytes vlm_uuid = 1;
+
+    // Volume definition uuid
+    optional bytes vlm_dfn_uuid = 2;
+
+    // Volume number
+    required sint32 vlm_nr = 3;
+
+    // Block device path
+    optional string block_device = 4;
+
+    // Meta disk path (might be "internal")
+    optional string meta_disk = 5;
+
+    // Storage pool uuid
+    optional bytes stor_pool_uuid = 6;
+
+    // Storage pool name
+    // if null: vlmDfn, rsc and node are asked for default (in this order)
+    optional string stor_pool_name = 7;
+
+    // Volume flags
+    optional sint64 vlm_flags = 8;
+
+    // Volume properties map
+    repeated LinStorMapEntry vlm_props = 9;
+}

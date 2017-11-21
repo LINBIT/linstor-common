@@ -7,7 +7,7 @@ import public "LinStorMapEntry.proto";
 message MsgCrtRscConn
 {
     // UUID
-    optional bytes uuid = 1;
+    optional bytes rsc_conn_uuid = 1;
 
     // Node 1 name
     required string node_name_1 = 2;

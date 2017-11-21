@@ -2,19 +2,19 @@ syntax = "proto2";
 
 package com.linbit.drbdmanage.proto;
 import public "LinStorMapEntry.proto";
-import public "MsgCrtVlmDfn.proto";
+import public "VlmDfn.proto";
 
 // linstor - Create resource definition
 message MsgCrtRscDfn
 {
     // UUID
-    optional bytes uuid = 1;
+    optional bytes rsc_dfn_uuid = 1;
 
     // Resource name
     required string rsc_name = 2;
 
     // Port
-    required sint32 rsc_port = 3;
+    optional sint32 rsc_port = 3;
 
     // Secret
     optional string rsc_secret = 4;

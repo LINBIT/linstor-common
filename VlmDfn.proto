@@ -1,0 +1,29 @@
+syntax = "proto2";
+
+package com.linbit.drbdmanage.proto;
+import public "LinStorMapEntry.proto";
+
+
+// linstor - Volume definition message 
+message VlmDfn
+{
+    // UUID
+    optional bytes vlm_dfn_uuid = 1;
+
+    // Volume number
+    // null for automatic assignment
+    optional sint32 vlm_nr = 2;
+
+    // Volume size (in kiB)
+    required int64 vlm_size = 3;
+
+    // Volume minor number
+    // null for automatic assignment
+    optional sint32 vlm_minor = 4;
+
+    // Volume flags
+    optional sint64 vlm_flags = 5;
+
+    // Volume definition properties map
+    repeated LinStorMapEntry vlm_props = 6;
+}

@@ -2,57 +2,30 @@ syntax = "proto2";
 
 package com.linbit.drbdmanage.proto;
 import public "LinStorMapEntry.proto";
+import public "Vlm.proto";
+
 
 // linstor - Create resource
 message MsgCrtRsc
 {
     // UUID
-    optional bytes uuid = 1;
+    optional bytes rsc_uuid = 1;
+
+    // Node uuid
+    optional bytes node_uuid = 2;
 
     // Node name
-    required string node_name = 2;
+    required string node_name = 3;
 
     // Resource definition uuid
-    optional bytes rsc_dfn_uuid = 3;
+    optional bytes rsc_dfn_uuid = 4;
 
     // Resource name
-    required string rsc_name = 4;
+    required string rsc_name = 5;
 
     // Resource properties map
-    repeated LinStorMapEntry rsc_props = 5;
+    repeated LinStorMapEntry rsc_props = 6;
 
     // Volume
-    repeated Vlm vlms = 6;
-}
-
-// Embedded volume
-message Vlm
-{
-    // UUID
-    optional bytes uuid = 1;
-
-    // Volume definition uuid
-    optional bytes vlm_dfn_uuid = 2;
-
-    // Volume number
-    required sint32 vlm_nr = 3;
-
-    // Block device path
-    required string block_device = 4;
-
-    // Meta disk path (might be "internal")
-    required string meta_disk = 5;
-
-    // Storage pool uuid
-    optional bytes stor_pool_uuid = 6;
-
-    // Storage pool name
-    // if null: vlmDfn, rsc and node are asked for default (in this order)
-    optional string stor_pool_name = 7;
-
-    // Volume flags
-    optional sint64 vlm_flags = 8;
-
-    // Volume properties map
-    repeated LinStorMapEntry vlm_props = 9;
+    repeated Vlm vlms = 7;
 }
