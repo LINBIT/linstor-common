@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package com.linbit.drbdmanage.proto.javainternal;
+package com.linbit.linstor.proto.javainternal;
 import public "LinStorMapEntry.proto";
 
 // linstor - Internal message containing a storage pool

@@ -8,10 +8,10 @@ PYSUFF=_pb2.py
 PYS=$(patsubst %,$(PYOUT)/%$(PYSUFF),$(COMMONNOEND))
 PYCONSTS=../linstor/sharedconsts.py
 
-JAVAOUT=../src/com/linbit/drbdmanage/proto
+JAVAOUT=../src/com/linbit/linstor/proto
 JAVASUFF=OuterClass.java
 JAVAS=$(patsubst %,$(JAVAOUT)/%$(JAVASUFF),$(JAVANOEND))
-JAVACONSTS=../src/com/linbit/drbdmanage/api/ApiConsts.java
+JAVACONSTS=../src/com/linbit/linstor/api/ApiConsts.java
 
 # make java the default one
 all: java

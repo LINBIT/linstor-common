@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-package com.linbit.drbdmanage.proto;
+package com.linbit.linstor.proto;
 import public "LinStorMapEntry.proto";
 
 // linstor - Create volume connection

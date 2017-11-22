@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-package com.linbit.drbdmanage.proto;
+package com.linbit.linstor.proto;
 
 // linstor - Delete node connection
 message MsgDelNodeConn
