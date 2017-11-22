@@ -326,6 +326,13 @@
                 "java": "long"
         },
         {
+                "name": "CRT_FAIL_NOT_FOUND_DFLT_STOR_POOL",
+                "type": "BOR",
+                "value": [141, "MASK_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "blockcomment": "Codes 150-159: access denied creation failures"
         },
         {
@@ -1245,6 +1252,13 @@
                 "name": "RC_RSC_CRT_FAIL_NOT_FOUND_STOR_POOL",
                 "type": "BOR",
                 "value": ["MASK_RSC", "CRT_FAIL_NOT_FOUND_STOR_POOL"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_RSC_CRT_FAIL_NOT_FOUND_DFLT_STOR_POOL",
+                "type": "BOR",
+                "value": ["MASK_RSC", "CRT_FAIL_NOT_FOUND_DFLT_STOR_POOL"],
                 "py": "long",
                 "java": "long"
         },
