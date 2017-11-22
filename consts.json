@@ -1448,6 +1448,27 @@
                 "java": "long"
         },
         {
+                "name": "RC_VLM_DFN_CRT_FAIL_SQL",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "CRT_FAIL_SQL"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_VLM_DFN_CRT_FAIL_SQL_ROLLBACK",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "CRT_FAIL_SQL_ROLLBACK"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_VLM_DFN_CRT_FAIL_ACC_DENIED_RSC_DFN",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "CRT_FAIL_ACC_DENIED_RSC_DFN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "blockcomment": "Volume return codes"
         },
         {
@@ -2793,7 +2814,7 @@
         },
         {
                 "name": "KEY_UUID",
-                "value": "Uuid",
+                "value": "UUID",
                 "py": "str",
                 "java": "String"
         },
@@ -2925,7 +2946,7 @@
         },
         {
                 "name": "KEY_ID",
-                "value": "Id",
+                "value": "ID",
                 "py": "str",
                 "java": "String"
         },
@@ -2985,7 +3006,7 @@
         },
         {
                 "name": "KEY_IP_ADDR",
-                "value": "IpAddr",
+                "value": "IPAddr",
                 "py": "str",
                 "java": "String"
         },
@@ -3054,7 +3075,7 @@
         },
         {
                 "name": "VAL_NETCOM_TYPE_SSL",
-                "value": "Ssl",
+                "value": "SSL",
                 "py": "str",
                 "java": "String"
         },
@@ -3094,6 +3115,27 @@
         {
                 "name": "VAL_NODE_TYPE_AUX",
                 "value": "Auxiliary",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Net interface Type values"
+        },
+        {
+                "name": "VAL_NETIF_TYPE_IP",
+                "value": "IP",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "VAL_NETIF_TYPE_RDMA",
+                "value": "RDMA",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "VAL_NETIF_TYPE_ROCE",
+                "value": "RoCE",
                 "py": "str",
                 "java": "String"
         },
