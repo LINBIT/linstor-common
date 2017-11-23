@@ -765,6 +765,13 @@
                 "java": "long"
         },
         {
+                "name": "DEL_FAIL_EXISTS_VLM",
+                "type": "BOR",
+                "value": [364, "MASK_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "DEL_FAIL_UNKNOWN_ERROR",
                 "type": "BOR",
                 "value": [397, "MASK_ERROR"],
@@ -966,6 +973,13 @@
                 "name": "RC_NODE_DEL_FAIL_INVLD_NODE_NAME",
                 "type": "BOR",
                 "value": ["MASK_NODE", "DEL_FAIL_INVLD_NODE_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_NODE_DEL_FAIL_EXISTS_VLM",
+                "type": "BOR",
+                "value": ["MASK_NODE", "DEL_FAIL_EXISTS_VLM"],
                 "py": "long",
                 "java": "long"
         },
