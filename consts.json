@@ -1462,9 +1462,65 @@
                 "java": "long"
         },
         {
+                "name": "RC_VLM_DFN_CRT_FAIL_INVLD_RSC_NAME",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "CRT_FAIL_INVLD_RSC_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_VLM_DFN_CRT_FAIL_INVLD_STOR_POOL_NAME",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "CRT_FAIL_INVLD_STOR_POOL_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_VLM_DFN_CRT_FAIL_INVLD_VLM_NR",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "CRT_FAIL_INVLD_VLM_NR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_VLM_DFN_CRT_FAIL_INVLD_MINOR_NR",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "CRT_FAIL_INVLD_MINOR_NR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_VLM_DFN_CRT_FAIL_INVLD_SIZE",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "CRT_FAIL_INVLD_VLM_SIZE"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_VLM_DFN_CRT_FAIL_ACC_DENIED_RSC_DFN",
                 "type": "BOR",
                 "value": ["MASK_VLM_DFN", "CRT_FAIL_ACC_DENIED_RSC_DFN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_VLM_DFN_CRT_FAIL_ACC_DENIED_VLM_DFN",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "CRT_FAIL_ACC_DENIED_VLM_DFN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_VLM_DFN_CRT_FAIL_EXISTS_VLM_DFN",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "CRT_FAIL_EXISTS_VLM_DFN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_VLM_DFN_CRT_FAIL_IMPL_ERROR",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "CRT_FAIL_IMPL_ERROR"],
                 "py": "long",
                 "java": "long"
         },
