@@ -3176,14 +3176,20 @@
                 "blockcomment": "Default ports"
         },
         {
-                "name": "DM_DFLT_SERVER_PORT_SSL",
-                "value": 6996,
+                "name": "DFLT_CTRL_PORT_SSL",
+                "value": 3377,
                 "py": "int",
                 "java": "int"
         },
         {
-                "name": "DM_DFLT_SERVER_PORT_PLAIN",
-                "value": 6995,
+                "name": "DFLT_CTRL_PORT_PLAIN",
+                "value": 3376,
+                "py": "int",
+                "java": "int"
+        },
+        {
+                "name": "DFLT_STLT_PORT_PLAIN",
+                "value": 3366,
                 "py": "int",
                 "java": "int"
         },
