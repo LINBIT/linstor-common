@@ -159,7 +159,7 @@
                 "java": "long"
         },
         {
-                "blockcomment": "Codes 110-119: invalid * creation failures"
+                "blockcomment": "Codes 110-129: invalid * creation failures"
         },
         {
                 "name": "CRT_FAIL_INVLD_NODE_NAME",
@@ -232,16 +232,30 @@
                 "java": "long"
         },
         {
-                "name": "CRT_FAIL_INVLD_NET_PORT",
+                "name": "CRT_FAIL_INVLD_NET_ADDR",
                 "type": "BOR",
                 "value": [120, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
-                "name": "CRT_FAIL_INVLD_NET_TYPE",
+                "name": "CRT_FAIL_INVLD_NET_PORT",
                 "type": "BOR",
                 "value": [121, "MASK_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "CRT_FAIL_INVLD_NET_TYPE",
+                "type": "BOR",
+                "value": [122, "MASK_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "CRT_FAIL_INVLD_PROP",
+                "type": "BOR",
+                "value": [123, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
@@ -872,6 +886,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_NODE_CRT_FAIL_INVLD_NET_ADDR",
+                "type": "BOR",
+                "value": ["MASK_NODE", "CRT_FAIL_INVLD_NET_ADDR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_NODE_CRT_FAIL_INVLD_NET_PORT",
                 "type": "BOR",
                 "value": ["MASK_NODE", "CRT_FAIL_INVLD_NET_PORT"],
@@ -893,9 +914,23 @@
                 "java": "long"
         },
         {
+                "name": "RC_NODE_CRT_FAIL_INVLD_PROP",
+                "type": "BOR",
+                "value": ["MASK_NODE", "CRT_FAIL_INVLD_PROP"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_NODE_CRT_FAIL_EXISTS_NODE",
                 "type": "BOR",
                 "value": ["MASK_NODE", "CRT_FAIL_EXISTS_NODE"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_NODE_CRT_FAIL_EXISTS_NET_IF",
+                "type": "BOR",
+                "value": ["MASK_NODE", "CRT_FAIL_EXISTS_NET_IF"],
                 "py": "long",
                 "java": "long"
         },
