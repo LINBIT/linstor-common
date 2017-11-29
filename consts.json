@@ -1567,6 +1567,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_VLM_DFN_CRT_FAIL_UNKNOWN_ERROR",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "CRT_FAIL_UNKNOWN_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_VLM_DFN_CRT_FAIL_IMPL_ERROR",
                 "type": "BOR",
                 "value": ["MASK_VLM_DFN", "CRT_FAIL_IMPL_ERROR"],
