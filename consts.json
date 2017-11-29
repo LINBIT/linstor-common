@@ -105,6 +105,12 @@
                 "blockcomment": "unused type masks:\n0x10_00000000000000L;\n0x0C_00000000000000L;\n0x08_00000000000000L;\n0x04_00000000000000L;"
         },
         {
+                "name": "UNKNOWN_API_CALL",
+                "value": "0xC00FFFFFFFFFFFFFL",
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "blockcomment": "Codes 1-9: success"
         },
         {
