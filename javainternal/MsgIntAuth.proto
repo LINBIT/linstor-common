@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.linbit.linstor.proto.javainternal;
+
+// LinStor - Internal message containing the satellite's node and a (maybe encrypted) shared secret
+message MsgIntAuth
+{
+    // Satellite's node uuid
+    bytes  node_uuid     = 1;
+
+    // Satellite's node name
+    string node_name     = 2;
+
+    // Shared secret
+    bytes  shared_secret = 3;
+}
