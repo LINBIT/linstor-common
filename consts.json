@@ -2787,12 +2787,6 @@
                 "blockcomment": "Authentication APIs"
         },
         {
-                "name": "API_AUTH",
-                "value": "Auth",
-                "py": "str",
-                "java": "String"
-        },
-        {
                 "name": "API_SIGN_IN",
                 "value": "SignIn",
                 "py": "str",
