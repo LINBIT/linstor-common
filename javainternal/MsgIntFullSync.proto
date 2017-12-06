@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.linbit.linstor.proto.javainternal;
+import public "javainternal/MsgIntNodeData.proto";
+import public "javainternal/MsgIntStorPoolData.proto";
+import public "javainternal/MsgIntRscData.proto";
+
+// linstor - Internal message containing a full synchronization of the resource specific data
+message MsgIntFullSync
+{
+    // Node data (including satellites local node, this time containing props, etc)
+    repeated MsgIntNodeData     nodes       = 1;
+
+    // Satellite specific storage pools (including stor pool definitions) 
+    repeated MsgIntStorPoolData stor_pools  = 2;
+
+    // Satellite specific resources (including resource definition, volume definitions and volumes)
+    repeated MsgIntRscData      rscs        = 3;
+}
