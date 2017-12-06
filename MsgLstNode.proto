@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "Node.proto";
+
+// linstor - List nodes
+message MsgLstNode
+{
+    // Nodes
+    repeated Node nodes = 1;
+}
