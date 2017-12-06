@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "StorPoolDfn.proto";
+
+// linstor - List storage pool definitions
+message MsgLstStorPoolDfn
+{
+    // Nodes
+    repeated StorPoolDfn stor_pool_dfns = 1;
+}
