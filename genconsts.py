@@ -73,6 +73,7 @@ def java(consts):
             c += " // %s" % (e['comment'])
         print c
 
+    print '\n    private ApiConsts()\n    {\n    }'
     print '}'
 
 
