@@ -2859,6 +2859,12 @@
                 "java": "String"
         },
         {
+                "name": "API_LST_STOR_POOL_DFN",
+                "value": "LstStorPoolDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
                 "blockcomment": "Subscription APIs"
         },
         {
