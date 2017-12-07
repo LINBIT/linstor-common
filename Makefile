@@ -1,5 +1,5 @@
 COMMONSRC=$(wildcard proto/*.proto)
-JAVASRC=$(wildcard javainternal/*.proto)
+JAVASRC=$(wildcard proto/javainternal/*.proto)
 COMMONNOEND=$(COMMONSRC:.proto=)
 JAVANOEND=$(COMMONNOEND) $(JAVASRC:.proto=)
 
@@ -8,7 +8,7 @@ PYSUFF=_pb2.py
 PYS=$(patsubst %,$(PYOUT)/%$(PYSUFF),$(COMMONNOEND))
 PYCONSTS=../linstor/sharedconsts.py
 
-JAVAOUT=../src/com/linbit/linstor/proto
+JAVAOUT=../src/com/linbit/linstor
 JAVASUFF=OuterClass.java
 JAVAS=$(patsubst %,$(JAVAOUT)/%$(JAVASUFF),$(JAVANOEND))
 JAVACONSTS=../src/com/linbit/linstor/api/ApiConsts.java
