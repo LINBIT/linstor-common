@@ -1,8 +1,8 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto;
-import public "LinStorMapEntry.proto";
-import public "VlmDfn.proto";
+import public "proto/LinStorMapEntry.proto";
+import public "proto/VlmDfn.proto";
 
 // linstor - Create resource definition
 message MsgCrtRscDfn

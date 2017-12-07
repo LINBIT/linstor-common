@@ -1,9 +1,9 @@
-COMMONSRC=$(wildcard *.proto)
+COMMONSRC=$(wildcard proto/*.proto)
 JAVASRC=$(wildcard javainternal/*.proto)
 COMMONNOEND=$(COMMONSRC:.proto=)
 JAVANOEND=$(COMMONNOEND) $(JAVASRC:.proto=)
 
-PYOUT=../proto
+PYOUT=../
 PYSUFF=_pb2.py
 PYS=$(patsubst %,$(PYOUT)/%$(PYSUFF),$(COMMONNOEND))
 PYCONSTS=../linstor/sharedconsts.py

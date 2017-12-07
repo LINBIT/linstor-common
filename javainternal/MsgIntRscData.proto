@@ -1,9 +1,9 @@
 syntax = "proto3";
 
 package com.linbit.linstor.proto.javainternal;
-import "LinStorMapEntry.proto";
-import "VlmDfn.proto";
-import "Vlm.proto";
+import "proto/LinStorMapEntry.proto";
+import "proto/VlmDfn.proto";
+import "proto/Vlm.proto";
 
 // LinStor - Internal message containing a resource
 message MsgIntRscData

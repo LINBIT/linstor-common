@@ -1,7 +1,7 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto;
-import public "LinStorMapEntry.proto";
+import public "proto/LinStorMapEntry.proto";
 
 // linstor - Create resource connection
 message MsgCrtRscConn

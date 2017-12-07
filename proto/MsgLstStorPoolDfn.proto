@@ -1,7 +1,7 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto;
-import public "StorPoolDfn.proto";
+import public "proto/StorPoolDfn.proto";
 
 // linstor - List storage pool definitions
 message MsgLstStorPoolDfn

@@ -1,8 +1,8 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto;
-import public "LinStorMapEntry.proto";
-import public "Vlm.proto";
+import public "proto/LinStorMapEntry.proto";
+import public "proto/Vlm.proto";
 
 
 // linstor - Create resource

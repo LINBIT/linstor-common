@@ -1,7 +1,7 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto;
-import public "RscDfn.proto";
+import public "proto/RscDfn.proto";
 
 // linstor - List nodes
 message MsgLstRscDfn
