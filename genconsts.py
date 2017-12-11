@@ -77,7 +77,7 @@ def java(consts):
     print '}'
 
 
-def python(consts):
+def python(consts, vers=2):
     print '# %s\n' % (hdr),
     print '# '.join([l.strip()+'\n' for l in license.split('\n')])
 
@@ -94,38 +94,7 @@ def python(consts):
         gtype = get_type(e)
         value = e['value']
 
-        if gtype:
-            value = [str(x) for x in value]
-            if gtype == 'bor':
-                value = ' | '.join(value)
-            elif gtype == 'band':
-                value = ' & '.join(value)
-        elif e['py'] == 'str':
-            value = "'%s'" % (value)
-
-        c = "%s = %s(%s)" % (e['name'], e['py'], value)
-        if 'comment' in e:
-            c += "  # %s" % (e['comment'])
-        print c
-
-def python3(consts):
-    print '# %s\n' % (hdr),
-    print '# '.join([l.strip()+'\n' for l in license.split('\n')])
-
-    nl, w = '', 0
-    for e in consts:
-        w += 1
-        if w > 1: nl = '\n'
-
-        if 'blockcomment' in e:
-            c = e['blockcomment'].replace('\n', '\n# ')
-            print '%s# ## %s ###' % (nl, c)
-            continue
-
-        gtype = get_type(e)
-        value = e['value']
-
-        if gtype is None and e['py'] == 'long':
+        if vers == 3 and gtype is None and e['py'] == 'long':
             e['py'] = ''
             value = value[:-1] if str(value).endswith('L') else value
 
@@ -137,7 +106,6 @@ def python3(consts):
                 value = ' & '.join(value)
         elif e['py'] == 'str':
             value = "'%s'" % (value)
-
 
         c = "%s = %s(%s)" % (e['name'], e['py'], value)
         if 'comment' in e:
@@ -164,7 +132,7 @@ with open(f) as consts_file:
     elif language == 'python':
         python(consts)
     elif language == 'python3':
-        python3(consts)
+        python(consts, vers=3)
     else:
         sys.stderr.write("Language '%s' not valid, valid languages are: %s\n" % (language, ','.join(langs)))
         sys.exit(1)
