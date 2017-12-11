@@ -1,0 +1,33 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "proto/LinStorMapEntry.proto";
+import public "proto/Vlm.proto";
+
+// linstor - StorPool
+message StorPool
+{
+    // UUID
+    optional bytes stor_pool_uuid = 1;
+
+    // UUID
+    optional bytes node_uuid = 2;
+
+    // Node name
+    required string node_name = 3;
+
+    // UUID
+    optional bytes stor_pool_dfn_uuid = 4;
+
+    // Storage pool name
+    required string stor_pool_name = 5;
+
+    // Driver name
+    required string driver = 6;
+
+    // Storage pool properties map
+    repeated LinStorMapEntry props = 7;
+
+    // Volumes
+    repeated Vlm vlms = 8;
+}
