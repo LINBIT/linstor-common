@@ -19,9 +19,12 @@ message RscDfn
     // Secret
     optional string rsc_secret = 4;
 
+    // Resource flags
+    optional sint64 rsc_flags = 5;
+
     // Resource properties map
-    repeated LinStorMapEntry rsc_props = 5;
+    repeated LinStorMapEntry rsc_props = 6;
 
     // Volume definitions list
-    repeated VlmDfn vlm_dfns = 6;
+    repeated VlmDfn vlm_dfns = 7;
 }
