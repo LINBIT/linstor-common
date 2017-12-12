@@ -1,0 +1,30 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "proto/LinStorMapEntry.proto";
+import public "proto/Vlm.proto";
+
+// linstor - Resource
+message Rsc
+{
+    // UUID
+    optional bytes uuid = 1;
+
+    // Resource name
+    required string name = 2;
+
+    // Node uuid
+    optional bytes node_uuid = 3;
+
+    // Node name
+    required string node_name = 4;
+
+    // Resource definition uuid
+    optional bytes rsc_dfn_uuid = 5;
+
+    // Resource properties map
+    repeated LinStorMapEntry props = 6;
+
+    // Volume
+    repeated Vlm vlms = 7;
+}
