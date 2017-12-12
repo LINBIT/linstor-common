@@ -2,6 +2,7 @@ syntax = "proto2";
 
 package com.linbit.linstor.proto;
 import public "proto/LinStorMapEntry.proto";
+import public "proto/NetInterface.proto";
 
 message Node {
     // UUID
@@ -15,4 +16,7 @@ message Node {
 
     // Node properties map
     repeated LinStorMapEntry props = 4;
+
+    // NetInterfaces
+    repeated NetInterface net_interfaces = 5;
 }

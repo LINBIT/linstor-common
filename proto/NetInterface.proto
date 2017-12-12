@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - NetInterface
+message NetInterface
+{
+	// UUID
+	optional bytes uuid = 1;
+
+	// NetInterface name
+	required string name = 2;
+
+	// Address
+	required string address = 3;
+
+	// Port number
+	required uint32 port = 4;
+
+	// type
+	required string type = 5;
+}
