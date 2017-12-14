@@ -13,10 +13,4 @@ message NetInterface
 
 	// Address
 	required string address = 3;
-
-	// Port number
-	required uint32 port = 4;
-
-	// type
-	required string type = 5;
 }

@@ -24,4 +24,7 @@ message MsgCrtRscDfn
 
     // Volume definitions list
     repeated VlmDfn vlm_dfns = 6;
+
+    // TransportType, defaults to IP
+    optional string rsc_transport_type = 7;
 }

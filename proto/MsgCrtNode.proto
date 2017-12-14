@@ -2,19 +2,11 @@ syntax = "proto2";
 
 package com.linbit.linstor.proto;
 import public "proto/LinStorMapEntry.proto";
+import "proto/Node.proto";
 
 // linstor - Create node
 message MsgCrtNode
 {
-    // UUID
-    optional string node_uuid = 1;
-
-    // Node name
-    required string node_name = 2;
-
-    // Node type
-    required string node_type = 3;
-
-    // Node properties map
-    repeated LinStorMapEntry node_props = 4;
+    // Node
+    required Node node = 1;
 }

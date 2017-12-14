@@ -46,6 +46,9 @@ message MsgIntRscData
 
     // List of nodes (including node-specific resource configuration)
     repeated MsgIntOtherRscData       other_resources   = 13;
+
+    // Resource definition transport type (IP, RDMA, RoCE)
+    string                            rsc_dfn_transport_type = 14;
 }
 
 message MsgIntOtherRscData
