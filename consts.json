@@ -550,6 +550,13 @@
                 "java": "long"
         },
         {
+                "name": "FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": [605, "MASK_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "blockcomment": "Codes 700-799: uuid mismatch failures"
         },
         {
@@ -1073,6 +1080,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_NODE_CRT_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_NODE", "MASK_CRT", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_NODE_CRT_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_NODE", "MASK_CRT", "FAIL_UUID_NODE"],
@@ -1577,6 +1591,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_NODE_MOD_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_NODE", "MASK_MOD", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_NODE_MOD_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_NODE", "MASK_MOD", "FAIL_UUID_NODE"],
@@ -2077,6 +2098,13 @@
                 "name": "RC_NODE_DEL_FAIL_MISSING_PROPS_NETIF_NAME",
                 "type": "BOR",
                 "value": ["MASK_NODE", "MASK_DEL", "FAIL_MISSING_PROPS_NETIF_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_NODE_DEL_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_NODE", "MASK_DEL", "FAIL_MISSING_STLT_CONN"],
                 "py": "long",
                 "java": "long"
         },
@@ -2595,6 +2623,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_RSC_DFN_CRT_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_RSC_DFN", "MASK_CRT", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_RSC_DFN_CRT_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_RSC_DFN", "MASK_CRT", "FAIL_UUID_NODE"],
@@ -3099,6 +3134,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_RSC_DFN_MOD_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_RSC_DFN", "MASK_MOD", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_RSC_DFN_MOD_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_RSC_DFN", "MASK_MOD", "FAIL_UUID_NODE"],
@@ -3599,6 +3641,13 @@
                 "name": "RC_RSC_DFN_DEL_FAIL_MISSING_PROPS_NETIF_NAME",
                 "type": "BOR",
                 "value": ["MASK_RSC_DFN", "MASK_DEL", "FAIL_MISSING_PROPS_NETIF_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_RSC_DFN_DEL_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_RSC_DFN", "MASK_DEL", "FAIL_MISSING_STLT_CONN"],
                 "py": "long",
                 "java": "long"
         },
@@ -4117,6 +4166,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_RSC_CRT_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_RSC", "MASK_CRT", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_RSC_CRT_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_RSC", "MASK_CRT", "FAIL_UUID_NODE"],
@@ -4621,6 +4677,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_RSC_MOD_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_RSC", "MASK_MOD", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_RSC_MOD_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_RSC", "MASK_MOD", "FAIL_UUID_NODE"],
@@ -5121,6 +5184,13 @@
                 "name": "RC_RSC_DEL_FAIL_MISSING_PROPS_NETIF_NAME",
                 "type": "BOR",
                 "value": ["MASK_RSC", "MASK_DEL", "FAIL_MISSING_PROPS_NETIF_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_RSC_DEL_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_RSC", "MASK_DEL", "FAIL_MISSING_STLT_CONN"],
                 "py": "long",
                 "java": "long"
         },
@@ -5639,6 +5709,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_VLM_DFN_CRT_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "MASK_CRT", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_VLM_DFN_CRT_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_VLM_DFN", "MASK_CRT", "FAIL_UUID_NODE"],
@@ -6143,6 +6220,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_VLM_DFN_MOD_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "MASK_MOD", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_VLM_DFN_MOD_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_VLM_DFN", "MASK_MOD", "FAIL_UUID_NODE"],
@@ -6643,6 +6727,13 @@
                 "name": "RC_VLM_DFN_DEL_FAIL_MISSING_PROPS_NETIF_NAME",
                 "type": "BOR",
                 "value": ["MASK_VLM_DFN", "MASK_DEL", "FAIL_MISSING_PROPS_NETIF_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_VLM_DFN_DEL_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_VLM_DFN", "MASK_DEL", "FAIL_MISSING_STLT_CONN"],
                 "py": "long",
                 "java": "long"
         },
@@ -7161,6 +7252,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_VLM_CRT_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_VLM", "MASK_CRT", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_VLM_CRT_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_VLM", "MASK_CRT", "FAIL_UUID_NODE"],
@@ -7665,6 +7763,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_VLM_MOD_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_VLM", "MASK_MOD", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_VLM_MOD_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_VLM", "MASK_MOD", "FAIL_UUID_NODE"],
@@ -8165,6 +8270,13 @@
                 "name": "RC_VLM_DEL_FAIL_MISSING_PROPS_NETIF_NAME",
                 "type": "BOR",
                 "value": ["MASK_VLM", "MASK_DEL", "FAIL_MISSING_PROPS_NETIF_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_VLM_DEL_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_VLM", "MASK_DEL", "FAIL_MISSING_STLT_CONN"],
                 "py": "long",
                 "java": "long"
         },
@@ -8683,6 +8795,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_NODE_CONN_CRT_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_NODE_CONN", "MASK_CRT", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_NODE_CONN_CRT_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_NODE_CONN", "MASK_CRT", "FAIL_UUID_NODE"],
@@ -9187,6 +9306,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_NODE_CONN_MOD_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_NODE_CONN", "MASK_MOD", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_NODE_CONN_MOD_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_NODE_CONN", "MASK_MOD", "FAIL_UUID_NODE"],
@@ -9687,6 +9813,13 @@
                 "name": "RC_NODE_CONN_DEL_FAIL_MISSING_PROPS_NETIF_NAME",
                 "type": "BOR",
                 "value": ["MASK_NODE_CONN", "MASK_DEL", "FAIL_MISSING_PROPS_NETIF_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_NODE_CONN_DEL_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_NODE_CONN", "MASK_DEL", "FAIL_MISSING_STLT_CONN"],
                 "py": "long",
                 "java": "long"
         },
@@ -10205,6 +10338,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_RSC_CONN_CRT_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_RSC_CONN", "MASK_CRT", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_RSC_CONN_CRT_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_RSC_CONN", "MASK_CRT", "FAIL_UUID_NODE"],
@@ -10709,6 +10849,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_RSC_CONN_MOD_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_RSC_CONN", "MASK_MOD", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_RSC_CONN_MOD_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_RSC_CONN", "MASK_MOD", "FAIL_UUID_NODE"],
@@ -11209,6 +11356,13 @@
                 "name": "RC_RSC_CONN_DEL_FAIL_MISSING_PROPS_NETIF_NAME",
                 "type": "BOR",
                 "value": ["MASK_RSC_CONN", "MASK_DEL", "FAIL_MISSING_PROPS_NETIF_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_RSC_CONN_DEL_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_RSC_CONN", "MASK_DEL", "FAIL_MISSING_STLT_CONN"],
                 "py": "long",
                 "java": "long"
         },
@@ -11727,6 +11881,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_VLM_CONN_CRT_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_VLM_CONN", "MASK_CRT", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_VLM_CONN_CRT_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_VLM_CONN", "MASK_CRT", "FAIL_UUID_NODE"],
@@ -12231,6 +12392,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_VLM_CONN_MOD_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_VLM_CONN", "MASK_MOD", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_VLM_CONN_MOD_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_VLM_CONN", "MASK_MOD", "FAIL_UUID_NODE"],
@@ -12731,6 +12899,13 @@
                 "name": "RC_VLM_CONN_DEL_FAIL_MISSING_PROPS_NETIF_NAME",
                 "type": "BOR",
                 "value": ["MASK_VLM_CONN", "MASK_DEL", "FAIL_MISSING_PROPS_NETIF_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_VLM_CONN_DEL_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_VLM_CONN", "MASK_DEL", "FAIL_MISSING_STLT_CONN"],
                 "py": "long",
                 "java": "long"
         },
@@ -13249,6 +13424,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_NET_IF_CRT_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_NET_IF", "MASK_CRT", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_NET_IF_CRT_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_NET_IF", "MASK_CRT", "FAIL_UUID_NODE"],
@@ -13753,6 +13935,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_NET_IF_MOD_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_NET_IF", "MASK_MOD", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_NET_IF_MOD_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_NET_IF", "MASK_MOD", "FAIL_UUID_NODE"],
@@ -14253,6 +14442,13 @@
                 "name": "RC_NET_IF_DEL_FAIL_MISSING_PROPS_NETIF_NAME",
                 "type": "BOR",
                 "value": ["MASK_NET_IF", "MASK_DEL", "FAIL_MISSING_PROPS_NETIF_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_NET_IF_DEL_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_NET_IF", "MASK_DEL", "FAIL_MISSING_STLT_CONN"],
                 "py": "long",
                 "java": "long"
         },
@@ -14771,6 +14967,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_STOR_POOL_DFN_CRT_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_STOR_POOL_DFN", "MASK_CRT", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_STOR_POOL_DFN_CRT_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_STOR_POOL_DFN", "MASK_CRT", "FAIL_UUID_NODE"],
@@ -15275,6 +15478,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_STOR_POOL_DFN_MOD_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_STOR_POOL_DFN", "MASK_MOD", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_STOR_POOL_DFN_MOD_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_STOR_POOL_DFN", "MASK_MOD", "FAIL_UUID_NODE"],
@@ -15775,6 +15985,13 @@
                 "name": "RC_STOR_POOL_DFN_DEL_FAIL_MISSING_PROPS_NETIF_NAME",
                 "type": "BOR",
                 "value": ["MASK_STOR_POOL_DFN", "MASK_DEL", "FAIL_MISSING_PROPS_NETIF_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_STOR_POOL_DFN_DEL_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_STOR_POOL_DFN", "MASK_DEL", "FAIL_MISSING_STLT_CONN"],
                 "py": "long",
                 "java": "long"
         },
@@ -16293,6 +16510,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_STOR_POOL_CRT_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_STOR_POOL", "MASK_CRT", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_STOR_POOL_CRT_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_STOR_POOL", "MASK_CRT", "FAIL_UUID_NODE"],
@@ -16797,6 +17021,13 @@
                 "java": "long"
         },
         {
+                "name": "RC_STOR_POOL_MOD_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_STOR_POOL", "MASK_MOD", "FAIL_MISSING_STLT_CONN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "RC_STOR_POOL_MOD_FAIL_UUID_NODE",
                 "type": "BOR",
                 "value": ["MASK_STOR_POOL", "MASK_MOD", "FAIL_UUID_NODE"],
@@ -17297,6 +17528,13 @@
                 "name": "RC_STOR_POOL_DEL_FAIL_MISSING_PROPS_NETIF_NAME",
                 "type": "BOR",
                 "value": ["MASK_STOR_POOL", "MASK_DEL", "FAIL_MISSING_PROPS_NETIF_NAME"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "RC_STOR_POOL_DEL_FAIL_MISSING_STLT_CONN",
+                "type": "BOR",
+                "value": ["MASK_STOR_POOL", "MASK_DEL", "FAIL_MISSING_STLT_CONN"],
                 "py": "long",
                 "java": "long"
         },
