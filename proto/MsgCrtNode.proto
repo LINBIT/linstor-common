@@ -3,10 +3,14 @@ syntax = "proto2";
 package com.linbit.linstor.proto;
 import public "proto/LinStorMapEntry.proto";
 import "proto/Node.proto";
+import "proto/SatelliteConnection.proto";
 
 // linstor - Create node
 message MsgCrtNode
 {
     // Node
     required Node node = 1;
+
+    // Satellite connections (currently only the first is used)
+    repeated SatelliteConnection satellite_connections = 2;
 }

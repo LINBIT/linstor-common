@@ -2,6 +2,7 @@ syntax = "proto2";
 
 package com.linbit.linstor.proto;
 import public "proto/LinStorMapEntry.proto";
+import public "proto/Node.proto";
 
 // linstor - Modify node
 message MsgModNode

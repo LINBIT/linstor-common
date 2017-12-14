@@ -4,7 +4,8 @@ package com.linbit.linstor.proto;
 import public "proto/LinStorMapEntry.proto";
 import public "proto/NetInterface.proto";
 
-message Node {
+message Node
+{
     // UUID
     optional string uuid = 1;
 
