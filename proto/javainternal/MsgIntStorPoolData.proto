@@ -7,13 +7,13 @@ import public "proto/LinStorMapEntry.proto";
 message MsgIntStorPoolData
 {
     // Stor pool uuid
-    bytes stor_pool_uuid = 1;
+    string stor_pool_uuid = 1;
 
     // Node uuid - this has to be the satellite's local node, just for double-checking
-    bytes node_uuid = 2;
+    string node_uuid = 2;
 
     // Stor pool definition uuid
-    bytes stor_pool_dfn_uuid = 4;
+    string stor_pool_dfn_uuid = 4;
 
     // Storage pool name
     string stor_pool_name = 5;

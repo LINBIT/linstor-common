@@ -9,16 +9,16 @@ import public "proto/Vlm.proto";
 message MsgCrtRsc
 {
     // UUID
-    optional bytes rsc_uuid = 1;
+    optional string rsc_uuid = 1;
 
     // Node uuid
-    optional bytes node_uuid = 2;
+    optional string node_uuid = 2;
 
     // Node name
     required string node_name = 3;
 
     // Resource definition uuid
-    optional bytes rsc_dfn_uuid = 4;
+    optional string rsc_dfn_uuid = 4;
 
     // Resource name
     required string rsc_name = 5;

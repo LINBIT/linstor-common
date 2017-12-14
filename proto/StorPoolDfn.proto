@@ -7,7 +7,7 @@ import public "proto/LinStorMapEntry.proto";
 message StorPoolDfn
 {
     // UUID
-    optional bytes uuid = 1;
+    optional string uuid = 1;
 
     // Storage pool name
     required string stor_pool_name = 2;

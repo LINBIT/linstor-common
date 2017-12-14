@@ -8,19 +8,19 @@ import public "proto/Vlm.proto";
 message Rsc
 {
     // UUID
-    optional bytes uuid = 1;
+    optional string uuid = 1;
 
     // Resource name
     required string name = 2;
 
     // Node uuid
-    optional bytes node_uuid = 3;
+    optional string node_uuid = 3;
 
     // Node name
     required string node_name = 4;
 
     // Resource definition uuid
-    optional bytes rsc_dfn_uuid = 5;
+    optional string rsc_dfn_uuid = 5;
 
     // Resource properties map
     repeated LinStorMapEntry props = 6;

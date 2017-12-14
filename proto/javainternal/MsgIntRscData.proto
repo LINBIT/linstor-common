@@ -12,7 +12,7 @@ message MsgIntRscData
     string                            rsc_name          = 1;
 
     // Resource definition uuid
-    bytes                             rsc_dfn_uuid      = 2;
+    string                            rsc_dfn_uuid      = 2;
 
     // Resource definition port
     sint32                            rsc_dfn_port      = 3;
@@ -27,7 +27,7 @@ message MsgIntRscData
     repeated LinStorMapEntry          rsc_dfn_props     = 6;
 
     // Resource uuid
-    bytes                             local_rsc_uuid    = 7;
+    string                            local_rsc_uuid    = 7;
 
     // Resource flags
     sint64                            local_rsc_flags   = 8;
@@ -54,7 +54,7 @@ message MsgIntOtherRscData
     string                   node_name   = 1;
 
     // Node uuid
-    bytes                    node_uuid   = 2;
+    string                   node_uuid   = 2;
 
     // Node type
     sint64                   node_type   = 3;
@@ -66,7 +66,7 @@ message MsgIntOtherRscData
     repeated LinStorMapEntry node_props  = 5;
 
     // Resource uuid
-    bytes                    rsc_uuid    = 6;
+    string                   rsc_uuid    = 6;
 
     // Resource node id
     sint32                   rsc_node_id = 7;

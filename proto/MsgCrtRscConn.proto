@@ -7,7 +7,7 @@ import public "proto/LinStorMapEntry.proto";
 message MsgCrtRscConn
 {
     // UUID
-    optional bytes rsc_conn_uuid = 1;
+    optional string rsc_conn_uuid = 1;
 
     // Node 1 name
     required string node_name_1 = 2;
@@ -19,10 +19,10 @@ message MsgCrtRscConn
     required string rsc_name = 4;
 
     // Resource 1 uuid
-    optional bytes rsc_1_uuid = 5;
+    optional string rsc_1_uuid = 5;
 
     // Resource 2 uuid
-    optional bytes rsc_2_uuid = 6;
+    optional string rsc_2_uuid = 6;
 
     // Resource connection properties map
     repeated LinStorMapEntry rsc_conn_props = 7;

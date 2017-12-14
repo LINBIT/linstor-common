@@ -8,7 +8,7 @@ import public "proto/VlmDfn.proto";
 message MsgCrtRscDfn
 {
     // UUID
-    optional bytes rsc_dfn_uuid = 1;
+    optional string rsc_dfn_uuid = 1;
 
     // Resource name
     required string rsc_name = 2;

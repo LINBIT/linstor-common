@@ -6,7 +6,7 @@ package com.linbit.linstor.proto;
 message MsgDelNode
 {
     // UUID
-    optional bytes uuid = 1;
+    optional string uuid = 1;
 
     // Node name
     required string node_name = 2;

@@ -6,7 +6,7 @@ package com.linbit.linstor.proto;
 message MsgDelRscConn
 {
     // UUID
-    optional bytes uuid = 1;
+    optional string uuid = 1;
 
     // Node 1 name
     required string node_name_1 = 2;

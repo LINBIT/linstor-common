@@ -6,7 +6,7 @@ import public "proto/NetInterface.proto";
 
 message Node {
     // UUID
-    optional bytes uuid = 1;
+    optional string uuid = 1;
 
     // Node name
     required string name = 2;

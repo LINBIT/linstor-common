@@ -6,7 +6,7 @@ package com.linbit.linstor.proto.javainternal;
 message MsgIntAuth
 {
     // Satellite's node uuid
-    bytes  node_uuid     = 1;
+    string  node_uuid     = 1;
 
     // Satellite's node name
     string node_name     = 2;

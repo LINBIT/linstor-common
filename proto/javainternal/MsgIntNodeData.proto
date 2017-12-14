@@ -7,7 +7,7 @@ import public "proto/LinStorMapEntry.proto";
 message MsgIntNodeData
 {
     // Node uuid
-    bytes                       node_uuid = 1;
+    string                      node_uuid = 1;
 
     // Node name
     string                      node_name = 2;
@@ -31,7 +31,7 @@ message MsgIntNodeData
 message NetIf
 {
     // Netif uuid
-    bytes   net_if_uuid = 1;
+    string  net_if_uuid = 1;
 
     // Netif name
     string  net_if_name = 2;
@@ -49,7 +49,7 @@ message NetIf
 message NodeConn
 {
     // Other node's uuid
-    bytes                       other_node_uuid = 1;
+    string                      other_node_uuid = 1;
 
     // Other node's name
     string                      other_node_name = 2;
@@ -61,7 +61,7 @@ message NodeConn
     sint64                      other_node_flags = 4;
 
     // Node connection's uuid
-    bytes                       node_conn_uuid = 5;
+    string                      node_conn_uuid = 5;
 
     // Node connection properties
     repeated LinStorMapEntry    node_conn_props = 6;

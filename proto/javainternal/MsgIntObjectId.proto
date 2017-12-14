@@ -9,5 +9,5 @@ message MsgIntObjectId
     string name = 1;
 
     // UUID
-    bytes  uuid = 2;
+    string uuid = 2;
 }

@@ -7,10 +7,10 @@ import public "proto/LinStorMapEntry.proto";
 message Vlm
 {
     // UUID
-    optional bytes vlm_uuid = 1;
+    optional string vlm_uuid = 1;
 
     // Volume definition uuid
-    optional bytes vlm_dfn_uuid = 2;
+    optional string vlm_dfn_uuid = 2;
 
     // Volume number
     required sint32 vlm_nr = 3;
@@ -22,7 +22,7 @@ message Vlm
     optional string meta_disk = 5;
 
     // Storage pool uuid
-    optional bytes stor_pool_uuid = 6;
+    optional string stor_pool_uuid = 6;
 
     // Storage pool name
     // if null: vlmDfn, rsc and node are asked for default (in this order)

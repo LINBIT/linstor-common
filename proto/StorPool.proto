@@ -8,16 +8,16 @@ import public "proto/Vlm.proto";
 message StorPool
 {
     // UUID
-    optional bytes stor_pool_uuid = 1;
+    optional string stor_pool_uuid = 1;
 
     // UUID
-    optional bytes node_uuid = 2;
+    optional string node_uuid = 2;
 
     // Node name
     required string node_name = 3;
 
     // UUID
-    optional bytes stor_pool_dfn_uuid = 4;
+    optional string stor_pool_dfn_uuid = 4;
 
     // Storage pool name
     required string stor_pool_name = 5;

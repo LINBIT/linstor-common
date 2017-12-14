@@ -8,7 +8,7 @@ import public "proto/LinStorMapEntry.proto";
 message VlmDfn
 {
     // UUID
-    optional bytes vlm_dfn_uuid = 1;
+    optional string vlm_dfn_uuid = 1;
 
     // Volume number
     // null for automatic assignment
