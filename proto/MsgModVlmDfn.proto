@@ -1,0 +1,29 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "proto/LinStorMapEntry.proto";
+
+// linstor - Modify volume definition
+message MsgModVlmDfn
+{
+    // UUID
+    optional string vlm_dfn_uuid = 1;
+
+    // Resource name
+    required string rsc_name = 2;
+
+    // Volume number
+    required sint32 vlm_nr  = 3;
+
+    // Minor number
+    optional sint32 vlm_minor = 4;
+    
+    // Volume size
+    optional int64  vlm_size = 5;
+
+    // Volume definition properties map
+    repeated LinStorMapEntry override_props = 6;
+    
+    // Volume definition property keys to delete
+    repeated string delete_prop_keys = 7;
+}

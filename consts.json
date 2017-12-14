@@ -17765,8 +17765,20 @@
                 "java": "String"
         },
         {
+                "name": "API_MOD_NODE_CONN",
+                "value": "ModNodeConn",
+                "py": "str",
+                "java": "String"
+        },
+        {
                 "name": "API_MOD_RSC",
                 "value": "ModRsc",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_MOD_RSC_CONN",
+                "value": "ModRscConn",
                 "py": "str",
                 "java": "String"
         },
@@ -17783,8 +17795,32 @@
                 "java": "String"
         },
         {
+                "name": "API_MOD_STOR_POOL",
+                "value": "ModStorPool",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_MOD_STOR_POOL_DFN",
+                "value": "ModStorPoolDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
                 "name": "API_MOD_VLM_DFN",
                 "value": "ModVlmDfn",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_MOD_VLM",
+                "value": "ModVlm",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_MOD_VLM_CONN",
+                "value": "ModVlmConn",
                 "py": "str",
                 "java": "String"
         },

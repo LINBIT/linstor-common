@@ -1,0 +1,29 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "proto/LinStorMapEntry.proto";
+
+// linstor - Modify volume connection
+message MsgModVlmConn
+{
+    // UUID
+    optional string vlm_conn_uuid = 1;
+
+    // Node 1 name
+    required string node_1_name = 2;
+
+    // Node 2 name
+    required string node_2_name = 3;
+    
+    // Resource name
+    required string rsc_name = 4;
+    
+    // Volume number
+    required sint32 vlm_nr = 5;
+
+    // Volume connection properties map
+    repeated LinStorMapEntry override_props = 6;
+    
+    // Volume connection property keys to delete
+    repeated string delete_prop_keys = 7;
+}
