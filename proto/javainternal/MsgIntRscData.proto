@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package com.linbit.linstor.proto.javainternal;
 import "proto/LinStorMapEntry.proto";
+import "proto/Node.proto";
 import "proto/VlmDfn.proto";
 import "proto/Vlm.proto";
 
@@ -53,20 +54,11 @@ message MsgIntRscData
 
 message MsgIntOtherRscData
 {
-    // Node name
-    string                   node_name   = 1;
-
-    // Node uuid
-    string                   node_uuid   = 2;
-
-    // Node type
-    sint64                   node_type   = 3;
+    // Node (except flags)
+    Node                     node        = 1;
 
     // Node flags
     sint64                   node_flags  = 4;
-
-    // Resource properties map
-    repeated LinStorMapEntry node_props  = 5;
 
     // Resource uuid
     string                   rsc_uuid    = 6;
