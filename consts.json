@@ -18266,6 +18266,27 @@
                 "java": "String"
         },
         {
+                "blockcomment": "Storage pool property keys"
+        },
+        {
+                "name": "KEY_STOR_POOL_VOLUME_GROUP",
+                "value": "LvmVg",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_STOR_POOL_THIN_POOL",
+                "value": "ThinPool",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "KEY_STOR_POOL_ZPOOL",
+                "value": "ZPool",
+                "py": "str",
+                "java": "String"
+        },
+        {
                 "blockcomment": "Property keys"
         },
         {
