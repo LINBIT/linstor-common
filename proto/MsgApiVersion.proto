@@ -8,4 +8,5 @@ message MsgApiVersion
     required uint64 min = 1;
     required uint64 max = 2;
     required uint64 features = 3;
+    optional string current_controller = 4;
 }
