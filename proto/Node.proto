@@ -18,6 +18,9 @@ message Node
     // Node properties map
     repeated LinStorMapEntry props = 4;
 
+    // Node flags
+    optional sint64 flags = 5;
+
     // NetInterfaces
-    repeated NetInterface net_interfaces = 5;
+    repeated NetInterface net_interfaces = 6;
 }
