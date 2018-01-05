@@ -22,7 +22,7 @@ message VlmDfn
     optional sint32 vlm_minor = 4;
 
     // Volume flags
-    optional sint64 vlm_flags = 5;
+    repeated string vlm_flags = 5;
 
     // Volume definition properties map
     repeated LinStorMapEntry vlm_props = 6;

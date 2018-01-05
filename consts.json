@@ -18504,5 +18504,32 @@
                 "value": "False",
                 "py": "str",
                 "java": "String"
+        },
+        {
+                "blockcomment": "Flag string values"
+        },
+        {
+                "name": "FLAG_CLEAN",
+                "value": "CLEAN",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "FLAG_DELETE",
+                "value": "DELETE",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "FLAG_DISKLESS",
+                "value": "DISKLESS",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "FLAG_QIGNORE",
+                "value": "QIGNORE",
+                "py": "str",
+                "java": "String"
         }
 ]

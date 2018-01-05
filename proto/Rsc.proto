@@ -26,7 +26,7 @@ message Rsc
     repeated LinStorMapEntry props = 6;
 
     // Resource flags
-    optional sint64 rsc_flags = 7;
+    repeated string rsc_flags = 7;
 
     // Volume
     repeated Vlm vlms = 8;

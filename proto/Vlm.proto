@@ -29,7 +29,7 @@ message Vlm
     optional string stor_pool_name = 7;
 
     // Volume flags
-    optional sint64 vlm_flags = 8;
+    repeated string vlm_flags = 8;
 
     // Volume properties map
     repeated LinStorMapEntry vlm_props = 9;
