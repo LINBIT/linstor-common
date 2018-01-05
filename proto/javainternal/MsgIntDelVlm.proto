@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.linbit.linstor.proto.javainternal;
+
+// linstor - volume deleted notification message
+message MsgDelVlm
+{
+	string node_name = 1;
+	string rsc_name = 2;
+	sint32 vlm_nr = 3;
+}
