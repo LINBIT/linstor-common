@@ -23,4 +23,7 @@ message Node
 
     // NetInterfaces
     repeated NetInterface net_interfaces = 6;
+
+    // Node connected
+    optional bool connected = 7;
 }
