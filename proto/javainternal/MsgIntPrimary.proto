@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package com.linbit.linstor.proto.javainternal;
+
+// LinStor - Internal message requesting primary state for resource
+message MsgIntPrimary
+{
+    // Resource name
+    string rsc_name = 1;
+
+    // Resource uuid
+    string rsc_uuid = 2;
+}
