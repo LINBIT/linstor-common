@@ -39,10 +39,10 @@ def get_type(e):
 def java(consts):
     indent = ' ' * 4
 
-    print '/*\n * %s\n * %s */\n' % (hdr, ' * '.join([l.strip()+'\n' for l in license.split('\n')]))
+    print('/*\n * %s\n * %s */\n' % (hdr, ' * '.join([l.strip()+'\n' for l in license.split('\n')])))
 
-    print 'package com.linbit.linstor.api;\n'
-    print 'public class ApiConsts\n{'
+    print('package com.linbit.linstor.api;\n')
+    print('public class ApiConsts\n{')
 
     nl, w = '', 0
     for e in consts:
@@ -51,7 +51,7 @@ def java(consts):
 
         if 'blockcomment' in e:
             c = e['blockcomment'].replace('\n', '\n'+indent+' * ')
-            print '%s%s/*\n %s* %s\n %s*/' % (nl, indent, indent, c, indent)
+            print('%s%s/*\n %s* %s\n %s*/' % (nl, indent, indent, c, indent))
             continue
 
         gtype = get_type(e)
@@ -71,10 +71,10 @@ def java(consts):
         c = "%spublic static final %s %s = %s;" % (indent, e['java'], e['name'], value)
         if 'comment' in e:
             c += " // %s" % (e['comment'])
-        print c
+        print(c)
 
-    print '\n    private ApiConsts()\n    {\n    }'
-    print '}'
+    print('\n    private ApiConsts()\n    {\n    }')
+    print('}')
 
 
 def python(consts):
@@ -92,7 +92,7 @@ if sys.version_info > (3,):
 
         if 'blockcomment' in e:
             c = e['blockcomment'].replace('\n', '\n# ')
-            print '%s# ## %s ###' % (nl, c)
+            print('%s# ## %s ###' % (nl, c))
             continue
 
         gtype = get_type(e)
@@ -113,7 +113,7 @@ if sys.version_info > (3,):
         c = "%s = %s(%s)" % (e['name'], e['py'], value)
         if 'comment' in e:
             c += "  # %s" % (e['comment'])
-        print c
+        print(c)
 
 
 if len(sys.argv) != 2:
