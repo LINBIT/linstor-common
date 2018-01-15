@@ -77,9 +77,13 @@ def java(consts):
     print '}'
 
 
-def python(consts, vers=2):
-    print '# %s\n' % (hdr),
-    print '# '.join([l.strip()+'\n' for l in license.split('\n')])
+def python(consts):
+    print('# %s\n' % (hdr))
+    print('# '.join([l.strip()+'\n' for l in license.split('\n')]))
+    print("""import sys
+if sys.version_info > (3,):
+    long = int
+""")
 
     nl, w = '', 0
     for e in consts:
@@ -94,8 +98,7 @@ def python(consts, vers=2):
         gtype = get_type(e)
         value = e['value']
 
-        if vers == 3 and gtype is None and e['py'] == 'long':
-            e['py'] = ''
+        if e['py'] == 'long':
             value = value[:-1] if str(value).endswith('L') else value
 
         if gtype:
@@ -131,8 +134,6 @@ with open(f) as consts_file:
         java(consts)
     elif language == 'python':
         python(consts)
-    elif language == 'python3':
-        python(consts, vers=3)
     else:
         sys.stderr.write("Language '%s' not valid, valid languages are: %s\n" % (language, ','.join(langs)))
         sys.exit(1)
