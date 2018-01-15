@@ -569,77 +569,77 @@
         {
                 "name": "FAIL_UUID_NODE",
                 "type": "BOR",
-                "value": [600, "MASK_ERROR"],
+                "value": [700, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "FAIL_UUID_RSC_DFN",
                 "type": "BOR",
-                "value": [601, "MASK_ERROR"],
+                "value": [701, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "FAIL_UUID_RSC",
                 "type": "BOR",
-                "value": [602, "MASK_ERROR"],
+                "value": [702, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "FAIL_UUID_VLM_DFN",
                 "type": "BOR",
-                "value": [603, "MASK_ERROR"],
+                "value": [703, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "FAIL_UUID_VLM",
                 "type": "BOR",
-                "value": [604, "MASK_ERROR"],
+                "value": [704, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "FAIL_UUID_NET_IF",
                 "type": "BOR",
-                "value": [605, "MASK_ERROR"],
+                "value": [705, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "FAIL_UUID_NODE_CONN",
                 "type": "BOR",
-                "value": [606, "MASK_ERROR"],
+                "value": [706, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "FAIL_UUID_RSC_CONN",
                 "type": "BOR",
-                "value": [607, "MASK_ERROR"],
+                "value": [707, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "FAIL_UUID_VLM_CONN",
                 "type": "BOR",
-                "value": [608, "MASK_ERROR"],
+                "value": [708, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "FAIL_UUID_STOR_POOL_DFN",
                 "type": "BOR",
-                "value": [609, "MASK_ERROR"],
+                "value": [709, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
         {
                 "name": "FAIL_UUID_STOR_POOL",
                 "type": "BOR",
-                "value": [610, "MASK_ERROR"],
+                "value": [710, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
