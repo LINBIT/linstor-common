@@ -7,7 +7,7 @@ import public "proto/LinStorMapEntry.proto";
 message MsgApiCallResponse
 {
     // return code (see ApiCallRcConstants)
-    required sint64 ret_code = 1;
+    required uint64 ret_code = 1;
 
     // object references
     repeated LinStorMapEntry obj_refs = 2;
