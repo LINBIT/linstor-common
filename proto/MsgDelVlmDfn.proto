@@ -7,7 +7,7 @@ import public "proto/VlmDfn.proto";
 // linstor - Delete volume definition
 message MsgDelVlmDfn
 {
-    optional string rsc_dfn_uuid = 1;
+    optional string vlm_dfn_uuid = 1;
 
     // Resource name
     required string rsc_name = 2;
