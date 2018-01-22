@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+message VlmState
+{
+    required sint32 vlm_nr = 1;
+    required sint32 vlm_minor_nr = 2;
+
+    required bool is_present = 3;
+    required bool has_disk = 4;
+    required bool has_meta_data = 5;
+    required bool check_meta_data = 6;
+    required bool disk_failed = 7;
+    required uint64 net_size = 8;
+    required uint64 gross_size = 9;
+}
