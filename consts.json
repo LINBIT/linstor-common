@@ -1353,6 +1353,12 @@
                 "java": "String"
         },
         {
+                "name": "KEY_STOR_POOL_DISKLESS",
+                "value": "Diskless",
+                "py": "str",
+                "java": "String"
+        },
+        {
                 "blockcomment": "Property keys"
         },
         {
