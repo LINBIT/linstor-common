@@ -77,6 +77,10 @@ def java(consts):
     print('}')
 
 
+def strip_L(value):
+    return value[:-1] if str(value).endswith('L') else value
+
+
 def python(consts):
     print('# %s\n' % (hdr))
     print('# '.join([l.strip()+'\n' for l in license.split('\n')]))
@@ -88,7 +92,7 @@ if sys.version_info > (3,):
     nl, w = '', 0
     for e in consts:
         w += 1
-        if w > 1: nl = '\n'
+        nl = '\n' if w > 1 else ''
 
         if 'blockcomment' in e:
             c = e['blockcomment'].replace('\n', '\n# ')
@@ -99,7 +103,10 @@ if sys.version_info > (3,):
         value = e['value']
 
         if e['py'] == 'long':
-            value = value[:-1] if str(value).endswith('L') else value
+            if isinstance(value, list):
+                value = [strip_L(x) for x in value]
+            else:
+                value = strip_L(value)
 
         if gtype:
             value = [str(x) for x in value]
