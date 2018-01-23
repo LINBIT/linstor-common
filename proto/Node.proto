@@ -26,4 +26,7 @@ message Node
 
     // Node connected
     optional bool connected = 7;
+
+    // Node's diskless stor pool uuid
+    optional string diskless_stor_pool_uuid = 8;
 }

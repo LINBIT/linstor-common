@@ -54,7 +54,7 @@ message MsgIntRscData
 
 message MsgIntOtherRscData
 {
-    // Node (except flags)
+    // Node
     Node                     node        = 1;
 
     // Node flags

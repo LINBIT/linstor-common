@@ -23,4 +23,7 @@ message NodeConn
 
     // Node connection properties map
     repeated LinStorMapEntry node_conn_props = 6;
+
+    // Node's diskless stor pool uuid
+    optional string node_diskless_stor_pool_uuid = 7;
 }

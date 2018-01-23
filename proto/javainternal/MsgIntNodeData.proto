@@ -26,6 +26,9 @@ message MsgIntNodeData
 
     // Node properties
     repeated LinStorMapEntry    node_props = 7;
+
+    // Node's diskless stor pool's uuid
+    string                      node_diskless_stor_pool_uuid = 8;
 }
 
 message NetIf
@@ -65,4 +68,7 @@ message NodeConn
 
     // Node connection properties
     repeated LinStorMapEntry    node_conn_props = 6;
+
+    // Other node's diskless stor pool's uuid
+    string                      other_node_diskless_stor_pool_uuid = 7;
 }
