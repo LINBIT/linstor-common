@@ -1,29 +1,10 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto;
-import public "proto/LinStorMapEntry.proto";
+import public "proto/StorPool.proto";
 
 // linstor - Create storage pool
 message MsgCrtStorPool
 {
-    // UUID
-    optional string stor_pool_uuid = 1;
-
-    // UUID
-    optional string node_uuid = 2;
-
-    // Node name
-    required string node_name = 3;
-
-    // UUID
-    optional string stor_pool_dfn_uuid = 4;
-
-    // Storage pool name
-    required string stor_pool_name = 5;
-
-    // Driver name
-    required string driver = 6;
-
-    // Storage pool properties map
-    repeated LinStorMapEntry stor_pool_props = 7;
+    required StorPool stor_pool = 1;
 }

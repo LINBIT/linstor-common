@@ -3,7 +3,6 @@ syntax = "proto2";
 package com.linbit.linstor.proto;
 import public "proto/LinStorMapEntry.proto";
 
-
 // linstor - Volume definition message 
 message VlmDfn
 {

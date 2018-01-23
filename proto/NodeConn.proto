@@ -1,0 +1,26 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "proto/LinStorMapEntry.proto";
+
+// linstor - Node connection
+message NodeConn
+{
+    // UUID
+    optional string node_conn_uuid = 1;
+
+    // Node 1 name
+    required string node_name_1 = 3;
+
+    // Node 1 uuid
+    optional string node_1_uuid = 2;
+
+    // Node 2 name
+    required string node_name_2 = 5;
+
+    // Node 2 uuid
+    optional string node_2_uuid = 4;
+
+    // Node connection properties map
+    repeated LinStorMapEntry node_conn_props = 6;
+}

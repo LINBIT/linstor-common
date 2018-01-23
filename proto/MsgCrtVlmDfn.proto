@@ -4,7 +4,6 @@ package com.linbit.linstor.proto;
 import public "proto/LinStorMapEntry.proto";
 import public "proto/VlmDfn.proto";
 
-
 // linstor - Create volume definition
 message MsgCrtVlmDfn
 {

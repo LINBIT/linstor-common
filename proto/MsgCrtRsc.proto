@@ -1,31 +1,10 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto;
-import public "proto/LinStorMapEntry.proto";
-import public "proto/Vlm.proto";
-
+import public "proto/Rsc.proto";
 
 // linstor - Create resource
 message MsgCrtRsc
 {
-    // UUID
-    optional string rsc_uuid = 1;
-
-    // Node uuid
-    optional string node_uuid = 2;
-
-    // Node name
-    required string node_name = 3;
-
-    // Resource definition uuid
-    optional string rsc_dfn_uuid = 4;
-
-    // Resource name
-    required string rsc_name = 5;
-
-    // Resource properties map
-    repeated LinStorMapEntry rsc_props = 6;
-
-    // Volume
-    repeated Vlm vlms = 7;
+    required Rsc rsc = 1;
 }

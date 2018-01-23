@@ -1,32 +1,10 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto;
-import public "proto/LinStorMapEntry.proto";
+import public "proto/VlmConn.proto";
 
 // linstor - Create volume connection
 message MsgCrtVlmConn
 {
-    // UUID
-    optional string vlm_conn_uuid = 1;
-
-    // Node 1 name
-    required string node_name_1 = 2;
-
-    // Node 2 name
-    required string node_name_2 = 3;
-
-    // Resource name
-    required string resource_name = 4;
-
-    // Volume number
-    required sint32 volume_nr = 5;
-
-    // Volume 1 uuid
-    optional string vlm_1_uuid = 6;
-
-    // Volume 2 uuid
-    optional string vlm_2_uuid = 7;
-
-    // Volume connection properties map
-    repeated LinStorMapEntry volume_conn_props = 8;
+    required VlmConn vlm_conn = 1;
 }
