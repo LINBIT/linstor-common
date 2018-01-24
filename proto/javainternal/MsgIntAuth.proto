@@ -14,6 +14,9 @@ message MsgIntAuth
     // Shared secret
     bytes  shared_secret = 3;
 
+    // Satellite node diskless stor pool definition's uuid
+    string node_diskless_stor_pool_dfn_uuid = 4;
+
     // Satellite node diskless stor pool's uuid
-    string node_diskless_stor_pool_uuid = 4;
+    string node_diskless_stor_pool_uuid = 5;
 }
