@@ -16,4 +16,7 @@ message MsgIntFullSync
 
     // Satellite specific resources (including resource definition, volume definitions and volumes)
     repeated MsgIntRscData      rscs        = 3;
+
+    // FullSync timestamp
+    sint64                      full_sync_timestamp = 4;
 }

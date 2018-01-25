@@ -50,6 +50,12 @@ message MsgIntRscData
 
     // Resource definition transport type (IP, RDMA, RoCE)
     string                            rsc_dfn_transport_type = 14;
+
+    // FullSync id
+    sint64                            full_sync_id = 15;
+    
+    // Update id
+    sint64                            update_id = 16;
 }
 
 message MsgIntOtherRscData

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package com.linbit.linstor.proto.javainternal;
+
+// linstor - expected full sync id
+message MsgIntExpectedFullSyncId
+{
+    sint64 expected_full_sync_id = 1;
+}
