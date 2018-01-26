@@ -30,4 +30,7 @@ message StorPool
 
     // Volumes
     repeated Vlm vlms = 8;
+
+    // Storage pool traits map
+    repeated LinStorMapEntry static_traits = 9;
 }

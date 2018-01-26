@@ -1386,6 +1386,15 @@
                 "java": "String"
         },
         {
+                "blockcomment": "Storage pool traits keys"
+        },
+        {
+                "name": "KEY_STOR_POOL_SUPPORTS_SNAPSHOTS",
+                "value": "SupportsSnapshots",
+                "py": "str",
+                "java": "String"
+        },
+        {
                 "blockcomment": "Property keys"
         },
         {
