@@ -713,6 +713,13 @@
                 "java": "long"
         },
         {
+                "name": "WARN_STLT_NOT_UPDATED",
+                "type": "BOR",
+                "value": [1003, "MASK_WARN"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "name": "WARN_NOT_FOUND",
                 "type": "BOR",
                 "value": [3000, "MASK_WARN"],
