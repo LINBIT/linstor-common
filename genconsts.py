@@ -39,7 +39,11 @@ def get_type(e):
 def java(consts):
     indent = ' ' * 4
 
-    print('/*\n * %s\n * %s */\n' % (hdr, ' * '.join([l.strip()+'\n' for l in license.split('\n')])))
+    license_hdr = ''
+    for l in license.split('\n'):
+        license_hdr += (' * ' + l).rstrip() + '\n'
+
+    print('/*\n * %s\n%s */\n' % (hdr, license_hdr))
 
     print('package com.linbit.linstor.api;\n')
     print('public class ApiConsts\n{')
