@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Deletes a controller config property
+message MsgDelCtrlCfgProp
+{
+    required string key = 1;
+    optional string namespace = 2;    
+}

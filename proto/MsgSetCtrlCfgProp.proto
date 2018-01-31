@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Sets a controller config property (might also override the given key)
+message MsgSetCtrlCfgProp
+{
+    required string key = 1;
+    required string value = 2;
+    optional string namespace = 3;    
+}

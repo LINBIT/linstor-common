@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Requests controller config for given properties
+message MsgReqCtrlCfgProps
+{
+    optional string key = 1;
+    optional string namespace = 2;    
+}

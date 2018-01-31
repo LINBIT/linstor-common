@@ -269,6 +269,13 @@
                 "java": "long"
         },
         {
+                "name": "FAIL_INVLD_TCP_PORT",
+                "type": "BOR",
+                "value": [215, "MASK_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -432,6 +439,13 @@
                 "name": "FAIL_ACC_DENIED_STLT_CONN",
                 "type": "BOR",
                 "value": [410, "MASK_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
+                "name": "FAIL_ACC_DENIED_CTRL_CFG",
+                "type": "BOR",
+                "value": [411, "MASK_ERROR"],
                 "py": "long",
                 "java": "long"
         },
