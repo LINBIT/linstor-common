@@ -5,8 +5,7 @@ package com.linbit.linstor.proto;
 // linstor - API Version
 message MsgApiVersion
 {
-    required uint64 min = 1;
-    required uint64 max = 2;
-    required uint64 features = 3;
-    optional string current_controller = 4;
+    required uint32 version = 1;
+    required uint64 features = 20;
+    optional string controler_info = 30;
 }
