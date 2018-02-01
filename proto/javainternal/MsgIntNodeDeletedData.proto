@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.linbit.linstor.proto.javainternal;
+
+// linstor - Internal message containing the identifier of a deleted but requested node.
+// This message is basically just to make sure the satellite deletes the node.
+message MsgIntNodeDeletedData
+{
+    // Node name
+    string node_name = 1;
+}
