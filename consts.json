@@ -1359,6 +1359,12 @@
                 "java": "String"
         },
         {
+                "name": "NAMESPC_STORAGE_DRIVER",
+                "value": "StorDriver",
+                "py": "str",
+                "java": "String"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
