@@ -17,7 +17,7 @@ message MsgModNode
     optional string node_type = 3;
 
     // Node properties map
-    repeated LinStorMapEntry override_node_props = 4;
+    repeated LinStorMapEntry override_props = 4;
     
     // Node property keys to delete
     repeated string delete_prop_keys = 5;
