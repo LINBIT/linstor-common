@@ -16,7 +16,7 @@ message MsgModRscDfn
     optional sint32 rsc_dfn_port = 3;
 
     // Resource definition properties map
-    repeated LinStorMapEntry override__props = 4;
+    repeated LinStorMapEntry override_props = 4;
 
     // Resource definition property keys to delete
     repeated string delete_prop_keys = 5;
