@@ -103,18 +103,18 @@
         },
         {
                 "name": "CREATED",
-                "type": "BOR",
-                "value": [1, "MASK_SUCCESS"]
+                "value": [1, "MASK_SUCCESS"],
+                "type": "BOR"
         },
         {
                 "name": "DELETED",
-                "type": "BOR",
-                "value": [2, "MASK_SUCCESS"]
+                "value": [2, "MASK_SUCCESS"],
+                "type": "BOR"
         },
         {
                 "name": "MODIFIED",
-                "type": "BOR",
-                "value": [3, "MASK_SUCCESS"]
+                "value": [3, "MASK_SUCCESS"],
+                "type": "BOR"
         },
         {
                 "blockcomment": "Codes 100 - 999: failures"
@@ -124,461 +124,461 @@
         },
         {
                 "name": "FAIL_SQL",
-                "type": "BOR",
-                "value": [100, "MASK_ERROR"]
+                "value": [100, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_SQL_ROLLBACK",
-                "type": "BOR",
-                "value": [101, "MASK_ERROR"]
+                "value": [101, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "blockcomment": "Codes 200-299: invalid * failures"
         },
         {
                 "name": "FAIL_INVLD_NODE_NAME",
-                "type": "BOR",
-                "value": [200, "MASK_ERROR"]
+                "value": [200, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_NODE_TYPE",
-                "type": "BOR",
-                "value": [201, "MASK_ERROR"]
+                "value": [201, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_RSC_NAME",
-                "type": "BOR",
-                "value": [202, "MASK_ERROR"]
+                "value": [202, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_RSC_PORT",
-                "type": "BOR",
-                "value": [203, "MASK_ERROR"]
+                "value": [203, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_NODE_ID",
-                "type": "BOR",
-                "value": [204, "MASK_ERROR"]
+                "value": [204, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_VLM_NR",
-                "type": "BOR",
-                "value": [205, "MASK_ERROR"]
+                "value": [205, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_VLM_SIZE",
-                "type": "BOR",
-                "value": [206, "MASK_ERROR"]
+                "value": [206, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_MINOR_NR",
-                "type": "BOR",
-                "value": [207, "MASK_ERROR"]
+                "value": [207, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_STOR_POOL_NAME",
-                "type": "BOR",
-                "value": [208, "MASK_ERROR"]
+                "value": [208, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_NET_NAME",
-                "type": "BOR",
-                "value": [209, "MASK_ERROR"]
+                "value": [209, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_NET_ADDR",
-                "type": "BOR",
-                "value": [210, "MASK_ERROR"]
+                "value": [210, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_NET_PORT",
-                "type": "BOR",
-                "value": [211, "MASK_ERROR"]
+                "value": [211, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_NET_TYPE",
-                "type": "BOR",
-                "value": [212, "MASK_ERROR"]
+                "value": [212, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_PROP",
-                "type": "BOR",
-                "value": [213, "MASK_ERROR"]
+                "value": [213, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_TRANSPORT_TYPE",
-                "type": "BOR",
-                "value": [214, "MASK_ERROR"]
+                "value": [214, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_INVLD_TCP_PORT",
-                "type": "BOR",
-                "value": [215, "MASK_ERROR"]
+                "value": [215, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
                 "name": "FAIL_NOT_FOUND_NODE",
-                "type": "BOR",
-                "value": [300, "MASK_ERROR"]
+                "value": [300, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_NOT_FOUND_RSC_DFN",
-                "type": "BOR",
-                "value": [301, "MASK_ERROR"]
+                "value": [301, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_NOT_FOUND_RSC",
-                "type": "BOR",
-                "value": [302, "MASK_ERROR"]
+                "value": [302, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_NOT_FOUND_VLM_DFN",
-                "type": "BOR",
-                "value": [303, "MASK_ERROR"]
+                "value": [303, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_NOT_FOUND_VLM",
-                "type": "BOR",
-                "value": [304, "MASK_ERROR"]
+                "value": [304, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_NOT_FOUND_NET_IF",
-                "type": "BOR",
-                "value": [305, "MASK_ERROR"]
+                "value": [305, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_NOT_FOUND_NODE_CONN",
-                "type": "BOR",
-                "value": [306, "MASK_ERROR"]
+                "value": [306, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_NOT_FOUND_RSC_CONN",
-                "type": "BOR",
-                "value": [307, "MASK_ERROR"]
+                "value": [307, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_NOT_FOUND_VLM_CONN",
-                "type": "BOR",
-                "value": [308, "MASK_ERROR"]
+                "value": [308, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_NOT_FOUND_STOR_POOL_DFN",
-                "type": "BOR",
-                "value": [309, "MASK_ERROR"]
+                "value": [309, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_NOT_FOUND_STOR_POOL",
-                "type": "BOR",
-                "value": [310, "MASK_ERROR"]
+                "value": [310, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_NOT_FOUND_DFLT_STOR_POOL",
-                "type": "BOR",
-                "value": [311, "MASK_ERROR"]
+                "value": [311, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "blockcomment": "Codes 400-499: access denied failures"
         },
         {
                 "name": "FAIL_ACC_DENIED_NODE",
-                "type": "BOR",
-                "value": [400, "MASK_ERROR"]
+                "value": [400, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_ACC_DENIED_RSC_DFN",
-                "type": "BOR",
-                "value": [401, "MASK_ERROR"]
+                "value": [401, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_ACC_DENIED_RSC",
-                "type": "BOR",
-                "value": [402, "MASK_ERROR"]
+                "value": [402, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_ACC_DENIED_VLM_DFN",
-                "type": "BOR",
-                "value": [403, "MASK_ERROR"]
+                "value": [403, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_ACC_DENIED_VLM",
-                "type": "BOR",
-                "value": [404, "MASK_ERROR"]
+                "value": [404, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_ACC_DENIED_STOR_POOL_DFN",
-                "type": "BOR",
-                "value": [405, "MASK_ERROR"]
+                "value": [405, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_ACC_DENIED_STOR_POOL",
-                "type": "BOR",
-                "value": [406, "MASK_ERROR"]
+                "value": [406, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_ACC_DENIED_NODE_CONN",
-                "type": "BOR",
-                "value": [407, "MASK_ERROR"]
+                "value": [407, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_ACC_DENIED_RSC_CONN",
-                "type": "BOR",
-                "value": [408, "MASK_ERROR"]
+                "value": [408, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_ACC_DENIED_VLM_CONN",
-                "type": "BOR",
-                "value": [409, "MASK_ERROR"]
+                "value": [409, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_ACC_DENIED_STLT_CONN",
-                "type": "BOR",
-                "value": [410, "MASK_ERROR"]
+                "value": [410, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_ACC_DENIED_CTRL_CFG",
-                "type": "BOR",
-                "value": [411, "MASK_ERROR"]
+                "value": [411, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_ACC_DENIED_COMMAND",
-                "type": "BOR",
-                "value": [412, "MASK_ERROR"]
+                "value": [412, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "blockcomment": "Codes 500-599: data already exists failures"
         },
         {
                 "name": "FAIL_EXISTS_NODE",
-                "type": "BOR",
-                "value": [500, "MASK_ERROR"]
+                "value": [500, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_EXISTS_RSC_DFN",
-                "type": "BOR",
-                "value": [501, "MASK_ERROR"]
+                "value": [501, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_EXISTS_RSC",
-                "type": "BOR",
-                "value": [502, "MASK_ERROR"]
+                "value": [502, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_EXISTS_VLM_DFN",
-                "type": "BOR",
-                "value": [503, "MASK_ERROR"]
+                "value": [503, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_EXISTS_VLM",
-                "type": "BOR",
-                "value": [504, "MASK_ERROR"]
+                "value": [504, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_EXISTS_NET_IF",
-                "type": "BOR",
-                "value": [505, "MASK_ERROR"]
+                "value": [505, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_EXISTS_NODE_CONN",
-                "type": "BOR",
-                "value": [506, "MASK_ERROR"]
+                "value": [506, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_EXISTS_RSC_CONN",
-                "type": "BOR",
-                "value": [507, "MASK_ERROR"]
+                "value": [507, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_EXISTS_VLM_CONN",
-                "type": "BOR",
-                "value": [508, "MASK_ERROR"]
+                "value": [508, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_EXISTS_STOR_POOL_DFN",
-                "type": "BOR",
-                "value": [509, "MASK_ERROR"]
+                "value": [509, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_EXISTS_STOR_POOL",
-                "type": "BOR",
-                "value": [510, "MASK_ERROR"]
+                "value": [510, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "blockcomment": "Codes 600-699: data missing failures"
         },
         {
                 "name": "FAIL_MISSING_PROPS",
-                "type": "BOR",
-                "value": [600, "MASK_ERROR"]
+                "value": [600, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_MISSING_PROPS_NETCOM_TYPE",
-                "type": "BOR",
-                "value": [601, "MASK_ERROR"]
+                "value": [601, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_MISSING_PROPS_NETCOM_PORT",
-                "type": "BOR",
-                "value": [602, "MASK_ERROR"]
+                "value": [602, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_MISSING_NETCOM",
-                "type": "BOR",
-                "value": [603, "MASK_ERROR"]
+                "value": [603, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_MISSING_PROPS_NETIF_NAME",
-                "type": "BOR",
-                "value": [604, "MASK_ERROR"]
+                "value": [604, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_MISSING_STLT_CONN",
-                "type": "BOR",
-                "value": [605, "MASK_ERROR"]
+                "value": [605, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "blockcomment": "Codes 700-799: uuid mismatch failures"
         },
         {
                 "name": "FAIL_UUID_NODE",
-                "type": "BOR",
-                "value": [700, "MASK_ERROR"]
+                "value": [700, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_UUID_RSC_DFN",
-                "type": "BOR",
-                "value": [701, "MASK_ERROR"]
+                "value": [701, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_UUID_RSC",
-                "type": "BOR",
-                "value": [702, "MASK_ERROR"]
+                "value": [702, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_UUID_VLM_DFN",
-                "type": "BOR",
-                "value": [703, "MASK_ERROR"]
+                "value": [703, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_UUID_VLM",
-                "type": "BOR",
-                "value": [704, "MASK_ERROR"]
+                "value": [704, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_UUID_NET_IF",
-                "type": "BOR",
-                "value": [705, "MASK_ERROR"]
+                "value": [705, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_UUID_NODE_CONN",
-                "type": "BOR",
-                "value": [706, "MASK_ERROR"]
+                "value": [706, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_UUID_RSC_CONN",
-                "type": "BOR",
-                "value": [707, "MASK_ERROR"]
+                "value": [707, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_UUID_VLM_CONN",
-                "type": "BOR",
-                "value": [708, "MASK_ERROR"]
+                "value": [708, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_UUID_STOR_POOL_DFN",
-                "type": "BOR",
-                "value": [709, "MASK_ERROR"]
+                "value": [709, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_UUID_STOR_POOL",
-                "type": "BOR",
-                "value": [710, "MASK_ERROR"]
+                "value": [710, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "blockcomment": "Codes 800-899: number pools exhausted"
         },
         {
                 "name": "FAIL_POOL_EXHAUSTED_VLM_NR",
-                "type": "BOR",
-                "value": [800, "MASK_ERROR"]
+                "value": [800, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_POOL_EXHAUSTED_MINOR_NR",
-                "type": "BOR",
-                "value": [801, "MASK_ERROR"]
+                "value": [801, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_POOL_EXHAUSTED_TCP_PORT",
-                "type": "BOR",
-                "value": [802, "MASK_ERROR"]
+                "value": [802, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_POOL_EXHAUSTED_NODE_ID",
-                "type": "BOR",
-                "value": [803, "MASK_ERROR"]
+                "value": [803, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "blockcomment": "Other failures"
         },
         {
                 "name": "FAIL_IN_USE",
-                "type": "BOR",
-                "value": [997, "MASK_ERROR"]
+                "value": [997, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_UNKNOWN_ERROR",
-                "type": "BOR",
-                "value": [998, "MASK_ERROR"]
+                "value": [998, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_IMPL_ERROR",
-                "type": "BOR",
-                "value": [999, "MASK_ERROR"]
+                "value": [999, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "blockcomment": "Codes 1000-1999: warnings"
         },
         {
                 "name": "WARN_INVLD_OPT_PROP_NETCOM_ENABLED",
-                "type": "BOR",
-                "value": [1001, "MASK_WARN"]
+                "value": [1001, "MASK_WARN"],
+                "type": "BOR"
         },
         {
                 "name": "WARN_NOT_CONNECTED",
-                "type": "BOR",
-                "value": [1002, "MASK_WARN"]
+                "value": [1002, "MASK_WARN"],
+                "type": "BOR"
         },
         {
                 "name": "WARN_STLT_NOT_UPDATED",
-                "type": "BOR",
-                "value": [1003, "MASK_WARN"]
+                "value": [1003, "MASK_WARN"],
+                "type": "BOR"
         },
         {
                 "name": "WARN_NOT_FOUND",
-                "type": "BOR",
-                "value": [3000, "MASK_WARN"]
+                "value": [3000, "MASK_WARN"],
+                "type": "BOR"
         },
         {
                 "blockcomment": "Special codes"
         },
         {
                 "name": "UNKNOWN_API_CALL",
-                "type": "BOR",
-                "value": ["0x0FFFFFFFFFFFFFFFL", "MASK_ERROR"]
+                "value": ["0x0FFFFFFFFFFFFFFFL", "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "blockcomment": "SignIn codes"
         },
         {
                 "name": "RC_SIGNIN_PASS",
-                "type": "BOR",
-                "value": [10000, "MASK_SUCCESS"]
+                "value": [10000, "MASK_SUCCESS"],
+                "type": "BOR"
         },
         {
                 "name": "RC_SIGNIN_FAIL",
-                "type": "BOR",
-                "value": [10000, "MASK_ERROR"]
+                "value": [10000, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "API_REPLY",
@@ -811,7 +811,7 @@
                 "type": "string"
         },
         {
-                "blockcomment": "Commands APIs"
+                "blockcomment": "Command APIs"
         },
         {
                 "name": "API_CONTROL_CTRL",
@@ -820,7 +820,7 @@
         },
         {
                 "name": "API_CMD_SHUTDOWN",
-                "value": "shutdown",
+                "value": "Shutdown",
                 "type": "string"
         },
         {
