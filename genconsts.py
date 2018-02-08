@@ -29,13 +29,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.""" % (
     now.year, ', '.join(['Robert Altnoeder', 'Roland Kammerer', 'Gabor Hernadi']))
 
 
-def get_type(e):
-    try:
-        return e['type'].lower()
-    except:
-        return None
-
-
 def java(consts):
     indent = ' ' * 4
 
@@ -54,25 +47,34 @@ def java(consts):
         if w > 1: nl = '\n'
 
         if 'blockcomment' in e:
-            c = e['blockcomment'].replace('\n', '\n'+indent+' * ')
+            c = e['blockcomment'].replace('\n', '\n' + indent + ' * ')
             print('%s%s/*\n %s* %s\n %s*/' % (nl, indent, indent, c, indent))
             continue
 
-        gtype = get_type(e)
         value = e['value']
+        _type = e['type']
+        native_type = None
 
-        if gtype:
-            value = [str(x) for x in value]
-            if gtype == 'bor':
-                value = ' | '.join(value)
-            elif gtype == 'band':
-                value = ' & '.join(value)
-        elif e['java'] == 'String':
-            value = '"%s"' % (value)
-        elif e['java'] == 'boolean':
-            value = str(value).lower()
+        if _type == 'BOR':
+            value = ' | '.join([str(x) for x in value])
+            native_type = 'long'
+        elif _type == 'BAND':
+            value = ' & '.join([str(x) for x in value])
+            native_type = 'long'
+        elif _type == 'string':
+            native_type = 'String'
+            value = '"%s"' % value
+        elif _type == 'bool':
+            native_type = 'boolean'
+        elif _type == 'int':
+            native_type = 'int'
+        elif _type == 'long':
+            native_type = 'long'
 
-        c = "%spublic static final %s %s = %s;" % (indent, e['java'], e['name'], value)
+        if native_type is None:
+            raise RuntimeError("Type '{t}' not handled.".format(t=_type))
+
+        c = "%spublic static final %s %s = %s;" % (indent, native_type, e['name'], value)
         if 'comment' in e:
             c += " // %s" % (e['comment'])
         print(c)
@@ -87,7 +89,7 @@ def strip_L(value):
 
 def python(consts):
     print('# %s\n' % (hdr))
-    print('# '.join([l.strip()+'\n' for l in license.split('\n')]))
+    print('# '.join([l.strip() + '\n' for l in license.split('\n')]))
     print("""import sys
 if sys.version_info > (3,):
     long = int
@@ -103,25 +105,35 @@ if sys.version_info > (3,):
             print('%s# ## %s ###' % (nl, c))
             continue
 
-        gtype = get_type(e)
         value = e['value']
+        _type = e['type']
 
-        if e['py'] == 'long':
+        if _type == 'long':
             if isinstance(value, list):
                 value = [strip_L(x) for x in value]
             else:
                 value = strip_L(value)
 
-        if gtype:
-            value = [str(x) for x in value]
-            if gtype == 'bor':
-                value = ' | '.join(value)
-            elif gtype == 'band':
-                value = ' & '.join(value)
-        elif e['py'] == 'str':
-            value = "'%s'" % (value)
+        native_type = None
 
-        c = "%s = %s(%s)" % (e['name'], e['py'], value)
+        if _type == 'BOR':
+            value = ' | '.join([str(x) for x in value])
+            native_type = 'long'
+        elif _type == 'BAND':
+            value = ' & '.join([str(x) for x in value])
+            native_type = 'long'
+        elif _type == 'string':
+            native_type = 'str'
+            value = "'%s'" % value
+        elif _type == 'bool':
+            native_type = 'bool'
+        elif _type == 'int':
+            native_type = 'int'
+        elif _type == 'long':
+            native_type = 'long'
+
+        assert(native_type is not None)
+        c = "%s = %s(%s)" % (e['name'], native_type, value)
         if 'comment' in e:
             c += "  # %s" % (e['comment'])
         print(c)
