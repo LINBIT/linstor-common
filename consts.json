@@ -450,6 +450,13 @@
                 "java": "long"
         },
         {
+                "name": "FAIL_ACC_DENIED_COMMAND",
+                "type": "BOR",
+                "value": [412, "MASK_ERROR"],
+                "py": "long",
+                "java": "long"
+        },
+        {
                 "blockcomment": "Codes 500-599: data already exists failures"
         },
         {
@@ -1037,6 +1044,21 @@
         {
                 "name": "API_DSTR_DBG_CNSL",
                 "value": "DstrDbgCnsl",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "blockcomment": "Commands APIs"
+        },
+        {
+                "name": "API_CONTROL_CTRL",
+                "value": "ControlCtrl",
+                "py": "str",
+                "java": "String"
+        },
+        {
+                "name": "API_CMD_SHUTDOWN",
+                "value": "shutdown",
                 "py": "str",
                 "java": "String"
         },
