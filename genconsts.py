@@ -84,7 +84,7 @@ def java(consts):
 
 
 def strip_L(value):
-    return value[:-1] if str(value).endswith('L') else value
+    return value[:-1] if str(value).endswith('L') and str(value).startswith('0x') else value
 
 
 def python(consts):
@@ -108,7 +108,7 @@ if sys.version_info > (3,):
         value = e['value']
         _type = e['type']
 
-        if _type == 'long':
+        if _type in ['long', 'BOR', 'BAND']:
             if isinstance(value, list):
                 value = [strip_L(x) for x in value]
             else:
