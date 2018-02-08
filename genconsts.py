@@ -39,6 +39,7 @@ def java(consts):
     print('/*\n * %s\n%s */\n' % (hdr, license_hdr))
 
     print('package com.linbit.linstor.api;\n')
+    print('@SuppressWarnings({"checkstyle:magicnumber", "checkstyle:constantname"})')
     print('public class ApiConsts\n{')
 
     nl, w = '', 0
