@@ -1195,6 +1195,16 @@
                 "type": "string"
         },
         {
+                "name": "KEY_TCP_PORT_RANGE",
+                "value": "tcpPortRange",
+                "type": "string"
+        },
+        {
+                "name": "KEY_MINOR_NR_RANGE",
+                "value": "minorNrRange",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property values"
         },
         {
