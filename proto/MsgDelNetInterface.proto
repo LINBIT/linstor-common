@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Delete a network interface
+message MsgDelNetInterface
+{
+    // Node name
+    required string node_name = 1;
+    
+    // Network interface name
+    required string net_if_name = 2;
+}

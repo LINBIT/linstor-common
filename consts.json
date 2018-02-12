@@ -1196,12 +1196,12 @@
         },
         {
                 "name": "KEY_TCP_PORT_RANGE",
-                "value": "tcpPortRange",
+                "value": "TcpPortRange",
                 "type": "string"
         },
         {
                 "name": "KEY_MINOR_NR_RANGE",
-                "value": "minorNrRange",
+                "value": "MinorNrRange",
                 "type": "string"
         },
         {
