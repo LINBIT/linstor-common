@@ -5,12 +5,18 @@ package com.linbit.linstor.proto;
 // linstor - NetInterface
 message NetInterface
 {
-	// UUID
-	optional string uuid = 1;
+    // UUID
+    optional string uuid = 1;
 
-	// NetInterface name
-	required string name = 2;
+    // NetInterface name
+    required string name = 2;
 
-	// Address
-	required string address = 3;
+    // Address
+    required string address = 3;
+
+    // The port of the satellite
+    optional sint32 stlt_port = 4;
+
+    // Encryption type
+    optional string stlt_encryption_type = 5;
 }
