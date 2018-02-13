@@ -1114,11 +1114,6 @@
                 "type": "string"
         },
         {
-                "name": "KEY_STOR_POOL_DISKLESS",
-                "value": "Diskless",
-                "type": "string"
-        },
-        {
                 "name": "KEY_STOR_POOL_PREF_NIC",
                 "value": "PrefNic",
                 "type": "string"
