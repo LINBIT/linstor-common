@@ -21,7 +21,7 @@
                 "stordriver_zpool": {
                         "key": [
                                 "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_THIN_POOL"
+                                "KEY_STOR_POOL_ZPOOL"
                         ],
                         "type": "regex",
                         "value": "[a-za-Z]+",
