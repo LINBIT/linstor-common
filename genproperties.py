@@ -44,7 +44,7 @@ def lang_python(data):
     print('"""')
     print('{h}\n{lic}'.format(h=hdr, lic=license))
     print('"""')
-    print('import sharedconsts as consts')
+    print('import linstor.sharedconsts as consts')
 
     properties = data['properties']
     objects = data['objects']
