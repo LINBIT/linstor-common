@@ -7,6 +7,7 @@ PYOUT=../
 PYSUFF=_pb2.py
 PYS=$(patsubst %,$(PYOUT)/%$(PYSUFF),$(COMMONNOEND))
 PYCONSTS=../linstor/sharedconsts.py
+PYPROPS=../linstor/properties.py
 
 JAVAOUT=../src/com/linbit/linstor
 JAVASUFF=OuterClass.java
@@ -31,10 +32,13 @@ $(JAVAOUT)/%$(JAVASUFF): %.proto
 $(PYCONSTS): consts.json
 	./genconsts.py python > $@
 
+$(PYPROPS): properties.json
+	./genproperties.py properties.json python > $@
+
 $(JAVACONSTS): consts.json
 	./genconsts.py java > $@
 
-python: $(PYS) $(PYCONSTS)
+python: $(PYS) $(PYCONSTS) $(PYPROPS)
 
 java: $(JAVAS) $(JAVACONSTS)
 

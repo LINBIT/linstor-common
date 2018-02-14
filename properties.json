@@ -1,0 +1,86 @@
+{
+        "properties": {
+                "stordriver_volumegroup": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_VOLUME_GROUP"
+                        ],
+                        "type": "regex",
+                        "value": "[a-za-Z]+",
+                        "internal": true
+                },
+                "stordriver_thinpool": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_THIN_POOL"
+                        ],
+                        "type": "regex",
+                        "value": "[a-za-Z]+",
+                        "internal": true
+                },
+                "stordriver_zpool": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_THIN_POOL"
+                        ],
+                        "type": "regex",
+                        "value": "[a-za-Z]+",
+                        "internal": true
+                },
+                "storage_pool_name": {
+                        "key": [
+                                "KEY_STOR_POOL_NAME"
+                        ],
+                        "type": "regex",
+                        "value": "[a-za-Z]+",
+                        "internal": true
+                },
+                "preferred_nic": {
+                        "key": [
+                                "KEY_STOR_POOL_PREF_NIC"
+                        ],
+                        "type": "regex",
+                        "value": "[a-za-Z0-9]+",
+                        "info": "Preferred network interface to use"
+                },
+                "tcp_port_range": {
+                        "key": [
+                                "KEY_TCP_PORT_RANGE"
+                        ],
+                        "type": "regex",
+                        "value": "[0-9]+-[0-9]+",
+                        "info": "TCP port range for resource allocation"
+                },
+                "minor_nr_range": {
+                        "key": [
+                                "KEY_MINOR_NR_RANGE"
+                        ],
+                        "type": "regex",
+                        "value": "[0-9]+-[0-9]+",
+                        "info": "Minor volume number range"
+                }
+        },
+        "objects": {
+                "controller": [
+                        "tcp_port_range",
+                        "minor_nr_range"
+                ],
+                "node": [
+                ],
+                "storagepool-definition": [
+                ],
+                "storagepool": [
+                        "stordriver_volumegroup",
+                        "stordriver_thinpool",
+                        "stordriver_zpool",
+                        "preferred_nic"
+                ],
+                "resource-definition": [
+                ],
+                "resource": [
+                        "storage_pool_name"
+                ],
+                "volume-definition": [
+                ]
+        }
+}
