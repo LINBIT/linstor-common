@@ -1096,6 +1096,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_AUXILIARY",
+                "value": "Aux",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
