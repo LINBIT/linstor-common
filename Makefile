@@ -43,7 +43,7 @@ python: $(PYS) $(PYCONSTS) $(PYPROPS)
 java: $(JAVAS) $(JAVACONSTS)
 
 cleanpython:
-	rm -f $(PYS) $(PYCONSTS)
+	rm -f $(PYS) $(PYCONSTS) $(PYPROPS)
 
 cleanjava:
 	rm -f $(JAVAS) $(JAVACONSTS)
