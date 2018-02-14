@@ -6,6 +6,6 @@ package com.linbit.linstor.proto;
 message MsgApiVersion
 {
     required uint32 version = 1;
-    required uint64 features = 20;
-    optional string controler_info = 30;
+    required uint64 features = 2;
+    optional string controller_info = 3;
 }
