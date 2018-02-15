@@ -405,6 +405,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_EXISTS_STLT_CONN",
+                "value": [511, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 600-699: data missing failures"
         },
         {
