@@ -32,8 +32,7 @@
                                 "KEY_STOR_POOL_NAME"
                         ],
                         "type": "regex",
-                        "value": "[a-za-Z]+",
-                        "internal": true
+                        "value": "[a-za-Z]+"
                 },
                 "preferred_nic": {
                         "key": [
@@ -78,7 +77,8 @@
                 "resource-definition": [
                 ],
                 "resource": [
-                        "storage_pool_name"
+                        "storage_pool_name",
+                        "preferred_nic"
                 ],
                 "volume-definition": [
                 ]
