@@ -36,4 +36,8 @@ message Vlm
 
     // Volume properties map
     repeated LinStorMapEntry vlm_props = 10;
+
+    // Storage pool's driver simple name
+    // in case we have to create a new storage pool
+    optional string stor_pool_driver_name = 11;
 }
