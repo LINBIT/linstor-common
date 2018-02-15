@@ -45,4 +45,9 @@ message Vlm
     // in case we have to create a new storage pool definition
     optional string stor_pool_dfn_uuid = 12;
 
+    // Storage pool definition's properties
+    repeated LinStorMapEntry stor_pool_dfn_props = 13;
+
+    // Storage pool's properties
+    repeated LinStorMapEntry stor_pool_props = 14;
 }
