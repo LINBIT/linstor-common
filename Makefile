@@ -9,7 +9,7 @@ PYS=$(patsubst %,$(PYOUT)/%$(PYSUFF),$(COMMONNOEND))
 PYCONSTS=../linstor/sharedconsts.py
 PYPROPS=../linstor/properties.py
 
-JAVAOUT=../src/com/linbit/linstor
+JAVAOUT=../src/com/linbit
 JAVASUFF=OuterClass.java
 JAVAS=$(patsubst %,$(JAVAOUT)/%$(JAVASUFF),$(JAVANOEND))
 JAVACONSTS=../src/com/linbit/linstor/api/ApiConsts.java
