@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/Rsc.proto";
+import public "linstor/proto/RscState.proto";
+
+// linstor - List resources
+message MsgLstRsc
+{
+    // Resources
+    repeated Rsc resources = 1;
+
+    // Resources states
+    repeated RscState resource_states = 2;
+}

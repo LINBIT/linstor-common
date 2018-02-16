@@ -1,5 +1,5 @@
-COMMONSRC=$(wildcard proto/*.proto)
-JAVASRC=$(wildcard proto/javainternal/*.proto)
+COMMONSRC=$(wildcard linstor/proto/*.proto)
+JAVASRC=$(wildcard linstor/proto/javainternal/*.proto)
 COMMONNOEND=$(COMMONSRC:.proto=)
 JAVANOEND=$(COMMONNOEND) $(JAVASRC:.proto=)
 

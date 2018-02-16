@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/LinStorMapEntry.proto";
+
+// linstor - Modify node connection
+message MsgModNodeConn
+{
+    // UUID
+    optional string node_conn_uuid = 1;
+
+    // Node 1 name
+    required string node_1_name = 2;
+
+    // Node 2 name
+    required string node_2_name = 3;
+
+    // Node connection properties map
+    repeated LinStorMapEntry override_props = 4;
+    
+    // Node connection property keys to delete
+    repeated string delete_prop_keys = 5;
+}

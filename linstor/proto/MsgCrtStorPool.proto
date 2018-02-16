@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/StorPool.proto";
+
+// linstor - Create storage pool
+message MsgCrtStorPool
+{
+    required StorPool stor_pool = 1;
+}

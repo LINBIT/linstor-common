@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/LinStorMapEntry.proto";
+
+// linstor - Modify storage pool definition
+message MsgModStorPoolDfn
+{
+    // UUID
+    optional string stor_pool_dfn_uuid = 1;
+
+    // Storage pool name
+    required string stor_pool_name = 2;
+
+    // Storage pool definition properties map
+    repeated LinStorMapEntry override_props = 3;
+    
+    // Storage pool definition property keys to delete
+    repeated string delete_prop_keys = 4;
+}

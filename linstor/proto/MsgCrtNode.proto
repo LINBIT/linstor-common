@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import "linstor/proto/Node.proto";
+
+// linstor - Create node
+message MsgCrtNode
+{
+    // Node
+    required Node node = 1;
+}

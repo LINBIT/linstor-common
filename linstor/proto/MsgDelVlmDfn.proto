@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/LinStorMapEntry.proto";
+import public "linstor/proto/VlmDfn.proto";
+
+// linstor - Delete volume definition
+message MsgDelVlmDfn
+{
+    optional string vlm_dfn_uuid = 1;
+
+    // Resource name
+    required string rsc_name = 2;
+
+    // VolumeNr
+    required sint32 vlm_nr = 3;
+}

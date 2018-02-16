@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/LinStorMapEntry.proto";
+
+// linstor - Create storage pool definition
+message StorPoolDfn
+{
+    // UUID
+    optional string uuid = 1;
+
+    // Storage pool name
+    required string stor_pool_name = 2;
+
+    // Storage pool definition properties map
+    repeated LinStorMapEntry props = 3;
+}

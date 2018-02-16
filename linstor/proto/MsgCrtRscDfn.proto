@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/RscDfn.proto";
+
+// linstor - Create resource definition
+message MsgCrtRscDfn
+{
+    required RscDfn rsc_dfn = 1;
+}
