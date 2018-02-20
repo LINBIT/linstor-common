@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package com.linbit.linstor.proto.javainternal;
+
+// linstor - Internal message of a successful authentication expected full sync id
+message MsgIntAuthSuccess
+{
+    // The next expected full sync id
+    sint64 expected_full_sync_id = 1;
+    
+    // A List of FreeSpace messages
+    repeated FreeSpace free_space = 2;
+}
+
+// linstor - Nested message containing information about the free space of a storage pool
+message FreeSpace
+{
+    // Storage pool uuid
+    string  stor_pool_uuid   = 1;
+
+    // Storage pool name
+    string  stor_pool_name  = 2;
+    
+    // Free space of this storage pool
+    uint64  free_space      = 3;
+}
