@@ -14,4 +14,5 @@ message VlmState
     required bool disk_failed = 7;
     required uint64 net_size = 8;
     required uint64 gross_size = 9;
+    optional string disk_state = 10;
 }
