@@ -527,6 +527,11 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_NOT_ENOUGH_NODES",
+                "value": [996, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_IN_USE",
                 "value": [997, "MASK_ERROR"],
                 "type": "BOR"
