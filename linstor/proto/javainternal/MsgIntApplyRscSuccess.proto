@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.linbit.linstor.proto.javainternal;
+import "linstor/proto/javainternal/MsgIntObjectId.proto";
+import "linstor/proto/StorPoolFreeSpace.proto";
+
+// linstor - Internal message about a successful resource creation or modification
+message MsgIntApplyRscSuccess
+{
+    // Resource description
+    MsgIntObjectId rsc_id = 1;
+    
+    repeated StorPoolFreeSpace free_space = 2;
+}

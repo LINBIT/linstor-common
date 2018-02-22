@@ -10,8 +10,5 @@ message MsgIntDelRsc
     // Resource description
     MsgDelRsc deleted_rsc = 1;
     
-    // Free space after the deletion of resources
     repeated StorPoolFreeSpace free_space = 2;
 }
-
-
