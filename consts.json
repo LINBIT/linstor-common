@@ -649,6 +649,11 @@
                 "type": "string"
         },
         {
+                "name": "API_AUTO_PLACE_RSC",
+                "value": "AutoPlaceRsc",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Modify object APIs"
         },
         {
