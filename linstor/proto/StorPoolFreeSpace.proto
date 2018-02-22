@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Message containing information about the free space of a storage pool
+message StorPoolFreeSpace
+{
+    // Storage pool uuid
+    required string  stor_pool_uuid   = 1;
+
+    // Storage pool name
+    required string  stor_pool_name  = 2;
+
+    // Free space of this storage pool
+    required uint64  free_space      = 3;
+}

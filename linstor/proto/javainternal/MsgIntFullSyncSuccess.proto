@@ -1,28 +1,12 @@
 syntax = "proto3";
 
 package com.linbit.linstor.proto.javainternal;
-import public "linstor/proto/javainternal/MsgIntNodeData.proto";
-import public "linstor/proto/javainternal/MsgIntStorPoolData.proto";
-import public "linstor/proto/javainternal/MsgIntRscData.proto";
+import "linstor/proto/StorPoolFreeSpace.proto";
 
 // linstor - Internal message indicating a successful full sync
 //           also contains the free space for each storage pool of the satellite
 message MsgIntFullSyncSuccess
 {
     // A List of FreeSpace messages
-    repeated FreeSpace free_space = 1;
-}
-
-
-// linstor - Nested message containing information about the free space of a storage pool
-message FreeSpace
-{
-    // Storage pool uuid
-    string  stor_pool_uuid   = 1;
-
-    // Storage pool name
-    string  stor_pool_name  = 2;
-    
-    // Free space of this storage pool
-    uint64  free_space      = 3;
+    repeated StorPoolFreeSpace free_space = 1;
 }

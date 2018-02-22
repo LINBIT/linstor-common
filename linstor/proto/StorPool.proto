@@ -3,6 +3,7 @@ syntax = "proto2";
 package com.linbit.linstor.proto;
 import public "linstor/proto/LinStorMapEntry.proto";
 import public "linstor/proto/Vlm.proto";
+import public "linstor/proto/StorPoolFreeSpace.proto";
 
 // linstor - StorPool
 message StorPool
@@ -33,4 +34,7 @@ message StorPool
 
     // Storage pool traits map
     repeated LinStorMapEntry static_traits = 9;
+
+    // Free space
+    optional StorPoolFreeSpace free_space = 10;
 }

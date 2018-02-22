@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.linbit.linstor.proto.javainternal;
+import "linstor/proto/StorPoolFreeSpace.proto";
+
+// LinStor - Internal message the free space of the applied storage pool
+message MsgIntApplyStorPoolSuccess
+{
+    // Free space
+    StorPoolFreeSpace free_space = 1;
+}

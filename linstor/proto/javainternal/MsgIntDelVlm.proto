@@ -1,11 +1,16 @@
 syntax = "proto3";
 
 package com.linbit.linstor.proto.javainternal;
+import "linstor/proto/StorPoolFreeSpace.proto";
 
 // linstor - volume deleted notification message
 message MsgIntDelVlm
 {
 	string node_name = 1;
+
 	string rsc_name = 2;
+
 	sint32 vlm_nr = 3;
+
+	repeated StorPoolFreeSpace free_space = 4;
 }
