@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package com.linbit.linstor.proto;
+package com.linbit.linstor.proto.javainternal;
 import "linstor/proto/MsgDelRsc.proto";
 import "linstor/proto/StorPoolFreeSpace.proto";
 
