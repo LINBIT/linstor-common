@@ -9,4 +9,5 @@ message MsgAutoPlaceRsc
     required uint32 place_count = 2;
     optional string storage_pool = 3;
     repeated string not_place_with_rsc = 4;
+    optional string not_place_with_rsc_regex = 5;
 }
