@@ -1144,6 +1144,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_CRYPT_PASSWD",
+                "value": "CryptPasswd",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool traits keys"
         },
         {
@@ -1368,6 +1373,11 @@
         {
                 "name": "FLAG_QIGNORE",
                 "value": "QIGNORE",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_ENCRYPTED",
+                "value": "ENCRYPTED",
                 "type": "string"
         }
 ]
