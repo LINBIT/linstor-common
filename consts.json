@@ -578,6 +578,11 @@
                 "type": "BOR"
         },
         {
+                "name": "API_CALL_AUTH_REQ",
+                "value": ["0x0FFFFFFFFFFFFFFEL", "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "SignIn codes"
         },
         {
