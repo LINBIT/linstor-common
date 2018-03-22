@@ -945,6 +945,27 @@
                 "type": "string"
         },
         {
+                "blockcomment": "Encryption APIs"
+        },
+        {
+                "name": "API_CRT_MASTER_PASSPHRASE",
+                "value": "CrtMasterPassphrase",
+                "type": "string"
+        },
+        {
+                "name": "API_SET_MASTER_PASSPHRASE",
+                "value": "SetMasterPassphrase",
+                "type": "string"
+        },
+        {
+                "name": "API_DEL_MASTER_PASSPHRASE",
+                "value": "DelMasterPassphrase",
+                "type": "string"
+        },
+        {
+                "blockcomment": "Control APIs"
+        },
+        {
                 "name": "API_SHTDWN",
                 "value": "Shtdwn",
                 "type": "string"
@@ -1232,6 +1253,14 @@
         {
                 "name": "KEY_MINOR_NR_RANGE",
                 "value": "MinorNrRange",
+                "type": "string"
+        },
+        {
+                "blockcomment": "Node properties"
+        },
+        {
+                "name": "KEY_CURRENT_STLT_CONN_NAME",
+                "value": "CurStltConnName",
                 "type": "string"
         },
         {

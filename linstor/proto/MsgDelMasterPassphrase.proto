@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Msg used to unset the master passphrase
+message MsgDelMasterPassphrase
+{
+    required string passphrase = 1;
+}

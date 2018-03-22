@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Msg used to create a new master passphrase
+message MsgCrtMasterPassphrase
+{
+    required string passphrase = 1;
+}

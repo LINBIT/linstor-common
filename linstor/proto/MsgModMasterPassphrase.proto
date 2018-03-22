@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Msg used to change the master passphrase
+message MsgModMasterPassphrase
+{
+    required string old_passphrase = 1;
+
+    required string new_passphrase = 2;
+}
