@@ -2,8 +2,8 @@ syntax = "proto2";
 
 package com.linbit.linstor.proto;
 
-// linstor - Msg used to change the master passphrase
-message MsgModMasterPassphrase
+// linstor - Msg used to change the crypt passphrase
+message MsgModCryptPassphrase
 {
     required string old_passphrase = 1;
 

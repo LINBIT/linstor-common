@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package com.linbit.linstor.proto.javainternal;
+
+// LinStor - Internal message containing the crypt key
+message MsgIntCryptKey
+{
+    bytes  crypt_key = 1;
+    
+    // FullSync id
+    sint64 full_sync_id = 2;
+    
+    // Update id
+    sint64 update_id = 3;
+}
