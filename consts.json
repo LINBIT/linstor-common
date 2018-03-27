@@ -294,6 +294,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_NOT_FOUND_CRYPT_KEY",
+                "value": [312, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 400-499: access denied failures"
         },
         {
