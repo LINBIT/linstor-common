@@ -957,6 +957,16 @@
                 "type": "string"
         },
         {
+                "name": "API_LST_ERROR_REPORTS",
+                "value": "LstErrorReports",
+                "type": "string"
+        },
+        {
+                "name": "API_REQ_ERROR_REPORTS",
+                "value": "ReqErrorReports",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Event APIs"
         },
         {

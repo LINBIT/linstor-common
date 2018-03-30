@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - List nodes
+message MsgReqErrorReport
+{
+    // Node
+    repeated string node_names = 1;
+    // Send text content
+    optional bool with_content = 2 [default = false];
+    // Since unix epoch utc
+    optional uint64 since = 3;
+    // Until unix epoch utc
+    optional uint64 to = 4;
+    // error report ids
+    repeated string ids = 5;
+}
