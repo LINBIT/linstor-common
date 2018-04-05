@@ -3,6 +3,7 @@ JAVASRC=$(wildcard linstor/proto/javainternal/*.proto)
 COMMONNOEND=$(COMMONSRC:.proto=)
 JAVANOEND=$(COMMONNOEND) $(JAVASRC:.proto=)
 COMMONDRBDOPTS=drbdoptions.json
+COMMONPROPERTIES=properties.json
 
 PYOUT=../
 PYSUFF=_pb2.py
@@ -15,6 +16,7 @@ JAVAOUT=../src/com/linbit
 JAVASUFF=OuterClass.java
 JAVAS=$(patsubst %,$(JAVAOUT)/%$(JAVASUFF),$(JAVANOEND))
 JAVACONSTS=../src/com/linbit/linstor/api/ApiConsts.java
+JAVAPROPERTYRULES=../src/com/linbit/linstor/api/prop/GeneratedPropertyRules.java
 
 # make java the default one
 all: java
@@ -34,8 +36,11 @@ $(JAVAOUT)/%$(JAVASUFF): %.proto
 $(PYCONSTS): consts.json
 	./genconsts.py python > $@
 
-$(PYPROPS): properties.json $(COMMONDRBDOPTS)
-	./genproperties.py python properties.json $(COMMONDRBDOPTS) > $@
+$(JAVAPROPERTYRULES): $(COMMONPROPERTIES) $(COMMONDRBDOPTS)
+	./genproperties.py java $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
+
+$(PYPROPS): $(COMMONPROPERTIES) $(COMMONDRBDOPTS)
+	./genproperties.py python $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
 
 $(PYDRBDOPTS):
 	./gendrbdoptions.py $(COMMONDRBDOPTS) $@

@@ -6,7 +6,7 @@
                                 "KEY_STOR_POOL_VOLUME_GROUP"
                         ],
                         "type": "regex",
-                        "value": "[a-za-Z]+",
+                        "value": "[a-zA-Z0-9_-]+",
                         "internal": true
                 },
                 "stordriver_thinpool": {
@@ -15,7 +15,7 @@
                                 "KEY_STOR_POOL_THIN_POOL"
                         ],
                         "type": "regex",
-                        "value": "[a-za-Z]+",
+                        "value": "[a-zA-Z0-9_-]+",
                         "internal": true
                 },
                 "stordriver_zpool": {
@@ -24,7 +24,7 @@
                                 "KEY_STOR_POOL_ZPOOL"
                         ],
                         "type": "regex",
-                        "value": "[a-za-Z]+",
+                        "value": "[a-zA-Z0-9_-]+",
                         "internal": true
                 },
                 "storage_pool_name": {
@@ -32,14 +32,14 @@
                                 "KEY_STOR_POOL_NAME"
                         ],
                         "type": "regex",
-                        "value": "[a-za-Z]+"
+                        "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$"
                 },
                 "preferred_nic": {
                         "key": [
                                 "KEY_STOR_POOL_PREF_NIC"
                         ],
                         "type": "regex",
-                        "value": "[a-za-Z0-9]+",
+                        "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
                         "info": "Preferred network interface to use"
                 },
                 "tcp_port_range": {

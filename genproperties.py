@@ -6,6 +6,7 @@ import datetime
 import os
 import copy
 import pprint
+import re
 
 now = datetime.datetime.utcnow()
 basename = os.path.basename(__file__)
@@ -86,8 +87,75 @@ def lang_python(data):
 
 
 def lang_java(data):
-    pass
+    properties = data['properties']
+    objects = data['objects']
 
+    create_regex_class = False
+
+    license_hdr = ''
+    for l in license.split('\n'):
+        license_hdr += (' * ' + l).rstrip() + '\n'
+
+    print('/*\n * %s\n%s */\n' % (hdr, license_hdr))
+
+    _print(0, 'package com.linbit.linstor.api.prop;\n')
+    _print(0, '')
+    _print(0, 'import com.linbit.linstor.api.prop.PropsWhitelist.LinStorObject;')
+    _print(0, '')
+    _print(0, 'import java.util.ArrayList;')
+    _print(0, 'import java.util.Arrays;')
+    _print(0, 'import java.util.Collections;')
+    _print(0, 'import java.util.List;')
+    _print(0, 'import java.util.Map;')
+    _print(0, 'import java.util.TreeMap;')
+    _print(0, '')
+    _print(0, 'public final class GeneratedPropertyRules\n{')
+    _print(1,     'public static List<Property> getWhitelistedProperties()')
+    _print(1,     '{')
+    _print(2,         'List<Property> propertyList = new ArrayList<>();')
+    for key, prop in properties.items():
+        _print(2,     'propertyList.add(')
+        _print(3,         'new PropertyBuilder()')
+        _print(4,             '.name("%s")' % key)
+        for propKey, propVal in prop.items():
+            if propKey == "key":
+                _print(4,     '.%s("%s")' % (propKey, '", "'.join(prop[propKey])))
+            else:
+                _print(4,     '.%s("%s")' % (propKey, prop[propKey]))
+        _print(4,             '.build()')
+        _print(3,     ');')
+    _print(2,         'return propertyList;')
+    _print(1,     '}\n')
+    _print(1,     'public static Map<LinStorObject, List<String>> getWhitelistedRules()')
+    _print(1,     '{')
+    _print(2,         'Map<LinStorObject, List<String>> rules = new TreeMap<>();')
+    for obj_name, rule_names in objects.items():
+        if not rule_names:
+            _print(2, 'rules.put(LinStorObject.%s, Collections.emptyList());' % _as_java_enum_name(obj_name))
+        else:
+            _print(2, 'rules.put(LinStorObject.%s,' % _as_java_enum_name(obj_name))
+            _print(3,     'Arrays.asList(')
+            _print(4,         '"%s"' % ('",\n' + _indent(4) + '"').join(rule_names))
+            _print(3,     ')')
+            _print(2, ');')
+    _print(2,         'return rules;')
+    _print(1,     '}')
+    _print(0, '}\n')
+    return True
+
+def _print(indent_level, line):
+    indent = _indent(indent_level)
+    print('%s%s' % (indent, line))
+
+def _indent(indent_level):
+    return ' ' * 4 * indent_level
+
+def _as_java_rule_name(name):
+    callback = lambda pat: pat.group(1).upper()
+    return re.sub(r'_(.)', callback, name) + 'Rule'
+
+def _as_java_enum_name(name):
+    return re.sub(r'-', '_', name).upper()
 
 def main():
     parser = argparse.ArgumentParser(prog="genproperties.py")
