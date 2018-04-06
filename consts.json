@@ -1281,13 +1281,13 @@
                 "type": "string"
         },
         {
-                "name": "KEY_TCP_PORT_RANGE",
-                "value": "TcpPortRange",
+                "name": "KEY_TCP_PORT_AUTO_RANGE",
+                "value": "TcpPortAutoRange",
                 "type": "string"
         },
         {
-                "name": "KEY_MINOR_NR_RANGE",
-                "value": "MinorNrRange",
+                "name": "KEY_MINOR_NR_AUTO_RANGE",
+                "value": "MinorNrAutoRange",
                 "type": "string"
         },
         {
