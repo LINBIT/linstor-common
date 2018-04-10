@@ -41,7 +41,7 @@ $(PYDRBDOPTS):
 	./gendrbdoptions.py $(COMMONDRBDOPTS) $@
 
 $(COMMONDRBDOPTS):
-	./gendrbdoptions.py $(COMMONDRBDOPTS) $@
+	./gendrbdoptions.py $(COMMONDRBDOPTS)
 
 $(JAVACONSTS): consts.json
 	./genconsts.py java > $@
