@@ -4,6 +4,7 @@ import argparse
 import json
 import datetime
 import os
+import copy
 import pprint
 
 now = datetime.datetime.utcnow()
@@ -28,16 +29,31 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.""" % (
     now.year, ', '.join(['Rene Peinthor', 'Gabor Hernadi']))
 
+_OBJECTS = ["controller", "node", "storagepool-definition",
+              "storagepool", "resource-definition", "resource", "volume-definition"]
 
 class MyPyKey(object):
     def __init__(self, keypath):
         self._keys = keypath
 
     def __str__(self):
-        return " + '/' + ".join(['consts.' + x for x in self._keys])
+        if isinstance(self._keys, list):
+            return " + '/' + ".join(['consts.' + x for x in self._keys])
+        return '"{k}"'.format(k=self._keys)
 
     def __repr__(self):
         return str(self)
+
+
+def merge_props(prop_a, prop_b):
+    prps = copy.deepcopy(prop_a)
+    prps['properties'].update(prop_b['properties'])
+
+    for obj in _OBJECTS:
+        for e in prop_b['objects'].get(obj, []):
+            prps['objects'][obj].append(e)
+
+    return prps
 
 
 def lang_python(data):
@@ -75,14 +91,21 @@ def lang_java(data):
 
 def main():
     parser = argparse.ArgumentParser(prog="genproperties.py")
-    parser.add_argument('propfile')
     parser.add_argument('language', choices=['python', 'java'])
+    parser.add_argument('propfile', nargs='+')
 
     args = parser.parse_args()
 
-    propdata = None
-    with open(args.propfile) as propfile:
-        propdata = json.load(propfile)
+    propdata = {
+        "properties": {},
+        "objects": {}
+    }
+    for obj in _OBJECTS:
+        propdata['objects'][obj] = []
+
+    for propfile_name in args.propfile:
+        with open(propfile_name) as propfile:
+            propdata = merge_props(propdata, json.load(propfile))
 
     if args.language == 'python':
         lang_python(propdata)

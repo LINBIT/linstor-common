@@ -1177,6 +1177,26 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_DRBD_NET_OPTIONS",
+                "value": "DrbdOptions/Net",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_DRBD_DISK_OPTIONS",
+                "value": "DrbdOptions/Disk",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_DRBD_RESOURCE_OPTIONS",
+                "value": "DrbdOptions/Resource",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_DRBD_PEER_DEVICE_OPTIONS",
+                "value": "DrbdOptions/PeerDevice",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
