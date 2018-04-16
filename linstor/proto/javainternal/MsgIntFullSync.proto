@@ -4,6 +4,7 @@ package com.linbit.linstor.proto.javainternal;
 import public "linstor/proto/javainternal/MsgIntNodeData.proto";
 import public "linstor/proto/javainternal/MsgIntStorPoolData.proto";
 import public "linstor/proto/javainternal/MsgIntRscData.proto";
+import public "linstor/proto/javainternal/MsgIntControllerData.proto";
 
 // linstor - Internal message containing a full synchronization of the resource specific data
 message MsgIntFullSync
@@ -22,4 +23,7 @@ message MsgIntFullSync
     
     // MasterKey (unencrypted, optional)
     string                      master_key = 5;
+
+    // Satellite conf properties (drbd options)
+    MsgIntControllerData        ctrl_data    = 6;
 }
