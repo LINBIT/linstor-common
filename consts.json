@@ -231,6 +231,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_ENCRYPT_TYPE",
+                "value": [217, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -587,6 +592,11 @@
         {
                 "name": "WARN_STLT_NOT_UPDATED",
                 "value": [1003, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
+                "name": "WARN_NO_STLT_CONN_DEFINED",
+                "value": [1004, "MASK_WARN"],
                 "type": "BOR"
         },
         {
@@ -1308,6 +1318,11 @@
         {
                 "name": "KEY_MINOR_NR_AUTO_RANGE",
                 "value": "MinorNrAutoRange",
+                "type": "string"
+        },
+        {
+                "name": "KEY_CUR_STLT_CONN_NAME",
+                "value": "CurStltConnName",
                 "type": "string"
         },
         {

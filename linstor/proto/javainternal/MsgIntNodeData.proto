@@ -51,8 +51,11 @@ message NetIf
     // Netif type (IP, RDMA, ...)
     string  net_if_type = 4;
 
-    // Netif port
-    sint32  net_if_port = 5;
+    // Satellite connection port
+    sint32  stlt_conn_port = 5;
+
+    // Satellite connection encryption type (SSL, Plain)
+    string  stlt_conn_encr_type = 6;
 }
 
 message NodeConn
