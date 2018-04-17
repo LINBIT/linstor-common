@@ -98,9 +98,9 @@ def lang_java(data):
 
     print('/*\n * %s\n%s */\n' % (hdr, license_hdr))
 
-    _print(0, 'package com.linbit.linstor.api.prop;\n')
+    _print(0, 'package com.linbit.linstor.api.prop;')
     _print(0, '')
-    _print(0, 'import com.linbit.linstor.api.prop.PropsWhitelist.LinStorObject;')
+    _print(0, 'import com.linbit.linstor.core.AbsApiCallHandler.LinStorObject;')
     _print(0, '')
     _print(0, 'import java.util.ArrayList;')
     _print(0, 'import java.util.Arrays;')
@@ -119,11 +119,18 @@ def lang_java(data):
         _print(4,             '.name("%s")' % key)
         for propKey, propVal in prop.items():
             if propKey == "key":
-                _print(4,     '.%s("%s")' % (propKey, '", "'.join(prop[propKey])))
+                if isinstance(prop[propKey], list):
+                    _print(4, '.keyRef("%s")' % ('", "'.join(prop[propKey])))
+                else:
+                    _print(4, '.keyStr("%s")' % (prop[propKey]))
+            elif propKey == "values":
+                _print(4,     '.values(')
+                _print(5,         '"%s"' % ('", \n' + _indent(5) + '"').join(prop[propKey]))
+                _print(4,     ')')
             else:
                 _print(4,     '.%s("%s")' % (propKey, prop[propKey]))
         _print(4,             '.build()')
-        _print(3,     ');')
+        _print(2,     ');')
     _print(2,         'return propertyList;')
     _print(1,     '}\n')
     _print(1,     'public static Map<LinStorObject, List<String>> getWhitelistedRules()')
