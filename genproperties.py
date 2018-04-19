@@ -113,22 +113,24 @@ def lang_java(data):
     _print(1,     'public static List<Property> getWhitelistedProperties()')
     _print(1,     '{')
     _print(2,         'List<Property> propertyList = new ArrayList<>();')
-    for key, prop in properties.items():
+    for key in sorted(properties.keys()):
+        prop = properties[key]
         _print(2,     'propertyList.add(')
         _print(3,         'new PropertyBuilder()')
         _print(4,             '.name("%s")' % key)
-        for propKey, propVal in prop.items():
+        for propKey in sorted(prop.keys()):
+            propVal = prop[propKey]
             if propKey == "key":
-                if isinstance(prop[propKey], list):
-                    _print(4, '.keyRef("%s")' % ('", "'.join(prop[propKey])))
+                if isinstance(propVal, list):
+                    _print(4, '.keyRef("%s")' % ('", "'.join(propVal)))
                 else:
-                    _print(4, '.keyStr("%s")' % (prop[propKey]))
+                    _print(4, '.keyStr("%s")' % (propVal))
             elif propKey == "values":
                 _print(4,     '.values(')
-                _print(5,         '"%s"' % ('", \n' + _indent(5) + '"').join(prop[propKey]))
+                _print(5,         '"%s"' % ('",\n' + _indent(5) + '"').join(sorted(propVal)))
                 _print(4,     ')')
             else:
-                _print(4,     '.%s("%s")' % (propKey, prop[propKey]))
+                _print(4,     '.%s("%s")' % (propKey, propVal))
         _print(4,             '.build()')
         _print(2,     ');')
     _print(2,         'return propertyList;')
@@ -136,7 +138,8 @@ def lang_java(data):
     _print(1,     'public static Map<LinStorObject, List<String>> getWhitelistedRules()')
     _print(1,     '{')
     _print(2,         'Map<LinStorObject, List<String>> rules = new TreeMap<>();')
-    for obj_name, rule_names in objects.items():
+    for obj_name in sorted(objects.keys()):
+        rule_names = sorted(objects[obj_name])
         if not rule_names:
             _print(2, 'rules.put(LinStorObject.%s, Collections.emptyList());' % _as_java_enum_name(obj_name))
         else:
@@ -152,7 +155,7 @@ def lang_java(data):
 
 def _print(indent_level, line):
     indent = _indent(indent_level)
-    print('%s%s' % (indent, line))
+    print('%s%s' % (indent, line.strip()))
 
 def _indent(indent_level):
     return ' ' * 4 * indent_level
