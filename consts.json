@@ -600,6 +600,11 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_DEL_UNSET_PROP",
+                "value": [1005, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "name": "WARN_NOT_FOUND",
                 "value": [3000, "MASK_WARN"],
                 "type": "BOR"
