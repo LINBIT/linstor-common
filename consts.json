@@ -372,6 +372,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_ACC_DENIED_WATCH",
+                "value": [413, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 500-599: data already exists failures"
         },
         {
@@ -437,6 +442,11 @@
         {
                 "name": "FAIL_EXISTS_CRYPT_PASSPHRASE",
                 "value": [512, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_EXISTS_WATCH",
+                "value": [513, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
