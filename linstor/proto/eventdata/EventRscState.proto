@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.eventdata;
+
+message EventRscState
+{
+    // The state of the resource
+    optional string state = 1;
+}

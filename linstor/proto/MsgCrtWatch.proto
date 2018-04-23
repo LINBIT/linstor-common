@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Watch specific events
+message MsgCrtWatch
+{
+    // Identifying number for this watch
+    //
+    // Events for this watch will be sent with this watch_id
+    required int32 watch_id = 1;
+
+    // Filter: Only the named events
+    optional string event_name = 2;
+
+    // Filter: Only events related to the resource definition with this name
+    optional string resource_name = 3;
+
+    // Filter: Only events related to this node
+    optional string node_name = 4;
+
+    // Filter: Only events related to volumes and their definitions with this number
+    optional sint32 volume_number = 5;
+}

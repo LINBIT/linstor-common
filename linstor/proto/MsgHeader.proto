@@ -9,7 +9,9 @@ message MsgHeader
     //
     // Immediate answers to this message will be sent
     // back with the same msg_id
-    required int32 msg_id = 1;
+    //
+    // Only provided with API calls where an answer is expected.
+    optional int32 msg_id = 1;
 
     // Name of the API call to execute
     //

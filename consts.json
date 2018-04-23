@@ -947,16 +947,21 @@
                 "type": "string"
         },
         {
-                "blockcomment": "Subscription APIs"
+                "blockcomment": "Event APIs"
         },
         {
-                "name": "API_CRT_SUBSCR",
-                "value": "CrtSubscr",
+                "name": "API_CRT_WATCH",
+                "value": "CrtWatch",
                 "type": "string"
         },
         {
-                "name": "API_DEL_SUBSCR",
-                "value": "DelSubscr",
+                "name": "API_CANCEL_WATCH",
+                "value": "CancelWatch",
+                "type": "string"
+        },
+        {
+                "name": "API_EVENT",
+                "value": "Event",
                 "type": "string"
         },
         {
@@ -1013,6 +1018,19 @@
         {
                 "name": "API_SHTDWN",
                 "value": "Shtdwn",
+                "type": "string"
+        },
+        {
+                "blockcomment": "Events"
+        },
+        {
+                "name": "EVENT_VOLUME_DISK_STATE",
+                "value": "VlmDiskState",
+                "type": "string"
+        },
+        {
+                "name": "EVENT_RESOURCE_STATE",
+                "value": "ResourceState",
                 "type": "string"
         },
         {
