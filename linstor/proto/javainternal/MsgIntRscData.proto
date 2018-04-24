@@ -48,14 +48,17 @@ message MsgIntRscData
     // List of nodes (including node-specific resource configuration)
     repeated MsgIntOtherRscData       other_resources   = 13;
 
+    // List of resource connections
+    repeated RscConnectionData        rsc_connections = 14;
+
     // Resource definition transport type (IP, RDMA, RoCE)
-    string                            rsc_dfn_transport_type = 14;
+    string                            rsc_dfn_transport_type = 15;
 
     // FullSync id
-    sint64                            full_sync_id = 15;
+    sint64                            full_sync_id = 16;
     
     // Update id
-    sint64                            update_id = 16;
+    sint64                            update_id = 17;
 }
 
 message MsgIntOtherRscData
@@ -80,4 +83,17 @@ message MsgIntOtherRscData
 
     // Volume
     repeated Vlm             local_vlms  = 10;
+}
+
+// Resource connection
+message RscConnectionData
+{
+    bytes uuid = 1;
+
+    string node_1 = 2;
+
+    string node_2 = 3;
+
+    // Resource Connection properties map
+    repeated LinStorMapEntry props   = 4;
 }
