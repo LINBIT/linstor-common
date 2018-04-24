@@ -88,7 +88,7 @@ message MsgIntOtherRscData
 // Resource connection
 message RscConnectionData
 {
-    bytes uuid = 1;
+    string uuid = 1;
 
     string node_1 = 2;
 
