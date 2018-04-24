@@ -84,6 +84,7 @@ _CategoyMap = {
 
 _FilterResource = ['disk-options', 'resource-options', 'net-options']
 _FilterVolume = ['disk-options']  # TODO add volume connection -> 'peer-device-options'
+_FilterPeerDevice = ['peer-device-options']
 
 
 def whitelist(conf):
@@ -109,6 +110,7 @@ def whitelist(conf):
     objs['controller'] = [x for x in conf['options']]
     objs['resource-definition'] = [x for x in conf['options'] if conf['options'][x]['category'] in _FilterResource]
     objs['volume-definition'] = [x for x in conf['options'] if conf['options'][x]['category'] in _FilterVolume]
+    objs['rsc-conn'] = [x for x in conf['options'] if conf['options'][x]['category'] in _FilterPeerDevice]
     return {
         'properties': props,
         'objects': objs

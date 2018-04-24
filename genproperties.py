@@ -30,8 +30,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.""" % (
     now.year, ', '.join(['Rene Peinthor', 'Gabor Hernadi']))
 
-_OBJECTS = ["controller", "node", "storagepool-definition",
-              "storagepool", "resource-definition", "resource", "volume-definition"]
 
 class MyPyKey(object):
     def __init__(self, keypath):
@@ -50,8 +48,10 @@ def merge_props(prop_a, prop_b):
     prps = copy.deepcopy(prop_a)
     prps['properties'].update(prop_b['properties'])
 
-    for obj in _OBJECTS:
+    for obj in prop_b['objects']:
         for e in prop_b['objects'].get(obj, []):
+            if obj not in prps['objects']:
+                prps['objects'][obj] = []
             prps['objects'][obj].append(e)
 
     return prps
@@ -89,8 +89,6 @@ def lang_python(data):
 def lang_java(data):
     properties = data['properties']
     objects = data['objects']
-
-    create_regex_class = False
 
     license_hdr = ''
     for l in license.split('\n'):
@@ -153,19 +151,23 @@ def lang_java(data):
     _print(0, '}\n')
     return True
 
+
 def _print(indent_level, line):
     indent = _indent(indent_level)
     print('%s%s' % (indent, line.strip()))
 
+
 def _indent(indent_level):
     return ' ' * 4 * indent_level
 
+
 def _as_java_rule_name(name):
-    callback = lambda pat: pat.group(1).upper()
-    return re.sub(r'_(.)', callback, name) + 'Rule'
+    return re.sub(r'_(.)', lambda pat: pat.group(1).upper(), name) + 'Rule'
+
 
 def _as_java_enum_name(name):
     return re.sub(r'-', '_', name).upper()
+
 
 def main():
     parser = argparse.ArgumentParser(prog="genproperties.py")
@@ -178,8 +180,6 @@ def main():
         "properties": {},
         "objects": {}
     }
-    for obj in _OBJECTS:
-        propdata['objects'][obj] = []
 
     for propfile_name in args.propfile:
         with open(propfile_name) as propfile:
