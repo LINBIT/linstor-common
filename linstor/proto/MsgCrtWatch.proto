@@ -19,6 +19,9 @@ message MsgCrtWatch
     // Filter: Only events related to this node
     optional string node_name = 4;
 
-    // Filter: Only events related to volumes and their definitions with this number
-    optional sint32 volume_number = 5;
+    // Whether to apply the volume number filter
+    optional bool filter_by_volume_number = 5;
+
+    // Filter: Only events related to volumes and their definitions with this number (when filter_by_volume_number set)
+    optional sint32 volume_number = 6;
 }
