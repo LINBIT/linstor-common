@@ -17,6 +17,9 @@ message MsgEvent
     // Identifying number for this watch
     required int32 watch_id = 1;
 
+    // The action represented by the event: open stream, new data, close stream
+    required string event_action = 6;
+
     // Identifies the event that caused this signal
     required string event_name = 2;
 
