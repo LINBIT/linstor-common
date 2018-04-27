@@ -8,9 +8,5 @@ message RscState
     required string rsc_name = 1;
     required string node_name = 2;
 
-	required bool is_present = 3;
-	required bool requires_adjust = 4;
-	required bool is_primary = 5;
-
     repeated VlmState vlm_states = 6;
 }
