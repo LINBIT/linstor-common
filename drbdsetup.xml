@@ -191,11 +191,11 @@
 		<handler>suspend-io</handler>
 	</option>
 </command>
-<command name="net-options">
-	<summary>Change the network options of a connection.</summary>
+<command name="new-peer">
+	<summary>Make a peer host known to a resource.</summary>
 	<argument>resource</argument>
 	<argument>peer_node_id</argument>
-	<option name="set-defaults" type="flag">
+	<option name="transport" type="string">
 	</option>
 	<option name="protocol" type="handler">
 		<handler>A</handler>

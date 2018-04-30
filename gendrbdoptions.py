@@ -13,7 +13,7 @@ in implemented languages
 
 def get_drbd_setup_xml(from_file):
     drbdsetup_cmd = ['/usr/sbin/drbdsetup', 'xml-help']
-    opts = ['disk-options', 'peer-device-options', 'resource-options', 'net-options']
+    opts = ['disk-options', 'peer-device-options', 'resource-options', 'new-peer']
     try:
         xml_opts = [subprocess.check_output(drbdsetup_cmd + [x]) for x in opts]
     except OSError as oe:
@@ -76,13 +76,13 @@ def parse_drbd_setup_xml(xmlout):
     }
 
 _CategoyMap = {
-    'net-options': "DrbdOptions/Net",
+    'new-peer': "DrbdOptions/Net",
     'disk-options': "DrbdOptions/Disk",
     'resource-options': "DrbdOptions/Resource",
     'peer-device-options': "DrbdOptions/PeerDevice"
 }
 
-_FilterResource = ['disk-options', 'resource-options', 'net-options']
+_FilterResource = ['disk-options', 'resource-options', 'new-peer']
 _FilterVolume = ['disk-options']  # TODO add volume connection -> 'peer-device-options'
 _FilterPeerDevice = ['peer-device-options']
 

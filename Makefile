@@ -56,7 +56,7 @@ python: $(PYS) $(PYCONSTS) $(PYPROPS) $(PYDRBDOPTS)
 java: $(JAVAS) $(JAVACONSTS) $(COMMONDRBDOPTS) $(JAVAPROPERTYRULES)
 
 cleanpython:
-	rm -f $(PYS) $(PYCONSTS) $(PYPROPS)
+	rm -f $(PYS) $(PYCONSTS) $(PYPROPS) $(PYDRBDOPTS)
 
 cleanjava:
 	rm -f $(JAVAS) $(JAVACONSTS)
