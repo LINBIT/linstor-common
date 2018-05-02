@@ -1074,7 +1074,14 @@
         {
                 "name": "EVENT_RESOURCE_STATE",
                 "value": "ResourceState",
-                "type": "string"
+                "type": "string",
+                "comment": "State of resource based on DRBD status (or other underlying system)"
+        },
+        {
+                "name": "EVENT_RESOURCE_DEPLOYMENT_STATE",
+                "value": "ResourceDeploymentState",
+                "type": "string",
+                "comment": "State of resource based on execution of commands to deploy it"
         },
         {
                 "blockcomment": "Object property keys"

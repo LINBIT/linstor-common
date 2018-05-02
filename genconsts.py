@@ -75,9 +75,9 @@ def java(consts):
         if native_type is None:
             raise RuntimeError("Type '{t}' not handled.".format(t=_type))
 
-        c = "%spublic static final %s %s = %s;" % (indent, native_type, e['name'], value)
         if 'comment' in e:
-            c += " // %s" % (e['comment'])
+            print("%s// %s" % (indent, e['comment']))
+        c = "%spublic static final %s %s = %s;" % (indent, native_type, e['name'], value)
         print(c)
 
     print('\n    private ApiConsts()\n    {\n    }')
@@ -134,9 +134,9 @@ if sys.version_info > (3,):
             native_type = 'long'
 
         assert(native_type is not None)
-        c = "%s = %s(%s)" % (e['name'], native_type, value)
         if 'comment' in e:
-            c += "  # %s" % (e['comment'])
+            print("# %s" % (e['comment']))
+        c = "%s = %s(%s)" % (e['name'], native_type, value)
         print(c)
 
 

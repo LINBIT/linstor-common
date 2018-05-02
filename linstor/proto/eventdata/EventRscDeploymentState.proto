@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.eventdata;
+import public "linstor/proto/MsgApiCallResponse.proto";
+
+message EventRscDeploymentState
+{
+    repeated MsgApiCallResponse responses = 1;
+}
