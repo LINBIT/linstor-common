@@ -1084,6 +1084,11 @@
                 "comment": "State of resource based on execution of commands to deploy it"
         },
         {
+                "name": "EVENT_RESOURCE_DEFINITION_READY",
+                "value": "ResourceDefinitionReady",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Object property keys"
         },
         {
