@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Snapshot
+message Snapshot
+{
+    // UUID
+    optional string uuid = 1;
+
+    // Snapshot name
+    required string snapshot_name = 2;
+
+    // Resource definition uuid
+    optional string rsc_dfn_uuid = 3;
+
+    // Resource name
+    required string rsc_name = 4;
+}

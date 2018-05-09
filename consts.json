@@ -1,6 +1,6 @@
 [
         {
-                "blockcomment": "Bits 62 - 63 (most significant 2) are reserved for the message type masks (error, warning, info)\nBits 25 - 26 are reserved for the operation type masks (create, modify, delete)\nBits 15 - 18 are reserved for the object type masks (node, resource, resource definition, ...)\nBits 0  - 14 are reserved for codes"
+                "blockcomment": "Bits 62 - 63 (most significant 2) are reserved for the message type masks (error, warning, info)\nBits 25 - 26 are reserved for the operation type masks (create, modify, delete)\nBits 18 - 21 are reserved for the object type masks (node, resource, resource definition, ...)\nBits 0  - 14 are reserved for codes"
         },
         {
                 "name": "MASK_ERROR",
@@ -101,6 +101,11 @@
         {
                 "name": "MASK_CTRL_CONF",
                 "value": "0x0000000000100000L",
+                "type": "long"
+        },
+        {
+                "name": "MASK_SNAPSHOT",
+                "value": "0x00000000000C0000L",
                 "type": "long"
         },
         {
@@ -233,6 +238,11 @@
         {
                 "name": "FAIL_INVLD_ENCRYPT_TYPE",
                 "value": [217, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_INVLD_SNAPSHOT_NAME",
+                "value": [218, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -567,6 +577,16 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_SNAPSHOTS_NOT_SUPPORTED",
+                "value": [994, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_NOT_CONNECTED",
+                "value": [995, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_NOT_ENOUGH_NODES",
                 "value": [996, "MASK_ERROR"],
                 "type": "BOR"
@@ -679,8 +699,8 @@
                 "type": "string"
         },
         {
-                "name": "API_CRT_SNPSHT",
-                "value": "CrtSnpsht",
+                "name": "API_CRT_SNAPSHOT",
+                "value": "CrtSnapshot",
                 "type": "string"
         },
         {
@@ -777,8 +797,8 @@
                 "type": "string"
         },
         {
-                "name": "API_MOD_SNPSHT",
-                "value": "ModSnpsht",
+                "name": "API_MOD_SNAPSHOT",
+                "value": "ModSnapshot",
                 "type": "string"
         },
         {
@@ -840,8 +860,8 @@
                 "type": "string"
         },
         {
-                "name": "API_DEL_SNPSHT",
-                "value": "DelSnpsht",
+                "name": "API_DEL_SNAPSHOT",
+                "value": "DelSnapshot",
                 "type": "string"
         },
         {
@@ -850,8 +870,8 @@
                 "type": "string"
         },
         {
-                "name": "API_RST_SNPSHT",
-                "value": "RstSnpsht",
+                "name": "API_RST_SNAPSHOT",
+                "value": "RstSnapshot",
                 "type": "string"
         },
         {
@@ -942,8 +962,8 @@
                 "type": "string"
         },
         {
-                "name": "API_LST_SNPSHT",
-                "value": "LstSnpsht",
+                "name": "API_LST_SNAPSHOT",
+                "value": "LstSnapshot",
                 "type": "string"
         },
         {
@@ -1122,6 +1142,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_SNAPSHOT",
+                "value": "Snapshot",
+                "type": "string"
+        },
+        {
                 "name": "KEY_NODE_NAME",
                 "value": "NodeName",
                 "type": "string"
@@ -1167,8 +1192,8 @@
                 "type": "string"
         },
         {
-                "name": "KEY_SNPSHT_NAME",
-                "value": "SnpshtName",
+                "name": "KEY_SNAPSHOT_NAME",
+                "value": "SnapshotName",
                 "type": "string"
         },
         {
