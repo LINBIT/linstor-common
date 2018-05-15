@@ -1486,6 +1486,41 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_SWORDFISH_HOST_PORT",
+                "value": "SwordfishHostPort",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_SWORDFISH_STOR_SVC",
+                "value": "SwordfishStorSvc",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_SWORDFISH_STOR_POOL",
+                "value": "SwordfishStorPool",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_SWORDFISH_USER_NAME",
+                "value": "SwordfishUserName",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_SWORDFISH_USER_PW",
+                "value": "SwordfishUserPw",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_SWORDFISH_POLL_TIMEOUT",
+                "value": "SwordfishTimeout",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_SWORDFISH_COMPOSED_NODE_NAME",
+                "value": "SwordfishComposedNodeName",
+                "type": "string"
+        },
+        {
                 "name": "KEY_STOR_POOL_PREF_NIC",
                 "value": "PrefNic",
                 "type": "string"

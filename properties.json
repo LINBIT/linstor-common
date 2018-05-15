@@ -27,6 +27,69 @@
                         "value": "[a-zA-Z0-9_/-]+",
                         "internal": true
                 },
+                "stordriver_swordfish_host_port": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_SWORDFISH_HOST_PORT"
+                        ],
+                        "type": "regex",
+                        "value": ".*",
+                        "internal": true
+                },
+                "stordriver_swordfish_stor_service": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_SWORDFISH_STOR_SVC"
+                        ],
+                        "type": "regex",
+                        "value": ".*",
+                        "internal": true
+                },
+                "stordriver_swordfish_stor_pool": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_SWORDFISH_STOR_POOL"
+                        ],
+                        "type": "regex",
+                        "value": ".*",
+                        "internal": true
+                },
+                "stordriver_swordfish_user_name": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_SWORDFISH_USER_NAME"
+                        ],
+                        "type": "regex",
+                        "value": ".*",
+                        "internal": true
+                },
+                "stordriver_swordfish_user_passwd": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_SWORDFISH_USER_PW"
+                        ],
+                        "type": "regex",
+                        "value": ".*",
+                        "internal": true
+                },
+                "stordriver_swordfish_timeout": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_SWORDFISH_POLL_TIMEOUT"
+                        ],
+                        "type": "regex",
+                        "value": ".*",
+                        "internal": true
+                },
+                "stordriver_swordfish_composed_node_name": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_SWORDFISH_COMPOSED_NODE_NAME"
+                        ],
+                        "type": "regex",
+                        "value": ".*",
+                        "internal": true
+                },
                 "storage_pool_name": {
                         "key": [
                                 "KEY_STOR_POOL_NAME"
@@ -102,7 +165,7 @@
                         "dm_stats"
                 ],
                 "node": [
-			"storage_pool_name"
+                        "storage_pool_name"
                 ],
                 "storagepool-definition": [
                 ],
@@ -110,10 +173,21 @@
                         "stordriver_volumegroup",
                         "stordriver_thinpool",
                         "stordriver_zpool",
-                        "preferred_nic"
+                        "preferred_nic",
+                        "stordriver_swordfish_host_port",
+                        "stordriver_swordfish_stor_service",
+                        "stordriver_swordfish_stor_pool",
+                        "stordriver_swordfish_user_name",
+                        "stordriver_swordfish_user_passwd",
+                        "stordriver_swordfish_timeout",
+                        "stordriver_swordfish_composed_node_name"
                 ],
+                
+                
+               
+                
                 "resource-definition": [
-			"storage_pool_name",
+                        "storage_pool_name",
                         "peer_slots_new_resource"
                 ],
                 "resource": [
@@ -122,8 +196,8 @@
                         "peer_slots"
                 ],
                 "volume-definition": [
-			"storage_pool_name",
-			"override_vlm_id"
+                        "storage_pool_name",
+                        "override_vlm_id"
                 ]
         }
 }
