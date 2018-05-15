@@ -12,7 +12,8 @@ PYCONSTS=../linstor/sharedconsts.py
 PYPROPS=../linstor/properties.py
 PYDRBDOPTS=../linstor/drbdsetup_options.py
 
-JAVAOUT=../src/com/linbit
+JAVABASEOUT=../generated-src
+JAVAOUT=$(JAVABASEOUT)/com/linbit
 JAVASUFF=OuterClass.java
 JAVAS=$(patsubst %,$(JAVAOUT)/%$(JAVASUFF),$(JAVANOEND))
 JAVACONSTS=../src/com/linbit/linstor/api/ApiConsts.java
@@ -30,8 +31,11 @@ all: java
 $(PYOUT)/%$(PYSUFF): %.proto
 	protoc -I=. --python_out=$(PYOUT) $<
 
-$(JAVAOUT)/%$(JAVASUFF): %.proto
-	protoc -I=. --java_out=../src $<
+$(JAVABASEOUT):
+	mkdir $@
+
+$(JAVAOUT)/%$(JAVASUFF): %.proto $(JAVABASEOUT)
+	protoc -I=. --java_out=$(JAVABASEOUT) $<
 
 $(PYCONSTS): consts.json
 	./genconsts.py python > $@
@@ -60,6 +64,7 @@ cleanpython:
 
 cleanjava:
 	rm -f $(JAVAS) $(JAVACONSTS)
+	rm -Rf $(JAVABASEOUT)
 
 clean: cleanpython cleanjava
 	rm -f $(COMMONDRBDOPTS)
