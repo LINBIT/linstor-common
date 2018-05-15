@@ -4,6 +4,7 @@ COMMONNOEND=$(COMMONSRC:.proto=)
 JAVANOEND=$(COMMONNOEND) $(JAVASRC:.proto=)
 COMMONDRBDOPTS=drbdoptions.json
 COMMONPROPERTIES=properties.json
+PROTOC=protoc
 
 PYOUT=../
 PYSUFF=_pb2.py
@@ -29,13 +30,13 @@ all: java
 	;
 
 $(PYOUT)/%$(PYSUFF): %.proto
-	protoc -I=. --python_out=$(PYOUT) $<
+	${PROTOC} -I=. --python_out=$(PYOUT) $<
 
 $(JAVABASEOUT):
 	mkdir $@
 
 $(JAVAOUT)/%$(JAVASUFF): %.proto $(JAVABASEOUT)
-	protoc -I=. --java_out=$(JAVABASEOUT) $<
+	${PROTOC} -I=. --java_out=$(JAVABASEOUT) $<
 
 $(PYCONSTS): consts.json
 	./genconsts.py python > $@
