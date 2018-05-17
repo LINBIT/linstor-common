@@ -11,6 +11,8 @@ package com.linbit.linstor.proto;
  * - resource_name and volume_nr - volume definition
  * - node_name and resource_name - resource
  * - node_name, resource_name and volume_nr - volume
+ * - resource_name and snapshot_name - snapshot definition
+ * - node_name, resource_name and snapshot_name - snapshot
  */
 message MsgEvent
 {
@@ -34,4 +36,7 @@ message MsgEvent
 
     // The number of the volume this relates to
     optional sint32 volume_number = 5;
+
+    // The name of the snapshot this relates to
+    optional string snapshot_name = 8;
 }

@@ -5,14 +5,7 @@ import public "linstor/proto/MsgApiCallResponse.proto";
 
 message EventInProgressSnapshot
 {
-    repeated InProgressSnapshot snapshots = 1;
-}
+    bool suspended = 1;
 
-message InProgressSnapshot
-{
-    string snapshot_name = 1;
-
-    bool suspended = 2;
-
-    bool snapshot_taken = 3;
+    bool snapshot_taken = 2;
 }
