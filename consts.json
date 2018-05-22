@@ -250,7 +250,11 @@
                 "value": [219, "MASK_ERROR"],
                 "type": "BOR"
         },
-
+        {
+		"name": "FAIL_INVLD_FREE_SPACE_MGR_NAME",
+                "value": [220, "MASK_ERROR"],
+                "type": "BOR"
+        },
         {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
@@ -420,6 +424,11 @@
         {
                 "name": "FAIL_ACC_DENIED_SNAPSHOT_VLM_DFN",
                 "value": [416, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_ACC_DENIED_FREE_SPACE_MGR",
+                "value": [417, "MASK_ERROR"],
                 "type": "BOR"
         },
         {

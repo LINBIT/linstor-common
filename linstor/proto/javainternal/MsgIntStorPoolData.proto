@@ -32,4 +32,7 @@ message MsgIntStorPoolData
     
     // Update id
     sint64 update_id = 10;
+
+    // Free space manager name
+    string free_space_mgr_name = 11;
 }

@@ -10,4 +10,6 @@ message MsgIntDelVlm
 	string rsc_name = 2;
 
 	sint32 vlm_nr = 3;
+
+	uint64 free_space = 4;
 }
