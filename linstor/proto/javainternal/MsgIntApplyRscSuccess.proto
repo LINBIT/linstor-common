@@ -11,4 +11,19 @@ message MsgIntApplyRscSuccess
     MsgIntObjectId rsc_id = 1;
     
     repeated StorPoolFreeSpace free_space = 2;
+
+    repeated VlmData vlm_data = 3;
+}
+
+
+// Contains updated volume data that is only evaluated on the satellite
+message VlmData
+{
+    string vlm_uuid = 1;
+
+    sint32 vlm_nr = 2;
+
+    string block_device_path = 3;
+
+    string meta_disk = 4;
 }
