@@ -387,6 +387,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_ACC_DENIED_SNAPSHOT_DFN",
+                "value": [414, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 500-599: data already exists failures"
         },
         {
@@ -457,6 +462,11 @@
         {
                 "name": "FAIL_EXISTS_WATCH",
                 "value": [513, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_EXISTS_SNAPSHOT_DFN",
+                "value": [514, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
