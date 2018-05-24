@@ -1,10 +1,10 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto;
-import public "linstor/proto/Snapshot.proto";
+import public "linstor/proto/SnapshotDfn.proto";
 
 // linstor - Create snapshot
 message MsgCrtSnapshot
 {
-    required Snapshot snapshot = 1;
+    required SnapshotDfn snapshot_dfn = 1;
 }

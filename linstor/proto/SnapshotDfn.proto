@@ -3,7 +3,7 @@ syntax = "proto2";
 package com.linbit.linstor.proto;
 
 // linstor - Snapshot
-message Snapshot
+message SnapshotDfn
 {
     // UUID
     optional string uuid = 1;
