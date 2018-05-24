@@ -972,8 +972,8 @@
                 "type": "string"
         },
         {
-                "name": "API_LST_SNAPSHOT",
-                "value": "LstSnapshot",
+                "name": "API_LST_SNAPSHOT_DFN",
+                "value": "LstSnapshotDfn",
                 "type": "string"
         },
         {
@@ -1587,6 +1587,21 @@
         {
                 "name": "FLAG_ENCRYPTED",
                 "value": "ENCRYPTED",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_SUCCESSFUL",
+                "value": "SUCCESSFUL",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_FAILED_DEPLOYMENT",
+                "value": "FAILED_DEPLOYMENT",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_FAILED_DISCONNECT",
+                "value": "FAILED_DISCONNECT",
                 "type": "string"
         }
 ]
