@@ -1603,5 +1603,43 @@
                 "name": "FLAG_FAILED_DISCONNECT",
                 "value": "FAILED_DISCONNECT",
                 "type": "string"
+        },
+        {
+                "blockcomment": "Satellite connection statuses"
+        },
+        {
+                "name": "CONN_STATUS_OFFLINE",
+                "value": 0,
+                "type": "int"
+        },
+        {
+                "name": "CONN_STATUS_CONNECTED",
+                "value": 1,
+                "type": "int"
+        },
+        {
+                "name": "CONN_STATUS_ONLINE",
+                "value": 2,
+                "type": "int"
+        },
+        {
+                "name": "CONN_STATUS_VERSION_MISMATCH",
+                "value": 3,
+                "type": "int"
+        },
+        {
+                "name": "CONN_STATUS_FULL_SYNC_FAILED",
+                "value": 4,
+                "type": "int"
+        },
+        {
+                "name": "CONN_STATUS_AUTHENTICATION_ERROR",
+                "value": 5,
+                "type": "int"
+        },
+        {
+                "name": "CONN_STATUS_UNKNOWN",
+                "value": 6,
+                "type": "int"
         }
 ]
