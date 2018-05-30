@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package com.linbit.linstor.proto.javainternal;
+import "linstor/proto/LinStorMapEntry.proto";
+
+// LinStor - Internal message containing an in-progress snapshot
+message MsgIntSnapshotData
+{
+    // Resource name
+    string                            rsc_name          = 1;
+
+    // Resource definition uuid
+    string                            rsc_dfn_uuid      = 2;
+
+    // Resource definition port
+    sint32                            rsc_dfn_port      = 3;
+
+    // Resource definition flags
+    sint64                            rsc_dfn_flags     = 4;
+
+    // Resource definition secret
+    string                            rsc_dfn_secret    = 5;
+
+    // Resource definition transport type (IP, RDMA, RoCE)
+    string                            rsc_dfn_transport_type = 6;
+
+    // Resource definition properties map
+    repeated LinStorMapEntry          rsc_dfn_props     = 7;
+
+    // Snapshot name
+    string                            snapshot_name     = 8;
+
+    // Snapshot definition uuid
+    string                            snapshot_dfn_uuid = 9;
+
+    // Snapshot uuid
+    string                            snapshot_uuid     = 10;
+
+    // True indicates that the resource should be suspended
+    bool                              suspend_resource  = 11;
+
+    // True indicates that this snapshot should be taken
+    bool                              take_snapshot     = 12;
+
+    // FullSync id
+    sint64                            full_sync_id      = 13;
+
+    // Update id
+    sint64                            update_id         = 14;
+}

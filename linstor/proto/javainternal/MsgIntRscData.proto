@@ -59,9 +59,6 @@ message MsgIntRscData
     
     // Update id
     sint64                            update_id = 17;
-
-    // In-progress snapshots
-    repeated IntSnapshot              in_progress_snapshots = 18;
 }
 
 message MsgIntOtherRscData
@@ -99,17 +96,4 @@ message RscConnectionData
 
     // Resource Connection properties map
     repeated LinStorMapEntry props   = 4;
-}
-
-message IntSnapshot
-{
-    string snapshot_uuid = 1;
-
-    string snapshot_name = 2;
-
-    string snapshot_definition_uuid = 3;
-
-    bool suspend_resource = 4;
-
-    bool take_snapshot = 5;
 }

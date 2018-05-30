@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package com.linbit.linstor.proto.javainternal;
+import "linstor/proto/LinStorMapEntry.proto";
+
+// LinStor - Internal message indicating that a snapshot is no longer in-progress
+message MsgIntSnapshotEndedData
+{
+    // Resource name
+    string                            rsc_name          = 1;
+
+    // Snapshot name
+    string                            snapshot_name     = 2;
+
+    // FullSync id
+    sint64                            full_sync_id      = 3;
+
+    // Update id
+    sint64                            update_id         = 4;
+}
