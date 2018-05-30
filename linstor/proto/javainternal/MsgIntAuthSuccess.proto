@@ -7,4 +7,8 @@ message MsgIntAuthSuccess
 {
     // The next expected full sync id
     sint64 expected_full_sync_id = 1;
+
+    uint32 version_major = 2;
+    uint32 version_minor = 3;
+    uint32 version_patch = 4;
 }
