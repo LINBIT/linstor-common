@@ -25,7 +25,7 @@ message Node
     repeated NetInterface net_interfaces = 6;
 
     // Node connected
-    optional bool connected = 7;
+    optional uint32 connection_status = 7;
 
     // Node's diskless stor pool uuid
     optional string diskless_stor_pool_uuid = 8;
