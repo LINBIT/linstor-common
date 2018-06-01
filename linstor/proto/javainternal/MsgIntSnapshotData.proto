@@ -37,19 +37,28 @@ message MsgIntSnapshotData
     string                            snapshot_uuid     = 10;
 
     // Volume definitions
-    repeated SnapshotVlmDfn           snapshot_vlm_dfns = 15;
+    repeated SnapshotVlmDfn           snapshot_vlm_dfns = 11;
+
+    // Snaphot definition flags
+    sint64                            snapshot_dfn_flags = 12;
+
+    // Snapshot volumes
+    repeated SnapshotVlm              snapshot_vlms     = 13;
+
+    // Snapshot flags
+    sint64                            flags             = 14;
 
     // True indicates that the resource should be suspended
-    bool                              suspend_resource  = 11;
+    bool                              suspend_resource  = 15;
 
     // True indicates that this snapshot should be taken
-    bool                              take_snapshot     = 12;
+    bool                              take_snapshot     = 16;
 
     // FullSync id
-    sint64                            full_sync_id      = 13;
+    sint64                            full_sync_id      = 17;
 
     // Update id
-    sint64                            update_id         = 14;
+    sint64                            update_id         = 18;
 }
 
 message SnapshotVlmDfn
@@ -59,4 +68,22 @@ message SnapshotVlmDfn
 
     // Volume number
     sint32 vlm_nr = 2;
+}
+
+message SnapshotVlm
+{
+    // UUID
+    string snapshot_vlm_uuid = 1;
+
+    // Volume definition uuid
+    string snapshot_vlm_dfn_uuid = 2;
+
+    // Volume number
+    sint32 vlm_nr = 3;
+
+    // Storage pool uuid
+    string stor_pool_uuid = 4;
+
+    // Storage pool name
+    string stor_pool_name = 5;
 }

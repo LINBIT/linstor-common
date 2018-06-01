@@ -314,6 +314,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_NOT_FOUND_SNAPSHOT_DFN",
+                "value": [313, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 400-499: access denied failures"
         },
         {

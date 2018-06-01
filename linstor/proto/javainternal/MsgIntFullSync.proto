@@ -4,6 +4,7 @@ package com.linbit.linstor.proto.javainternal;
 import public "linstor/proto/javainternal/MsgIntNodeData.proto";
 import public "linstor/proto/javainternal/MsgIntStorPoolData.proto";
 import public "linstor/proto/javainternal/MsgIntRscData.proto";
+import public "linstor/proto/javainternal/MsgIntSnapshotData.proto";
 import public "linstor/proto/javainternal/MsgIntControllerData.proto";
 
 // linstor - Internal message containing a full synchronization of the resource specific data
@@ -17,6 +18,9 @@ message MsgIntFullSync
 
     // Satellite specific resources (including resource definition, volume definitions and volumes)
     repeated MsgIntRscData      rscs        = 3;
+
+    // Satellite specific in-progress snapshots (including resource definition, snapshot volume definitions etc)
+    repeated MsgIntSnapshotData snapshots   = 7;
 
     // FullSync timestamp
     sint64                      full_sync_timestamp = 4;

@@ -8,4 +8,6 @@ message EventInProgressSnapshot
     bool suspended = 1;
 
     bool snapshot_taken = 2;
+
+    bool deleted = 3;
 }
