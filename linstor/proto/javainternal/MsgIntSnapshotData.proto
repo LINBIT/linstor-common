@@ -36,6 +36,9 @@ message MsgIntSnapshotData
     // Snapshot uuid
     string                            snapshot_uuid     = 10;
 
+    // Volume definitions
+    repeated SnapshotVlmDfn           snapshot_vlm_dfns = 15;
+
     // True indicates that the resource should be suspended
     bool                              suspend_resource  = 11;
 
@@ -47,4 +50,13 @@ message MsgIntSnapshotData
 
     // Update id
     sint64                            update_id         = 14;
+}
+
+message SnapshotVlmDfn
+{
+    // UUID
+    string snapshot_vlm_dfn_uuid = 1;
+
+    // Volume number
+    sint32 vlm_nr = 2;
 }
