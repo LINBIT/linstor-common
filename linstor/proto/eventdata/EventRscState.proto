@@ -6,4 +6,6 @@ message EventRscState
 {
     // The state of the resource
     optional bool ready = 1;
+
+    optional bool in_use = 2;
 }
