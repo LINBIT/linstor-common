@@ -68,6 +68,9 @@ message SnapshotVlmDfn
 
     // Volume number
     sint32 vlm_nr = 2;
+
+    // Volume size (in kiB)
+    int64 vlm_size = 3;
 }
 
 message SnapshotVlm

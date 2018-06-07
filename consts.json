@@ -319,6 +319,16 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_NOT_FOUND_SNAPSHOT_VLM_DFN",
+                "value": [314, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_NOT_FOUND_SNAPSHOT",
+                "value": [315, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 400-499: access denied failures"
         },
         {
@@ -394,6 +404,11 @@
         {
                 "name": "FAIL_ACC_DENIED_SNAPSHOT_DFN",
                 "value": [414, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_ACC_DENIED_SNAPSHOT",
+                "value": [415, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -885,8 +900,8 @@
                 "type": "string"
         },
         {
-                "name": "API_RST_SNAPSHOT",
-                "value": "RstSnapshot",
+                "name": "API_RESTORE_SNAPSHOT",
+                "value": "RestoreSnapshot",
                 "type": "string"
         },
         {
@@ -1259,6 +1274,16 @@
         {
                 "name": "KEY_MISSING_NAMESPC",
                 "value": "MissingNameSpace",
+                "type": "string"
+        },
+        {
+                "name": "KEY_VLM_RESTORE_FROM_RESOURCE",
+                "value": "RestoreFromResource",
+                "type": "string"
+        },
+        {
+                "name": "KEY_VLM_RESTORE_FROM_SNAPSHOT",
+                "value": "RestoreFromSnapshot",
                 "type": "string"
         },
         {

@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Create resource from snapshot
+message MsgRestoreSnapshotRsc
+{
+    // Nodes
+    repeated RestoreNode nodes = 1;
+
+    // Source resource name
+    required string from_resource_name = 2;
+
+    // Snapshot name
+    required string from_snapshot_name = 3;
+
+    // Target resource name
+    required string to_resource_name = 4;
+}
+
+message RestoreNode
+{
+    required string name = 1;
+}
