@@ -1574,6 +1574,11 @@
                 "type": "int"
         },
         {
+                "name": "DFLT_STLT_PORT_SSL",
+                "value": 3367,
+                "type": "int"
+        },
+        {
                 "name": "DFLT_STLT_PORT_PLAIN",
                 "value": 3366,
                 "type": "int"
