@@ -19,7 +19,7 @@ message Vlm
     optional uint32 vlm_minor_nr = 4;
 
     // Block device path
-    optional string block_device = 5;
+    optional string backing_disk = 5;
 
     // Meta disk path (might be "internal")
     optional string meta_disk = 6;
