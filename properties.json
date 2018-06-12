@@ -65,6 +65,7 @@
                         "minor_nr_range"
                 ],
                 "node": [
+			"storage_pool_name"
                 ],
                 "storagepool-definition": [
                 ],
@@ -75,12 +76,14 @@
                         "preferred_nic"
                 ],
                 "resource-definition": [
+			"storage_pool_name"
                 ],
                 "resource": [
                         "storage_pool_name",
                         "preferred_nic"
                 ],
                 "volume-definition": [
+			"storage_pool_name"
                 ]
         }
 }
