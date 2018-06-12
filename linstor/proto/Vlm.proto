@@ -50,4 +50,7 @@ message Vlm
 
     // Storage pool's properties
     repeated LinStorMapEntry stor_pool_props = 14;
+
+    // Device path the end user can use, might be equal to backing_disk
+    optional string device_path = 16;
 }
