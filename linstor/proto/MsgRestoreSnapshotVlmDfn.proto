@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Create volume definitions from snapshot
+message MsgRestoreSnapshotVlmDfn
+{
+    // Source resource name
+    required string from_resource_name = 1;
+
+    // Snapshot name
+    required string from_snapshot_name = 2;
+
+    // Target resource name
+    required string to_resource_name = 3;
+}

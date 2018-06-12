@@ -900,6 +900,11 @@
                 "type": "string"
         },
         {
+                "name": "API_RESTORE_VLM_DFN",
+                "value": "RestoreVlmDfn",
+                "type": "string"
+        },
+        {
                 "name": "API_RESTORE_SNAPSHOT",
                 "value": "RestoreSnapshot",
                 "type": "string"
