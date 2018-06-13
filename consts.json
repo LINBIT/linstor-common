@@ -1297,6 +1297,26 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_CURRENT_GI",
+                "value": "DrbdCurrentGi",
+                "type": "string"
+        },
+        {
+                "name": "KEY_DRBD_BITMAP_GI",
+                "value": "DrbdBitmapGi",
+                "type": "string"
+        },
+        {
+                "name": "KEY_DRBD_HISTORY_1_GI",
+                "value": "DrbdHistory1Gi",
+                "type": "string"
+        },
+        {
+                "name": "KEY_DRBD_HISTORY_2_GI",
+                "value": "DrbdHistory2Gi",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property namespaces"
         },
         {
