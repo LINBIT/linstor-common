@@ -19,4 +19,12 @@ message SnapshotDfn
 
     // Snapshot definition flags
     repeated string snapshot_dfn_flags = 5;
+
+    // Snapshots
+    repeated Snapshot snapshots = 6;
+}
+
+message Snapshot
+{
+    required string node_name = 1;
 }
