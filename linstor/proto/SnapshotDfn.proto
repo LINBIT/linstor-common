@@ -22,9 +22,21 @@ message SnapshotDfn
 
     // Snapshots
     repeated Snapshot snapshots = 6;
+
+    // Snapshot volume definitions
+    repeated SnapshotVlmDfn snapshot_vlm_dfns = 7;
 }
 
 message Snapshot
 {
     required string node_name = 1;
+}
+
+message SnapshotVlmDfn
+{
+    // Volume number
+    optional sint32 vlm_nr = 1;
+
+    // Volume size (in kiB)
+    required int64 vlm_size = 2;
 }
