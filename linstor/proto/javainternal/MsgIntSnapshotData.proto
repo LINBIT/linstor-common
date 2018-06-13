@@ -71,6 +71,9 @@ message SnapshotVlmDfn
 
     // Volume size (in kiB)
     int64 vlm_size = 3;
+
+    // Snapshot volume definition flags
+    sint64 flags = 4;
 }
 
 message SnapshotVlm

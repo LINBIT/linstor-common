@@ -412,6 +412,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_ACC_DENIED_SNAPSHOT_VLM_DFN",
+                "value": [416, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 500-599: data already exists failures"
         },
         {
