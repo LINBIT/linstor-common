@@ -612,6 +612,11 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_INSUFFICIENT_PEER_SLOTS",
+                "value": [993, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_SNAPSHOTS_NOT_SUPPORTED",
                 "value": [994, "MASK_ERROR"],
                 "type": "BOR"
@@ -1501,6 +1506,16 @@
         {
                 "name": "KEY_CUR_STLT_CONN_NAME",
                 "value": "CurStltConnName",
+                "type": "string"
+        },
+        {
+                "name": "KEY_PEER_SLOTS_NEW_RESOURCE",
+                "value": "PeerSlotsNewResource",
+                "type": "string"
+        },
+        {
+                "name": "KEY_PEER_SLOTS",
+                "value": "PeerSlots",
                 "type": "string"
         },
         {

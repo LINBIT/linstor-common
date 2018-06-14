@@ -57,15 +57,35 @@
                         "type": "regex",
                         "value": "[0-9]+-[0-9]+",
                         "info": "Range for auto-allocation of volume minor numbers"
+                },
+                "peer_slots_new_resource": {
+                        "key": [
+                                "KEY_PEER_SLOTS_NEW_RESOURCE"
+                        ],
+                        "type": "range",
+                        "min": 1,
+                        "max": 31,
+                        "info": "DRBD peer slots to allocate for newly created resources (default 7), the number of peer slots cannot be changed once the resource is created, so allow sufficient slots to increase redundancy in the future"
+                },
+                "peer_slots": {
+                        "key": [
+                                "KEY_PEER_SLOTS"
+                        ],
+                        "type": "range",
+                        "min": 1,
+                        "max": 31,
+                        "info": "DRBD peer slots present on resource",
+                        "internal": true
                 }
         },
         "objects": {
                 "controller": [
                         "tcp_port_range",
-                        "minor_nr_range"
+                        "minor_nr_range",
+                        "peer_slots_new_resource"
                 ],
                 "node": [
-			"storage_pool_name"
+			            "storage_pool_name"
                 ],
                 "storagepool-definition": [
                 ],
@@ -76,14 +96,16 @@
                         "preferred_nic"
                 ],
                 "resource-definition": [
-			"storage_pool_name"
+			            "storage_pool_name",
+                        "peer_slots_new_resource"
                 ],
                 "resource": [
                         "storage_pool_name",
-                        "preferred_nic"
+                        "preferred_nic",
+                        "peer_slots"
                 ],
                 "volume-definition": [
-			"storage_pool_name"
+			            "storage_pool_name"
                 ]
         }
 }
