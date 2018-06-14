@@ -19,7 +19,8 @@ JAVASUFF=OuterClass.java
 JAVAS=$(patsubst %,$(JAVAOUT)/%$(JAVASUFF),$(JAVANOEND))
 JAVAAPIOUT=$(JAVAOUT)/linstor/api
 JAVACONSTS=$(JAVAAPIOUT)/ApiConsts.java
-JAVAPROPERTYRULES=../src/com/linbit/linstor/api/prop/GeneratedPropertyRules.java
+JAVAPROPOUT=$(JAVAAPIOUT)/prop
+JAVAPROPERTYRULES=$(JAVAPROPOUT)/GeneratedPropertyRules.java
 
 # make java the default one
 all: java
@@ -42,7 +43,10 @@ $(JAVAOUT)/%$(JAVASUFF): %.proto $(JAVABASEOUT)
 $(PYCONSTS): consts.json
 	./genconsts.py python > $@
 
-$(JAVAPROPERTYRULES): $(COMMONPROPERTIES) $(COMMONDRBDOPTS)
+$(JAVAPROPOUT):
+	mkdir -p $@
+
+$(JAVAPROPERTYRULES): $(COMMONPROPERTIES) $(COMMONDRBDOPTS) $(JAVAPROPOUT)
 	./genproperties.py java $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
 
 $(PYPROPS): $(COMMONPROPERTIES) $(COMMONDRBDOPTS)
