@@ -84,7 +84,15 @@
                         ],
                         "type": "boolean",
                         "info": "Enable dmstats on lvm create"
-                }
+                },
+		"override_vlm_id": {
+			"key": [
+				"KEY_STOR_POOL_OVERRIDE_VLM_ID"
+			],
+			"type": "regex",
+			"value": ".*",
+			"info": "Overrids the generated '<resource-name>_<5 digit volume number>' volume name for migration purposes."
+		}
         },
         "objects": {
                 "controller": [
@@ -114,7 +122,8 @@
                         "peer_slots"
                 ],
                 "volume-definition": [
-			"storage_pool_name"
+			"storage_pool_name",
+			"override_vlm_id"
                 ]
         }
 }

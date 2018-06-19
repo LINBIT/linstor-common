@@ -1422,6 +1422,11 @@
                 "value": "CryptPasswd",
                 "type": "string"
         },
+	{
+		"name": "KEY_STOR_POOL_OVERRIDE_VLM_ID",
+		"value": "OverrideVlmId",
+		"type": "string"
+	},
         {
                 "blockcomment": "Storage pool traits keys"
         },
