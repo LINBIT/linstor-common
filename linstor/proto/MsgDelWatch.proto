@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Stop watching events
+message MsgDelWatch
+{
+    // Identifying number for this watch
+    required int32 watch_id = 1;
+}
