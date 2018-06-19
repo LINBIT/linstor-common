@@ -76,16 +76,25 @@
                         "max": 31,
                         "info": "DRBD peer slots present on resource",
                         "internal": true
+                },
+                "dm_stats": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_DMSTATS"
+                        ],
+                        "type": "boolean",
+                        "info": "Enable dmstats on lvm create"
                 }
         },
         "objects": {
                 "controller": [
                         "tcp_port_range",
                         "minor_nr_range",
-                        "peer_slots_new_resource"
+                        "peer_slots_new_resource",
+                        "dm_stats"
                 ],
                 "node": [
-			            "storage_pool_name"
+			"storage_pool_name"
                 ],
                 "storagepool-definition": [
                 ],
@@ -96,7 +105,7 @@
                         "preferred_nic"
                 ],
                 "resource-definition": [
-			            "storage_pool_name",
+			"storage_pool_name",
                         "peer_slots_new_resource"
                 ],
                 "resource": [
@@ -105,7 +114,7 @@
                         "peer_slots"
                 ],
                 "volume-definition": [
-			            "storage_pool_name"
+			"storage_pool_name"
                 ]
         }
 }

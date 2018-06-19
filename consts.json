@@ -1322,6 +1322,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DMSTATS",
+                "value": "DMStats",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property namespaces"
         },
         {
