@@ -10,4 +10,6 @@ message MsgAutoPlaceRsc
     optional string storage_pool = 3;
     repeated string not_place_with_rsc = 4;
     optional string not_place_with_rsc_regex = 5;
+    repeated string replicas_on_same = 6;
+    repeated string replicas_on_different = 7;
 }
