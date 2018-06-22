@@ -1690,6 +1690,11 @@
                 "type": "string"
         },
         {
+                "name": "FLAG_RESIZE",
+                "value": "RESIZE",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Satellite connection statuses"
         },
         {
