@@ -719,6 +719,11 @@
                 "type": "string"
         },
         {
+                "name": "API_HOSTNAME",
+                "value": "Hostname",
+                "type": "string"
+        },
+        {
                 "name": "API_CRT_RSC",
                 "value": "CrtRsc",
                 "type": "string"
