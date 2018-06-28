@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/RscDfn.proto";
+
+// linstor - response to a query of max volume sizes
+message MsgRspMaxVlmSizes
+{
+    // Candidate list
+    repeated Candidate candidates = 1;
+}
+
+message Candidate
+{
+    // Storage pool name
+    required string stor_pool_name = 1;
+
+    // The free space of the fullest storage pool
+    required sint64 max_vlm_size = 2;
+
+    // References of the real storage pools (combination of stor_pool_name and node_name)
+    repeated string node_names = 3;
+}

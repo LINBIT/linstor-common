@@ -1037,6 +1037,19 @@
                 "type": "string"
         },
         {
+                "blockcomment": "Query APIs"
+        },
+        {
+                "name": "API_QRY_MAX_VLM_SIZE",
+                "value": "QryMaxVlmSize",
+                "type": "string"
+        },
+        {
+                "name": "API_RSP_MAX_VLM_SIZE",
+                "value": "RspMaxVlmSize",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Event APIs"
         },
         {

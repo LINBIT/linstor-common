@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/RscDfn.proto";
+
+// linstor - query of max volume sizes
+message MsgQryMaxVlmSizes
+{
+    required uint32 place_count = 1;
+    optional string storage_pool = 2;
+    repeated string not_place_with_rsc = 3;
+    optional string not_place_with_rsc_regex = 4;
+    repeated string replicas_on_same = 5;
+    repeated string replicas_on_different = 6;
+}
+

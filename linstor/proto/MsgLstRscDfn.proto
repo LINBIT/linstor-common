@@ -3,9 +3,9 @@ syntax = "proto2";
 package com.linbit.linstor.proto;
 import public "linstor/proto/RscDfn.proto";
 
-// linstor - List nodes
+// linstor - List resource definitions
 message MsgLstRscDfn
 {
-    // Nodes
+    // Resource defitions
     repeated RscDfn rsc_dfns = 1;
 }
