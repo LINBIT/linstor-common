@@ -1,15 +1,11 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto;
+import public "linstor/proto/AutoSelectFilter.proto";
 
 // linstor - Auto place resource
 message MsgAutoPlaceRsc
 {
     required string rsc_name = 1;
-    required uint32 place_count = 2;
-    optional string storage_pool = 3;
-    repeated string not_place_with_rsc = 4;
-    optional string not_place_with_rsc_regex = 5;
-    repeated string replicas_on_same = 6;
-    repeated string replicas_on_different = 7;
+    required AutoSelectFilter select_filter = 2;
 }
