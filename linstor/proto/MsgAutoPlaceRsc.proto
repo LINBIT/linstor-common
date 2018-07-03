@@ -8,4 +8,5 @@ message MsgAutoPlaceRsc
 {
     required string rsc_name = 1;
     required AutoSelectFilter select_filter = 2;
+    optional bool diskless_on_remaining = 3 [default = false];
 }
