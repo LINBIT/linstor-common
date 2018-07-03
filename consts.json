@@ -693,6 +693,11 @@
                 "type": "BOR"
         },
         {
+                "name": "API_CALL_PARSE_ERROR",
+                "value": ["0x0FFFFFFFFFFFFFFDL", "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "SignIn codes"
         },
         {
