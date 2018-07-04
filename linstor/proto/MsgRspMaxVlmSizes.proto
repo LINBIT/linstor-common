@@ -20,4 +20,7 @@ message Candidate
 
     // References of the real storage pools (combination of stor_pool_name and node_name)
     repeated string node_names = 3;
+
+    // Whether all the storage pools for this candidate are thinly provisioned
+    optional bool all_thin = 4;
 }
