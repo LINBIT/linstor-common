@@ -1459,6 +1459,30 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_PROVISIONING",
+                "value": "Provisioning",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_ALLOCATION_UNIT",
+                "value": "AllocationUnit",
+                "type": "string",
+                "comment": "Unit of smallest allocation. The size in KiB as a decimal number."
+        },
+        {
+                "blockcomment": "Storage pool traits values"
+        },
+        {
+                "name": "VAL_STOR_POOL_PROVISIONING_FAT",
+                "value": "Fat",
+                "type": "string"
+        },
+        {
+                "name": "VAL_STOR_POOL_PROVISIONING_THIN",
+                "value": "Thin",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property keys"
         },
         {
