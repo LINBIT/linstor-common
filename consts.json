@@ -246,6 +246,12 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_PLACE_COUNT",
+                "value": [219, "MASK_ERROR"],
+                "type": "BOR"
+        },
+
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -672,6 +678,11 @@
         {
                 "name": "WARN_DEL_UNSET_PROP",
                 "value": [1005, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
+                "name": "WARN_RSC_ALREADY_DEPLOYED",
+                "value": [1006, "MASK_WARN"],
                 "type": "BOR"
         },
         {
