@@ -13,7 +13,7 @@ PYCONSTS=../linstor/sharedconsts.py
 PYPROPS=../linstor/properties.py
 PYDRBDOPTS=../linstor/drbdsetup_options.py
 
-JAVABASEOUT=../generated-src
+JAVABASEOUT=../server/generated-src
 JAVAOUT=$(JAVABASEOUT)/com/linbit
 JAVASUFF=OuterClass.java
 JAVAS=$(patsubst %,$(JAVAOUT)/%$(JAVASUFF),$(JAVANOEND))
