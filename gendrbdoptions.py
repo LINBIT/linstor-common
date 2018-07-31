@@ -82,7 +82,7 @@ _CategoyMap = {
     'peer-device-options': "DrbdOptions/PeerDevice"
 }
 
-_FilterResource = ['disk-options', 'resource-options', 'new-peer']
+_FilterResource = ['disk-options', 'resource-options', 'new-peer', 'peer-device-options']
 _FilterVolume = ['disk-options']  # TODO add volume connection -> 'peer-device-options'
 _FilterPeerDevice = ['peer-device-options']
 
