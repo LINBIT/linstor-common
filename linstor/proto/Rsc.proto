@@ -30,4 +30,7 @@ message Rsc
 
     // Volume
     repeated Vlm vlms = 8;
+
+    // DRBD node ID
+    optional int32 node_id = 9;
 }
