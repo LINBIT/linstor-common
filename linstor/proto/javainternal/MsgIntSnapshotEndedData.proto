@@ -1,7 +1,6 @@
 syntax = "proto3";
 
 package com.linbit.linstor.proto.javainternal;
-import "linstor/proto/LinStorMapEntry.proto";
 
 // LinStor - Internal message indicating that a snapshot is no longer in-progress
 message MsgIntSnapshotEndedData
