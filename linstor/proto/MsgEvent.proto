@@ -19,10 +19,7 @@ message MsgEvent
     // Identifying number for this watch
     required int32 watch_id = 1;
 
-    // Incrementing counter for events for this watch, starting at 1
-    optional int64 event_counter = 7;
-
-    // The action represented by the event: open stream, new data, close stream
+    // The action represented by the event: new data, close stream
     required string event_action = 6;
 
     // Identifies the event that caused this signal

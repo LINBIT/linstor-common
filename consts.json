@@ -1143,11 +1143,6 @@
                 "blockcomment": "Event stream actions"
         },
         {
-                "name": "EVENT_STREAM_OPEN",
-                "value": "Open",
-                "type": "string"
-        },
-        {
                 "name": "EVENT_STREAM_VALUE",
                 "value": "Value",
                 "type": "string"
