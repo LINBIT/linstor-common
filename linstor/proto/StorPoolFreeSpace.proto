@@ -13,4 +13,7 @@ message StorPoolFreeSpace
 
     // Free space of this storage pool
     required uint64  free_space      = 3;
+
+    // Total capacity of this storage pool
+    required uint64  total_capacity     = 4;
 }
