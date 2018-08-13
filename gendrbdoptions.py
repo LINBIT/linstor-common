@@ -71,9 +71,11 @@ def parse_drbd_setup_xml(xmlout):
         "options": options,
         "filters": {
             "resource": [x for x in options.keys() if options[x]['category'] in _FilterResource],
-            "volume": [x for x in options.keys() if options[x]['category'] in _FilterVolume]
+            "volume": [x for x in options.keys() if options[x]['category'] in _FilterVolume],
+            "peer-device-options": [x for x in options.keys() if options[x]['category'] in _FilterPeerDevice]
         }
     }
+
 
 _CategoyMap = {
     'new-peer': "DrbdOptions/Net",
@@ -84,7 +86,7 @@ _CategoyMap = {
 
 _FilterResource = ['disk-options', 'resource-options', 'new-peer', 'peer-device-options']
 _FilterVolume = ['disk-options']  # TODO add volume connection -> 'peer-device-options'
-_FilterPeerDevice = ['peer-device-options']
+_FilterPeerDevice = ['peer-device-options', 'new-peer']
 
 
 def whitelist(conf):
