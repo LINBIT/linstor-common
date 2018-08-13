@@ -49,7 +49,7 @@ $(JAVAPROPOUT):
 $(JAVAPROPERTYRULES): $(COMMONPROPERTIES) $(COMMONDRBDOPTS) $(JAVAPROPOUT)
 	./genproperties.py java $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
 
-$(PYPROPS): $(COMMONPROPERTIES) $(COMMONDRBDOPTS)
+$(PYPROPS): $(COMMONPROPERTIES) $(COMMONDRBDOPTS) $(PYDRBDOPTS)
 	./genproperties.py python $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
 
 $(PYDRBDOPTS):
@@ -68,12 +68,14 @@ python: $(PYS) $(PYCONSTS) $(PYPROPS) $(PYDRBDOPTS)
 
 java: $(JAVAS) $(JAVACONSTS) $(COMMONDRBDOPTS) $(JAVAPROPERTYRULES)
 
-cleanpython:
+cleancommon:
+	rm -f $(COMMONDRBDOPTS)
+
+cleanpython: cleancommon
 	rm -f $(PYS) $(PYCONSTS) $(PYPROPS) $(PYDRBDOPTS)
 
-cleanjava:
+cleanjava: cleancommon
 	rm -f $(JAVAS) $(JAVACONSTS)
 	rm -Rf $(JAVABASEOUT)
 
 clean: cleanpython cleanjava
-	rm -f $(COMMONDRBDOPTS)
