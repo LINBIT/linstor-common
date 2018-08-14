@@ -722,9 +722,19 @@
                 "type": "BOR"
         },
         {
+                "blockcomment": "Special answer message content types"
+        },
+        {
                 "name": "API_REPLY",
                 "value": "Reply",
-                "type": "string"
+                "type": "string",
+                "comment": "Textual MsgApiCallResponse responses"
+        },
+        {
+                "name": "API_END_OF_IMMEDIATE_ANSWERS",
+                "value": "EndOfImmediateAnswers",
+                "type": "string",
+                "comment": "Indicates that the immediate answers to the API call are complete"
         },
         {
                 "blockcomment": "Create object APIs"
