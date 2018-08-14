@@ -91,7 +91,7 @@
 			],
 			"type": "regex",
 			"value": ".*",
-			"info": "Overrids the generated '<resource-name>_<5 digit volume number>' volume name for migration purposes."
+			"info": "Overwrites the generated '<resource-name>_<5 digit volume number>' volume name for migration purposes."
 		}
         },
         "objects": {
