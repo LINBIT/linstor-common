@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/LinStorMapEntry.proto";
+
+// linstor - Toggle resource between diskless and having a disk
+message MsgToggleDisk
+{
+    // UUID
+    optional string rsc_uuid = 1;
+
+    // Node name
+    required string node_name = 2;
+
+    // Resource name
+    required string rsc_name  = 3;
+
+    // Storage pool name
+    optional string stor_pool_name = 4;
+}

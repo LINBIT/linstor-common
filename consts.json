@@ -686,6 +686,11 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_RSC_ALREADY_HAS_DISK",
+                "value": [1007, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "name": "WARN_NOT_FOUND",
                 "value": [3000, "MASK_WARN"],
                 "type": "BOR"
@@ -825,6 +830,11 @@
         {
                 "name": "API_MOD_RSC",
                 "value": "ModRsc",
+                "type": "string"
+        },
+        {
+                "name": "API_TOGGLE_DISK",
+                "value": "ToggleDisk",
                 "type": "string"
         },
         {
