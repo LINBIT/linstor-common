@@ -1773,6 +1773,16 @@
                 "type": "string"
         },
         {
+                "name": "FLAG_DISK_ADDING",
+                "value": "DISK_ADDING",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_DISK_ADD_REQUESTED",
+                "value": "DISK_ADD_REQUESTED",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Satellite connection statuses"
         },
         {
