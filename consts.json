@@ -627,6 +627,16 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_INSUFFICIENT_REPLICA_COUNT",
+                "value": [991, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_RSC_BUSY",
+                "value": [992, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_INSUFFICIENT_PEER_SLOTS",
                 "value": [993, "MASK_ERROR"],
                 "type": "BOR"
@@ -697,6 +707,11 @@
         {
                 "name": "WARN_RSC_ALREADY_HAS_DISK",
                 "value": [1007, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
+                "name": "WARN_RSC_ALREADY_DISKLESS",
+                "value": [1008, "MASK_WARN"],
                 "type": "BOR"
         },
         {
@@ -1789,6 +1804,16 @@
         {
                 "name": "FLAG_DISK_ADD_REQUESTED",
                 "value": "DISK_ADD_REQUESTED",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_DISK_REMOVING",
+                "value": "DISK_REMOVING",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_DISK_REMOVE_REQUESTED",
+                "value": "DISK_REMOVE_REQUESTED",
                 "type": "string"
         },
         {

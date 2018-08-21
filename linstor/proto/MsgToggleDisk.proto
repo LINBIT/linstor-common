@@ -17,4 +17,7 @@ message MsgToggleDisk
 
     // Storage pool name
     optional string stor_pool_name = 4;
+
+    // Should the resource be toggled to diskless
+    optional bool diskless = 5;
 }
