@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package com.linbit.linstor.proto.javainternal;
+
+// linstor - Internal message informing the controller that the satellite removed
+// a volume from the diskless storage pool
+message MsgIntVlmRemovedFromDiskless
+{
+    // Volume uuid
+    string vlm_uuid = 1;
+
+    // Node name
+    string node_Name = 2;
+
+    // Resource name
+    string rsc_name = 3;
+
+    // Volume number
+    int32 vlm_nr = 4;
+
+    // Storage pool uuid
+    string stor_pool_uuid = 5;
+
+    // Storage pool name
+    string stor_pool_name = 6;
+    
+    // Free space of the storage pool
+    uint64 free_space = 7;
+}
