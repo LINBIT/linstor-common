@@ -30,7 +30,7 @@
                 "stordriver_swordfish_host_port": {
                         "key": [
                                 "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SWORDFISH_HOST_PORT"
+                                "KEY_STOR_POOL_SF_HOST_PORT"
                         ],
                         "type": "regex",
                         "value": ".*",
@@ -39,7 +39,7 @@
                 "stordriver_swordfish_stor_service": {
                         "key": [
                                 "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SWORDFISH_STOR_SVC"
+                                "KEY_STOR_POOL_SF_STOR_SVC"
                         ],
                         "type": "regex",
                         "value": ".*",
@@ -48,7 +48,7 @@
                 "stordriver_swordfish_stor_pool": {
                         "key": [
                                 "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SWORDFISH_STOR_POOL"
+                                "KEY_STOR_POOL_SF_STOR_POOL"
                         ],
                         "type": "regex",
                         "value": ".*",
@@ -57,7 +57,7 @@
                 "stordriver_swordfish_user_name": {
                         "key": [
                                 "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SWORDFISH_USER_NAME"
+                                "KEY_STOR_POOL_SF_USER_NAME"
                         ],
                         "type": "regex",
                         "value": ".*",
@@ -66,7 +66,7 @@
                 "stordriver_swordfish_user_passwd": {
                         "key": [
                                 "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SWORDFISH_USER_PW"
+                                "KEY_STOR_POOL_SF_USER_PW"
                         ],
                         "type": "regex",
                         "value": ".*",
@@ -129,7 +129,7 @@
                 "stordriver_swordfish_composed_node_name": {
                         "key": [
                                 "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SWORDFISH_COMPOSED_NODE_NAME"
+                                "KEY_STOR_POOL_SF_COMPOSED_NODE_NAME"
                         ],
                         "type": "regex",
                         "value": ".*",
