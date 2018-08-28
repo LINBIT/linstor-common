@@ -207,10 +207,14 @@
                         "tcp_port_range",
                         "minor_nr_range",
                         "peer_slots_new_resource",
-                        "dm_stats"
+                        "dm_stats",
+                        "stordriver_swordfish_user_name",
+                        "stordriver_swordfish_user_passwd",
+                        "stordriver_swordfish_host_port"
                 ],
                 "node": [
-                        "storage_pool_name"
+                        "storage_pool_name",
+                        "stordriver_swordfish_composed_node_name"
                 ],
                 "storagepool-definition": [
                 ],
@@ -219,18 +223,14 @@
                         "stordriver_thinpool",
                         "stordriver_zpool",
                         "preferred_nic",
-                        "stordriver_swordfish_host_port",
                         "stordriver_swordfish_stor_service",
                         "stordriver_swordfish_stor_pool",
-                        "stordriver_swordfish_user_name",
-                        "stordriver_swordfish_user_passwd",
                         "stordriver_swordfish_poll_timeout_vlm_crt",
                         "stordriver_swordfish_poll_retries_vlm_crt",
                         "stordriver_swordfish_poll_timeout_attach_vlm",
                         "stordriver_swordfish_poll_retries_attach_vlm",
                         "stordriver_swordfish_poll_timeout_grep_nvme_uuid",
-                        "stordriver_swordfish_poll_retries_grep_nvme_uuid",
-                        "stordriver_swordfish_composed_node_name"
+                        "stordriver_swordfish_poll_retries_grep_nvme_uuid"
                 ],
                 "resource-definition": [
                         "storage_pool_name",
