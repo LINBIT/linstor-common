@@ -214,7 +214,10 @@
                 ],
                 "node": [
                         "storage_pool_name",
-                        "stordriver_swordfish_composed_node_name"
+                        "stordriver_swordfish_composed_node_name",
+                        "stordriver_swordfish_user_name",
+                        "stordriver_swordfish_user_passwd",
+                        "stordriver_swordfish_host_port"
                 ],
                 "storagepool-definition": [
                 ],
