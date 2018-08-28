@@ -193,14 +193,14 @@
                         "type": "boolean",
                         "info": "Enable dmstats on lvm create"
                 },
-		"override_vlm_id": {
-			"key": [
-				"KEY_STOR_POOL_OVERRIDE_VLM_ID"
-			],
-			"type": "regex",
-			"value": ".*",
-			"info": "Overwrites the generated '<resource-name>_<5 digit volume number>' volume name for migration purposes."
-		}
+                "override_vlm_id": {
+                        "key": [
+                                "KEY_STOR_POOL_OVERRIDE_VLM_ID"
+                        ],
+                        "type": "regex",
+                        "value": ".*",
+                        "info": "Overwrites the generated '<resource-name>_<5 digit volume number>' volume name for migration purposes."
+                }
         },
         "objects": {
                 "controller": [

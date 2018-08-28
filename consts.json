@@ -251,7 +251,7 @@
                 "type": "BOR"
         },
         {
-		"name": "FAIL_INVLD_FREE_SPACE_MGR_NAME",
+                "name": "FAIL_INVLD_FREE_SPACE_MGR_NAME",
                 "value": [220, "MASK_ERROR"],
                 "type": "BOR"
         },
@@ -1560,11 +1560,11 @@
                 "value": "CryptPasswd",
                 "type": "string"
         },
-	{
-		"name": "KEY_STOR_POOL_OVERRIDE_VLM_ID",
-		"value": "OverrideVlmId",
-		"type": "string"
-	},
+        {
+                "name": "KEY_STOR_POOL_OVERRIDE_VLM_ID",
+                "value": "OverrideVlmId",
+                "type": "string"
+        },
         {
                 "blockcomment": "Storage pool traits keys"
         },
