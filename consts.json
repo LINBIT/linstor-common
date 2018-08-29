@@ -1691,6 +1691,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_ALLOW_LARGER_VOLUME_SIZE",
+                "value": "AllowLargerVolumeSize",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property values"
         },
         {

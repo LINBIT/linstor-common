@@ -185,6 +185,13 @@
                         "info": "DRBD peer slots present on resource",
                         "internal": true
                 },
+                "allow_larger_volume_size": {
+                        "key": [
+                                "KEY_ALLOW_LARGER_VOLUME_SIZE"
+                        ],
+                        "type": "boolean",
+                        "info": "Do not fail when the underlying volume is larger than expected"
+                },
                 "dm_stats": {
                         "key": [
                                 "NAMESPC_STORAGE_DRIVER",
@@ -199,7 +206,7 @@
                         ],
                         "type": "regex",
                         "value": ".*",
-                        "info": "Overwrites the generated '<resource-name>_<5 digit volume number>' volume name for migration purposes."
+                        "info": "Overwrites the generated '<resource-name>_<5 digit volume number>' volume name for migration purposes"
                 }
         },
         "objects": {
@@ -246,7 +253,8 @@
                 ],
                 "volume-definition": [
                         "storage_pool_name",
-                        "override_vlm_id"
+                        "override_vlm_id",
+                        "allow_larger_volume_size"
                 ]
         }
 }
