@@ -189,7 +189,7 @@
                         "key": [
                                 "KEY_ALLOW_LARGER_VOLUME_SIZE"
                         ],
-                        "type": "boolean",
+                        "type": "boolean_true_false",
                         "info": "Do not fail when the underlying volume is larger than expected"
                 },
                 "dm_stats": {
@@ -197,7 +197,7 @@
                                 "NAMESPC_STORAGE_DRIVER",
                                 "KEY_DMSTATS"
                         ],
-                        "type": "boolean",
+                        "type": "boolean_true_false",
                         "info": "Enable dmstats on lvm create"
                 },
                 "override_vlm_id": {
