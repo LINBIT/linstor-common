@@ -27,5 +27,7 @@ message VlmData
 
     string meta_disk = 4;
 
+    string device_path = 6;
+
     uint64 real_size = 5;
 }
