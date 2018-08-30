@@ -3,6 +3,7 @@ syntax = "proto3";
 package com.linbit.linstor.proto.javainternal;
 import "linstor/proto/javainternal/MsgIntObjectId.proto";
 import "linstor/proto/StorPoolFreeSpace.proto";
+import "linstor/proto/LinStorMapEntry.proto";
 
 // linstor - Internal message about a successful resource creation or modification
 message MsgIntApplyRscSuccess
@@ -30,4 +31,6 @@ message VlmData
     string device_path = 6;
 
     uint64 real_size = 5;
+    
+    repeated LinStorMapEntry vlm_dfn_props = 7;
 }
