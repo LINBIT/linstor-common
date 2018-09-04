@@ -6,6 +6,17 @@ import public "linstor/proto/NetInterface.proto";
 
 message Node
 {
+    enum ConnectionStatus
+    {
+        OFFLINE = 0;
+        CONNECTED = 1;
+        ONLINE = 2;
+        VERSION_MISMATCH = 3;
+        FULL_SYNC_FAILED = 4;
+        AUTHENTICATION_ERROR = 5;
+        UNKNOWN = 6;
+    }
+
     // UUID
     optional string uuid = 1;
 
@@ -25,7 +36,7 @@ message Node
     repeated NetInterface net_interfaces = 6;
 
     // Node connected
-    optional uint32 connection_status = 7;
+    optional ConnectionStatus connection_status = 7;
 
     // Node's diskless stor pool uuid
     optional string diskless_stor_pool_uuid = 8;
