@@ -6,17 +6,11 @@ package com.linbit.linstor.proto.javainternal;
 message MsgIntAuth
 {
     // Satellite's node uuid
-    string  node_uuid     = 1;
+    string node_uuid     = 1;
 
     // Satellite's node name
     string node_name     = 2;
 
     // Shared secret
     bytes  shared_secret = 3;
-
-    // Satellite node diskless stor pool definition's uuid
-    string node_diskless_stor_pool_dfn_uuid = 4;
-
-    // Satellite node diskless stor pool's uuid
-    string node_diskless_stor_pool_uuid = 5;
 }

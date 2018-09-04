@@ -27,9 +27,6 @@ message MsgIntNodeData
     // Node properties
     repeated LinStorMapEntry    node_props = 7;
 
-    // Node's diskless stor pool's uuid
-    string                      node_diskless_stor_pool_uuid = 8;
-    
     // FullSync id
     sint64                      full_sync_id = 9;
     
