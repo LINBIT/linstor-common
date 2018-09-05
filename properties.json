@@ -27,6 +27,15 @@
                         "value": "[a-zA-Z0-9_/-]+",
                         "internal": true
                 },
+                "stordriver_zpool_thin": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_ZPOOLTHIN"
+                        ],
+                        "type": "regex",
+                        "value": "[a-zA-Z0-9_/-]+",
+                        "internal": true
+                },
                 "stordriver_swordfish_host_port": {
                         "key": [
                                 "NAMESPC_STORAGE_DRIVER",
@@ -232,6 +241,7 @@
                         "stordriver_volumegroup",
                         "stordriver_thinpool",
                         "stordriver_zpool",
+                        "stordriver_zpool_thin",
                         "preferred_nic",
                         "stordriver_swordfish_stor_service",
                         "stordriver_swordfish_stor_pool",
