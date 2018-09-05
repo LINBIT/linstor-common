@@ -256,6 +256,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_STOR_DRIVER",
+                "value": [221, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
