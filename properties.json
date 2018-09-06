@@ -36,10 +36,10 @@
                         "value": "[a-zA-Z0-9_/-]+",
                         "internal": true
                 },
-                "stordriver_swordfish_host_port": {
+                "stordriver_swordfish_url": {
                         "key": [
                                 "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_HOST_PORT"
+                                "KEY_STOR_POOL_SF_URL"
                         ],
                         "type": "regex",
                         "value": ".*",
@@ -226,14 +226,15 @@
                         "dm_stats",
                         "stordriver_swordfish_user_name",
                         "stordriver_swordfish_user_passwd",
-                        "stordriver_swordfish_host_port"
+                        "stordriver_swordfish_url"
                 ],
                 "node": [
                         "storage_pool_name",
                         "stordriver_swordfish_composed_node_name",
+                        "stordriver_swordfish_stor_service",
                         "stordriver_swordfish_user_name",
                         "stordriver_swordfish_user_passwd",
-                        "stordriver_swordfish_host_port"
+                        "stordriver_swordfish_url"
                 ],
                 "storagepool-definition": [
                 ],
@@ -243,7 +244,6 @@
                         "stordriver_zpool",
                         "stordriver_zpool_thin",
                         "preferred_nic",
-                        "stordriver_swordfish_stor_service",
                         "stordriver_swordfish_stor_pool",
                         "stordriver_swordfish_poll_timeout_vlm_crt",
                         "stordriver_swordfish_poll_retries_vlm_crt",
