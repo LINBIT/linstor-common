@@ -23,4 +23,7 @@ message MsgApiCallResponse
 
     // details format
     optional string details = 6;
+
+    // created error reports
+    repeated string error_report_ids = 7;
 }
