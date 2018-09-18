@@ -96,6 +96,8 @@ if sys.version_info > (3,):
     long = int
 """)
 
+    store_mask = True
+    masks = []
     nl, w = '', 0
     for e in consts:
         w += 1
@@ -103,6 +105,8 @@ if sys.version_info > (3,):
 
         if 'blockcomment' in e:
             c = e['blockcomment'].replace('\n', '\n# ')
+            if 'Special answer message content types' in c:
+                store_mask = False
             print('%s# ## %s ###' % (nl, c))
             continue
 
@@ -133,11 +137,34 @@ if sys.version_info > (3,):
         elif _type == 'long':
             native_type = 'long'
 
+        if store_mask:
+            masks.append(e['name'])
+
         assert(native_type is not None)
         if 'comment' in e:
             print("# %s" % (e['comment']))
         c = "%s = %s(%s)" % (e['name'], native_type, value)
         print(c)
+
+    print('\n\nif __name__ == "__main__":')
+    print(' ' * 4 + 'MAP_MASK = {')
+    print(',\n'.join([' ' * 8 + "'" + mask + "': " + mask for mask in masks]))
+    print(' ' * 4 + '}')
+    print("""    TYPE_MASKS = [
+        0xC000000000000000,  # TYPE
+        0x0000000003000000,  # OPERATION
+        0x00000000003C0000,  # OBJECT
+        0xC00000000000FFFF   # ACTION
+    ]
+
+    for num_str in sys.argv[1:]:
+        num = long(num_str)
+        mask = []
+        for type_mask in TYPE_MASKS:
+            for key, mask_value in MAP_MASK.items():
+                if num & type_mask == mask_value:
+                    mask.append(key)
+        print(num_str + " = " + " | ". join(mask))""")
 
 
 if len(sys.argv) != 2:
