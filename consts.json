@@ -725,6 +725,11 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_STORAGE_ERROR",
+                "value": [1010, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "name": "WARN_NOT_FOUND",
                 "value": [3000, "MASK_WARN"],
                 "type": "BOR"
