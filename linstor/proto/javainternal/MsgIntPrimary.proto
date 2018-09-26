@@ -10,4 +10,7 @@ message MsgIntPrimary
 
     // Resource uuid
     string rsc_uuid = 2;
+
+    // Whether the resource has already been initialized
+    bool already_initialized = 3;
 }
