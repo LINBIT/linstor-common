@@ -6,8 +6,5 @@ import public "linstor/proto/Rsc.proto";
 // linstor - Create resource
 message MsgCrtRsc
 {
-    required Rsc rsc = 1;
-
-    // Whether to override the node ID
-    optional bool override_node_id = 2;
+    repeated Rsc rscs = 1;
 }

@@ -33,4 +33,7 @@ message Rsc
 
     // DRBD node ID
     optional int32 node_id = 9;
+
+    // Whether to override the node ID
+    optional bool override_node_id = 10;
 }
