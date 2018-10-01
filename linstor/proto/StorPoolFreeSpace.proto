@@ -1,6 +1,7 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto;
+import "linstor/proto/MsgApiCallResponse.proto";
 
 // linstor - Message containing information about the free space of a storage pool
 message StorPoolFreeSpace
@@ -16,4 +17,7 @@ message StorPoolFreeSpace
 
     // Total capacity of this storage pool
     required uint64  total_capacity     = 4;
+
+    // Errors
+    repeated MsgApiCallResponse errors = 5;
 }

@@ -7,5 +7,5 @@ import "linstor/proto/StorPoolFreeSpace.proto";
 message MsgIntFreeSpace
 {
     // A List of FreeSpace messages
-    repeated StorPoolFreeSpace free_space = 1;
+    repeated StorPoolFreeSpace free_spaces = 1;
 }
