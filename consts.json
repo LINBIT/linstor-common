@@ -515,6 +515,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_EXISTS_SWORDFISH_TARGET_PER_RSC_DFN",
+                "value": [515, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 600-699: data missing failures"
         },
         {
