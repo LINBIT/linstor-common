@@ -26,4 +26,7 @@ message RscConn
 
     // Resource connection properties map
     repeated LinStorMapEntry rsc_conn_props = 7;
+
+    // Resource definition flags
+    repeated string rsc_conn_flags = 8;
 }
