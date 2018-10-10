@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - List nodes
+message MsgReqRscConn
+{
+	required string rsc_name = 1;
+}

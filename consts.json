@@ -1122,6 +1122,16 @@
                 "type": "string"
         },
         {
+                "name": "API_REQ_RSC_CONN_LIST",
+                "value": "ReqRscConnList",
+                "type": "string"
+        },
+        {
+                "name": "API_LST_RSC_CONN",
+                "value": "LstRscConn",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Query APIs"
         },
         {

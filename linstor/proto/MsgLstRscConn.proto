@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/RscConn.proto";
+
+// linstor - List resource connection
+message MsgLstRscConn
+{
+    // Resources
+    repeated RscConn rsc_connections = 1;
+}
