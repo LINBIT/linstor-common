@@ -216,6 +216,15 @@
                         "type": "regex",
                         "value": ".*",
                         "info": "Overwrites the generated '<resource-name>_<5 digit volume number>' volume name for migration purposes"
+                },
+                "max_oversubscription_ratio": {
+                        "key": [
+                                "KEY_STOR_POOL_DFN_MAX_OVERSUBSCRIPTION_RATIO"
+                        ],
+                        "type": "range",
+                        "min": 1,
+                        "max": 1000,
+                        "info": "Maximum allowed ratio of the sum of volume sizes in a thin pool to the total capacity of the pool (default 20)"
                 }
         },
         "objects": {
@@ -237,6 +246,7 @@
                         "stordriver_swordfish_url"
                 ],
                 "storagepool-definition": [
+                        "max_oversubscription_ratio"
                 ],
                 "storagepool": [
                         "stordriver_volumegroup",

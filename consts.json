@@ -1596,6 +1596,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_DFN_MAX_OVERSUBSCRIPTION_RATIO",
+                "value": "MaxOversubscriptionRatio",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool traits keys"
         },
         {
