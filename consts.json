@@ -637,6 +637,11 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_STOR_POOL_CONFIGURATION_ERROR",
+                "value": [990, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_INSUFFICIENT_REPLICA_COUNT",
                 "value": [991, "MASK_ERROR"],
                 "type": "BOR"
