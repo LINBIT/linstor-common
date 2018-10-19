@@ -29,4 +29,6 @@ message RscConn
 
     // Resource definition flags
     repeated string rsc_conn_flags = 8;
+
+    optional sint32 port = 9;
 }

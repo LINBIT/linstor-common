@@ -98,4 +98,6 @@ message RscConnectionData
 
     // Resource Connection properties map
     repeated LinStorMapEntry props   = 5;
+
+    sint32 port = 6;
 }
