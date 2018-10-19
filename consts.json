@@ -942,6 +942,16 @@
                 "type": "string"
         },
         {
+                "name": "API_ENABLE_DRBD_PROXY",
+                "value": "EnableDrbdProxy",
+                "type": "string"
+        },
+        {
+                "name": "API_DISABLE_DRBD_PROXY",
+                "value": "DisableDrbdProxy",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Delete object APIs"
         },
         {

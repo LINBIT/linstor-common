@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/LinStorMapEntry.proto";
+
+// linstor - Enable DRBD Proxy on a resource connection
+message MsgEnableDrbdProxy
+{
+    // UUID
+    optional string rsc_conn_uuid = 1;
+
+    // Node 1 name
+    required string node_1_name = 2;
+
+    // Node 2 name
+    required string node_2_name = 3;
+
+    // Resource name
+    required string rsc_name = 4;
+
+    // Port
+    optional sint32 port = 5;
+}
