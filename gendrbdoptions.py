@@ -6,9 +6,23 @@ import xml.etree.ElementTree as ET
 
 
 """
-This script translates xml output from drbdsetup options to an usable languages presentation
-in implemented languages
+This script translates xml output from drbdsetup options to JSON
 """
+
+
+_CategoryNamespaces = {
+    'new-peer': "DrbdOptions/Net",
+    'disk-options': "DrbdOptions/Disk",
+    'resource-options': "DrbdOptions/Resource",
+    'peer-device-options': "DrbdOptions/PeerDevice"
+}
+
+_ObjectCategories = {
+    "controller": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options'],
+    "resource-definition": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options'],
+    "volume-definition": ['disk-options'],  # TODO add volume connection -> 'peer-device-options'
+    "rsc-conn": ['peer-device-options', 'new-peer']
+}
 
 
 def get_drbd_setup_xml(from_file):
@@ -30,117 +44,76 @@ def get_drbd_setup_xml(from_file):
 def parse_drbd_setup_xml(xmlout):
     root = ET.fromstring(xmlout)
 
-    options = {}
+    objects = {k: [] for k in _ObjectCategories.keys()}
+    properties = {}
     for command in root:
         cmd_name = command.attrib['name']
-        for child in command:
-            if child.tag == 'summary':
-                #options['help'] = child.text
-                pass
-            elif child.tag == 'argument':
-                # ignore them
-                pass
-            elif child.tag == 'option':
-                opt = child.attrib['name']
-                if opt in ['set-defaults', '_name']:
-                    continue
+        cmd_namespace = _CategoryNamespaces[cmd_name]
 
-                options[opt] = {
-                    'type': child.attrib['type'] if child.attrib['type'] != 'handler' else 'symbol',
-                    'category': cmd_name
-                }
-                if child.attrib['type'] == 'boolean':
-                    options[opt]['default'] = True if child.find('default').text == 'yes' else False
-                if child.attrib['type'] == 'handler':
-                    options[opt]['symbols'] = [h.text for h in child.findall('handler')]
-                elif child.attrib['type'] == 'numeric':
-                    for v in ('unit_prefix', 'unit'):
-                        val = child.find(v)
-                        if val is not None:
-                            options[opt][v] = val.text
-                    for v in ['min', 'max', 'default']:
-                        val = child.find(v)
-                        if val is not None:
-                            options[opt][v] = int(val.text)
-                elif child.attrib['type'] == 'numeric-or-symbol':
-                    options[opt]['symbols'] = [h.text for h in child.findall('symbol')]
-                    options[opt]['min'] = child.find('min').text
-                    options[opt]['max'] = child.find('max').text
+        cmd_properties = {}
+        for option in command.findall('option'):
+            option_name = option.attrib['name']
+            if option_name not in ['set-defaults', '_name']:
+                cmd_properties[option_name] = convert_option(cmd_namespace, option_name, option)
+
+        for obj, categories in _ObjectCategories.items():
+            if cmd_name in categories:
+                objects[obj].extend(cmd_properties.keys())
+        properties.update(cmd_properties)
 
     return {
-        "options": options,
-        "filters": {
-            "resource": [x for x in options.keys() if options[x]['category'] in _FilterResource],
-            "volume": [x for x in options.keys() if options[x]['category'] in _FilterVolume],
-            "peer-device-options": [x for x in options.keys() if options[x]['category'] in _FilterPeerDevice]
-        }
+        "objects": objects,
+        "properties": properties
     }
 
 
-_CategoyMap = {
-    'new-peer': "DrbdOptions/Net",
-    'disk-options': "DrbdOptions/Disk",
-    'resource-options': "DrbdOptions/Resource",
-    'peer-device-options': "DrbdOptions/PeerDevice"
-}
+def convert_option(cmd_namespace, option_name, option):
+    option_type = option.attrib['type']
 
-_FilterResource = ['disk-options', 'resource-options', 'new-peer', 'peer-device-options']
-_FilterVolume = ['disk-options']  # TODO add volume connection -> 'peer-device-options'
-_FilterPeerDevice = ['peer-device-options', 'new-peer']
-
-
-def whitelist(conf):
-    props = {}
-    objs = {}
-
-    for opt_name in conf['options']:
-        opt = conf['options'][opt_name]
-        is_range = opt['type'] == 'numeric' and 'min' in opt
-        props[opt_name] = {
-            'key': _CategoyMap[opt['category']] + '/' + opt_name,
-            'internal': True,
-            'type': 'range' if is_range else opt['type']
-        }
-
-        if is_range or opt['type'] == 'numeric-or-symbol':
-            props[opt_name]['min'] = opt['min']
-            props[opt_name]['max'] = opt['max']
-
-        if opt['type'] == 'symbol' or opt['type'] == 'numeric-or-symbol':
-            props[opt_name]['values'] = opt['symbols']
-
-    objs['controller'] = [x for x in conf['options']]
-    objs['resource-definition'] = [x for x in conf['options'] if conf['options'][x]['category'] in _FilterResource]
-    objs['volume-definition'] = [x for x in conf['options'] if conf['options'][x]['category'] in _FilterVolume]
-    objs['rsc-conn'] = [x for x in conf['options'] if conf['options'][x]['category'] in _FilterPeerDevice]
-    return {
-        'properties': props,
-        'objects': objs
+    prop = {
+        'internal': True,
+        'key': cmd_namespace + '/' + option_name,
+        'drbd_option_name': option_name
     }
 
+    if option_type == 'string':
+        prop_type = option_type
+    elif option_type == 'boolean':
+        prop_type = option_type
+        prop['default'] = True if option.find('default').text == 'yes' else False
+    elif option_type == 'handler':
+        prop_type = 'symbol'
+        prop['values'] = [h.text for h in option.findall('handler')]
+    elif option_type == 'numeric':
+        for v in ('unit_prefix', 'unit'):
+            val = option.find(v)
+            if val is not None:
+                prop[v] = val.text
+        for v in ['min', 'max', 'default']:
+            val = option.find(v)
+            if val is not None:
+                prop[v] = int(val.text)
+        prop_type = 'range' if 'min' in prop.keys() else 'numeric'
+    elif option_type == 'numeric-or-symbol':
+        prop_type = option_type
+        prop['values'] = [h.text for h in option.findall('symbol')]
+        prop['min'] = option.find('min').text
+        prop['max'] = option.find('max').text
+    else:
+        raise RuntimeError('Unknown option type ' + option_type)
 
-def gendrbd(output_target, python_code):
+    prop['type'] = prop_type
+
+    return prop
+
+
+def gendrbd(output_target):
     xml = get_drbd_setup_xml('drbdsetup.xml')
-    conf = parse_drbd_setup_xml(xml)
+    props = parse_drbd_setup_xml(xml)
     import json
-    import pprint
-
-    white = whitelist(conf)
 
     with open(output_target, 'wt') as f:
-        f.write(json.dumps(white, f, indent=2))
-
-    if python_code:
-        with open(python_code, 'wt') as f:
-            # header with a readable dump
-            f.write('"""\nDo not edit, this file is generated."""\n\n')
-            # f.write('Json representation for viewing:\n')
-            # f.write(json.dumps(conf, f, indent=2))
-            # f.write('\n"""\n\n')
-            # actual usable dump
-            #f.write('drbdoptions_raw = """' + pickle.dumps(conf) + '"""')
-            f.write('drbd_options = ')
-            pprint.pprint(conf, stream=f, indent=4)
+        f.write(json.dumps(props, f, indent=2))
 
     return 0
 
@@ -148,11 +121,10 @@ def gendrbd(output_target, python_code):
 def main():
     parser = argparse.ArgumentParser(description="generates prepared code containing drbd options")
     parser.add_argument("drbdoptions")
-    parser.add_argument("python_code", nargs='?')
 
     args = parser.parse_args()
 
-    sys.exit(gendrbd(args.drbdoptions, args.python_code))
+    sys.exit(gendrbd(args.drbdoptions))
 
 
 if __name__ == '__main__':

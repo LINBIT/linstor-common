@@ -116,18 +116,19 @@ def lang_java(data):
         _print(3,         'new PropertyBuilder()')
         _print(4,             '.name("%s")' % key)
         for propKey in sorted(prop.keys()):
-            propVal = prop[propKey]
-            if propKey == "key":
-                if isinstance(propVal, list):
-                    _print(4, '.keyRef("%s")' % ('", "'.join(propVal)))
+            if _relevant_for_java(propKey):
+                propVal = prop[propKey]
+                if propKey == "key":
+                    if isinstance(propVal, list):
+                        _print(4, '.keyRef("%s")' % ('", "'.join(propVal)))
+                    else:
+                        _print(4, '.keyStr("%s")' % (propVal))
+                elif propKey == "values":
+                    _print(4,     '.values(')
+                    _print(5,         '"%s"' % ('",\n' + _indent(5) + '"').join(sorted(propVal)))
+                    _print(4,     ')')
                 else:
-                    _print(4, '.keyStr("%s")' % (propVal))
-            elif propKey == "values":
-                _print(4,     '.values(')
-                _print(5,         '"%s"' % ('",\n' + _indent(5) + '"').join(sorted(propVal)))
-                _print(4,     ')')
-            else:
-                _print(4,     '.%s("%s")' % (propKey, propVal))
+                    _print(4,     '.%s("%s")' % (propKey, propVal))
         _print(4,             '.build()')
         _print(2,     ');')
     _print(2,         'return propertyList;')
@@ -158,6 +159,10 @@ def _print(indent_level, line):
 
 def _indent(indent_level):
     return ' ' * 4 * indent_level
+
+
+def _relevant_for_java(propKey):
+    return propKey not in ['default', 'drbd_option_name', 'unit_prefix', 'unit']
 
 
 def _as_java_rule_name(name):

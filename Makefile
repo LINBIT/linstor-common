@@ -11,7 +11,6 @@ PYSUFF=_pb2.py
 PYS=$(patsubst %,$(PYOUT)/%$(PYSUFF),$(COMMONNOEND))
 PYCONSTS=../linstor/sharedconsts.py
 PYPROPS=../linstor/properties.py
-PYDRBDOPTS=../linstor/drbdsetup_options.py
 
 JAVABASEOUT=../server/generated-src
 JAVAOUT=$(JAVABASEOUT)/com/linbit
@@ -49,11 +48,8 @@ $(JAVAPROPOUT):
 $(JAVAPROPERTYRULES): $(COMMONPROPERTIES) $(COMMONDRBDOPTS) $(JAVAPROPOUT)
 	./genproperties.py java $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
 
-$(PYPROPS): $(COMMONPROPERTIES) $(COMMONDRBDOPTS) $(PYDRBDOPTS)
+$(PYPROPS): $(COMMONPROPERTIES) $(COMMONDRBDOPTS)
 	./genproperties.py python $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
-
-$(PYDRBDOPTS):
-	./gendrbdoptions.py $(COMMONDRBDOPTS) $@
 
 $(COMMONDRBDOPTS):
 	./gendrbdoptions.py $(COMMONDRBDOPTS)
@@ -64,7 +60,7 @@ $(JAVAAPIOUT):
 $(JAVACONSTS): consts.json $(JAVAAPIOUT)
 	./genconsts.py java > $@
 
-python: $(PYS) $(PYCONSTS) $(PYPROPS) $(PYDRBDOPTS)
+python: $(PYS) $(PYCONSTS) $(PYPROPS)
 
 java: $(JAVAS) $(JAVACONSTS) $(COMMONDRBDOPTS) $(JAVAPROPERTYRULES)
 
@@ -72,7 +68,7 @@ cleancommon:
 	rm -f $(COMMONDRBDOPTS)
 
 cleanpython: cleancommon
-	rm -f $(PYS) $(PYCONSTS) $(PYPROPS) $(PYDRBDOPTS)
+	rm -f $(PYS) $(PYCONSTS) $(PYPROPS)
 
 cleanjava: cleancommon
 	rm -f $(JAVAS) $(JAVACONSTS)
