@@ -225,6 +225,71 @@
                         "min": 1,
                         "max": 1000,
                         "info": "Maximum allowed ratio of the sum of volume sizes in a thin pool to the total capacity of the pool (default 20)"
+                },
+                "proxy_memlimit": {
+                        "unit_prefix": "1",
+                        "min": 16777216,
+                        "default": 16777216,
+                        "max": 9223372036854775807,
+                        "drbd_option_name": "memlimit",
+                        "internal": true,
+                        "key": "DrbdOptions/Proxy/memlimit",
+                        "type": "range",
+                        "unit": "bytes"
+                },
+                "proxy_read_loops": {
+                        "unit_prefix": "1",
+                        "min": 0,
+                        "default": 0,
+                        "max": 2147483647,
+                        "drbd_option_name": "read-loops",
+                        "internal": true,
+                        "key": "DrbdOptions/Proxy/read-loops",
+                        "type": "range"
+                },
+                "proxy_bwlimit": {
+                        "unit_prefix": "1",
+                        "min": 0,
+                        "default": 0,
+                        "max": 2147483647,
+                        "drbd_option_name": "bwlimit",
+                        "internal": true,
+                        "key": "DrbdOptions/Proxy/bwlimit",
+                        "type": "range",
+                        "unit": "bytes/second"
+                },
+                "proxy_sndbuf_size": {
+                        "unit_prefix": "1",
+                        "min": 0,
+                        "default": 0,
+                        "max": 10485760,
+                        "drbd_option_name": "sndbuf-size",
+                        "internal": true,
+                        "key": "DrbdOptions/Proxy/sndbuf-size",
+                        "type": "range",
+                        "unit": "bytes"
+                },
+                "proxy_rcvbuf_size": {
+                        "unit_prefix": "1",
+                        "min": 0,
+                        "default": 0,
+                        "max": 10485760,
+                        "drbd_option_name": "rcvbuf-size",
+                        "internal": true,
+                        "key": "DrbdOptions/Proxy/rcvbuf-size",
+                        "type": "range",
+                        "unit": "bytes"
+                },
+                "proxy_ping_timeout": {
+                        "unit_prefix": "1",
+                        "min": 1,
+                        "default": 200,
+                        "max": 300,
+                        "drbd_option_name": "ping-timeout",
+                        "internal": true,
+                        "key": "DrbdOptions/Net/ping-timeout",
+                        "type": "range",
+                        "unit": "1/10 seconds"
                 }
         },
         "objects": {
@@ -275,6 +340,14 @@
                         "storage_pool_name",
                         "override_vlm_id",
                         "allow_larger_volume_size"
+                ],
+                "drbd-proxy": [
+                        "proxy_memlimit",
+                        "proxy_read_loops",
+                        "proxy_bwlimit",
+                        "proxy_sndbuf_size",
+                        "proxy_rcvbuf_size",
+                        "proxy_ping_timeout"
                 ]
         }
 }

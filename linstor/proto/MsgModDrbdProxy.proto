@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/LinStorMapEntry.proto";
+
+// linstor - Modify DRBD Proxy configuration for a resource definition
+message MsgModDrbdProxy
+{
+    // Resource definition UUID
+    optional string rsc_dfn_uuid = 1;
+
+    // Resource name
+    required string rsc_name = 2;
+
+    // Resource definition properties map
+    repeated LinStorMapEntry override_props = 3;
+
+    // Resource definition property keys to delete
+    repeated string delete_prop_keys = 4;
+}

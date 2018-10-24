@@ -952,6 +952,11 @@
                 "type": "string"
         },
         {
+                "name": "API_MOD_DRBD_PROXY",
+                "value": "ModifyDrbdProxy",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Delete object APIs"
         },
         {
@@ -1510,6 +1515,11 @@
         {
                 "name": "NAMESPC_DRBD_PEER_DEVICE_OPTIONS",
                 "value": "DrbdOptions/PeerDevice",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_DRBD_PROXY_OPTIONS",
+                "value": "DrbdOptions/Proxy",
                 "type": "string"
         },
         {
