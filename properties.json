@@ -287,7 +287,7 @@
                         "max": 300,
                         "drbd_option_name": "ping-timeout",
                         "internal": true,
-                        "key": "DrbdOptions/Net/ping-timeout",
+                        "key": "DrbdOptions/Proxy/ping-timeout",
                         "type": "range",
                         "unit": "1/10 seconds"
                 }
