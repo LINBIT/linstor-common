@@ -261,6 +261,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_DRBD_PROXY_COMPRESSION_TYPE",
+                "value": [222, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -1488,6 +1493,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_DRBD_PROXY",
+                "value": "DrbdProxy",
+                "type": "string"
+        },
+        {
                 "name": "NAMESPC_AUXILIARY",
                 "value": "Aux",
                 "type": "string"
@@ -1520,6 +1530,11 @@
         {
                 "name": "NAMESPC_DRBD_PROXY_OPTIONS",
                 "value": "DrbdOptions/Proxy",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_DRBD_PROXY_COMPRESSION_OPTIONS",
+                "value": "DrbdOptions/ProxyCompression",
                 "type": "string"
         },
         {
@@ -1658,6 +1673,14 @@
                 "type": "string"
         },
         {
+                "blockcomment": "DRBD Proxy keys (other than 'options')"
+        },
+        {
+                "name": "KEY_DRBD_PROXY_COMPRESSION_TYPE",
+                "value": "CompressionType",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property keys"
         },
         {
@@ -1776,6 +1799,29 @@
         {
                 "name": "VAL_SSL_PROTO_TLSv1",
                 "value": "TLSv1",
+                "type": "string"
+        },
+        {
+                "blockcomment": "DRBD Proxy compression type property values"
+        },
+        {
+                "name": "VAL_DRBD_PROXY_COMPRESSION_NONE",
+                "value": "none",
+                "type": "string"
+        },
+        {
+                "name": "VAL_DRBD_PROXY_COMPRESSION_ZLIB",
+                "value": "zlib",
+                "type": "string"
+        },
+        {
+                "name": "VAL_DRBD_PROXY_COMPRESSION_LZMA",
+                "value": "lzma",
+                "type": "string"
+        },
+        {
+                "name": "VAL_DRBD_PROXY_COMPRESSION_LZ4",
+                "value": "lz4",
                 "type": "string"
         },
         {

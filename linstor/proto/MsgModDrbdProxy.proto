@@ -12,9 +12,15 @@ message MsgModDrbdProxy
     // Resource name
     required string rsc_name = 2;
 
-    // Resource definition properties map
+    // DRBD Proxy properties map
     repeated LinStorMapEntry override_props = 3;
 
-    // Resource definition property keys to delete
+    // DRBD Proxy property keys to delete
     repeated string delete_prop_keys = 4;
+
+    optional string compression_type = 5;
+
+    // DRBD Proxy compression properties map
+    repeated LinStorMapEntry compression_props = 6;
+
 }
