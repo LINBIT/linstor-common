@@ -525,6 +525,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_EXISTS_SNAPSHOT",
+                "value": [516, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 600-699: data missing failures"
         },
         {
