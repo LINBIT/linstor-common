@@ -144,6 +144,24 @@
                         "value": ".*",
                         "internal": true
                 },
+                "stordriver_swordfish_retry_count": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_SF_RETRY_COUNT"
+                        ],
+                        "type": "regex",
+                        "value": "[0-9]+",
+                        "internal": true
+                },
+                 "stordriver_swordfish_retry_delay": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_SF_RETRY_DELAY"
+                        ],
+                        "type": "regex",
+                        "value": "[0-9]+",
+                        "internal": true
+                },
                 "storage_pool_name": {
                         "key": [
                                 "KEY_STOR_POOL_NAME"
@@ -439,7 +457,9 @@
                         "dm_stats",
                         "stordriver_swordfish_user_name",
                         "stordriver_swordfish_user_passwd",
-                        "stordriver_swordfish_url"
+                        "stordriver_swordfish_url",
+                        "stordriver_swordfish_retry_count",
+                        "stordriver_swordfish_retry_delay"
                 ],
                 "node": [
                         "storage_pool_name",
@@ -447,7 +467,9 @@
                         "stordriver_swordfish_stor_service",
                         "stordriver_swordfish_user_name",
                         "stordriver_swordfish_user_passwd",
-                        "stordriver_swordfish_url"
+                        "stordriver_swordfish_url",
+                        "stordriver_swordfish_retry_count",
+                        "stordriver_swordfish_retry_delay"
                 ],
                 "storagepool-definition": [
                         "max_oversubscription_ratio"
@@ -464,7 +486,9 @@
                         "stordriver_swordfish_poll_timeout_attach_vlm",
                         "stordriver_swordfish_poll_retries_attach_vlm",
                         "stordriver_swordfish_poll_timeout_grep_nvme_uuid",
-                        "stordriver_swordfish_poll_retries_grep_nvme_uuid"
+                        "stordriver_swordfish_poll_retries_grep_nvme_uuid",
+                        "stordriver_swordfish_retry_count",
+                        "stordriver_swordfish_retry_delay"
                 ],
                 "resource-definition": [
                         "storage_pool_name",
