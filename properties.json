@@ -265,17 +265,6 @@
                         "key": "DrbdOptions/Proxy/read-loops",
                         "type": "range"
                 },
-                "proxy_bwlimit": {
-                        "unit_prefix": "1",
-                        "min": 0,
-                        "default": 0,
-                        "max": 2147483647,
-                        "drbd_option_name": "bwlimit",
-                        "internal": true,
-                        "key": "DrbdOptions/Proxy/bwlimit",
-                        "type": "range",
-                        "unit": "bytes/second"
-                },
                 "proxy_sndbuf_size": {
                         "unit_prefix": "1",
                         "min": 0,
@@ -508,7 +497,6 @@
                 "drbd-proxy": [
                         "proxy_memlimit",
                         "proxy_read_loops",
-                        "proxy_bwlimit",
                         "proxy_sndbuf_size",
                         "proxy_rcvbuf_size",
                         "proxy_ping_timeout"
