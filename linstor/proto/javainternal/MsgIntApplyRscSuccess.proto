@@ -30,7 +30,9 @@ message VlmData
 
     string device_path = 6;
 
-    uint64 real_size = 5;
+    uint64 usable_size = 5;
+
+    uint64 allocated_size = 8;
     
     repeated LinStorMapEntry vlm_dfn_props = 7;
 }

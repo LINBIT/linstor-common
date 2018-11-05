@@ -54,9 +54,9 @@ message Vlm
     // Device path the end user can use, might be equal to backing_disk
     optional string device_path = 16;
 
-    // Real size of the deployed volume reported by the backing device (in KiB)
-    optional uint64 real_size = 17;
+    // Allocated size of the deployed volume reported by the backing device (in KiB)
+    optional uint64 allocated_size = 17;
 
-    // Allocated capacity for this volume (in KiB)
-    optional uint64 allocated = 18;
+    // Usable size
+    optional uint64 usable_size = 18;
 }
