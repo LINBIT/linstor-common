@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Reconnect Node
+message MsgNodeReconnect
+{
+    repeated string nodes = 1;
+}
