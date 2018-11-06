@@ -39,25 +39,25 @@ $(JAVABASEOUT):
 $(JAVAOUT)/%$(JAVASUFF): %.proto $(JAVABASEOUT)
 	${PROTOC} -I=. --java_out=$(JAVABASEOUT) $<
 
-$(PYCONSTS): consts.json
+$(PYCONSTS): genconsts.py consts.json
 	./genconsts.py python > $@
 
 $(JAVAPROPOUT):
 	mkdir -p $@
 
-$(JAVAPROPERTYRULES): $(COMMONPROPERTIES) $(COMMONDRBDOPTS) $(JAVAPROPOUT)
+$(JAVAPROPERTYRULES): genproperties.py $(COMMONPROPERTIES) $(COMMONDRBDOPTS) $(JAVAPROPOUT)
 	./genproperties.py java $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
 
-$(PYPROPS): $(COMMONPROPERTIES) $(COMMONDRBDOPTS)
+$(PYPROPS): genproperties.py $(COMMONPROPERTIES) $(COMMONDRBDOPTS)
 	./genproperties.py python $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
 
-$(COMMONDRBDOPTS):
+$(COMMONDRBDOPTS): gendrbdoptions.py
 	./gendrbdoptions.py $(COMMONDRBDOPTS)
 
 $(JAVAAPIOUT):
 	mkdir -p $@
 
-$(JAVACONSTS): consts.json $(JAVAAPIOUT)
+$(JAVACONSTS): genconsts.py consts.json $(JAVAAPIOUT)
 	./genconsts.py java > $@
 
 python: $(PYS) $(PYCONSTS) $(PYPROPS)
