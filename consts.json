@@ -879,6 +879,16 @@
                 "type": "string"
         },
         {
+                "name": "API_RESTORE_VLM_DFN",
+                "value": "RestoreVlmDfn",
+                "type": "string"
+        },
+        {
+                "name": "API_RESTORE_SNAPSHOT",
+                "value": "RestoreSnapshot",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Modify object APIs"
         },
         {
@@ -1025,33 +1035,8 @@
                 "type": "string"
         },
         {
-                "name": "API_DEL_CRYPT_PASS",
-                "value": "DelCryptPass",
-                "type": "string"
-        },
-        {
-                "name": "API_RESTORE_VLM_DFN",
-                "value": "RestoreVlmDfn",
-                "type": "string"
-        },
-        {
-                "name": "API_RESTORE_SNAPSHOT",
-                "value": "RestoreSnapshot",
-                "type": "string"
-        },
-        {
-                "name": "API_AUTO_DPLY_RSC",
-                "value": "AutoDplyRsc",
-                "type": "string"
-        },
-        {
                 "name": "API_LOST_NODE",
                 "value": "LostNode",
-                "type": "string"
-        },
-        {
-                "name": "API_CHK_STATE",
-                "value": "ChkState",
                 "type": "string"
         },
         {
@@ -1091,6 +1076,11 @@
         {
                 "name": "API_CMD_SHUTDOWN",
                 "value": "Shutdown",
+                "type": "string"
+        },
+        {
+                "name": "API_NODE_RECONNECT",
+                "value": "NodeReconnect",
                 "type": "string"
         },
         {
@@ -1159,11 +1149,6 @@
         {
                 "name": "API_LST_RSC_CONN",
                 "value": "LstRscConn",
-                "type": "string"
-        },
-        {
-                "name": "API_NODE_RECONNECT",
-                "value": "NodeReconnect",
                 "type": "string"
         },
         {
@@ -1243,14 +1228,6 @@
         {
                 "name": "API_ENTER_CRYPT_PASS",
                 "value": "EnterCryptPass",
-                "type": "string"
-        },
-        {
-                "blockcomment": "Control APIs"
-        },
-        {
-                "name": "API_SHTDWN",
-                "value": "Shtdwn",
                 "type": "string"
         },
         {
