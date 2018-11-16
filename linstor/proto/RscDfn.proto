@@ -30,4 +30,7 @@ message RscDfn
 
     // TransportType, defaults to IP
     optional string rsc_dfn_transport_type = 8;
+
+    // Whether the resource definition is deliberately down
+    optional bool rsc_dfn_down = 9;
 }

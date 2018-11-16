@@ -27,6 +27,9 @@ message MsgIntSnapshotData
     // Resource definition properties map
     repeated LinStorMapEntry          rsc_dfn_props     = 7;
 
+    // Whether the resource definition is deliberately down
+    bool                              rsc_dfn_down      = 19;
+
     // Snapshot name
     string                            snapshot_name     = 8;
 
@@ -41,6 +44,9 @@ message MsgIntSnapshotData
 
     // Snaphot definition flags
     sint64                            snapshot_dfn_flags = 12;
+
+    // Snapshot definition properties map
+    repeated LinStorMapEntry          snapshot_dfn_props = 20;
 
     // Snapshot volumes
     repeated SnapshotVlm              snapshot_vlms     = 13;

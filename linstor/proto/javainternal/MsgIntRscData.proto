@@ -27,6 +27,9 @@ message MsgIntRscData
     // Resource definition properties map
     repeated LinStorMapEntry          rsc_dfn_props     = 6;
 
+    // Whether the resource definition is deliberately down
+    bool                              rsc_dfn_down      = 18;
+
     // Resource uuid
     string                            local_rsc_uuid    = 7;
 

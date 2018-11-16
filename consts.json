@@ -977,6 +977,11 @@
                 "type": "string"
         },
         {
+                "name": "API_ROLLBACK_SNAPSHOT",
+                "value": "RollbackSnapshot",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Delete object APIs"
         },
         {
@@ -1428,6 +1433,11 @@
         {
                 "name": "KEY_DMSTATS",
                 "value": "DMStats",
+                "type": "string"
+        },
+        {
+                "name": "KEY_SNAPSHOT_DFN_SEQUENCE_NUMBER",
+                "value": "SequenceNumber",
                 "type": "string"
         },
         {
@@ -1981,6 +1991,11 @@
         {
                 "name": "FLAG_DISK_REMOVE_REQUESTED",
                 "value": "DISK_REMOVE_REQUESTED",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_IN_ROLLBACK",
+                "value": "IN_ROLLBACK",
                 "type": "string"
         },
         {
