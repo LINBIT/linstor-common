@@ -21,11 +21,7 @@
 	<option name="md-flushes" type="boolean">
 		<default>yes</default>
 	</option>
-	<option name="resync-after" type="numeric">
-		<min>-1</min>
-		<max>1048575</max>
-		<default>-1</default>
-		<unit_prefix>1</unit_prefix>
+	<option name="resync-after" type="string">
 	</option>
 	<option name="al-extents" type="numeric">
 		<min>67</min>
