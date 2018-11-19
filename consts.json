@@ -1780,6 +1780,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_RSC_ROLLBACK_TARGET",
+                "value": "RollbackTarget",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property values"
         },
         {
@@ -1991,11 +1996,6 @@
         {
                 "name": "FLAG_DISK_REMOVE_REQUESTED",
                 "value": "DISK_REMOVE_REQUESTED",
-                "type": "string"
-        },
-        {
-                "name": "FLAG_IN_ROLLBACK",
-                "value": "IN_ROLLBACK",
                 "type": "string"
         },
         {
