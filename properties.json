@@ -193,6 +193,13 @@
                         "value": "[0-9]+-[0-9]+",
                         "info": "Range for auto-allocation of volume minor numbers"
                 },
+                 "global_seq_api_calls": {
+                        "key": [
+                                "KEY_GLOBAL_SEQ_API_CALLS"
+                        ],
+                        "type": "boolean_true_false",
+                        "info": "Globally sequentialize all ctrl -> stlt api calls"
+                },
                 "peer_slots_new_resource": {
                         "key": [
                                 "KEY_PEER_SLOTS_NEW_RESOURCE"
@@ -448,7 +455,8 @@
                         "stordriver_swordfish_user_passwd",
                         "stordriver_swordfish_url",
                         "stordriver_swordfish_retry_count",
-                        "stordriver_swordfish_retry_delay"
+                        "stordriver_swordfish_retry_delay",
+                        "global_seq_api_calls"
                 ],
                 "node": [
                         "storage_pool_name",

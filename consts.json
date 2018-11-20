@@ -1755,6 +1755,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_GLOBAL_SEQ_API_CALLS",
+                "value": "GlobSeqApiCalls",
+                "type": "string"
+        },
+        {
                 "name": "KEY_SF_TARGET_PORT_AUTO_RANGE",
                 "value": "SwordfishTargetPortAutoRange",
                 "type": "string"
