@@ -56,4 +56,7 @@ message Vlm
 
     // Real size of the deployed volume reported by the backing device (in KiB)
     optional uint64 real_size = 17;
+
+    // Allocated capacity for this volume (in KiB)
+    optional uint64 allocated = 18;
 }
