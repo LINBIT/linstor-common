@@ -21,6 +21,8 @@ JAVACONSTS=$(JAVAAPIOUT)/ApiConsts.java
 JAVAPROPOUT=$(JAVAAPIOUT)/prop
 JAVAPROPERTYRULES=$(JAVAPROPOUT)/GeneratedPropertyRules.java
 
+GOCONSTS=../apiconsts.go
+
 # make java the default one
 all: java
 
@@ -60,9 +62,14 @@ $(JAVAAPIOUT):
 $(JAVACONSTS): genconsts.py consts.json $(JAVAAPIOUT)
 	./genconsts.py java > $@
 
+$(GOCONSTS): genconsts.py consts.json
+	./genconsts.py golang | gofmt > $@
+
 python: $(PYS) $(PYCONSTS) $(PYPROPS)
 
 java: $(JAVAS) $(JAVACONSTS) $(COMMONDRBDOPTS) $(JAVAPROPERTYRULES)
+
+golang: $(GOCONSTS)
 
 cleancommon:
 	rm -f $(COMMONDRBDOPTS)
