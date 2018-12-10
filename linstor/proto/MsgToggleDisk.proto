@@ -18,6 +18,9 @@ message MsgToggleDisk
     // Storage pool name
     optional string stor_pool_name = 4;
 
+    // Name of node from which to migrate storage
+    optional string migrate_from = 6;
+
     // Should the resource be toggled to diskless
     optional bool diskless = 5;
 }

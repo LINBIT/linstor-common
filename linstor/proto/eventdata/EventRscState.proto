@@ -8,4 +8,6 @@ message EventRscState
     optional bool ready = 1;
 
     optional bool in_use = 2;
+
+    optional bool up_to_date = 3;
 }

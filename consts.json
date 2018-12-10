@@ -1790,6 +1790,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_RSC_MIGRATE_FROM",
+                "value": "MigrateFrom",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property values"
         },
         {
