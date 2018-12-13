@@ -1859,6 +1859,11 @@
                 "type": "string"
         },
         {
+                "name": "VAL_NODE_TYPE_SWFISH_TARGET",
+                "value": "SWORDFISH_TARGET",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Net interface Type values"
         },
         {
