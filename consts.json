@@ -3,6 +3,11 @@
                 "blockcomment": "Bits 62 - 63 (most significant 2) are reserved for the message type masks (error, warning, info)\nBits 25 - 26 are reserved for the operation type masks (create, modify, delete)\nBits 18 - 21 are reserved for the object type masks (node, resource, resource definition, ...)\nBits 0  - 14 are reserved for codes"
         },
         {
+                "name": "MASK_BITS_TYPE",
+                "value": "0xC000000000000000L",
+                "type": "long"
+        },
+        {
                 "name": "MASK_ERROR",
                 "value": "0xC000000000000000L",
                 "type": "long"
@@ -26,6 +31,11 @@
                 "blockcomment": "Operation type masks"
         },
         {
+                "name": "MASK_BITS_OP",
+                "value": "0x0000000003000000L",
+                "type": "long"
+        },
+        {
                 "name": "MASK_CRT",
                 "value": "0x0000000001000000L",
                 "type": "long"
@@ -42,6 +52,11 @@
         },
         {
                 "blockcomment": "Type masks (Node, ResDfn, Res, VolDfn, Vol, NetInterface, ...)"
+        },
+        {
+                "name": "MASK_BITS_OBJ",
+                "value": "0x00000000003C0000L",
+                "type": "long"
         },
         {
                 "name": "MASK_NODE",
@@ -106,6 +121,14 @@
         {
                 "name": "MASK_SNAPSHOT",
                 "value": "0x00000000000C0000L",
+                "type": "long"
+        },
+        {
+                "blockcomment": "Codes"
+        },
+        {
+                "name": "MASK_BITS_CODE",
+                "value": "0x0000000000007FFFL",
                 "type": "long"
         },
         {
