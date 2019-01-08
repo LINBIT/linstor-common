@@ -15,6 +15,7 @@ message Node
         FULL_SYNC_FAILED = 4;
         AUTHENTICATION_ERROR = 5;
         UNKNOWN = 6;
+        HOSTNAME_MISMATCH = 7;
     }
 
     // UUID

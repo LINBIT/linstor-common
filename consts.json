@@ -2073,5 +2073,10 @@
                 "name": "CONN_STATUS_UNKNOWN",
                 "value": 6,
                 "type": "int"
+        },
+        {
+                "name": "CONN_STATUS_HOSTNAME_MISMATCH",
+                "value": 7,
+                "type": "int"
         }
 ]
