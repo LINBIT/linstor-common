@@ -1547,6 +1547,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_CONNECTION_PATHS",
+                "value": "Paths",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
