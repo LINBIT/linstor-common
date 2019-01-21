@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/LinStorMapEntry.proto";
+
+// linstor - changes (creates, updates or deletes) given properties for the given KeyValueStore
+message MsgModKvsProps
+{
+    // Instance name
+    required string instance_name = 1;
+    
+    // Creates or updates given properties
+    repeated LinStorMapEntry mod_props = 2;
+    
+    // Pairs of instance name and property key to delete
+    repeated string del_props = 3;
+}

@@ -289,6 +289,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_KVS_NAME",
+                "value": [223, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -462,6 +467,11 @@
         {
                 "name": "FAIL_ACC_DENIED_FREE_SPACE_MGR",
                 "value": [417, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_ACC_DENIED_KVS",
+                "value": [418, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -1005,6 +1015,11 @@
                 "type": "string"
         },
         {
+                "name": "API_MOD_KVS_PROPS",
+                "value": "ModifyKvsProps",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Delete object APIs"
         },
         {
@@ -1177,6 +1192,11 @@
         {
                 "name": "API_LST_RSC_CONN",
                 "value": "LstRscConn",
+                "type": "string"
+        },
+        {
+                "name": "API_LST_KVS_PROPS",
+                "value": "LstKvsProps",
                 "type": "string"
         },
         {
