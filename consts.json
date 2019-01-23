@@ -847,6 +847,11 @@
                 "type": "string"
         },
         {
+                "name": "API_PREPARE_DISKS",
+                "value": "PrepareDisks",
+                "type": "string"
+        },
+        {
                 "name": "API_CRT_RSC",
                 "value": "CrtRsc",
                 "type": "string"
