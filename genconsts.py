@@ -177,6 +177,8 @@ def golang(consts):
     store_mask = True
     masks = []
     nl, w = '', 0
+    translated = {}
+
     for e in consts:
         w += 1
         nl = '\n' if w > 1 else ''
@@ -198,9 +200,11 @@ def golang(consts):
                 value = strip_L(value)
 
         if _type == 'BOR':
+            value = [translated.get(v, v) for v in value]
             value = ' | '.join([str(x) for x in value])
             value = '(%s)' % value
         elif _type == 'BAND':
+            value = [translated.get(v, v) for v in value]
             value = ' & '.join([str(x) for x in value])
             value = '(%s)' % value
         elif _type == 'string':
@@ -211,9 +215,14 @@ def golang(consts):
 
         if 'comment' in e:
             print("// %s" % (e['comment']))
-        var = e['name'][0].upper() + e['name'][1:]
+        var = snake_to_camel(e['name'])
+        translated[e['name']] = var
         c = "const %s = %s" % (var, value)
         print(c)
+
+
+def snake_to_camel(name):
+    return "".join(w.lower().title() for w in name.split("_"))
 
 
 if len(sys.argv) < 2:
