@@ -20,4 +20,7 @@ message MsgModStorPool
     
     // Storage pool property keys to delete
     repeated string delete_prop_keys = 5;
+
+	// Storage pool namespaces to delete
+	repeated string del_namespaces = 6;
 }

@@ -8,4 +8,7 @@ message MsgLstRscConn
 {
     // Resources
     repeated RscConn rsc_connections = 1;
+
+	// Resources namespaces to list
+	repeated string namespaces = 2;
 }

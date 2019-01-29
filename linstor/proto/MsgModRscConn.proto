@@ -23,4 +23,7 @@ message MsgModRscConn
     
     // Resource connection property keys to delete
     repeated string delete_prop_keys = 6;
+
+	// Resource connection namespaces to delete
+	repeated string del_namespaces = 7;
 }

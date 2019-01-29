@@ -17,4 +17,7 @@ message MsgModStorPoolDfn
     
     // Storage pool definition property keys to delete
     repeated string delete_prop_keys = 4;
+
+	// Storage pool namespaces to delete
+	repeated string del_namespaces = 5;
 }

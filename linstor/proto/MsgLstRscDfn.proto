@@ -8,4 +8,7 @@ message MsgLstRscDfn
 {
     // Resource defitions
     repeated RscDfn rsc_dfns = 1;
+
+	// Resource definitions namespaces to list
+	repeated string namespaces = 2;
 }

@@ -8,4 +8,7 @@ message MsgLstStorPool
 {
     // Storage pools
     repeated StorPool stor_pools = 1;
+
+	// Storage pools namespaces to list
+	repeated string namespaces = 2;
 }

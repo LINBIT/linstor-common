@@ -8,4 +8,6 @@ message MsgModCryptPassphrase
     required string old_passphrase = 1;
 
     required string new_passphrase = 2;
+
+	repeated string del_namespaces = 3;
 }

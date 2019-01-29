@@ -20,4 +20,7 @@ message MsgModRsc
     
     // Resource property keys to delete
     repeated string delete_prop_keys = 5;
+
+	// Resource namespaces to delete
+	repeated string del_namespaces = 6;
 }

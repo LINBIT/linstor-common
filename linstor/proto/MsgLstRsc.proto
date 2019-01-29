@@ -12,4 +12,7 @@ message MsgLstRsc
 
     // Resources states
     repeated RscState resource_states = 2;
+
+	// Resources namespaces to list
+	repeated string namespaces = 3;
 }

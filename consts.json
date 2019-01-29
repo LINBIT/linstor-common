@@ -1,6 +1,6 @@
 [
         {
-                "blockcomment": "Bits 62 - 63 (most significant 2) are reserved for the message type masks (error, warning, info)\nBits 25 - 26 are reserved for the operation type masks (create, modify, delete)\nBits 18 - 21 are reserved for the object type masks (node, resource, resource definition, ...)\nBits 0  - 14 are reserved for codes"
+                "blockcomment": "Bits 62 - 63 (most significant 2) are reserved for the message type masks (error, warning, info)\nBits 25 - 26 are reserved for the operation type masks (create, modify, delete)\nBits 18 - 22 are reserved for the object type masks (node, resource, resource definition, ...)\nBits 0  - 14 are reserved for codes"
         },
         {
                 "name": "MASK_BITS_TYPE",
@@ -55,7 +55,12 @@
         },
         {
                 "name": "MASK_BITS_OBJ",
-                "value": "0x00000000003C0000L",
+                "value": "0x00000000007C0000L",
+                "type": "long"
+        },
+        {
+                "name": "MASK_KVS",
+                "value": "0x0000000000400000L",
                 "type": "long"
         },
         {
@@ -377,6 +382,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_NOT_FOUND_KVS",
+                "value": [316, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 400-499: access denied failures"
         },
         {
@@ -651,6 +661,11 @@
         {
                 "name": "FAIL_UUID_STOR_POOL",
                 "value": [710, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_UUID_KVS",
+                "value": [711, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -1020,8 +1035,8 @@
                 "type": "string"
         },
         {
-                "name": "API_MOD_KVS_PROPS",
-                "value": "ModifyKvsProps",
+                "name": "API_MOD_KVS",
+                "value": "ModifyKvs",
                 "type": "string"
         },
         {
@@ -1080,6 +1095,11 @@
         {
                 "name": "API_DEL_SNAPSHOT",
                 "value": "DelSnapshot",
+                "type": "string"
+        },
+        {
+                "name": "API_DEL_KVS",
+                "value": "DelKvs",
                 "type": "string"
         },
         {
@@ -1200,8 +1220,8 @@
                 "type": "string"
         },
         {
-                "name": "API_LST_KVS_PROPS",
-                "value": "LstKvsProps",
+                "name": "API_LST_KVS",
+                "value": "LstKvs",
                 "type": "string"
         },
         {
@@ -1317,6 +1337,11 @@
         },
         {
                 "blockcomment": "Object property keys"
+        },
+        {
+                "name": "KEY_KVS",
+                "value": "Kvs",
+                "type": "string"
         },
         {
                 "name": "KEY_UUID",

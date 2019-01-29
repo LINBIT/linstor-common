@@ -26,4 +26,7 @@ message MsgModVlmConn
     
     // Volume connection property keys to delete
     repeated string delete_prop_keys = 7;
+
+	// Volume connection namespaces to delete
+	repeated string del_namespaces = 8;
 }

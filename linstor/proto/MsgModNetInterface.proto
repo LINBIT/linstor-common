@@ -11,4 +11,7 @@ message MsgModNetInterface
     
     // Network interface name
     required NetInterface net_if = 2;
+
+	// Network namespaces to delete
+	repeated string del_namespaces = 3;
 }

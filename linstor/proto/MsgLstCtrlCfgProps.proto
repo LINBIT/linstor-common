@@ -7,4 +7,6 @@ import public "linstor/proto/LinStorMapEntry.proto";
 message MsgLstCtrlCfgProps
 {
     repeated LinStorMapEntry props = 1;
+
+	repeated string namespaces = 2;
 }

@@ -23,4 +23,6 @@ message MsgModDrbdProxy
     // DRBD Proxy compression properties map
     repeated LinStorMapEntry compression_props = 6;
 
+	// DRBD Proxy namespaces to delete
+	repeated string del_namespaces = 7;
 }

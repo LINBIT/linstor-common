@@ -8,4 +8,7 @@ message MsgLstStorPoolDfn
 {
     // Nodes
     repeated StorPoolDfn stor_pool_dfns = 1;
+
+	// Nodes namespaces to list
+	repeated string namespaces = 2;
 }

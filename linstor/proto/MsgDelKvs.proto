@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+
+// linstor - Delete KeyValueStore
+message MsgDelKvs
+{
+    // UUID
+    optional string uuid = 1;
+
+    // Node name
+    required string kvs_name = 2;
+}

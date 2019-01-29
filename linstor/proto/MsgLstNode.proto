@@ -3,9 +3,12 @@ syntax = "proto2";
 package com.linbit.linstor.proto;
 import public "linstor/proto/Node.proto";
 
-// linstor - List nodes
+// linstor - Response for 'List nodes'
 message MsgLstNode
 {
     // Nodes
     repeated Node nodes = 1;
+
+	// Nodes namespaces to list
+	repeated string namespaces = 2;
 }

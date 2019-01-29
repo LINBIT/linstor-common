@@ -21,4 +21,7 @@ message MsgModNode
     
     // Node property keys to delete
     repeated string delete_prop_keys = 5;
+
+	// Node namespaces to delete
+	repeated string del_namespaces = 6;
 }

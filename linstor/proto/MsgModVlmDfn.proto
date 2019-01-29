@@ -26,4 +26,7 @@ message MsgModVlmDfn
     
     // Volume definition property keys to delete
     repeated string delete_prop_keys = 7;
+
+	// Volume definition namespaces to delete
+	repeated string del_namespaces = 8;
 }
