@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto;
+import public "linstor/proto/LinStorMapEntry.proto";
+
+message Kvs
+{
+    // UUID
+    optional string uuid = 1;
+
+    // Kvs name
+    required string name = 2;
+
+    // Kvs properties map
+    repeated LinStorMapEntry props = 3;
+}

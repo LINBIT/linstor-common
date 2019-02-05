@@ -1,10 +1,11 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto;
+import public "linstor/proto/Kvs.proto";
 
 // linstor - Response for 'List instances of a given KeyValueStore'
 message MsgRspKvs
 {
-    // Instance names
-    repeated string instance_names = 1;
+    // instances
+    repeated Kvs key_value_store = 1;
 }

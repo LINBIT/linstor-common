@@ -9,8 +9,8 @@ message MsgModKvs
 	// UUID
     optional string node_uuid = 1;
 
-    // Instance name
-    required string instance_name = 2;
+    // Kvs name
+    required string kvs_name = 2;
     
     // Creates or updates given properties
     repeated LinStorMapEntry override_props = 3;
