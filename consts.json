@@ -59,6 +59,16 @@
                 "type": "long"
         },
         {
+                "name": "MASK_VLM_GRP",
+                "value": "0x0000000000480000L",
+                "type": "long"
+        },
+        {
+                "name": "MASK_RSC_GRP",
+                "value": "0x0000000000440000L",
+                "type": "long"
+        },
+        {
                 "name": "MASK_KVS",
                 "value": "0x0000000000400000L",
                 "type": "long"
@@ -319,6 +329,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_VLM_SIZES",
+                "value": [228, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -404,6 +419,16 @@
         {
                 "name": "FAIL_NOT_FOUND_KVS",
                 "value": [316, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_NOT_FOUND_RSC_GRP",
+                "value": [317, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_NOT_FOUND_VLM_GRP",
+                "value": [318, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -502,6 +527,16 @@
         {
                 "name": "FAIL_ACC_DENIED_KVS",
                 "value": [418, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_ACC_DENIED_RSC_GRP",
+                "value": [419, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_ACC_DENIED_VLM_GRP",
+                "value": [420, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -615,6 +650,16 @@
         {
                 "name": "FAIL_LOST_STOR_POOL",
                 "value": [521, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_EXISTS_RSC_GRP",
+                "value": [522, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_EXISTS_VLM_GRP",
+                "value": [523, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -1032,6 +1077,21 @@
                 "type": "string"
         },
         {
+                "name": "API_CRT_RSC_GRP",
+                "value": "CrtRscGrp",
+                "type": "string"
+        },
+        {
+                "name": "API_CRT_VLM_GRP",
+                "value": "CrtVlmGrp",
+                "type": "string"
+        },
+        {
+                "name": "API_SPAWN_RSC_DFN",
+                "value": "SpawnRscDfn",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Modify object APIs"
         },
         {
@@ -1130,6 +1190,16 @@
                 "type": "string"
         },
         {
+                "name": "API_MOD_RSC_GRP",
+                "value": "ModifyRscGrp",
+                "type": "string"
+        },
+        {
+                "name": "API_MOD_VLM_GRP",
+                "value": "ModifyVlmGrp",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Delete object APIs"
         },
         {
@@ -1190,6 +1260,16 @@
         {
                 "name": "API_DEL_KVS",
                 "value": "DelKvs",
+                "type": "string"
+        },
+        {
+                "name": "API_DEL_RSC_GRP",
+                "value": "DelRscGrp",
+                "type": "string"
+        },
+        {
+                "name": "API_DEL_VLM_GRP",
+                "value": "DelVlmGrp",
                 "type": "string"
         },
         {
@@ -1317,6 +1397,16 @@
         {
                 "name": "API_LST_KVS",
                 "value": "LstKvs",
+                "type": "string"
+        },
+        {
+                "name": "API_LST_RSC_GRP",
+                "value": "LstRscGrp",
+                "type": "string"
+        },
+        {
+                "name": "API_LST_VLM_GRP",
+                "value": "LstVlmGrp",
                 "type": "string"
         },
         {
@@ -1451,6 +1541,16 @@
         {
                 "name": "KEY_RSC_DFN",
                 "value": "RscDfn",
+                "type": "string"
+        },
+        {
+                "name": "KEY_RSC_GRP",
+                "value": "RscGrp",
+                "type": "string"
+        },
+        {
+                "name": "KEY_VLM_GRP",
+                "value": "VlmGrp",
                 "type": "string"
         },
         {
