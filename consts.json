@@ -692,6 +692,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_POOL_EXHAUSTED_RSC_LAYER_ID",
+                "value": [804, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Other failures"
         },
         {

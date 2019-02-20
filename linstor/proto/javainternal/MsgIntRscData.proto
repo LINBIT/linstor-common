@@ -5,6 +5,7 @@ import "linstor/proto/LinStorMapEntry.proto";
 import "linstor/proto/Node.proto";
 import "linstor/proto/VlmDfn.proto";
 import "linstor/proto/Vlm.proto";
+import "linstor/proto/RscLayerData.proto";
 
 // LinStor - Internal message containing a resource
 message MsgIntRscData
@@ -62,6 +63,9 @@ message MsgIntRscData
     
     // Update id
     sint64                            update_id = 17;
+    
+    // Root layer object - other layer objects are nested within layer_object
+    RscLayerData                      layer_object = 19;
 }
 
 message MsgIntOtherRscData
@@ -86,6 +90,9 @@ message MsgIntOtherRscData
 
     // Volume
     repeated Vlm             local_vlms  = 10;
+    
+    // Root layer data - other layer data are nested within layer_object
+    RscLayerData             layer_object = 11;
 }
 
 // Resource connection

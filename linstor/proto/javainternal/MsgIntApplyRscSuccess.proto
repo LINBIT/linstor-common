@@ -3,7 +3,7 @@ syntax = "proto3";
 package com.linbit.linstor.proto.javainternal;
 import "linstor/proto/javainternal/MsgIntObjectId.proto";
 import "linstor/proto/StorPoolFreeSpace.proto";
-import "linstor/proto/LinStorMapEntry.proto";
+import "linstor/proto/RscLayerData.proto";
 
 // linstor - Internal message about a successful resource creation or modification
 message MsgIntApplyRscSuccess
@@ -13,26 +13,5 @@ message MsgIntApplyRscSuccess
     
     repeated StorPoolFreeSpace free_space = 2;
 
-    repeated VlmData vlm_data = 3;
-}
-
-
-// Contains updated volume data that is only evaluated on the satellite
-message VlmData
-{
-    string vlm_uuid = 1;
-
-    sint32 vlm_nr = 2;
-
-    string block_device_path = 3;
-
-    string meta_disk = 4;
-
-    string device_path = 6;
-
-    uint64 usable_size = 5;
-
-    uint64 allocated_size = 8;
-    
-    repeated LinStorMapEntry vlm_dfn_props = 7;
+    RscLayerData layer_object = 3;
 }
