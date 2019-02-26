@@ -1607,6 +1607,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_REST",
+                "value": "REST",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
@@ -1875,6 +1880,21 @@
         {
                 "name": "KEY_RSC_MIGRATE_FROM",
                 "value": "MigrateFrom",
+                "type": "string"
+        },
+        {
+                "name": "KEY_REST_LISTEN_ADDR",
+                "value": "listenAddr",
+                "type": "string"
+        },
+        {
+                "name": "KEY_REST_LISTEN_PORT",
+                "value": "listenPort",
+                "type": "string"
+        },
+        {
+                "name": "KEY_REST_ENABLED",
+                "value": "enabled",
                 "type": "string"
         },
         {

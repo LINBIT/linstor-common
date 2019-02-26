@@ -443,6 +443,23 @@
                         "min": 0,
                         "default": 0,
                         "max": 253
+                },
+                "rest_listen_addr": {
+                    "internal": false,
+                    "key": ["NAMESPC_REST", "KEY_REST_LISTEN_ADDR"],
+                    "type": "string"
+                },
+                "rest_listen_port": {
+                    "internal": false,
+                    "key": ["NAMESPC_REST", "KEY_REST_LISTEN_PORT"],
+                    "type": "range",
+                    "min": 1,
+                    "max": 65535
+                },
+                "rest_enabled": {
+                    "internal": false,
+                    "key": ["NAMESPC_REST", "KEY_REST_ENABLED"],
+                    "type": "boolean_true_false"
                 }
         },
         "objects": {
@@ -456,7 +473,10 @@
                         "stordriver_swordfish_url",
                         "stordriver_swordfish_retry_count",
                         "stordriver_swordfish_retry_delay",
-                        "global_seq_api_calls"
+                        "global_seq_api_calls",
+                        "rest_listen_addr",
+                        "rest_listen_port",
+                        "rest_enabled"
                 ],
                 "node": [
                         "storage_pool_name",
