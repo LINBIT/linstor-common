@@ -1,5 +1,5 @@
-COMMONSRC=$(wildcard linstor/proto/*.proto) $(wildcard linstor/proto/eventdata/*.proto)
-JAVASRC=$(wildcard linstor/proto/javainternal/*.proto)
+COMMONSRC=$(wildcard linstor/proto/*.proto)  $(wildcard linstor/proto/common/*.proto) $(wildcard linstor/proto/eventdata/*.proto)  $(wildcard linstor/proto/requests/*.proto) $(wildcard linstor/proto/responses/*.proto)
+JAVASRC=$(wildcard linstor/proto/javainternal/*.proto) $(wildcard linstor/proto/javainternal/c2s/*.proto) $(wildcard linstor/proto/javainternal/s2c/*.proto)
 COMMONNOEND=$(COMMONSRC:.proto=)
 JAVANOEND=$(COMMONNOEND) $(JAVASRC:.proto=)
 COMMONDRBDOPTS=drbdoptions.json

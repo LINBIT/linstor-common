@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.requests;
+
+// Requests a list of resource connections of the given resource name
+// ApiConsts.API_REQ_RSC_CONN_LIST
+message MsgReqRscConn
+{
+	required string rsc_name = 1;
+}

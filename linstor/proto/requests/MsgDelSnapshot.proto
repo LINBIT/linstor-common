@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.requests;
+
+// Delete a snapshot
+// ApiConsts.API_DEL_SNAPSHOT
+message MsgDelSnapshot
+{
+    optional string uuid = 1;
+    required string rsc_name = 2;
+    required string snapshot_name = 3;
+}

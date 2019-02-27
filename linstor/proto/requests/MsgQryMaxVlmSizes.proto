@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.requests;
+import "linstor/proto/common/AutoSelectFilter.proto";
+
+// Query of max volume sizes
+// ApiConsts.API_QRY_MAX_VLM_SIZE
+message MsgQryMaxVlmSizes
+{
+    required common.AutoSelectFilter select_filter = 1;
+}
+

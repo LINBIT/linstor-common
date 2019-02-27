@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.requests;
+
+// Delete a resource connection
+// ApiConsts.API_DEL_RSC_CONN
+message MsgDelRscConn
+{
+    optional string uuid = 1;
+    required string node_name_1 = 2;
+    required string node_name_2 = 3;
+    required string resource_name = 4;
+}

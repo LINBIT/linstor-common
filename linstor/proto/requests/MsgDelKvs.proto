@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.requests;
+
+// Delete KeyValueStore
+// ApiConsts.API_DEL_KVS
+message MsgDelKvs
+{
+    optional string uuid = 1;
+    required string kvs_name = 2;
+}

@@ -1,9 +1,0 @@
-syntax = "proto2";
-
-package com.linbit.linstor.proto;
-
-// linstor - Cancel an existing watch
-message MsgCancelWatch
-{
-    required int32 watch_id = 1;
-}

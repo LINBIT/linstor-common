@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.requests;
+
+// Delete a storage pool
+// ApiConsts.API_DEL_STOR_POOL
+message MsgDelStorPool
+{
+    optional string uuid = 1;
+    required string node_name = 2;
+    required string stor_pool_name = 3;
+}

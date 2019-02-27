@@ -1286,18 +1286,18 @@
                 "type": "string"
         },
         {
-                "name": "API_SET_CFG_VAL",
-                "value": "SetCfgVal",
+                "name": "API_SET_CTRL_PROP",
+                "value": "SetCtrlProp",
                 "type": "string"
         },
         {
-                "name": "API_DEL_CFG_VAL",
-                "value": "DelCfgVal",
+                "name": "API_DEL_CTRL_PROP",
+                "value": "DelCtrlProp",
                 "type": "string"
         },
         {
-                "name": "API_LST_CFG_VAL",
-                "value": "LstCfgVal",
+                "name": "API_LST_CTRL_PROPS",
+                "value": "LstCtrlProps",
                 "type": "string"
         },
         {

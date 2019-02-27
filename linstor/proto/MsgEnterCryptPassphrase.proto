@@ -1,9 +1,0 @@
-syntax = "proto2";
-
-package com.linbit.linstor.proto;
-
-// linstor - Msg used to enter the current crypt passphrase
-message MsgEnterCryptPassphrase
-{
-    required string passphrase = 1;
-}

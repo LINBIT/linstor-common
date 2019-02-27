@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.requests;
+import "linstor/proto/common/RscDfn.proto";
+
+// Create resource definition
+// ApiConsts.API_CRT_RSC_DFN
+message MsgCrtRscDfn
+{
+    required common.RscDfn rsc_dfn = 1;
+}

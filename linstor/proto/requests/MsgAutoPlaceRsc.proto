@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.requests;
+import "linstor/proto/common/AutoSelectFilter.proto";
+
+// Auto place resource
+// ApiConsts.API_AUTO_PLACE_RSC
+message MsgAutoPlaceRsc
+{
+    required string rsc_name = 1;
+    required common.AutoSelectFilter select_filter = 2;
+    optional bool diskless_on_remaining = 3 [default = false];
+}

@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.requests;
+import "linstor/proto/common/Rsc.proto";
+
+// Create resource
+// ApiConsts.API_CRT_RSC
+message MsgCrtRsc
+{
+    repeated common.Rsc rscs = 1;
+}

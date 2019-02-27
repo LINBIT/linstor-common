@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.requests;
+
+// Create a new crypt passphrase
+// ApiConsts.API_CRT_CRYPT_PASS
+message MsgCrtCryptPassphrase
+{
+    required string passphrase = 1;
+}

@@ -1,0 +1,40 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.common;
+import "linstor/proto/common/LinStorMapEntry.proto";
+
+// Volume
+message Vlm
+{
+    optional string vlm_uuid = 1;
+    optional string vlm_dfn_uuid = 2;
+    required sint32 vlm_nr = 3;
+    optional uint32 vlm_minor_nr = 4;
+    optional string backing_disk = 5;
+    optional string meta_disk = 6;
+    optional string stor_pool_uuid = 7;
+    
+    // if null: vlmDfn, rsc and node are asked for default (in this order)
+    optional string stor_pool_name = 8; 
+    
+    repeated string vlm_flags = 9;
+    repeated common.LinStorMapEntry vlm_props = 10;
+
+    // Storage pool's driver simple name
+    // in case we have to create a new storage pool
+    optional string stor_pool_driver_name = 11;
+
+    // Storage pool definition's uuid
+    // in case we have to create a new storage pool definition
+    optional string stor_pool_dfn_uuid = 12;
+
+    repeated common.LinStorMapEntry stor_pool_dfn_props = 13;
+    repeated common.LinStorMapEntry stor_pool_props = 14;
+    optional string device_path = 16;
+
+    // Allocated size of the deployed volume reported by the backing device (in KiB)
+    optional uint64 allocated_size = 17;
+
+    // Usable size, has to be greater or equal the volume definition's size
+    optional uint64 usable_size = 18;
+}
