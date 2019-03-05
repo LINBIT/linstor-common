@@ -957,6 +957,11 @@
                 "type": "string"
         },
         {
+                "name": "API_UUID_NAME_PREFIX",
+                "value": "LS_",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Modify object APIs"
         },
         {
