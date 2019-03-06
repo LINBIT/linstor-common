@@ -3,17 +3,25 @@ syntax = "proto2";
 package com.linbit.linstor.proto.common;
 import "linstor/proto/common/LinStorMapEntry.proto";
 import "linstor/proto/common/VlmDfn.proto";
+import "linstor/proto/common/DrbdRsc.proto";
+import "linstor/proto/common/Types.proto";
 
 // Resource definition
 message RscDfn
 {
     optional string rsc_dfn_uuid = 1;
     required string rsc_name = 2;
-    optional sint32 rsc_dfn_port = 3;
-    optional string rsc_dfn_secret = 4;
     repeated string rsc_dfn_flags = 5;
     repeated common.LinStorMapEntry rsc_dfn_props = 6;
     repeated VlmDfn vlm_dfns = 7;
-    optional string rsc_dfn_transport_type = 8 [default = "IP"];
-    optional bool rsc_dfn_down = 9;
+    repeated RscDfnLayerData layer_data = 10;
+}
+
+message RscDfnLayerData
+{
+    required Types.LayerType layer_type = 1;
+    oneof data
+    {
+        DrbdRscDfn drbd = 2;
+    }
 }

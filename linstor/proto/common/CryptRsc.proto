@@ -16,5 +16,7 @@ message CryptVlm
     optional string         backing_device = 4;
     optional int64          allocated_size = 5;
     optional int64          usable_size = 6;
+    optional bool           opened = 7;
+    optional string         diskState = 8;
 }
 

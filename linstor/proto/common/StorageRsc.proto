@@ -15,16 +15,17 @@ message StorageVlm
     optional string         device_path = 2;
     optional int64          allocated_size = 3;
     optional int64          usable_size = 4;
+    optional string         disk_state = 5;
     
     oneof provider
     {
-        DrbdDisklessVlm     drbd_diskless = 5;
-        LvmVlm              lvm = 6;
-        LvmThinVlm          lvm_thin = 7;
-        ZfsVlm              zfs = 8;
-        ZfsThinVlm          zfs_thin = 9;
-        SwordfishTarget     sf_target = 10;
-        SwordfishInitiator  sf_init = 11;
+        DrbdDisklessVlm     drbd_diskless = 6;
+        LvmVlm              lvm = 7;
+        LvmThinVlm          lvm_thin = 8;
+        ZfsVlm              zfs = 9;
+        ZfsThinVlm          zfs_thin = 10;
+        SwordfishTarget     sf_target = 11;
+        SwordfishInitiator  sf_init = 12;
     }
 }
 

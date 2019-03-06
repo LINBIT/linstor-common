@@ -2,6 +2,8 @@ syntax = "proto2";
 
 package com.linbit.linstor.proto.common;
 import "linstor/proto/common/LinStorMapEntry.proto";
+import "linstor/proto/common/DrbdRsc.proto";
+import "linstor/proto/common/Types.proto";
 
 // Volume definition
 message VlmDfn
@@ -14,9 +16,17 @@ message VlmDfn
     // Volume size in kiB
     required int64 vlm_size = 3;
 
-    // null for automatic assignment
-    optional sint32 vlm_minor = 4;
-
     repeated string vlm_flags = 5;
     repeated common.LinStorMapEntry vlm_props = 6;
+
+    repeated VlmDfnLayerData layer_data = 7;
+}
+
+message VlmDfnLayerData
+{
+    required Types.LayerType layer_type = 1;
+    oneof data
+    {
+        DrbdVlmDfn drbd = 2;
+    }
 }

@@ -26,7 +26,8 @@ message DrbdRscDfn
     required uint32             port = 5;
     // has to correspond to a value of the linstor-java "TransportType" enum
     required string             transport_type = 6;
-    required string             secret = 7;        
+    required string             secret = 7;
+    required bool               down = 8;
 }
 
 message DrbdVlm
@@ -37,6 +38,7 @@ message DrbdVlm
     optional string             meta_disk = 4;
     optional int64              allocated_size = 5;
     optional int64              usable_size = 6;
+    optional string             disk_state = 7;
 }
 
 // multiple DrbdVlms might refer to the same DrbdVlmDfn. The combination of the corresponding resource definition's name, the rsc_name_suffix and vlm_nr is the primary key.

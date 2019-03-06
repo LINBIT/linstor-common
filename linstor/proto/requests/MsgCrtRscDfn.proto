@@ -8,4 +8,8 @@ import "linstor/proto/common/RscDfn.proto";
 message MsgCrtRscDfn
 {
     required common.RscDfn rsc_dfn = 1;
+
+    optional sint32 drbd_port = 2;
+    optional string drbd_secret = 3;
+    optional string drbd_transport_type = 4 [default ="IP"];
 }

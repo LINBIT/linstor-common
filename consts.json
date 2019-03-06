@@ -299,6 +299,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_LAYER_KIND",
+                "value": [224, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -800,6 +805,11 @@
         {
                 "name": "WARN_STORAGE_ERROR",
                 "value": [1010, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
+                "name": "WARN_NOT_FOUND_CRYPT_KEY",
+                "value": [1011, "MASK_WARN"],
                 "type": "BOR"
         },
         {

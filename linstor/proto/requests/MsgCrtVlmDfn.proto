@@ -11,5 +11,12 @@ message MsgCrtVlmDfn
     optional string rsc_dfn_uuid = 2;
 
     // Volume definitions to add to the resource definition
-    repeated common.VlmDfn vlm_dfns = 3;
+    repeated VlmDfnWithPayload vlm_dfns = 3;
+}
+
+message VlmDfnWithPayload
+{
+    required common.VlmDfn vlm_dfn = 1;
+
+    optional sint32 drbd_minor_nr = 2;
 }

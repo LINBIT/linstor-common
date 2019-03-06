@@ -16,7 +16,5 @@ message Rsc
     repeated common.LinStorMapEntry props = 6;
     repeated string rsc_flags = 7;
     repeated Vlm vlms = 8;
-    optional int32 node_id = 9;
-    optional bool override_node_id = 10;
     optional RscLayerData layer_object = 11;
 }

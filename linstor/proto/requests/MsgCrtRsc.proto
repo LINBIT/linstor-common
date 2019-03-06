@@ -2,10 +2,18 @@ syntax = "proto2";
 
 package com.linbit.linstor.proto.requests;
 import "linstor/proto/common/Rsc.proto";
+import "linstor/proto/common/Types.proto";
 
 // Create resource
 // ApiConsts.API_CRT_RSC
 message MsgCrtRsc
 {
-    repeated common.Rsc rscs = 1;
+    repeated RscWithPayload rscs = 1;
+}
+
+message RscWithPayload
+{
+    required common.Rsc rsc = 1;
+    repeated common.Types.LayerType layer_stack = 2;
+    optional int32 drbd_node_id = 3;
 }
