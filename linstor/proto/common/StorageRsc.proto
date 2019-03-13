@@ -2,6 +2,8 @@ syntax = "proto2";
 
 package com.linbit.linstor.proto.common;
 
+import "linstor/proto/common/ProviderType.proto";
+
 // Storage layer specific properties. See RscLayerData.proto for shared properties
 message StorageRsc
 {
@@ -26,6 +28,15 @@ message StorageVlm
         ZfsThinVlm          zfs_thin = 10;
         SwordfishTarget     sf_target = 11;
         SwordfishInitiator  sf_init = 12;
+    }
+}
+
+message StorageVlmDfn
+{
+    required ProviderType provider_type = 1;
+    oneof data
+    {
+        SwordfishVlmDfn swordfish = 2;
     }
 }
 

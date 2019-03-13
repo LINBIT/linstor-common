@@ -5,7 +5,8 @@ import "linstor/proto/common/LinStorMapEntry.proto";
 import "linstor/proto/common/DrbdRsc.proto";
 import "linstor/proto/common/CryptRsc.proto";
 import "linstor/proto/common/StorageRsc.proto";
-import "linstor/proto/common/Types.proto";
+import "linstor/proto/common/LayerType.proto";
+import "linstor/proto/common/ProviderType.proto";
 
 // Volume
 message Vlm
@@ -23,7 +24,7 @@ message Vlm
 
     // Storage pool's driver simple name
     // in case we have to create a new storage pool
-    optional string stor_pool_driver_name = 8;
+    optional ProviderType provider_kind = 8;
 
     // Storage pool definition's uuid
     // in case we have to create a new storage pool definition
@@ -44,7 +45,7 @@ message Vlm
 
 message VlmLayerData
 {
-    required Types.LayerType layer_type = 1;
+    required LayerType layer_type = 1;
     oneof data
     {
         DrbdVlm    drbd = 2;

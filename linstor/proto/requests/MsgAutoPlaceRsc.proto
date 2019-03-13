@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package com.linbit.linstor.proto.requests;
 import "linstor/proto/common/AutoSelectFilter.proto";
-import "linstor/proto/common/Types.proto";
+import "linstor/proto/common/LayerType.proto";
 
 // Auto place resource
 // ApiConsts.API_AUTO_PLACE_RSC
@@ -11,5 +11,5 @@ message MsgAutoPlaceRsc
     required string rsc_name = 1;
     required common.AutoSelectFilter select_filter = 2;
     optional bool diskless_on_remaining = 3 [default = false];
-    repeated common.Types.LayerType layer_stack = 4;
+    repeated common.LayerType layer_stack = 4;
 }

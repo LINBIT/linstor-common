@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package com.linbit.linstor.proto.common;
+
+enum LayerType
+{
+    DRBD = 1;
+    LUKS = 2;
+    STORAGE = 3;
+}

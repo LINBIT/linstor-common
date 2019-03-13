@@ -3,7 +3,8 @@ syntax = "proto2";
 package com.linbit.linstor.proto.common;
 import "linstor/proto/common/LinStorMapEntry.proto";
 import "linstor/proto/common/DrbdRsc.proto";
-import "linstor/proto/common/Types.proto";
+import "linstor/proto/common/StorageRsc.proto";
+import "linstor/proto/common/LayerType.proto";
 
 // Volume definition
 message VlmDfn
@@ -24,9 +25,10 @@ message VlmDfn
 
 message VlmDfnLayerData
 {
-    required Types.LayerType layer_type = 1;
+    required LayerType layer_type = 1;
     oneof data
     {
         DrbdVlmDfn drbd = 2;
+        StorageVlmDfn storage = 3;
     }
 }
