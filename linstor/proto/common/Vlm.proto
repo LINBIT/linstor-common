@@ -45,11 +45,8 @@ message Vlm
 
 message VlmLayerData
 {
-    required LayerType layer_type = 1;
-    oneof data
-    {
-        DrbdVlm    drbd = 2;
-        CryptVlm   crypt = 3;
-        StorageVlm storage = 4;
-    }
+    required LayerType  layer_type = 1;
+    optional DrbdVlm    drbd = 2;
+    optional CryptVlm   crypt = 3;
+    optional StorageVlm storage = 4;
 }

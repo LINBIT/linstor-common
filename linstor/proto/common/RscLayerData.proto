@@ -4,6 +4,7 @@ package com.linbit.linstor.proto.common;
 import "linstor/proto/common/DrbdRsc.proto";
 import "linstor/proto/common/CryptRsc.proto";
 import "linstor/proto/common/StorageRsc.proto";
+import "linstor/proto/common/LayerType.proto";
 
 // Shared properties of layered resource data. See DrbdRsc.proto, CryptRsc.proto and StorageRsc.proto for concrete types
 message RscLayerData
@@ -11,10 +12,8 @@ message RscLayerData
     required int32              id = 1;
     repeated RscLayerData       children = 2;
     required string             rsc_name_suffix = 3;
-    oneof layer_specific_payload
-    {
-        DrbdRsc                 drbd = 6;
-        CryptRsc                crypt = 7;
-        StorageRsc              storage = 8;
-    }
+    required LayerType          layer_type = 4;
+    optional DrbdRsc            drbd = 6;
+    optional CryptRsc           crypt = 7;
+    optional StorageRsc         storage = 8;
 }

@@ -18,26 +18,21 @@ message StorageVlm
     optional int64          allocated_size = 3;
     optional int64          usable_size = 4;
     optional string         disk_state = 5;
-    
-    oneof provider
-    {
-        DrbdDisklessVlm     drbd_diskless = 6;
-        LvmVlm              lvm = 7;
-        LvmThinVlm          lvm_thin = 8;
-        ZfsVlm              zfs = 9;
-        ZfsThinVlm          zfs_thin = 10;
-        SwordfishTarget     sf_target = 11;
-        SwordfishInitiator  sf_init = 12;
-    }
+
+    required ProviderType        provider_kind = 6;
+    optional DrbdDisklessVlm     drbd_diskless = 7;
+    optional LvmVlm              lvm = 8;
+    optional LvmThinVlm          lvm_thin = 9;
+    optional ZfsVlm              zfs = 10;
+    optional ZfsThinVlm          zfs_thin = 11;
+    optional SwordfishTarget     sf_target = 12;
+    optional SwordfishInitiator  sf_init = 13;
 }
 
 message StorageVlmDfn
 {
-    required ProviderType provider_type = 1;
-    oneof data
-    {
-        SwordfishVlmDfn swordfish = 2;
-    }
+    required ProviderType provider_kind = 1;
+    optional SwordfishVlmDfn swordfish = 2;
 }
 
 message DrbdDisklessVlm

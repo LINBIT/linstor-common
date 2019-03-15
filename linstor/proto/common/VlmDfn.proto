@@ -25,10 +25,7 @@ message VlmDfn
 
 message VlmDfnLayerData
 {
-    required LayerType layer_type = 1;
-    oneof data
-    {
-        DrbdVlmDfn drbd = 2;
-        StorageVlmDfn storage = 3;
-    }
+    required LayerType      layer_type = 1;
+    optional DrbdVlmDfn     drbd = 2;
+    optional StorageVlmDfn  storage = 3;
 }
