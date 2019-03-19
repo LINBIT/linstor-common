@@ -3,7 +3,7 @@ syntax = "proto2";
 package com.linbit.linstor.proto.common;
 import "linstor/proto/common/LinStorMapEntry.proto";
 import "linstor/proto/common/DrbdRsc.proto";
-import "linstor/proto/common/CryptRsc.proto";
+import "linstor/proto/common/LuksRsc.proto";
 import "linstor/proto/common/StorageRsc.proto";
 import "linstor/proto/common/LayerType.proto";
 import "linstor/proto/common/ProviderType.proto";
@@ -47,6 +47,6 @@ message VlmLayerData
 {
     required LayerType  layer_type = 1;
     optional DrbdVlm    drbd = 2;
-    optional CryptVlm   crypt = 3;
+    optional LuksVlm    luks = 3;
     optional StorageVlm storage = 4;
 }

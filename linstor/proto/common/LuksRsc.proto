@@ -2,13 +2,13 @@ syntax = "proto2";
 
 package com.linbit.linstor.proto.common;
 
-// CryptSetup layer specific properties. See RscLayerData.proto for shared properties
-message CryptRsc
+// Luks layer specific properties. See RscLayerData.proto for shared properties
+message LuksRsc
 {
-    repeated CryptVlm   crypt_vlms = 1;
+    repeated LuksVlm   luks_vlms = 1;
 }
 
-message CryptVlm
+message LuksVlm
 {
     required uint32         vlm_nr = 1;
     required bytes          encrypted_password = 2;
