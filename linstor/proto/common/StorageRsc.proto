@@ -20,7 +20,7 @@ message StorageVlm
     optional string         disk_state = 5;
 
     required ProviderType        provider_kind = 6;
-    optional DrbdDisklessVlm     drbd_diskless = 7;
+    optional DisklessVlm         diskless = 7;
     optional LvmVlm              lvm = 8;
     optional LvmThinVlm          lvm_thin = 9;
     optional ZfsVlm              zfs = 10;
@@ -35,7 +35,7 @@ message StorageVlmDfn
     optional SwordfishVlmDfn swordfish = 2;
 }
 
-message DrbdDisklessVlm
+message DisklessVlm
 {
     // currently no special payload
 }
