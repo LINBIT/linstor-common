@@ -1798,11 +1798,6 @@
                 "type": "string"
         },
         {
-                "name": "KEY_BIND_ADDR",
-                "value": "BindAddr",
-                "type": "string"
-        },
-        {
                 "name": "KEY_NETCOM_TYPE",
                 "value": "NetComType",
                 "type": "string"
@@ -1903,17 +1898,17 @@
                 "type": "string"
         },
         {
-                "name": "KEY_REST_LISTEN_ADDR",
-                "value": "listenAddr",
+                "name": "KEY_BIND_ADDR",
+                "value": "bindAddress",
                 "type": "string"
         },
         {
-                "name": "KEY_REST_LISTEN_PORT",
-                "value": "listenPort",
+                "name": "KEY_BIND_PORT",
+                "value": "port",
                 "type": "string"
         },
         {
-                "name": "KEY_REST_ENABLED",
+                "name": "KEY_ENABLED",
                 "value": "enabled",
                 "type": "string"
         },

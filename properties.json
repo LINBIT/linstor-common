@@ -446,19 +446,19 @@
                 },
                 "rest_listen_addr": {
                     "internal": false,
-                    "key": ["NAMESPC_REST", "KEY_REST_LISTEN_ADDR"],
+                    "key": ["NAMESPC_REST", "KEY_BIND_ADDR"],
                     "type": "string"
                 },
                 "rest_listen_port": {
                     "internal": false,
-                    "key": ["NAMESPC_REST", "KEY_REST_LISTEN_PORT"],
+                    "key": ["NAMESPC_REST", "KEY_BIND_PORT"],
                     "type": "range",
                     "min": 1,
                     "max": 65535
                 },
                 "rest_enabled": {
                     "internal": false,
-                    "key": ["NAMESPC_REST", "KEY_REST_ENABLED"],
+                    "key": ["NAMESPC_REST", "KEY_ENABLED"],
                     "type": "boolean_true_false"
                 }
         },
