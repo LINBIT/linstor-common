@@ -808,6 +808,11 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_STORAGE_KIND_ADDED",
+                "value": [1012, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "name": "WARN_NOT_FOUND_CRYPT_KEY",
                 "value": [1011, "MASK_WARN"],
                 "type": "BOR"
