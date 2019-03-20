@@ -304,6 +304,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_LAYER_STACK",
+                "value": [225, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
