@@ -309,6 +309,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_EXT_NAME",
+                "value": [226, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -583,6 +588,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_EXISTS_EXT_NAME",
+                "value": [517, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 600-699: data missing failures"
         },
         {
@@ -613,6 +623,11 @@
         {
                 "name": "FAIL_MISSING_STLT_CONN",
                 "value": [605, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_MISSING_EXT_NAME",
+                "value": [606, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -964,11 +979,6 @@
         {
                 "name": "API_RESTORE_SNAPSHOT",
                 "value": "RestoreSnapshot",
-                "type": "string"
-        },
-        {
-                "name": "API_UUID_NAME_PREFIX",
-                "value": "LS_",
                 "type": "string"
         },
         {
