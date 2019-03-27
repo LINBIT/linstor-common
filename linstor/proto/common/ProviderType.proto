@@ -5,6 +5,8 @@ option go_package = "common";
 
 enum ProviderType
 {
+    UNKNOWN_PROVIDER = 0;
+
     DISKLESS = 1;
 
     LVM = 2;

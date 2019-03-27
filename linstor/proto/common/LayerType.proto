@@ -5,6 +5,8 @@ option go_package = "common";
 
 enum LayerType
 {
+    UNKNOWN_LAYER = 0;
+
     DRBD = 1;
     LUKS = 2;
     STORAGE = 3;

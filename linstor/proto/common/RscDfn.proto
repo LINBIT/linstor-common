@@ -23,6 +23,6 @@ message RscDfn
 
 message RscDfnLayerData
 {
-    required LayerType layer_type = 1;
+    required LayerType  layer_type = 1;
     optional DrbdRscDfn drbd = 2;
 }

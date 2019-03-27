@@ -32,7 +32,7 @@ message StorageVlm
 
 message StorageVlmDfn
 {
-    required ProviderType provider_kind = 1;
+    required ProviderType    provider_kind = 1;
     optional SwordfishVlmDfn swordfish = 2;
 }
 

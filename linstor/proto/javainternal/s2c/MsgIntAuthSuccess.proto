@@ -1,5 +1,8 @@
 syntax = "proto3";
 
+import "linstor/proto/common/LayerTypeWrapper.proto";
+import "linstor/proto/common/ProviderTypeWrapper.proto";
+
 package com.linbit.linstor.proto.javainternal.s2c;
 
 // Internal message of a successful authentication expected full sync id
@@ -11,4 +14,8 @@ message MsgIntAuthSuccess
     uint32 version_major = 2;
     uint32 version_minor = 3;
     uint32 version_patch = 4;
+
+    repeated common.LayerTypeWrapper supported_layer = 5;
+    repeated common.ProviderTypeWrapper supported_provider = 6;
 }
+

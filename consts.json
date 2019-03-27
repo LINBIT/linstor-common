@@ -725,6 +725,16 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_STLT_DOES_NOT_SUPPORT_LAYER",
+                "value": [988, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_STLT_DOES_NOT_SUPPORT_PROVIDER",
+                "value": [989, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_STOR_POOL_CONFIGURATION_ERROR",
                 "value": [990, "MASK_ERROR"],
                 "type": "BOR"
