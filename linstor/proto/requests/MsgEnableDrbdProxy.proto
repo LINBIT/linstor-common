@@ -1,6 +1,7 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto.requests;
+option go_package = "requests";
 
 // Enable DRBD Proxy on a resource connection
 // ApiConsts.API_ENABLE_DRBD_PROXY

@@ -1,6 +1,8 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto.responses;
+option go_package = "responses";
+
 import "linstor/proto/common/SnapshotDfn.proto";
 
 // List of snapshot definitions

@@ -1,8 +1,9 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto.responses;
+option go_package = "responses";
 
-// API Version 
+// API Version
 // Requested by: none - this message is send to any inbound connection after being accepted / opened.
 message MsgApiVersion
 {

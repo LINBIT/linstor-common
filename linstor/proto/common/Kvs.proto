@@ -1,9 +1,11 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto.common;
+option go_package = "common";
+
 import "linstor/proto/common/LinStorMapEntry.proto";
 
-// Key-Value-Store 
+// Key-Value-Store
 message Kvs
 {
     optional string uuid = 1;

@@ -1,6 +1,8 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto.common;
+option go_package = "common";
+
 import "linstor/proto/common/LinStorMapEntry.proto";
 import "linstor/proto/common/Vlm.proto";
 import "linstor/proto/common/StorPoolFreeSpace.proto";

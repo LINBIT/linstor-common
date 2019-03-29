@@ -1,6 +1,8 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto.common;
+option go_package = "common";
+
 import "linstor/proto/common/LinStorMapEntry.proto";
 import "linstor/proto/common/DrbdRsc.proto";
 import "linstor/proto/common/LuksRsc.proto";
@@ -15,10 +17,10 @@ message Vlm
     optional string vlm_dfn_uuid = 2;
     required sint32 vlm_nr = 3;
     optional string stor_pool_uuid = 4;
-    
+
     // if null: vlmDfn, rsc and node are asked for default (in this order)
-    optional string stor_pool_name = 5; 
-    
+    optional string stor_pool_name = 5;
+
     repeated string vlm_flags = 6;
     repeated common.LinStorMapEntry vlm_props = 7;
 

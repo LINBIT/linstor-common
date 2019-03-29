@@ -1,6 +1,7 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto.requests;
+option go_package = "requests";
 
 // SignIn - Authenticate identity
 // ApiConsts.API_SIGN_IN

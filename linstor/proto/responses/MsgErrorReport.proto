@@ -1,6 +1,7 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto.responses;
+option go_package = "responses";
 
 // Contains an error report
 // Requested by: MsgReqErrorReport, ApiConsts.API_REQ_ERROR_REPORTS

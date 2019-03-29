@@ -1,6 +1,7 @@
 syntax = "proto2";
 
 package com.linbit.linstor.proto.common;
+option go_package = "common";
 
 // Drbd layer specific properties. See RscLayerData.proto for shared properties
 message DrbdRsc
@@ -19,7 +20,7 @@ message DrbdRsc
 message DrbdRscDfn
 {
     required string             rsc_name_suffix = 1;
-    
+
     required uint32             peers_slots = 2;
     required uint32             al_stripes = 3;
     required int64              al_size = 4;
@@ -47,7 +48,7 @@ message DrbdVlmDfn
 {
     required string             rsc_name_suffix = 1;
     required uint32             vlm_nr = 2;
-    
+
     required int32              minor = 3;
 }
 
