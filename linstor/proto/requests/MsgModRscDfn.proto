@@ -20,4 +20,5 @@ message MsgModRscDfn
     optional sint32 drbd_port = 8;
     optional string drbd_secret = 9;
     optional string drbd_transport_type = 10;
+    optional sint32 drbd_new_rsc_peer_slots = 11;
 }
