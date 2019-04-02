@@ -10,4 +10,5 @@ enum LayerType
     DRBD = 1;
     LUKS = 2;
     STORAGE = 3;
+    NVME = 4;
 }

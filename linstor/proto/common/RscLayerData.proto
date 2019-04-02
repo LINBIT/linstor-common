@@ -6,6 +6,7 @@ option go_package = "common";
 import "linstor/proto/common/DrbdRsc.proto";
 import "linstor/proto/common/LuksRsc.proto";
 import "linstor/proto/common/StorageRsc.proto";
+import "linstor/proto/common/NvmeRsc.proto";
 import "linstor/proto/common/LayerType.proto";
 
 // Shared properties of layered resource data. See DrbdRsc.proto, LuksRsc.proto and StorageRsc.proto for concrete types
@@ -18,4 +19,5 @@ message RscLayerData
     optional DrbdRsc            drbd = 6;
     optional LuksRsc            luks = 7;
     optional StorageRsc         storage = 8;
+    optional NvmeRsc            nvme = 9;
 }
