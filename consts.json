@@ -314,6 +314,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_PROVIDER",
+                "value": [227, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
