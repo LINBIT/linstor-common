@@ -3,6 +3,9 @@ syntax = "proto2";
 package com.linbit.linstor.proto.common;
 option go_package = "common";
 
+import "linstor/proto/common/LayerType.proto";
+import "linstor/proto/common/ProviderType.proto";
+
 message AutoSelectFilter
 {
     // replica count
@@ -26,4 +29,12 @@ message AutoSelectFilter
     // select nodes which have different values of the given property-keys.
     // if a property does not exist, it is assumed to be different (also to other non existing)
     repeated string replicas_on_different = 6;
+
+    // select nodes which support at least the following list of layers.
+    // an empty list is the same as a list containing all layers (nothing is filtered)
+    repeated common.LayerType layer_stack = 7;
+
+    // select nodes which support at least the following list of (storage) provider.
+    // an empty list is the same as a list containing all providers (nothing is filtered)
+    repeated common.ProviderType providers = 8;
 }
