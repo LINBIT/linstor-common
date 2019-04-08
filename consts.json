@@ -2208,5 +2208,10 @@
                 "name": "CONN_STATUS_HOSTNAME_MISMATCH",
                 "value": 7,
                 "type": "int"
+        },
+        {
+                "name": "CONN_STATUS_OTHER_CONTROLLER",
+                "value": 8,
+                "type": "int"
         }
 ]

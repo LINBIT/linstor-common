@@ -18,6 +18,7 @@ message Node
         AUTHENTICATION_ERROR = 5;
         UNKNOWN = 6;
         HOSTNAME_MISMATCH = 7;
+        OTHER_CONTROLLER = 8;
     }
 
     optional string uuid = 1;
