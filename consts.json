@@ -1652,6 +1652,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_DRBD_HANDLER_OPTIONS",
+                "value": "DrbdOptions/Handlers",
+                "type": "string"
+        },
+        {
                 "name": "NAMESPC_CONNECTION_PATHS",
                 "value": "Paths",
                 "type": "string"

@@ -41,6 +41,45 @@ def get_drbd_setup_xml(from_file):
     # return '<root>\n' + "".join(xml_opts) + '</root>'
 
 
+def create_and_add_handlers_option(properties, option_name):
+    if option_name in properties:
+        raise RuntimeError("drbd option name already in use: " + option_name)
+
+    properties[option_name] = {
+        'internal': True,
+        'key':  'DrbdOptions/Handlers/' + option_name,
+        'drbd_option_name': option_name,
+        'type': 'string'
+    }
+
+    return properties
+
+
+def add_handlers(objects, properties):
+    handlers = [
+        "after-resync-target",
+        "before-resync-target",
+        "before-resync-source",
+        "out-of-sync",
+        "quorum-lost",
+        "fence-peer",
+        "unfence-peer",
+        "initial-split-brain",
+        "local-io-error",
+        "pri-lost",
+        "pri-lost-after-sb",
+        "pri-on-incon-degr",
+        "split-brain"
+    ]
+
+    for h in handlers:
+        create_and_add_handlers_option(properties, h)
+        objects["controller"].append(h)
+        objects["resource-definition"].append(h)
+
+    return properties
+
+
 def parse_drbd_setup_xml(xmlout):
     root = ET.fromstring(xmlout)
 
@@ -60,6 +99,9 @@ def parse_drbd_setup_xml(xmlout):
             if cmd_name in categories:
                 objects[obj].extend(cmd_properties.keys())
         properties.update(cmd_properties)
+
+    # add handlers section options
+    add_handlers(objects, properties)
 
     return {
         "objects": objects,
@@ -113,7 +155,7 @@ def gendrbd(output_target):
     import json
 
     with open(output_target, 'wt') as f:
-        f.write(json.dumps(props, f, indent=2))
+        json.dump(props, f, indent=2, separators=(',', ': '))
 
     return 0
 
