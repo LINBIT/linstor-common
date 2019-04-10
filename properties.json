@@ -461,6 +461,30 @@
                     "key": ["NAMESPC_REST", "KEY_ENABLED"],
                     "type": "boolean_true_false"
                 },
+                "nvme_tr_type": {
+                        "internal": false,
+                        "key": ["NAMESPC_NVME", "KEY_TR_TYPE"],
+                        "type": "symbol",
+                        "default": "rdma",
+                        "values": [
+                                "rdma",
+                                "tcp"
+                        ]
+                },
+                "nvme_port": {
+                        "internal": false,
+                        "key": ["NAMESPC_NVME", "KEY_PORT"],
+                        "type": "range",
+                        "min": 1,
+                        "max": 65535
+                },
+                "nvme_preferred_nic": {
+                        "internal": false,
+                        "key": ["NAMESPC_NVME","KEY_PREF_NIC"],
+                        "type": "regex",
+                        "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+                        "info": "Preferred network interface to use"
+                },
                 "fs_type": {
                     "internal": true,
                     "key": ["NAMESPC_FILESYSTEM", "KEY_FS_TYPE"],
@@ -490,7 +514,10 @@
                         "global_seq_api_calls",
                         "rest_listen_addr",
                         "rest_listen_port",
-                        "rest_enabled"
+                        "rest_enabled",
+                        "nvme_tr_type",
+                        "nvme_port",
+                        "nvme_preferred_nic"
                 ],
                 "node": [
                         "storage_pool_name",
@@ -526,14 +553,17 @@
                         "peer_slots_new_resource",
                         "proxy_compression_type",
                         "fs_type",
-                        "fs_mkfsparameters"
+                        "fs_mkfsparameters",
+                        "nvme_tr_type",
+                        "nvme_port"
                 ],
                 "resource": [
                         "storage_pool_name",
                         "preferred_nic",
                         "peer_slots",
                         "fs_type",
-                        "fs_mkfsparameters"
+                        "fs_mkfsparameters",
+                        "nvme_preferred_nic"
                 ],
                 "volume-definition": [
                         "storage_pool_name",

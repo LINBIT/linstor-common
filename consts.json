@@ -1672,6 +1672,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_NVME",
+                "value": "NVMe",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
@@ -1950,6 +1955,21 @@
         {
                 "name": "KEY_ENABLED",
                 "value": "enabled",
+                "type": "string"
+        },
+        {
+                "name": "KEY_TR_TYPE",
+                "value": "enabled",
+                "type": "string"
+        },
+        {
+                "name": "KEY_PORT",
+                "value": "enabled",
+                "type": "string"
+        },
+        {
+                "name": "KEY_PREF_NIC",
+                "value": "PrefNic",
                 "type": "string"
         },
         {
@@ -2241,5 +2261,13 @@
                 "name": "CONN_STATUS_OTHER_CONTROLLER",
                 "value": 8,
                 "type": "int"
+        },
+        {
+                "blockcomment": "Default names"
+        },
+        {
+                "name": "DEFAULT_NETIF",
+                "value": "default",
+                "type": "string"
         }
 ]
