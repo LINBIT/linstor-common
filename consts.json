@@ -1667,6 +1667,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_FILESYSTEM",
+                "value": "FileSystem",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
@@ -1945,6 +1950,29 @@
         {
                 "name": "KEY_ENABLED",
                 "value": "enabled",
+                "type": "string"
+        },
+        {
+                "blockcomment": "File system property keys"
+        },
+        {
+                "name": "KEY_FS_TYPE",
+                "value": "Type",
+                "type": "string"
+        },
+        {
+                "name": "KEY_FS_MKFSPARAMETERS",
+                "value": "MkfsParams",
+                "type": "string"
+        },
+        {
+                "name": "VAL_FS_TYPE_EXT4",
+                "value": "ext4",
+                "type": "string"
+        },
+        {
+                "name": "VAL_FS_TYPE_XFS",
+                "value": "xfs",
                 "type": "string"
         },
         {

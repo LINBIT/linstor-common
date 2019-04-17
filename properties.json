@@ -460,6 +460,20 @@
                     "internal": false,
                     "key": ["NAMESPC_REST", "KEY_ENABLED"],
                     "type": "boolean_true_false"
+                },
+                "fs_type": {
+                    "internal": true,
+                    "key": ["NAMESPC_FILESYSTEM", "KEY_FS_TYPE"],
+                    "type": "symbol",
+                    "values": [
+                        "ext4",
+                        "xfs"
+                    ]
+                },
+                "fs_mkfsparameters": {
+                    "internal": false,
+                    "key": ["NAMESPC_FILESYSTEM", "KEY_FS_MKFSPARAMETERS"],
+                    "type": "string"
                 }
         },
         "objects": {
@@ -510,17 +524,23 @@
                 "resource-definition": [
                         "storage_pool_name",
                         "peer_slots_new_resource",
-                        "proxy_compression_type"
+                        "proxy_compression_type",
+                        "fs_type",
+                        "fs_mkfsparameters"
                 ],
                 "resource": [
                         "storage_pool_name",
                         "preferred_nic",
-                        "peer_slots"
+                        "peer_slots",
+                        "fs_type",
+                        "fs_mkfsparameters"
                 ],
                 "volume-definition": [
                         "storage_pool_name",
                         "override_vlm_id",
-                        "allow_larger_volume_size"
+                        "allow_larger_volume_size",
+                        "fs_type",
+                        "fs_mkfsparameters"
                 ],
                 "drbd-proxy": [
                         "proxy_memlimit",
