@@ -2288,6 +2288,11 @@
                 "type": "int"
         },
         {
+                "name": "CONN_STATUS_AUTHENTICATED",
+                "value": 9,
+                "type": "int"
+        },
+        {
                 "blockcomment": "Default names"
         },
         {
