@@ -598,6 +598,21 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_EXISTS_NVME_TARGET_PER_RSC_DFN",
+                "value": [518, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_EXISTS_NVME_INITIATOR_PER_RSC_DFN",
+                "value": [519, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_EXISTS_SWORDFISH_INITIATOR_PER_RSC_DFN",
+                "value": [520, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 600-699: data missing failures"
         },
         {
@@ -633,6 +648,16 @@
         {
                 "name": "FAIL_MISSING_EXT_NAME",
                 "value": [606, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_MISSING_SWORDFISH_TARGET",
+                "value": [607, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_MISSING_NVME_TARGET",
+                "value": [608, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
