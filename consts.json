@@ -1188,6 +1188,11 @@
                 "type": "string"
         },
         {
+                "name": "API_LOST_STOR_POOL",
+                "value": "LostStorPool",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Authentication APIs"
         },
         {
