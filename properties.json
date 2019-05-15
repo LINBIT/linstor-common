@@ -9,6 +9,23 @@
                         "value": "[a-zA-Z0-9_-]+",
                         "internal": true
                 },
+                "stordriver_lvcreate_type": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_LVCREATE_TYPE"
+                        ],
+                        "type": "symbol",
+                        "default": "linear",
+                        "values": [
+                                "linear",
+                                "striped",
+                                "mirror",
+                                "raid0", "raid1", "raid4", "raid5", "raid6", "raid10",
+                                "lzma",
+                                "lz4"
+                        ],
+                        "internal": true
+                },
                 "stordriver_thinpool": {
                         "key": [
                                 "NAMESPC_STORAGE_DRIVER",
@@ -153,7 +170,7 @@
                         "value": "[0-9]+",
                         "internal": true
                 },
-                 "stordriver_swordfish_retry_delay": {
+                "stordriver_swordfish_retry_delay": {
                         "key": [
                                 "NAMESPC_STORAGE_DRIVER",
                                 "KEY_STOR_POOL_SF_RETRY_DELAY"
@@ -546,7 +563,8 @@
                         "stordriver_swordfish_poll_timeout_grep_nvme_uuid",
                         "stordriver_swordfish_poll_retries_grep_nvme_uuid",
                         "stordriver_swordfish_retry_count",
-                        "stordriver_swordfish_retry_delay"
+                        "stordriver_swordfish_retry_delay",
+                        "stordriver_lvcreate_type"
                 ],
                 "resource-definition": [
                         "storage_pool_name",
@@ -570,7 +588,8 @@
                         "override_vlm_id",
                         "allow_larger_volume_size",
                         "fs_type",
-                        "fs_mkfsparameters"
+                        "fs_mkfsparameters",
+                        "stordriver_lvcreate_type"
                 ],
                 "drbd-proxy": [
                         "proxy_memlimit",

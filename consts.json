@@ -1710,6 +1710,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_LVCREATE_TYPE",
+                "value": "LvcreateType",
+                "type": "string"
+        },
+        {
                 "name": "KEY_STOR_POOL_THIN_POOL",
                 "value": "ThinPool",
                 "type": "string"
