@@ -613,6 +613,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_LOST_STOR_POOL",
+                "value": [521, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 600-699: data missing failures"
         },
         {
