@@ -65,7 +65,9 @@ $(JAVACONSTS): genconsts.py consts.json $(JAVAAPIOUT)
 $(GOCONSTS): genconsts.py consts.json
 	./genconsts.py golang | gofmt > $@
 
-python: $(PYS) $(PYCONSTS) $(PYPROPS)
+pythonproto: $(PYS)
+
+python: $(PYCONSTS) $(PYPROPS)
 
 java: $(JAVAS) $(JAVACONSTS) $(COMMONDRBDOPTS) $(JAVAPROPERTYRULES)
 
@@ -74,8 +76,11 @@ golang: $(GOCONSTS)
 cleancommon:
 	rm -f $(COMMONDRBDOPTS)
 
+cleanpythonproto:
+	rm -f $(PYS)
+
 cleanpython: cleancommon
-	rm -f $(PYS) $(PYCONSTS) $(PYPROPS)
+	rm -f $(PYCONSTS) $(PYPROPS)
 
 cleanjava: cleancommon
 	rm -f $(JAVAS) $(JAVACONSTS)
