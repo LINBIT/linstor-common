@@ -179,6 +179,15 @@
                         "value": "[0-9]+",
                         "internal": true
                 },
+                "stordriver_wait_timeout_after_create": {
+                        "key": [
+                                "NAMESPC_STORAGE_DRIVER",
+                                "KEY_STOR_POOL_WAIT_TIMEOUT_AFTER_CREATE"
+                        ],
+                        "type": "regex",
+                        "value": "[0-9]+",
+                        "internal": true
+                },
                 "storage_pool_name": {
                         "key": [
                                 "KEY_STOR_POOL_NAME"
@@ -534,7 +543,8 @@
                         "rest_enabled",
                         "nvme_tr_type",
                         "nvme_port",
-                        "nvme_preferred_nic"
+                        "nvme_preferred_nic",
+                        "stordriver_wait_timeout_after_create"
                 ],
                 "node": [
                         "storage_pool_name",
@@ -564,7 +574,8 @@
                         "stordriver_swordfish_poll_retries_grep_nvme_uuid",
                         "stordriver_swordfish_retry_count",
                         "stordriver_swordfish_retry_delay",
-                        "stordriver_lvcreate_type"
+                        "stordriver_lvcreate_type",
+                        "stordriver_wait_timeout_after_create"
                 ],
                 "resource-definition": [
                         "storage_pool_name",

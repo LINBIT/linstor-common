@@ -1820,6 +1820,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_WAIT_TIMEOUT_AFTER_CREATE",
+                "value": "WaitTimeoutAfterCreate",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool traits keys"
         },
         {
