@@ -198,7 +198,8 @@
                 "KEY_STOR_POOL_NAME"
             ],
             "type": "regex",
-            "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$"
+            "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+            "info": "Linstor storage pool name to use."
         },
         "preferred_nic": {
             "key": [
@@ -481,7 +482,8 @@
                 "NAMESPC_REST",
                 "KEY_BIND_ADDR"
             ],
-            "type": "string"
+            "type": "string",
+            "info": "Bind address of the REST API"
         },
         "rest_listen_port": {
             "internal": false,
@@ -491,7 +493,8 @@
             ],
             "type": "range",
             "min": 1,
-            "max": 65535
+            "max": 65535,
+            "info": "TCP Port of the REST API"
         },
         "rest_enabled": {
             "internal": false,
@@ -499,6 +502,7 @@
                 "NAMESPC_REST",
                 "KEY_ENABLED"
             ],
+            "info": "Bool if REST API should be enabled",
             "type": "boolean_true_false"
         },
         "nvme_tr_type": {
@@ -553,6 +557,7 @@
                 "NAMESPC_FILESYSTEM",
                 "KEY_FS_MKFSPARAMETERS"
             ],
+            "info": "Additional parameters for the mkfs command",
             "type": "string"
         }
     },
