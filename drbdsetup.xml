@@ -1,4 +1,12 @@
 <root>
+<!--
+DRBDADM_BUILDTAG=GIT-hash:\ c30216b49330216bf8a567b7727da6e24f099f08\ build\ by\ buildd@lgw01-amd64-032\,\ 2019-01-16\ 12:54:20
+DRBDADM_API_VERSION=2
+DRBD_KERNEL_VERSION_CODE=0x090011
+DRBD_KERNEL_VERSION=9.0.17
+DRBDADM_VERSION_CODE=0x090800
+DRBDADM_VERSION=9.8.0
+-->
 <command name="disk-options">
 	<summary>Change the disk options of an attached lower-level device.</summary>
 	<argument>minor</argument>
@@ -21,7 +29,11 @@
 	<option name="md-flushes" type="boolean">
 		<default>yes</default>
 	</option>
-	<option name="resync-after" type="string">
+	<option name="resync-after" type="numeric">
+		<min>-1</min>
+		<max>1048575</max>
+		<default>-1</default>
+		<unit_prefix>1</unit_prefix>
 	</option>
 	<option name="al-extents" type="numeric">
 		<min>67</min>
@@ -75,7 +87,7 @@
 	</option>
 	<option name="resync-rate" type="numeric">
 		<min>1</min>
-		<max>4194304</max>
+		<max>8388608</max>
 		<default>250</default>
 		<unit_prefix>k</unit_prefix>
 		<unit>bytes/second</unit>
@@ -185,6 +197,14 @@
 	<option name="on-no-quorum" type="handler">
 		<handler>io-error</handler>
 		<handler>suspend-io</handler>
+	</option>
+	<option name="quorum-minimum-redundancy" type="numeric-or-symbol">
+		<min>1</min>
+		<max>32</max>
+		<default>off</default>
+		<symbol>off</symbol>
+		<symbol>majority</symbol>
+		<symbol>all</symbol>
 	</option>
 </command>
 <command name="new-peer">
