@@ -1,630 +1,660 @@
 {
-        "properties": {
-                "stordriver_volumegroup": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_VOLUME_GROUP"
-                        ],
-                        "type": "regex",
-                        "value": "[a-zA-Z0-9_-]+",
-                        "internal": true
-                },
-                "stordriver_lvcreate_type": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_LVCREATE_TYPE"
-                        ],
-                        "type": "symbol",
-                        "default": "linear",
-                        "values": [
-                                "linear",
-                                "striped",
-                                "mirror",
-                                "raid0", "raid1", "raid4", "raid5", "raid6", "raid10",
-                                "lzma",
-                                "lz4"
-                        ],
-                        "internal": true
-                },
-                "stordriver_thinpool": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_THIN_POOL"
-                        ],
-                        "type": "regex",
-                        "value": "[a-zA-Z0-9_-]+",
-                        "internal": true
-                },
-                "stordriver_zpool": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_ZPOOL"
-                        ],
-                        "type": "regex",
-                        "value": "[a-zA-Z0-9_/-]+",
-                        "internal": true
-                },
-                "stordriver_zpool_thin": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_ZPOOLTHIN"
-                        ],
-                        "type": "regex",
-                        "value": "[a-zA-Z0-9_/-]+",
-                        "internal": true
-                },
-                "stordriver_swordfish_url": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_URL"
-                        ],
-                        "type": "regex",
-                        "value": ".*",
-                        "internal": true
-                },
-                "stordriver_swordfish_stor_service": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_STOR_SVC"
-                        ],
-                        "type": "regex",
-                        "value": ".*",
-                        "internal": true
-                },
-                "stordriver_swordfish_stor_pool": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_STOR_POOL"
-                        ],
-                        "type": "regex",
-                        "value": ".*",
-                        "internal": true
-                },
-                "stordriver_swordfish_user_name": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_USER_NAME"
-                        ],
-                        "type": "regex",
-                        "value": ".*",
-                        "internal": true
-                },
-                "stordriver_swordfish_user_passwd": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_USER_PW"
-                        ],
-                        "type": "regex",
-                        "value": ".*",
-                        "internal": true
-                },
-                "stordriver_swordfish_poll_timeout_vlm_crt": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_POLL_TIMEOUT_VLM_CRT"
-                        ],
-                        "type": "regex",
-                        "value": "[0-9]+",
-                        "internal": true
-                },
-                "stordriver_swordfish_poll_retries_vlm_crt": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_POLL_RETRIES_VLM_CRT"
-                        ],
-                        "type": "regex",
-                        "value": "[0-9]+",
-                        "internal": true
-                },
-                "stordriver_swordfish_poll_timeout_attach_vlm": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_POLL_TIMEOUT_ATTACH_VLM"
-                        ],
-                        "type": "regex",
-                        "value": "[0-9]+",
-                        "internal": true
-                },
-                "stordriver_swordfish_poll_retries_attach_vlm": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_POLL_RETRIES_ATTACH_VLM"
-                        ],
-                        "type": "regex",
-                        "value": "[0-9]+",
-                        "internal": true
-                },
-                "stordriver_swordfish_poll_timeout_grep_nvme_uuid": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_POLL_TIMEOUT_GREP_NVME_UUID"
-                        ],
-                        "type": "regex",
-                        "value": "[0-9]+",
-                        "internal": true
-                },
-                "stordriver_swordfish_poll_retries_grep_nvme_uuid": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_POLL_RETRIES_GREP_NVME_UUID"
-                        ],
-                        "type": "regex",
-                        "value": "[0-9]+",
-                        "internal": true
-                },
-                "stordriver_swordfish_composed_node_name": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_COMPOSED_NODE_NAME"
-                        ],
-                        "type": "regex",
-                        "value": ".*",
-                        "internal": true
-                },
-                "stordriver_swordfish_retry_count": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_RETRY_COUNT"
-                        ],
-                        "type": "regex",
-                        "value": "[0-9]+",
-                        "internal": true
-                },
-                "stordriver_swordfish_retry_delay": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_SF_RETRY_DELAY"
-                        ],
-                        "type": "regex",
-                        "value": "[0-9]+",
-                        "internal": true
-                },
-                "stordriver_wait_timeout_after_create": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_STOR_POOL_WAIT_TIMEOUT_AFTER_CREATE"
-                        ],
-                        "type": "regex",
-                        "value": "[0-9]+",
-                        "internal": true
-                },
-                "storage_pool_name": {
-                        "key": [
-                                "KEY_STOR_POOL_NAME"
-                        ],
-                        "type": "regex",
-                        "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$"
-                },
-                "preferred_nic": {
-                        "key": [
-                                "KEY_STOR_POOL_PREF_NIC"
-                        ],
-                        "type": "regex",
-                        "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
-                        "info": "Preferred network interface to use"
-                },
-                "tcp_port_range": {
-                        "key": [
-                                "KEY_TCP_PORT_AUTO_RANGE"
-                        ],
-                        "type": "regex",
-                        "value": "[0-9]+-[0-9]+",
-                        "info": "Range for auto-allocation of resource TCP ports"
-                },
-                "minor_nr_range": {
-                        "key": [
-                                "KEY_MINOR_NR_AUTO_RANGE"
-                        ],
-                        "type": "regex",
-                        "value": "[0-9]+-[0-9]+",
-                        "info": "Range for auto-allocation of volume minor numbers"
-                },
-                 "global_seq_api_calls": {
-                        "key": [
-                                "KEY_GLOBAL_SEQ_API_CALLS"
-                        ],
-                        "type": "boolean_true_false",
-                        "info": "Globally sequentialize all ctrl -> stlt api calls"
-                },
-                "peer_slots_new_resource": {
-                        "key": [
-                                "KEY_PEER_SLOTS_NEW_RESOURCE"
-                        ],
-                        "type": "range",
-                        "min": 1,
-                        "max": 31,
-                        "info": "DRBD peer slots to allocate for newly created resources (default 7), the number of peer slots cannot be changed once the resource is created, so allow sufficient slots to increase redundancy in the future"
-                },
-                "peer_slots": {
-                        "key": [
-                                "KEY_PEER_SLOTS"
-                        ],
-                        "type": "range",
-                        "min": 1,
-                        "max": 31,
-                        "info": "DRBD peer slots present on resource",
-                        "internal": true
-                },
-                "allow_larger_volume_size": {
-                        "key": [
-                                "KEY_ALLOW_LARGER_VOLUME_SIZE"
-                        ],
-                        "type": "boolean_true_false",
-                        "info": "Do not fail when the underlying volume is larger than expected"
-                },
-                "dm_stats": {
-                        "key": [
-                                "NAMESPC_STORAGE_DRIVER",
-                                "KEY_DMSTATS"
-                        ],
-                        "type": "boolean_true_false",
-                        "info": "Enable dmstats on lvm create"
-                },
-                "override_vlm_id": {
-                        "key": [
-                                "KEY_STOR_POOL_OVERRIDE_VLM_ID"
-                        ],
-                        "type": "regex",
-                        "value": ".*",
-                        "info": "Overwrites the generated '<resource-name>_<5 digit volume number>' volume name for migration purposes"
-                },
-                "max_oversubscription_ratio": {
-                        "key": [
-                                "KEY_STOR_POOL_DFN_MAX_OVERSUBSCRIPTION_RATIO"
-                        ],
-                        "type": "range",
-                        "min": 1,
-                        "max": 1000,
-                        "info": "Maximum allowed ratio of the sum of volume sizes in a thin pool to the total capacity of the pool (default 20)"
-                },
-                "proxy_memlimit": {
-                        "unit_prefix": "1",
-                        "min": 16777216,
-                        "default": 16777216,
-                        "max": 9223372036854775807,
-                        "drbd_option_name": "memlimit",
-                        "internal": true,
-                        "key": "DrbdOptions/Proxy/memlimit",
-                        "type": "range",
-                        "unit": "bytes"
-                },
-                "proxy_read_loops": {
-                        "unit_prefix": "1",
-                        "min": 0,
-                        "default": 0,
-                        "max": 2147483647,
-                        "drbd_option_name": "read-loops",
-                        "internal": true,
-                        "key": "DrbdOptions/Proxy/read-loops",
-                        "type": "range"
-                },
-                "proxy_sndbuf_size": {
-                        "unit_prefix": "1",
-                        "min": 0,
-                        "default": 0,
-                        "max": 10485760,
-                        "drbd_option_name": "sndbuf-size",
-                        "internal": true,
-                        "key": "DrbdOptions/Proxy/sndbuf-size",
-                        "type": "range",
-                        "unit": "bytes"
-                },
-                "proxy_rcvbuf_size": {
-                        "unit_prefix": "1",
-                        "min": 0,
-                        "default": 0,
-                        "max": 10485760,
-                        "drbd_option_name": "rcvbuf-size",
-                        "internal": true,
-                        "key": "DrbdOptions/Proxy/rcvbuf-size",
-                        "type": "range",
-                        "unit": "bytes"
-                },
-                "proxy_ping_timeout": {
-                        "unit_prefix": "1",
-                        "min": 1,
-                        "default": 200,
-                        "max": 300,
-                        "drbd_option_name": "ping-timeout",
-                        "internal": true,
-                        "key": "DrbdOptions/Proxy/ping-timeout",
-                        "type": "range",
-                        "unit": "1/10 seconds"
-                },
-                "proxy_compression_type": {
-                        "internal": true,
-                        "key": [
-                                "NAMESPC_DRBD_PROXY",
-                                "KEY_DRBD_PROXY_COMPRESSION_TYPE"
-                        ],
-                        "type": "symbol",
-                        "values": [
-                                "zlib",
-                                "lzma",
-                                "lz4"
-                        ]
-                },
-                "proxy_compression_zlib_level": {
-                        "internal": true,
-                        "key": "DrbdOptions/ProxyCompression/level",
-                        "drbd_option_name": "level",
-                        "type": "range",
-                        "min": 1,
-                        "default": 2,
-                        "max": 9
-                },
-                "proxy_compression_lzma_dict_size": {
-                        "internal": true,
-                        "key": "DrbdOptions/ProxyCompression/dict-size",
-                        "drbd_option_name": "dict-size",
-                        "type": "range",
-                        "min": 4096,
-                        "default": 32768,
-                        "max": 1610612736
-                },
-                "proxy_compression_lzma_lc": {
-                        "internal": true,
-                        "key": "DrbdOptions/ProxyCompression/lc",
-                        "drbd_option_name": "lc",
-                        "type": "range",
-                        "min": 0,
-                        "default": 3,
-                        "max": 4
-                },
-                "proxy_compression_lzma_lp": {
-                        "internal": true,
-                        "key": "DrbdOptions/ProxyCompression/lp",
-                        "drbd_option_name": "lp",
-                        "type": "range",
-                        "min": 0,
-                        "default": 0,
-                        "max": 4
-                },
-                "proxy_compression_lzma_pb": {
-                        "internal": true,
-                        "key": "DrbdOptions/ProxyCompression/pb",
-                        "drbd_option_name": "pb",
-                        "type": "range",
-                        "min": 0,
-                        "default": 2,
-                        "max": 4
-                },
-                "proxy_compression_lzma_nice_len": {
-                        "internal": true,
-                        "key": "DrbdOptions/ProxyCompression/nice-len",
-                        "drbd_option_name": "nice-len",
-                        "type": "range",
-                        "min": 0,
-                        "default": 273,
-                        "max": 273
-                },
-                "proxy_compression_lzma_mf": {
-                        "internal": true,
-                        "key": "DrbdOptions/ProxyCompression/mf",
-                        "drbd_option_name": "mf",
-                        "type": "symbol",
-                        "default": "hc3",
-                        "values": [
-                                "hc4",
-                                "hc3",
-                                "bt2",
-                                "bt3",
-                                "bt4"
-                        ]
-                },
-                "proxy_compression_lzma_mode": {
-                        "internal": true,
-                        "key": "DrbdOptions/ProxyCompression/mode",
-                        "drbd_option_name": "mode",
-                        "type": "symbol",
-                        "default": "fast",
-                        "values": [
-                                "fast",
-                                "normal"
-                        ]
-                },
-                "proxy_compression_lzma_depth": {
-                        "internal": true,
-                        "key": "DrbdOptions/ProxyCompression/depth",
-                        "drbd_option_name": "depth",
-                        "type": "range",
-                        "min": 0,
-                        "default": 0,
-                        "max": 1000
-                },
-                "proxy_compression_lzma_level": {
-                        "internal": true,
-                        "key": "DrbdOptions/ProxyCompression/level",
-                        "drbd_option_name": "level",
-                        "type": "range",
-                        "min": 1,
-                        "default": 4,
-                        "max": 9
-                },
-                "proxy_compression_lzma_contexts": {
-                        "internal": true,
-                        "key": "DrbdOptions/ProxyCompression/contexts",
-                        "drbd_option_name": "contexts",
-                        "type": "range",
-                        "min": 1,
-                        "default": "thread count",
-                        "max": 253
-                },
-                "proxy_compression_lzma_fallback_to_zlib": {
-                        "internal": true,
-                        "key": "DrbdOptions/ProxyCompression/fallback-to-zlib",
-                        "drbd_option_name": "fallback-to-zlib",
-                        "type": "symbol",
-                        "default": "off",
-                        "values": [
-                                "off",
-                                "on"
-                        ]
-                },
-                "proxy_compression_lzma_numa_threshold": {
-                        "internal": true,
-                        "key": "DrbdOptions/ProxyCompression/numa-threshold",
-                        "drbd_option_name": "numa-threshold",
-                        "type": "range",
-                        "min": 0,
-                        "default": 0,
-                        "max": 253
-                },
-                "rest_listen_addr": {
-                    "internal": false,
-                    "key": ["NAMESPC_REST", "KEY_BIND_ADDR"],
-                    "type": "string"
-                },
-                "rest_listen_port": {
-                    "internal": false,
-                    "key": ["NAMESPC_REST", "KEY_BIND_PORT"],
-                    "type": "range",
-                    "min": 1,
-                    "max": 65535
-                },
-                "rest_enabled": {
-                    "internal": false,
-                    "key": ["NAMESPC_REST", "KEY_ENABLED"],
-                    "type": "boolean_true_false"
-                },
-                "nvme_tr_type": {
-                        "internal": false,
-                        "key": ["NAMESPC_NVME", "KEY_TR_TYPE"],
-                        "type": "symbol",
-                        "default": "rdma",
-                        "values": [
-                                "rdma",
-                                "tcp"
-                        ]
-                },
-                "nvme_port": {
-                        "internal": false,
-                        "key": ["NAMESPC_NVME", "KEY_PORT"],
-                        "type": "range",
-                        "min": 1,
-                        "max": 65535
-                },
-                "nvme_preferred_nic": {
-                        "internal": false,
-                        "key": ["NAMESPC_NVME","KEY_PREF_NIC"],
-                        "type": "regex",
-                        "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
-                        "info": "Preferred network interface to use"
-                },
-                "fs_type": {
-                    "internal": true,
-                    "key": ["NAMESPC_FILESYSTEM", "KEY_FS_TYPE"],
-                    "type": "symbol",
-                    "values": [
-                        "ext4",
-                        "xfs"
-                    ]
-                },
-                "fs_mkfsparameters": {
-                    "internal": false,
-                    "key": ["NAMESPC_FILESYSTEM", "KEY_FS_MKFSPARAMETERS"],
-                    "type": "string"
-                }
+    "properties": {
+        "stordriver_volumegroup": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_VOLUME_GROUP"
+            ],
+            "type": "regex",
+            "value": "[a-zA-Z0-9_-]+",
+            "internal": true
         },
-        "objects": {
-                "controller": [
-                        "tcp_port_range",
-                        "minor_nr_range",
-                        "peer_slots_new_resource",
-                        "dm_stats",
-                        "stordriver_swordfish_user_name",
-                        "stordriver_swordfish_user_passwd",
-                        "stordriver_swordfish_url",
-                        "stordriver_swordfish_retry_count",
-                        "stordriver_swordfish_retry_delay",
-                        "global_seq_api_calls",
-                        "rest_listen_addr",
-                        "rest_listen_port",
-                        "rest_enabled",
-                        "nvme_tr_type",
-                        "nvme_port",
-                        "nvme_preferred_nic",
-                        "stordriver_wait_timeout_after_create"
-                ],
-                "node": [
-                        "storage_pool_name",
-                        "stordriver_swordfish_composed_node_name",
-                        "stordriver_swordfish_stor_service",
-                        "stordriver_swordfish_user_name",
-                        "stordriver_swordfish_user_passwd",
-                        "stordriver_swordfish_url",
-                        "stordriver_swordfish_retry_count",
-                        "stordriver_swordfish_retry_delay"
-                ],
-                "storagepool-definition": [
-                        "max_oversubscription_ratio"
-                ],
-                "storagepool": [
-                        "stordriver_volumegroup",
-                        "stordriver_thinpool",
-                        "stordriver_zpool",
-                        "stordriver_zpool_thin",
-                        "preferred_nic",
-                        "stordriver_swordfish_stor_pool",
-                        "stordriver_swordfish_poll_timeout_vlm_crt",
-                        "stordriver_swordfish_poll_retries_vlm_crt",
-                        "stordriver_swordfish_poll_timeout_attach_vlm",
-                        "stordriver_swordfish_poll_retries_attach_vlm",
-                        "stordriver_swordfish_poll_timeout_grep_nvme_uuid",
-                        "stordriver_swordfish_poll_retries_grep_nvme_uuid",
-                        "stordriver_swordfish_retry_count",
-                        "stordriver_swordfish_retry_delay",
-                        "stordriver_lvcreate_type",
-                        "stordriver_wait_timeout_after_create"
-                ],
-                "resource-definition": [
-                        "storage_pool_name",
-                        "peer_slots_new_resource",
-                        "proxy_compression_type",
-                        "fs_type",
-                        "fs_mkfsparameters",
-                        "nvme_tr_type",
-                        "nvme_port"
-                ],
-                "resource": [
-                        "storage_pool_name",
-                        "preferred_nic",
-                        "peer_slots",
-                        "fs_type",
-                        "fs_mkfsparameters",
-                        "nvme_preferred_nic"
-                ],
-                "volume-definition": [
-                        "storage_pool_name",
-                        "override_vlm_id",
-                        "allow_larger_volume_size",
-                        "fs_type",
-                        "fs_mkfsparameters",
-                        "stordriver_lvcreate_type"
-                ],
-                "drbd-proxy": [
-                        "proxy_memlimit",
-                        "proxy_read_loops",
-                        "proxy_sndbuf_size",
-                        "proxy_rcvbuf_size",
-                        "proxy_ping_timeout"
-                ],
-                "drbd-proxy-zlib": [
-                        "proxy_compression_zlib_level"
-                ],
-                "drbd-proxy-lzma": [
-                        "proxy_compression_lzma_dict_size",
-                        "proxy_compression_lzma_lc",
-                        "proxy_compression_lzma_lp",
-                        "proxy_compression_lzma_pb",
-                        "proxy_compression_lzma_nice_len",
-                        "proxy_compression_lzma_mf",
-                        "proxy_compression_lzma_mode",
-                        "proxy_compression_lzma_depth",
-                        "proxy_compression_lzma_level",
-                        "proxy_compression_lzma_contexts",
-                        "proxy_compression_lzma_fallback_to_zlib",
-                        "proxy_compression_lzma_numa_threshold"
-                ]
+        "stordriver_lvcreate_type": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_LVCREATE_TYPE"
+            ],
+            "type": "symbol",
+            "default": "linear",
+            "values": [
+                "linear",
+                "striped",
+                "mirror",
+                "raid0",
+                "raid1",
+                "raid4",
+                "raid5",
+                "raid6",
+                "raid10",
+                "lzma",
+                "lz4"
+            ],
+            "internal": true
+        },
+        "stordriver_thinpool": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_THIN_POOL"
+            ],
+            "type": "regex",
+            "value": "[a-zA-Z0-9_-]+",
+            "internal": true
+        },
+        "stordriver_zpool": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_ZPOOL"
+            ],
+            "type": "regex",
+            "value": "[a-zA-Z0-9_/-]+",
+            "internal": true
+        },
+        "stordriver_zpool_thin": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_ZPOOLTHIN"
+            ],
+            "type": "regex",
+            "value": "[a-zA-Z0-9_/-]+",
+            "internal": true
+        },
+        "stordriver_swordfish_url": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_URL"
+            ],
+            "type": "regex",
+            "value": ".*",
+            "internal": true
+        },
+        "stordriver_swordfish_stor_service": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_STOR_SVC"
+            ],
+            "type": "regex",
+            "value": ".*",
+            "internal": true
+        },
+        "stordriver_swordfish_stor_pool": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_STOR_POOL"
+            ],
+            "type": "regex",
+            "value": ".*",
+            "internal": true
+        },
+        "stordriver_swordfish_user_name": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_USER_NAME"
+            ],
+            "type": "regex",
+            "value": ".*",
+            "internal": true
+        },
+        "stordriver_swordfish_user_passwd": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_USER_PW"
+            ],
+            "type": "regex",
+            "value": ".*",
+            "internal": true
+        },
+        "stordriver_swordfish_poll_timeout_vlm_crt": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_POLL_TIMEOUT_VLM_CRT"
+            ],
+            "type": "regex",
+            "value": "[0-9]+",
+            "internal": true
+        },
+        "stordriver_swordfish_poll_retries_vlm_crt": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_POLL_RETRIES_VLM_CRT"
+            ],
+            "type": "regex",
+            "value": "[0-9]+",
+            "internal": true
+        },
+        "stordriver_swordfish_poll_timeout_attach_vlm": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_POLL_TIMEOUT_ATTACH_VLM"
+            ],
+            "type": "regex",
+            "value": "[0-9]+",
+            "internal": true
+        },
+        "stordriver_swordfish_poll_retries_attach_vlm": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_POLL_RETRIES_ATTACH_VLM"
+            ],
+            "type": "regex",
+            "value": "[0-9]+",
+            "internal": true
+        },
+        "stordriver_swordfish_poll_timeout_grep_nvme_uuid": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_POLL_TIMEOUT_GREP_NVME_UUID"
+            ],
+            "type": "regex",
+            "value": "[0-9]+",
+            "internal": true
+        },
+        "stordriver_swordfish_poll_retries_grep_nvme_uuid": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_POLL_RETRIES_GREP_NVME_UUID"
+            ],
+            "type": "regex",
+            "value": "[0-9]+",
+            "internal": true
+        },
+        "stordriver_swordfish_composed_node_name": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_COMPOSED_NODE_NAME"
+            ],
+            "type": "regex",
+            "value": ".*",
+            "internal": true
+        },
+        "stordriver_swordfish_retry_count": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_RETRY_COUNT"
+            ],
+            "type": "regex",
+            "value": "[0-9]+",
+            "internal": true
+        },
+        "stordriver_swordfish_retry_delay": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_SF_RETRY_DELAY"
+            ],
+            "type": "regex",
+            "value": "[0-9]+",
+            "internal": true
+        },
+	"stordriver_wait_timeout_after_create": {
+	    "key": [
+	        "NAMESPC_STORAGE_DRIVER",
+	        "KEY_STOR_POOL_WAIT_TIMEOUT_AFTER_CREATE"
+	    ],
+	    "type": "regex",
+	    "value": "[0-9]+",
+	    "internal": true
+	},        
+        "storage_pool_name": {
+            "key": [
+                "KEY_STOR_POOL_NAME"
+            ],
+            "type": "regex",
+            "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$"
+        },
+        "preferred_nic": {
+            "key": [
+                "KEY_STOR_POOL_PREF_NIC"
+            ],
+            "type": "regex",
+            "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+            "info": "Preferred network interface to use"
+        },
+        "tcp_port_range": {
+            "key": [
+                "KEY_TCP_PORT_AUTO_RANGE"
+            ],
+            "type": "regex",
+            "value": "[0-9]+-[0-9]+",
+            "info": "Range for auto-allocation of resource TCP ports"
+        },
+        "minor_nr_range": {
+            "key": [
+                "KEY_MINOR_NR_AUTO_RANGE"
+            ],
+            "type": "regex",
+            "value": "[0-9]+-[0-9]+",
+            "info": "Range for auto-allocation of volume minor numbers"
+        },
+        "global_seq_api_calls": {
+            "key": [
+                "KEY_GLOBAL_SEQ_API_CALLS"
+            ],
+            "type": "boolean_true_false",
+            "info": "Globally sequentialize all ctrl -> stlt api calls"
+        },
+        "peer_slots_new_resource": {
+            "key": [
+                "KEY_PEER_SLOTS_NEW_RESOURCE"
+            ],
+            "type": "range",
+            "min": 1,
+            "max": 31,
+            "info": "DRBD peer slots to allocate for newly created resources (default 7), the number of peer slots cannot be changed once the resource is created, so allow sufficient slots to increase redundancy in the future"
+        },
+        "peer_slots": {
+            "key": [
+                "KEY_PEER_SLOTS"
+            ],
+            "type": "range",
+            "min": 1,
+            "max": 31,
+            "info": "DRBD peer slots present on resource",
+            "internal": true
+        },
+        "allow_larger_volume_size": {
+            "key": [
+                "KEY_ALLOW_LARGER_VOLUME_SIZE"
+            ],
+            "type": "boolean_true_false",
+            "info": "Do not fail when the underlying volume is larger than expected"
+        },
+        "dm_stats": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_DMSTATS"
+            ],
+            "type": "boolean_true_false",
+            "info": "Enable dmstats on lvm create"
+        },
+        "override_vlm_id": {
+            "key": [
+                "KEY_STOR_POOL_OVERRIDE_VLM_ID"
+            ],
+            "type": "regex",
+            "value": ".*",
+            "info": "Overwrites the generated '<resource-name>_<5 digit volume number>' volume name for migration purposes"
+        },
+        "max_oversubscription_ratio": {
+            "key": [
+                "KEY_STOR_POOL_DFN_MAX_OVERSUBSCRIPTION_RATIO"
+            ],
+            "type": "range",
+            "min": 1,
+            "max": 1000,
+            "info": "Maximum allowed ratio of the sum of volume sizes in a thin pool to the total capacity of the pool (default 20)"
+        },
+        "proxy_memlimit": {
+            "unit_prefix": "1",
+            "min": 16777216,
+            "default": 16777216,
+            "max": 9223372036854775807,
+            "drbd_option_name": "memlimit",
+            "internal": true,
+            "key": "DrbdOptions/Proxy/memlimit",
+            "type": "range",
+            "unit": "bytes"
+        },
+        "proxy_read_loops": {
+            "unit_prefix": "1",
+            "min": 0,
+            "default": 0,
+            "max": 2147483647,
+            "drbd_option_name": "read-loops",
+            "internal": true,
+            "key": "DrbdOptions/Proxy/read-loops",
+            "type": "range"
+        },
+        "proxy_sndbuf_size": {
+            "unit_prefix": "1",
+            "min": 0,
+            "default": 0,
+            "max": 10485760,
+            "drbd_option_name": "sndbuf-size",
+            "internal": true,
+            "key": "DrbdOptions/Proxy/sndbuf-size",
+            "type": "range",
+            "unit": "bytes"
+        },
+        "proxy_rcvbuf_size": {
+            "unit_prefix": "1",
+            "min": 0,
+            "default": 0,
+            "max": 10485760,
+            "drbd_option_name": "rcvbuf-size",
+            "internal": true,
+            "key": "DrbdOptions/Proxy/rcvbuf-size",
+            "type": "range",
+            "unit": "bytes"
+        },
+        "proxy_ping_timeout": {
+            "unit_prefix": "1",
+            "min": 1,
+            "default": 200,
+            "max": 300,
+            "drbd_option_name": "ping-timeout",
+            "internal": true,
+            "key": "DrbdOptions/Proxy/ping-timeout",
+            "type": "range",
+            "unit": "1/10 seconds"
+        },
+        "proxy_compression_type": {
+            "internal": true,
+            "key": [
+                "NAMESPC_DRBD_PROXY",
+                "KEY_DRBD_PROXY_COMPRESSION_TYPE"
+            ],
+            "type": "symbol",
+            "values": [
+                "zlib",
+                "lzma",
+                "lz4"
+            ]
+        },
+        "proxy_compression_zlib_level": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/level",
+            "drbd_option_name": "level",
+            "type": "range",
+            "min": 1,
+            "default": 2,
+            "max": 9
+        },
+        "proxy_compression_lzma_dict_size": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/dict-size",
+            "drbd_option_name": "dict-size",
+            "type": "range",
+            "min": 4096,
+            "default": 32768,
+            "max": 1610612736
+        },
+        "proxy_compression_lzma_lc": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/lc",
+            "drbd_option_name": "lc",
+            "type": "range",
+            "min": 0,
+            "default": 3,
+            "max": 4
+        },
+        "proxy_compression_lzma_lp": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/lp",
+            "drbd_option_name": "lp",
+            "type": "range",
+            "min": 0,
+            "default": 0,
+            "max": 4
+        },
+        "proxy_compression_lzma_pb": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/pb",
+            "drbd_option_name": "pb",
+            "type": "range",
+            "min": 0,
+            "default": 2,
+            "max": 4
+        },
+        "proxy_compression_lzma_nice_len": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/nice-len",
+            "drbd_option_name": "nice-len",
+            "type": "range",
+            "min": 0,
+            "default": 273,
+            "max": 273
+        },
+        "proxy_compression_lzma_mf": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/mf",
+            "drbd_option_name": "mf",
+            "type": "symbol",
+            "default": "hc3",
+            "values": [
+                "hc4",
+                "hc3",
+                "bt2",
+                "bt3",
+                "bt4"
+            ]
+        },
+        "proxy_compression_lzma_mode": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/mode",
+            "drbd_option_name": "mode",
+            "type": "symbol",
+            "default": "fast",
+            "values": [
+                "fast",
+                "normal"
+            ]
+        },
+        "proxy_compression_lzma_depth": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/depth",
+            "drbd_option_name": "depth",
+            "type": "range",
+            "min": 0,
+            "default": 0,
+            "max": 1000
+        },
+        "proxy_compression_lzma_level": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/level",
+            "drbd_option_name": "level",
+            "type": "range",
+            "min": 1,
+            "default": 4,
+            "max": 9
+        },
+        "proxy_compression_lzma_contexts": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/contexts",
+            "drbd_option_name": "contexts",
+            "type": "range",
+            "min": 1,
+            "default": "thread count",
+            "max": 253
+        },
+        "proxy_compression_lzma_fallback_to_zlib": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/fallback-to-zlib",
+            "drbd_option_name": "fallback-to-zlib",
+            "type": "symbol",
+            "default": "off",
+            "values": [
+                "off",
+                "on"
+            ]
+        },
+        "proxy_compression_lzma_numa_threshold": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/numa-threshold",
+            "drbd_option_name": "numa-threshold",
+            "type": "range",
+            "min": 0,
+            "default": 0,
+            "max": 253
+        },
+        "rest_listen_addr": {
+            "internal": false,
+            "key": [
+                "NAMESPC_REST",
+                "KEY_BIND_ADDR"
+            ],
+            "type": "string"
+        },
+        "rest_listen_port": {
+            "internal": false,
+            "key": [
+                "NAMESPC_REST",
+                "KEY_BIND_PORT"
+            ],
+            "type": "range",
+            "min": 1,
+            "max": 65535
+        },
+        "rest_enabled": {
+            "internal": false,
+            "key": [
+                "NAMESPC_REST",
+                "KEY_ENABLED"
+            ],
+            "type": "boolean_true_false"
+        },
+        "nvme_tr_type": {
+            "internal": false,
+            "key": [
+                "NAMESPC_NVME",
+                "KEY_TR_TYPE"
+            ],
+            "type": "symbol",
+            "default": "rdma",
+            "values": [
+                "rdma",
+                "tcp"
+            ]
+        },
+        "nvme_port": {
+            "internal": false,
+            "key": [
+                "NAMESPC_NVME",
+                "KEY_PORT"
+            ],
+            "type": "range",
+            "min": 1,
+            "max": 65535
+        },
+        "nvme_preferred_nic": {
+            "internal": false,
+            "key": [
+                "NAMESPC_NVME",
+                "KEY_PREF_NIC"
+            ],
+            "type": "regex",
+            "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+            "info": "Preferred network interface to use"
+        },
+        "fs_type": {
+            "internal": true,
+            "key": [
+                "NAMESPC_FILESYSTEM",
+                "KEY_FS_TYPE"
+            ],
+            "info": "File system type to use",
+            "type": "symbol",
+            "values": [
+                "ext4",
+                "xfs"
+            ]
+        },
+        "fs_mkfsparameters": {
+            "internal": false,
+            "key": [
+                "NAMESPC_FILESYSTEM",
+                "KEY_FS_MKFSPARAMETERS"
+            ],
+            "type": "string"
         }
+    },
+    "objects": {
+        "controller": [
+            "tcp_port_range",
+            "minor_nr_range",
+            "peer_slots_new_resource",
+            "dm_stats",
+            "stordriver_swordfish_user_name",
+            "stordriver_swordfish_user_passwd",
+            "stordriver_swordfish_url",
+            "stordriver_swordfish_retry_count",
+            "stordriver_swordfish_retry_delay",
+            "global_seq_api_calls",
+            "rest_listen_addr",
+            "rest_listen_port",
+            "rest_enabled",
+            "nvme_tr_type",
+            "nvme_port",
+            "nvme_preferred_nic",
+	    "stordriver_wait_timeout_after_create"
+        ],
+        "node": [
+            "storage_pool_name",
+            "stordriver_swordfish_composed_node_name",
+            "stordriver_swordfish_stor_service",
+            "stordriver_swordfish_user_name",
+            "stordriver_swordfish_user_passwd",
+            "stordriver_swordfish_url",
+            "stordriver_swordfish_retry_count",
+            "stordriver_swordfish_retry_delay"
+        ],
+        "storagepool-definition": [
+            "max_oversubscription_ratio"
+        ],
+        "storagepool": [
+            "stordriver_volumegroup",
+            "stordriver_thinpool",
+            "stordriver_zpool",
+            "stordriver_zpool_thin",
+            "preferred_nic",
+            "stordriver_swordfish_stor_pool",
+            "stordriver_swordfish_poll_timeout_vlm_crt",
+            "stordriver_swordfish_poll_retries_vlm_crt",
+            "stordriver_swordfish_poll_timeout_attach_vlm",
+            "stordriver_swordfish_poll_retries_attach_vlm",
+            "stordriver_swordfish_poll_timeout_grep_nvme_uuid",
+            "stordriver_swordfish_poll_retries_grep_nvme_uuid",
+            "stordriver_swordfish_retry_count",
+            "stordriver_swordfish_retry_delay",
+            "stordriver_lvcreate_type",
+	    "stordriver_wait_timeout_after_create"
+        ],
+        "resource-definition": [
+            "storage_pool_name",
+            "peer_slots_new_resource",
+            "proxy_compression_type",
+            "fs_type",
+            "fs_mkfsparameters",
+            "nvme_tr_type",
+            "nvme_port"
+        ],
+        "resource": [
+            "storage_pool_name",
+            "preferred_nic",
+            "peer_slots",
+            "fs_type",
+            "fs_mkfsparameters",
+            "nvme_preferred_nic"
+        ],
+        "volume-definition": [
+            "storage_pool_name",
+            "override_vlm_id",
+            "allow_larger_volume_size",
+            "fs_type",
+            "fs_mkfsparameters",
+            "stordriver_lvcreate_type"
+        ],
+        "drbd-proxy": [
+            "proxy_memlimit",
+            "proxy_read_loops",
+            "proxy_sndbuf_size",
+            "proxy_rcvbuf_size",
+            "proxy_ping_timeout"
+        ],
+        "drbd-proxy-zlib": [
+            "proxy_compression_zlib_level"
+        ],
+        "drbd-proxy-lzma": [
+            "proxy_compression_lzma_dict_size",
+            "proxy_compression_lzma_lc",
+            "proxy_compression_lzma_lp",
+            "proxy_compression_lzma_pb",
+            "proxy_compression_lzma_nice_len",
+            "proxy_compression_lzma_mf",
+            "proxy_compression_lzma_mode",
+            "proxy_compression_lzma_depth",
+            "proxy_compression_lzma_level",
+            "proxy_compression_lzma_contexts",
+            "proxy_compression_lzma_fallback_to_zlib",
+            "proxy_compression_lzma_numa_threshold"
+        ]
+    }
 }
