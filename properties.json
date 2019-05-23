@@ -476,6 +476,14 @@
             "default": 0,
             "max": 253
         },
+        "drbd_current_gi": {
+            "internal": false,
+            "key": [
+                "KEY_DRBD_CURRENT_GI"
+            ],
+            "type": "regex",
+            "value": "[a-fA-F0-9]{16}"
+        },
         "rest_listen_addr": {
             "internal": false,
             "key": [
@@ -635,7 +643,8 @@
             "allow_larger_volume_size",
             "fs_type",
             "fs_mkfsparameters",
-            "stordriver_lvcreate_type"
+            "stordriver_lvcreate_type",
+            "drbd_current_gi"
         ],
         "drbd-proxy": [
             "proxy_memlimit",
