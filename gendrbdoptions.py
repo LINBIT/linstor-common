@@ -103,6 +103,13 @@ def parse_drbd_setup_xml(xmlout):
     # add handlers section options
     add_handlers(objects, properties)
 
+    # patch resync-after to be type `string`, the type is still wrong in the drbdsetup.xml
+    properties['resync-after']['type'] = "string"
+    del properties['resync-after']['max']
+    del properties['resync-after']['min']
+    del properties['resync-after']['default']
+    del properties['resync-after']['unit_prefix']
+
     return {
         "objects": objects,
         "properties": properties
