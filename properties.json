@@ -184,15 +184,15 @@
             "value": "[0-9]+",
             "internal": true
         },
-	"stordriver_wait_timeout_after_create": {
-	    "key": [
-	        "NAMESPC_STORAGE_DRIVER",
-	        "KEY_STOR_POOL_WAIT_TIMEOUT_AFTER_CREATE"
-	    ],
-	    "type": "regex",
-	    "value": "[0-9]+",
-	    "internal": true
-	},        
+        "stordriver_wait_timeout_after_create": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_WAIT_TIMEOUT_AFTER_CREATE"
+            ],
+            "type": "regex",
+            "value": "[0-9]+",
+            "internal": true
+        },
         "storage_pool_name": {
             "key": [
                 "KEY_STOR_POOL_NAME"
@@ -200,6 +200,25 @@
             "type": "regex",
             "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
             "info": "Linstor storage pool name to use."
+        },
+        "storage_pool_drbd_meta_name": {
+            "key": [
+                "KEY_STOR_POOL_DRBD_META_NAME"
+            ],
+            "type": "regex",
+            "value": "^|.internal|[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+            "info": "Linstor storage pool name to use."
+        },
+        "storage_pool_drbd_meta_type": {
+            "key": [
+                "KEY_STOR_POOL_DRBD_META_TYPE"
+            ],
+            "type": "symbol",
+            "default": "internal",
+            "values": [
+                "external",
+                "internal"
+            ]
         },
         "preferred_nic": {
             "key": [
@@ -591,6 +610,8 @@
         ],
         "node": [
             "storage_pool_name",
+            "storage_pool_drbd_meta_name",
+            "storage_pool_drbd_meta_type",
             "stordriver_swordfish_composed_node_name",
             "stordriver_swordfish_stor_service",
             "stordriver_swordfish_user_name",
@@ -622,6 +643,8 @@
         ],
         "resource-definition": [
             "storage_pool_name",
+            "storage_pool_drbd_meta_name",
+            "storage_pool_drbd_meta_type",
             "peer_slots_new_resource",
             "proxy_compression_type",
             "fs_type",
@@ -632,6 +655,8 @@
         ],
         "resource": [
             "storage_pool_name",
+            "storage_pool_drbd_meta_name",
+            "storage_pool_drbd_meta_type",
             "preferred_nic",
             "peer_slots",
             "fs_type",
@@ -640,6 +665,8 @@
         ],
         "volume-definition": [
             "storage_pool_name",
+            "storage_pool_drbd_meta_name",
+            "storage_pool_drbd_meta_type",
             "override_vlm_id",
             "allow_larger_volume_size",
             "fs_type",

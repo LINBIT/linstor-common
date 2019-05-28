@@ -1499,6 +1499,16 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_DRBD_META_NAME",
+                "value": "StorPoolNameDrbdMeta",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_DRBD_META_TYPE",
+                "value": "DrbdMetaType",
+                "type": "string"
+        },
+        {
                 "name": "KEY_NET_IF_NAME",
                 "value": "NetIfName",
                 "type": "string"
@@ -1854,6 +1864,11 @@
         {
                 "name": "VAL_STOR_POOL_PROVISIONING_THIN",
                 "value": "Thin",
+                "type": "string"
+        },
+        {
+                "name": "VAL_STOR_POOL_DRBD_META_INTERNAL",
+                "value": ".internal",
                 "type": "string"
         },
         {
