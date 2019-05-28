@@ -618,7 +618,7 @@
             "stordriver_swordfish_retry_count",
             "stordriver_swordfish_retry_delay",
             "stordriver_lvcreate_type",
-	    "stordriver_wait_timeout_after_create"
+            "stordriver_wait_timeout_after_create"
         ],
         "resource-definition": [
             "storage_pool_name",
@@ -627,7 +627,8 @@
             "fs_type",
             "fs_mkfsparameters",
             "nvme_tr_type",
-            "nvme_port"
+            "nvme_port",
+            "stordriver_lvcreate_type"
         ],
         "resource": [
             "storage_pool_name",
