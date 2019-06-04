@@ -39,7 +39,7 @@ $(JAVABASEOUT):
 	mkdir $@
 
 $(JAVAOUT)/%$(JAVASUFF): %.proto $(JAVABASEOUT)
-	${PROTOC} -I=. --java_out=$(JAVABASEOUT) $<
+	${PROTOC} -I=. --java_out=lite:$(JAVABASEOUT) $<
 
 $(PYCONSTS): genconsts.py consts.json
 	./genconsts.py python > $@
