@@ -609,6 +609,7 @@
 	    "stordriver_wait_timeout_after_create"
         ],
         "node": [
+            "preferred_nic",
             "storage_pool_name",
             "storage_pool_drbd_meta_name",
             "storage_pool_drbd_meta_type",
