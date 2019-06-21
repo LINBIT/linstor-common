@@ -2429,6 +2429,11 @@
                 "type": "string"
         },
         {
+                "name": "FLAG_LOST",
+                "value": "LOST",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Satellite connection statuses"
         },
         {
