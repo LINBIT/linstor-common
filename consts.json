@@ -1722,6 +1722,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_SYS_FS",
+                "value": "sys/fs",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
@@ -2053,6 +2058,19 @@
         {
                 "name": "VAL_FS_TYPE_XFS",
                 "value": "xfs",
+                "type": "string"
+        },
+        {
+                "blockcomment": "sys/fs property keys"
+        },
+        {
+                "name": "KEY_SYS_FS_BLKIO_THROTTLE_READ",
+                "value": "blkio_throttle_read",
+                "type": "string"
+        },
+        {
+                "name": "KEY_SYS_FS_BLKIO_THROTTLE_WRITE",
+                "value": "blkio_throttle_write",
                 "type": "string"
         },
         {

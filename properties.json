@@ -586,6 +586,24 @@
             ],
             "info": "Additional parameters for the mkfs command",
             "type": "string"
+        },
+        "sys_fs_blkio_throttle_read": {
+            "internal": false,
+            "key": [
+                "NAMESPC_SYS_FS",
+                "KEY_SYS_FS_BLKIO_THROTTLE_READ"
+            ],
+            "info": "Sets the /sys/fs/cgroup/blkio/blkio.throttle.read_bps_device",
+            "type": "long"
+        },
+        "sys_fs_blkio_throttle_write": {
+            "internal": false,
+            "key": [
+                "NAMESPC_SYS_FS",
+                "KEY_SYS_FS_BLKIO_THROTTLE_WRITE"
+            ],
+            "info": "Sets the /sys/fs/cgroup/blkio/blkio.throttle.write_bps_device",
+            "type": "long"
         }
     },
     "objects": {
@@ -606,7 +624,9 @@
             "nvme_tr_type",
             "nvme_port",
             "nvme_preferred_nic",
-	    "stordriver_wait_timeout_after_create"
+            "stordriver_wait_timeout_after_create",
+            "sys_fs_blkio_throttle_read",
+            "sys_fs_blkio_throttle_write"
         ],
         "node": [
             "preferred_nic",
@@ -619,10 +639,14 @@
             "stordriver_swordfish_user_passwd",
             "stordriver_swordfish_url",
             "stordriver_swordfish_retry_count",
-            "stordriver_swordfish_retry_delay"
+            "stordriver_swordfish_retry_delay",
+            "sys_fs_blkio_throttle_read",
+            "sys_fs_blkio_throttle_write"
         ],
         "storagepool-definition": [
-            "max_oversubscription_ratio"
+            "max_oversubscription_ratio",
+            "sys_fs_blkio_throttle_read",
+            "sys_fs_blkio_throttle_write"
         ],
         "storagepool": [
             "stordriver_volumegroup",
@@ -640,7 +664,9 @@
             "stordriver_swordfish_retry_count",
             "stordriver_swordfish_retry_delay",
             "stordriver_lvcreate_type",
-            "stordriver_wait_timeout_after_create"
+            "stordriver_wait_timeout_after_create",
+            "sys_fs_blkio_throttle_read",
+            "sys_fs_blkio_throttle_write"
         ],
         "resource-definition": [
             "storage_pool_name",
@@ -652,7 +678,9 @@
             "fs_mkfsparameters",
             "nvme_tr_type",
             "nvme_port",
-            "stordriver_lvcreate_type"
+            "stordriver_lvcreate_type",
+            "sys_fs_blkio_throttle_read",
+            "sys_fs_blkio_throttle_write"
         ],
         "resource": [
             "storage_pool_name",
@@ -662,7 +690,9 @@
             "peer_slots",
             "fs_type",
             "fs_mkfsparameters",
-            "nvme_preferred_nic"
+            "nvme_preferred_nic",
+            "sys_fs_blkio_throttle_read",
+            "sys_fs_blkio_throttle_write"
         ],
         "volume-definition": [
             "storage_pool_name",
@@ -673,7 +703,13 @@
             "fs_type",
             "fs_mkfsparameters",
             "stordriver_lvcreate_type",
-            "drbd_current_gi"
+            "drbd_current_gi",
+            "sys_fs_blkio_throttle_read",
+            "sys_fs_blkio_throttle_write"
+        ],
+        "volume": [
+            "sys_fs_blkio_throttle_read",
+            "sys_fs_blkio_throttle_write"
         ],
         "drbd-proxy": [
             "proxy_memlimit",
