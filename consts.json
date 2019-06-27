@@ -2361,6 +2361,11 @@
                 "type": "int"
         },
         {
+                "name": "CONN_STATUS_NO_STLT_CONN",
+                "value": 10,
+                "type": "int"
+        },
+        {
                 "blockcomment": "Default names"
         },
         {
