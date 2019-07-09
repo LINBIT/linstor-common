@@ -604,6 +604,12 @@
             ],
             "info": "Sets the /sys/fs/cgroup/blkio/blkio.throttle.write_bps_device",
             "type": "long"
+        },
+        "search_domain": {
+            "internal": false,
+            "key": ["KEY_SEARCH_DOMAIN"],
+            "info": "Search domain node names, if no FQDN is given.",
+            "type": "string"
         }
     },
     "objects": {
@@ -626,7 +632,8 @@
             "nvme_preferred_nic",
             "stordriver_wait_timeout_after_create",
             "sys_fs_blkio_throttle_read",
-            "sys_fs_blkio_throttle_write"
+            "sys_fs_blkio_throttle_write",
+            "search_domain"
         ],
         "node": [
             "preferred_nic",

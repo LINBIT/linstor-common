@@ -2038,6 +2038,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_SEARCH_DOMAIN",
+                "value": "SearchDomain",
+                "type": "string"
+        },
+        {
                 "blockcomment": "File system property keys"
         },
         {
