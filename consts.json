@@ -1755,6 +1755,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_FILE_DIRECTORY",
+                "value": "FileDir",
+                "type": "string"
+        },
+        {
                 "name": "KEY_STOR_POOL_SF_URL",
                 "value": "SwordfishUrl",
                 "type": "string"
