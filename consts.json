@@ -909,13 +909,18 @@
                 "blockcomment": "SignIn codes"
         },
         {
-                "name": "RC_SIGNIN_PASS",
+                "name": "SUCCESS_SIGN_IN",
                 "value": [10000, "MASK_SUCCESS"],
                 "type": "BOR"
         },
         {
-                "name": "RC_SIGNIN_FAIL",
+                "name": "FAIL_SIGN_IN",
                 "value": [10000, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_SIGN_IN_MISSING_CREDENTIALS",
+                "value": [10001, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
