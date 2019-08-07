@@ -865,7 +865,7 @@
                 "type": "BOR"
         },
         {
-                "blockcomment": "Codes 1000-1999: warnings"
+                "blockcomment": "Codes 1000-9999: warnings"
         },
         {
                 "name": "WARN_INVLD_OPT_PROP_NETCOM_ENABLED",
@@ -930,6 +930,14 @@
         {
                 "name": "WARN_NOT_FOUND",
                 "value": [3000, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
+                "blockcomment": "Codes 10000-19999: warnings"
+        },
+        {
+                "name": "INFO_NO_RSC_SPAWNED",
+                "value": [10000, "MASK_INFO"],
                 "type": "BOR"
         },
         {
