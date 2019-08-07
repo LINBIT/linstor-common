@@ -619,6 +619,12 @@
             "key": ["KEY_SEARCH_DOMAIN"],
             "info": "Search domain node names, if no FQDN is given.",
             "type": "string"
+        },
+        "ext_cmd_wait_to": {
+            "internal": false,
+            "key": ["KEY_EXT_CMD_WAIT_TO"],
+            "info": "Wait timeout for an external command in milliseconds",
+            "type": "long"
         }
     },
     "objects": {
@@ -642,7 +648,8 @@
             "stordriver_wait_timeout_after_create",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
-            "search_domain"
+            "search_domain",
+            "ext_cmd_wait_to"
         ],
         "node": [
             "preferred_nic",
