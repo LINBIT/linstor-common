@@ -941,6 +941,11 @@
                 "type": "BOR"
         },
         {
+                "name": "INFO_NODE_NAME_MISMATCH",
+                "value": [10001, "MASK_INFO"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Special codes"
         },
         {
