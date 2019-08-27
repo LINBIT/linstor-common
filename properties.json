@@ -678,6 +678,7 @@
             "stordriver_zpool_thin",
             "stordriver_file_dir",
             "preferred_nic",
+            "nvme_preferred_nic",
             "stordriver_swordfish_stor_pool",
             "stordriver_swordfish_poll_timeout_vlm_crt",
             "stordriver_swordfish_poll_retries_vlm_crt",
