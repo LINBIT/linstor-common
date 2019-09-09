@@ -918,13 +918,18 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_NOT_FOUND_CRYPT_KEY",
+                "value": [1011, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "name": "WARN_STORAGE_KIND_ADDED",
                 "value": [1012, "MASK_WARN"],
                 "type": "BOR"
         },
         {
-                "name": "WARN_NOT_FOUND_CRYPT_KEY",
-                "value": [1011, "MASK_WARN"],
+                "name": "WARN_NOT_ENOUGH_NODES_FOR_TIE_BREAKER",
+                "value": [1013, "MASK_WARN"],
                 "type": "BOR"
         },
         {
@@ -933,7 +938,7 @@
                 "type": "BOR"
         },
         {
-                "blockcomment": "Codes 10000-19999: warnings"
+                "blockcomment": "Codes 10000-19999: info"
         },
         {
                 "name": "INFO_NO_RSC_SPAWNED",
@@ -943,6 +948,26 @@
         {
                 "name": "INFO_NODE_NAME_MISMATCH",
                 "value": [10001, "MASK_INFO"],
+                "type": "BOR"
+        },
+        {
+                "name": "INFO_PROP_SET",
+                "value": [10002, "MASK_INFO"],
+                "type": "BOR"
+        },
+        {
+                "name": "INFO_TIE_BREAKER_CREATED",
+                "value": [10003, "MASK_INFO"],
+                "type": "BOR"
+        },
+        {
+                "name": "INFO_TIE_BREAKER_DELETING",
+                "value": [10004, "MASK_INFO"],
+                "type": "BOR"
+        },
+        {
+                "name": "INFO_PROP_REMOVED",
+                "value": [10005, "MASK_INFO"],
                 "type": "BOR"
         },
         {
@@ -1732,6 +1757,16 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_AUTO_QUORUM",
+                "value": "auto-quorum",
+                "type": "string"
+        },
+        {
+                "name": "KEY_DRBD_AUTO_ADD_QUORUM_TIEBREAKER",
+                "value": "auto-add-quorum-tiebreaker",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property namespaces"
         },
         {
@@ -2220,7 +2255,7 @@
                 "type": "string"
         },
         {
-                "blockcomment": "DRBD Proxy compression type property values"
+                "blockcomment": "DRBD related property values"
         },
         {
                 "name": "VAL_DRBD_PROXY_COMPRESSION_NONE",
@@ -2240,6 +2275,21 @@
         {
                 "name": "VAL_DRBD_PROXY_COMPRESSION_LZ4",
                 "value": "lz4",
+                "type": "string"
+        },
+        {
+                "name": "VAL_DRBD_AUTO_QUORUM_DISABLED",
+                "value": "disabled",
+                "type": "string"
+        },
+        {
+                "name": "VAL_DRBD_AUTO_QUORUM_IO_ERROR",
+                "value": "io-error",
+                "type": "string"
+        },
+        {
+                "name": "VAL_DRBD_AUTO_QUORUM_SUSPEND_IO",
+                "value": "suspend-io",
                 "type": "string"
         },
         {

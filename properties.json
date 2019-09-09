@@ -625,6 +625,29 @@
             "key": ["KEY_EXT_CMD_WAIT_TO"],
             "info": "Wait timeout for an external command in milliseconds",
             "type": "long"
+        },
+        "drbd_auto_quorum": {
+            "internal": false,
+            "key":  [
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_DRBD_AUTO_QUORUM"
+            ],
+            "info": "Enables automatic setting of the 'quroum' and 'on-no-quroum' property",
+            "type": "symbol",
+            "values": [
+                "io-error",
+                "suspend-io",
+                "disabled"
+            ] 
+        },
+        "drbd_auto_add_quorum_tie_breaker": {
+            "internal": false,
+            "key": [
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_DRBD_AUTO_ADD_QUORUM_TIEBREAKER"
+            ],
+            "info": "Enables automatic management (creation and deletion) of tie breaking resource",
+            "type": "boolean_true_false"
         }
     },
     "objects": {
@@ -649,7 +672,9 @@
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
             "search_domain",
-            "ext_cmd_wait_to"
+            "ext_cmd_wait_to",
+            "drbd_auto_quorum",
+            "drbd_auto_add_quorum_tie_breaker"
         ],
         "node": [
             "preferred_nic",
@@ -705,7 +730,9 @@
             "nvme_port",
             "stordriver_lvcreate_type",
             "sys_fs_blkio_throttle_read",
-            "sys_fs_blkio_throttle_write"
+            "sys_fs_blkio_throttle_write",
+            "drbd_auto_quorum",
+            "drbd_auto_add_quorum_tie_breaker"
         ],
         "resource": [
             "storage_pool_name",
