@@ -966,6 +966,11 @@
                 "type": "BOR"
         },
         {
+                "name": "INFO_TIE_BREAKER_TAKEOVER",
+                "value": [10006, "MASK_INFO"],
+                "type": "BOR"
+        },
+        {
                 "name": "INFO_PROP_REMOVED",
                 "value": [10005, "MASK_INFO"],
                 "type": "BOR"
