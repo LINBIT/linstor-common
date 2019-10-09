@@ -1135,6 +1135,11 @@
                 "type": "string"
         },
         {
+                "name": "API_CREATE_DEVICE_POOL",
+                "value": "CreateDevicePool",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Modify object APIs"
         },
         {
@@ -1450,6 +1455,11 @@
         {
                 "name": "API_LST_VLM_GRP",
                 "value": "LstVlmGrp",
+                "type": "string"
+        },
+        {
+                "name": "API_LST_PHYS_STOR",
+                "value": "LstPhysicalStorage",
                 "type": "string"
         },
         {
