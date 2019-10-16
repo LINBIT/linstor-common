@@ -375,8 +375,18 @@
             "values": [
                 "zlib",
                 "lzma",
-                "lz4"
+                "lz4",
+                "zstd"
             ]
+        },
+        "proxy_compression_zstd_level": {
+            "internal": true,
+            "key": "DrbdOptions/ProxyCompression/level",
+            "drbd_option_name": "level",
+            "type": "range",
+            "min": 1,
+            "default": 3,
+            "max": 22
         },
         "proxy_compression_zlib_level": {
             "internal": true,
@@ -786,6 +796,9 @@
             "proxy_compression_lzma_contexts",
             "proxy_compression_lzma_fallback_to_zlib",
             "proxy_compression_lzma_numa_threshold"
+        ],
+        "drbd-proxy-zstd": [
+            "proxy_compression_zstd_level"
         ]
     }
 }

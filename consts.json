@@ -2268,6 +2268,11 @@
                 "type": "string"
         },
         {
+                "name": "VAL_DRBD_PROXY_COMPRESSION_ZSTD",
+                "value": "zstd",
+                "type": "string"
+        },
+        {
                 "name": "VAL_DRBD_PROXY_COMPRESSION_ZLIB",
                 "value": "zlib",
                 "type": "string"
