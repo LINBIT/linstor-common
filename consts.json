@@ -2489,6 +2489,11 @@
                 "type": "string"
         },
         {
+                "name": "FLAG_TIE_BREAKER",
+                "value": "TIE_BREAKER",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Satellite connection statuses"
         },
         {
