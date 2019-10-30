@@ -658,6 +658,116 @@
             ],
             "info": "Enables automatic management (creation and deletion) of tie breaking resource",
             "type": "boolean_true_false"
+        },
+        "writecache_pool_name": {
+            "key": [
+                "NAMESPC_WRITECACHE",
+                "KEY_WRITECACHE_POOL_NAME"
+            ],
+            "type": "regex",
+            "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+            "info": "Linstor storage pool name for writecache"
+        },
+        "writecache_size": {
+            "key": [
+                "NAMESPC_WRITECACHE",
+                "KEY_WRITECACHE_SIZE"
+            ],
+            "type": "regex",
+            "value": "^100%|[0-9]{1,2}([.][0-9]*)?%|[1-9][0-9]{2,}$",
+            "info": "Size of the writecache in % (0-100) or KiB otherwise"
+        },
+        "writecache_block_size": {
+            "key": [
+                "NAMESPC_WRITECACHE",
+                "KEY_WRITECACHE_BLOCKSIZE"
+            ],
+            "type": "long",
+            "info": "4096 is recommended; the maximum block size is the page size",
+            "default": "4096"
+        },
+        "writecache_opt_start_sector":
+        {
+            "key": [
+                "NAMESPC_WRITECACHE_OPTIONS",
+                "KEY_WRITECACHE_OPTION_START_SECTOR"
+            ],
+            "type": "long",
+            "info": "offset from the start of cache device in 512-byte sectors",
+            "default": "0"
+        },
+        "writecache_opt_high_watermark":
+        {
+            "key": [
+                "NAMESPC_WRITECACHE_OPTIONS",
+                "KEY_WRITECACHE_OPTION_HIGH_WATERMARK"
+            ],
+            "type": "long",
+            "info": "start writeback when the number of used blocks reach this watermark",
+            "default": "50"
+        },
+        "writecache_opt_low_watermark":
+        {
+            "key": [
+                "NAMESPC_WRITECACHE_OPTIONS",
+                "KEY_WRITECACHE_OPTION_LOW_WATERMARK"
+            ],
+            "type": "long",
+            "info": "stop writeback when the number of used blocks drops below this watermark",
+            "default": "45"
+        },
+        "writecache_opt_writeback_jobs":
+        {
+            "key": [
+                "NAMESPC_WRITECACHE_OPTIONS",
+                "KEY_WRITECACHE_OPTION_WRITEBACK_JOBS"
+            ],
+            "type": "long",
+            "info": "limit the number of blocks that are in flight during writeback. Setting this value reduces writeback throughput, but it may improve latency of read requests",
+            "default": "unlimited"
+        },
+        "writecache_opt_autocommit_blocks":
+        {
+            "key": [
+                "NAMESPC_WRITECACHE_OPTIONS",
+                "KEY_WRITECACHE_OPTION_AUTOCOMMIT_BLOCKS"
+            ],
+            "type": "long",
+            "info": "when the application writes this amount of blocks without issuing the FLUSH request, the blocks are automatically commited",
+            "default": "64 for pmem, 65536 for ssd"
+        },
+        "writecache_opt_autocommit_time":
+        {
+            "key": [
+                "NAMESPC_WRITECACHE_OPTIONS",
+                "KEY_WRITECACHE_OPTION_AUTOCOMMIT_TIME"
+            ],
+            "type": "long",
+            "info": "autocommit time in milliseconds. The data is automatically commited if this time passes and no FLUSH request is received",
+            "default": "1000"
+        },
+        "writecache_opt_fua":
+        {
+            "key": [
+                "NAMESPC_WRITECACHE_OPTIONS",
+                "KEY_WRITECACHE_OPTION_FUA"
+            ],
+            "type": "symbol",
+            "values": [
+                "On",
+                "Off"
+            ],
+            "info": "\\\"On\\\" results in \\\"fua\\\" as argument, whereas the value \\\"Off\\\" results in \\\"nofua\\\" argument",
+            "default": "On"
+        },
+        "writecache_opt_additional":
+        {
+            "key": [
+                "NAMESPC_WRITECACHE_OPTIONS",
+                "KEY_WRITECACHE_OPTION_ADDITIONAL"
+            ],
+            "type": "string",
+            "info": "Additional arguments passed through"
         }
     },
     "objects": {
@@ -684,7 +794,18 @@
             "search_domain",
             "ext_cmd_wait_to",
             "drbd_auto_quorum",
-            "drbd_auto_add_quorum_tie_breaker"
+            "drbd_auto_add_quorum_tie_breaker",
+            "writecache_pool_name",
+            "writecache_size",
+            "writecache_block_size",
+            "writecache_opt_start_sector",
+            "writecache_opt_high_watermark",
+            "writecache_opt_low_watermark",
+            "writecache_opt_writeback_jobs",
+            "writecache_opt_autocommit_blocks",
+            "writecache_opt_autocommit_time",
+            "writecache_opt_fua",
+            "writecache_opt_additional"
         ],
         "node": [
             "preferred_nic",
@@ -699,7 +820,18 @@
             "stordriver_swordfish_retry_count",
             "stordriver_swordfish_retry_delay",
             "sys_fs_blkio_throttle_read",
-            "sys_fs_blkio_throttle_write"
+            "sys_fs_blkio_throttle_write",
+            "writecache_pool_name",
+            "writecache_size",
+            "writecache_block_size",
+            "writecache_opt_start_sector",
+            "writecache_opt_high_watermark",
+            "writecache_opt_low_watermark",
+            "writecache_opt_writeback_jobs",
+            "writecache_opt_autocommit_blocks",
+            "writecache_opt_autocommit_time",
+            "writecache_opt_fua",
+            "writecache_opt_additional"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",
@@ -742,7 +874,18 @@
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
             "drbd_auto_quorum",
-            "drbd_auto_add_quorum_tie_breaker"
+            "drbd_auto_add_quorum_tie_breaker",
+            "writecache_pool_name",
+            "writecache_size",
+            "writecache_block_size",
+            "writecache_opt_start_sector",
+            "writecache_opt_high_watermark",
+            "writecache_opt_low_watermark",
+            "writecache_opt_writeback_jobs",
+            "writecache_opt_autocommit_blocks",
+            "writecache_opt_autocommit_time",
+            "writecache_opt_fua",
+            "writecache_opt_additional"
         ],
         "resource": [
             "storage_pool_name",
@@ -767,7 +910,18 @@
             "stordriver_lvcreate_type",
             "drbd_current_gi",
             "sys_fs_blkio_throttle_read",
-            "sys_fs_blkio_throttle_write"
+            "sys_fs_blkio_throttle_write",
+            "writecache_pool_name",
+            "writecache_size",
+            "writecache_block_size",
+            "writecache_opt_start_sector",
+            "writecache_opt_high_watermark",
+            "writecache_opt_low_watermark",
+            "writecache_opt_writeback_jobs",
+            "writecache_opt_autocommit_blocks",
+            "writecache_opt_autocommit_time",
+            "writecache_opt_fua",
+            "writecache_opt_additional"
         ],
         "volume": [
             "sys_fs_blkio_throttle_read",

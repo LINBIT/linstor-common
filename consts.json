@@ -933,6 +933,11 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_MIXED_PMEM_AND_NON_PMEM",
+                "value": [1014, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "name": "WARN_NOT_FOUND",
                 "value": [3000, "MASK_WARN"],
                 "type": "BOR"
@@ -1772,6 +1777,61 @@
                 "type": "string"
         },
         {
+                "name": "KEY_WRITECACHE_BLOCKSIZE",
+                "value": "Blocksize",
+                "type": "string"
+        },
+        {
+                "name": "KEY_WRITECACHE_POOL_NAME",
+                "value": "PoolName",
+                "type": "string"
+        },
+        {
+                "name": "KEY_WRITECACHE_SIZE",
+                "value": "Size",
+                "type": "string"
+        },
+        {
+                "name": "KEY_WRITECACHE_OPTION_HIGH_WATERMARK",
+                "value": "HighWatermark",
+                "type": "string"
+        },
+        {
+                "name": "KEY_WRITECACHE_OPTION_LOW_WATERMARK",
+                "value": "LowWatermark",
+                "type": "string"
+        },
+        {
+                "name": "KEY_WRITECACHE_OPTION_START_SECTOR",
+                "value": "StartSector",
+                "type": "string"
+        },
+        {
+                "name": "KEY_WRITECACHE_OPTION_WRITEBACK_JOBS",
+                "value": "WritebackJobs",
+                "type": "string"
+        },
+        {
+                "name": "KEY_WRITECACHE_OPTION_AUTOCOMMIT_BLOCKS",
+                "value": "AutocommitBlocks",
+                "type": "string"
+        },
+        {
+                "name": "KEY_WRITECACHE_OPTION_AUTOCOMMIT_TIME",
+                "value": "AutocommitTime",
+                "type": "string"
+        },
+        {
+                "name": "KEY_WRITECACHE_OPTION_FUA",
+                "value": "Fua",
+                "type": "string"
+        },
+        {
+                "name": "KEY_WRITECACHE_OPTION_ADDITIONAL",
+                "value": "Additional",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property namespaces"
         },
         {
@@ -1882,6 +1942,16 @@
         {
                 "name": "NAMESPC_SYS_FS",
                 "value": "sys/fs",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_WRITECACHE",
+                "value": "Writecache",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_WRITECACHE_OPTIONS",
+                "value": "Writecache/Options",
                 "type": "string"
         },
         {
@@ -2328,6 +2398,19 @@
         {
                 "name": "VAL_NODE_TYPE_SWFISH_TARGET",
                 "value": "SWORDFISH_TARGET",
+                "type": "string"
+        },
+        {
+                "blockcomment": "Writecache option values"
+        },
+        {
+                "name": "VAL_WRITECACHE_FUA_ON",
+                "value": "On",
+                "type": "string"
+        },
+        {
+                "name": "VAL_WRITECACHE_FUA_OFF",
+                "value": "Off",
                 "type": "string"
         },
         {
