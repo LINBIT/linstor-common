@@ -2577,6 +2577,17 @@
                 "type": "string"
         },
         {
+                "name": "FLAG_DRBD_DISKLESS",
+                "value": "DRBD_DISKLESS",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_NVME_INITIATOR",
+                "value": "NVME_INITIATOR",
+                "type": "string"
+        },
+        
+        {
                 "blockcomment": "Satellite connection statuses"
         },
         {
