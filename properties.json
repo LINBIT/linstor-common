@@ -757,7 +757,7 @@
                 "On",
                 "Off"
             ],
-            "info": "\\\"On\\\" results in \\\"fua\\\" as argument, whereas the value \\\"Off\\\" results in \\\"nofua\\\" argument",
+            "info": "\"On\" results in \"fua\" as argument, whereas the value \"Off\" results in \"nofua\" argument",
             "default": "On"
         },
         "writecache_opt_additional":

@@ -118,6 +118,8 @@ def lang_java(data):
         for propKey in sorted(prop.keys()):
             if _relevant_for_java(propKey):
                 propVal = prop[propKey]
+                if isinstance(propVal, str):
+                    propVal = propVal.replace('"', '\\"')
                 if propKey == "key":
                     if isinstance(propVal, list):
                         _print(4, '.keyRef("%s")' % ('", "'.join(propVal)))
