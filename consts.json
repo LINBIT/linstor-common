@@ -711,6 +711,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_NO_STLT_CONN_DEFINED",
+                "value": [609, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 700-799: uuid mismatch failures"
         },
         {
