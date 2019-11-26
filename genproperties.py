@@ -7,6 +7,11 @@ import os
 import copy
 import pprint
 import re
+import sys
+
+if sys.version_info > (3, 0):
+    PYTHON2 = False
+    unicode = str
 
 now = datetime.datetime.utcnow()
 basename = os.path.basename(__file__)
@@ -118,7 +123,7 @@ def lang_java(data):
         for propKey in sorted(prop.keys()):
             if _relevant_for_java(propKey):
                 propVal = prop[propKey]
-                if isinstance(propVal, str):
+                if isinstance(propVal, unicode):
                     propVal = propVal.replace('"', '\\"')
                 if propKey == "key":
                     if isinstance(propVal, list):
