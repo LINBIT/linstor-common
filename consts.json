@@ -540,6 +540,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_ACC_DENIED_SNAP_DFN",
+                "value": [421, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 500-599: data already exists failures"
         },
         {
