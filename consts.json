@@ -628,11 +628,6 @@
                 "type": "BOR"
         },
         {
-                "name": "FAIL_EXISTS_SWORDFISH_TARGET_PER_RSC_DFN",
-                "value": [515, "MASK_ERROR"],
-                "type": "BOR"
-        },
-        {
                 "name": "FAIL_EXISTS_SNAPSHOT",
                 "value": [516, "MASK_ERROR"],
                 "type": "BOR"
@@ -650,11 +645,6 @@
         {
                 "name": "FAIL_EXISTS_NVME_INITIATOR_PER_RSC_DFN",
                 "value": [519, "MASK_ERROR"],
-                "type": "BOR"
-        },
-        {
-                "name": "FAIL_EXISTS_SWORDFISH_INITIATOR_PER_RSC_DFN",
-                "value": [520, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -708,11 +698,6 @@
         {
                 "name": "FAIL_MISSING_EXT_NAME",
                 "value": [606, "MASK_ERROR"],
-                "type": "BOR"
-        },
-        {
-                "name": "FAIL_MISSING_SWORDFISH_TARGET",
-                "value": [607, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -1112,11 +1097,6 @@
         {
                 "name": "API_CRT_CRYPT_PASS",
                 "value": "CrtCryptPass",
-                "type": "string"
-        },
-        {
-                "name": "API_CRT_SF_TARGET_NODE",
-                "value": "CrtSfTargetNode",
                 "type": "string"
         },
         {
@@ -2003,76 +1983,6 @@
                 "type": "string"
         },
         {
-                "name": "KEY_STOR_POOL_SF_URL",
-                "value": "SwordfishUrl",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_SF_STOR_SVC",
-                "value": "SwordfishStorSvc",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_SF_STOR_POOL",
-                "value": "SwordfishStorPool",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_SF_USER_NAME",
-                "value": "SwordfishUserName",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_SF_USER_PW",
-                "value": "SwordfishUserPw",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_SF_POLL_TIMEOUT_VLM_CRT",
-                "value": "SwordfishVolumeCreateTimeout",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_SF_POLL_RETRIES_VLM_CRT",
-                "value": "SwordfishVolumeCreateRetries",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_SF_POLL_TIMEOUT_ATTACH_VLM",
-                "value": "SwordfishAttachVolumeTimeout",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_SF_POLL_RETRIES_ATTACH_VLM",
-                "value": "SwordfishAttachVolumeRetries",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_SF_POLL_TIMEOUT_GREP_NVME_UUID",
-                "value": "SwordfishGrepNvmeUuidTimeout",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_SF_POLL_RETRIES_GREP_NVME_UUID",
-                "value": "SwordfishGrepNvmeUuidRetries",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_SF_COMPOSED_NODE_NAME",
-                "value": "SwordfishComposedNodeName",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_SF_RETRY_COUNT",
-                "value": "SwordfishRetryCount",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_SF_RETRY_DELAY",
-                "value": "SwordfishRetryDelay",
-                "type": "string"
-        },
-        {
                 "name": "KEY_STOR_POOL_PREF_NIC",
                 "value": "PrefNic",
                 "type": "string"
@@ -2218,11 +2128,6 @@
         {
                 "name": "KEY_GLOBAL_SEQ_API_CALLS",
                 "value": "GlobSeqApiCalls",
-                "type": "string"
-        },
-        {
-                "name": "KEY_SF_TARGET_PORT_AUTO_RANGE",
-                "value": "SwordfishTargetPortAutoRange",
                 "type": "string"
         },
         {
@@ -2408,11 +2313,6 @@
         {
                 "name": "VAL_NODE_TYPE_AUX",
                 "value": "Auxiliary",
-                "type": "string"
-        },
-        {
-                "name": "VAL_NODE_TYPE_SWFISH_TARGET",
-                "value": "SWORDFISH_TARGET",
                 "type": "string"
         },
         {

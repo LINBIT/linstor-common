@@ -67,132 +67,6 @@
             "value": ".*",
             "internal": true
         },
-        "stordriver_swordfish_url": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_URL"
-            ],
-            "type": "regex",
-            "value": ".*",
-            "internal": true
-        },
-        "stordriver_swordfish_stor_service": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_STOR_SVC"
-            ],
-            "type": "regex",
-            "value": ".*",
-            "internal": true
-        },
-        "stordriver_swordfish_stor_pool": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_STOR_POOL"
-            ],
-            "type": "regex",
-            "value": ".*",
-            "internal": true
-        },
-        "stordriver_swordfish_user_name": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_USER_NAME"
-            ],
-            "type": "regex",
-            "value": ".*",
-            "internal": true
-        },
-        "stordriver_swordfish_user_passwd": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_USER_PW"
-            ],
-            "type": "regex",
-            "value": ".*",
-            "internal": true
-        },
-        "stordriver_swordfish_poll_timeout_vlm_crt": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_POLL_TIMEOUT_VLM_CRT"
-            ],
-            "type": "regex",
-            "value": "[0-9]+",
-            "internal": true
-        },
-        "stordriver_swordfish_poll_retries_vlm_crt": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_POLL_RETRIES_VLM_CRT"
-            ],
-            "type": "regex",
-            "value": "[0-9]+",
-            "internal": true
-        },
-        "stordriver_swordfish_poll_timeout_attach_vlm": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_POLL_TIMEOUT_ATTACH_VLM"
-            ],
-            "type": "regex",
-            "value": "[0-9]+",
-            "internal": true
-        },
-        "stordriver_swordfish_poll_retries_attach_vlm": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_POLL_RETRIES_ATTACH_VLM"
-            ],
-            "type": "regex",
-            "value": "[0-9]+",
-            "internal": true
-        },
-        "stordriver_swordfish_poll_timeout_grep_nvme_uuid": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_POLL_TIMEOUT_GREP_NVME_UUID"
-            ],
-            "type": "regex",
-            "value": "[0-9]+",
-            "internal": true
-        },
-        "stordriver_swordfish_poll_retries_grep_nvme_uuid": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_POLL_RETRIES_GREP_NVME_UUID"
-            ],
-            "type": "regex",
-            "value": "[0-9]+",
-            "internal": true
-        },
-        "stordriver_swordfish_composed_node_name": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_COMPOSED_NODE_NAME"
-            ],
-            "type": "regex",
-            "value": ".*",
-            "internal": true
-        },
-        "stordriver_swordfish_retry_count": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_RETRY_COUNT"
-            ],
-            "type": "regex",
-            "value": "[0-9]+",
-            "internal": true
-        },
-        "stordriver_swordfish_retry_delay": {
-            "key": [
-                "NAMESPC_STORAGE_DRIVER",
-                "KEY_STOR_POOL_SF_RETRY_DELAY"
-            ],
-            "type": "regex",
-            "value": "[0-9]+",
-            "internal": true
-        },
         "stordriver_wait_timeout_after_create": {
             "key": [
                 "NAMESPC_STORAGE_DRIVER",
@@ -776,11 +650,6 @@
             "minor_nr_range",
             "peer_slots_new_resource",
             "dm_stats",
-            "stordriver_swordfish_user_name",
-            "stordriver_swordfish_user_passwd",
-            "stordriver_swordfish_url",
-            "stordriver_swordfish_retry_count",
-            "stordriver_swordfish_retry_delay",
             "global_seq_api_calls",
             "rest_listen_addr",
             "rest_listen_port",
@@ -812,13 +681,6 @@
             "storage_pool_name",
             "storage_pool_drbd_meta_name",
             "storage_pool_drbd_meta_type",
-            "stordriver_swordfish_composed_node_name",
-            "stordriver_swordfish_stor_service",
-            "stordriver_swordfish_user_name",
-            "stordriver_swordfish_user_passwd",
-            "stordriver_swordfish_url",
-            "stordriver_swordfish_retry_count",
-            "stordriver_swordfish_retry_delay",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
             "writecache_pool_name",
@@ -846,15 +708,6 @@
             "stordriver_file_dir",
             "preferred_nic",
             "nvme_preferred_nic",
-            "stordriver_swordfish_stor_pool",
-            "stordriver_swordfish_poll_timeout_vlm_crt",
-            "stordriver_swordfish_poll_retries_vlm_crt",
-            "stordriver_swordfish_poll_timeout_attach_vlm",
-            "stordriver_swordfish_poll_retries_attach_vlm",
-            "stordriver_swordfish_poll_timeout_grep_nvme_uuid",
-            "stordriver_swordfish_poll_retries_grep_nvme_uuid",
-            "stordriver_swordfish_retry_count",
-            "stordriver_swordfish_retry_delay",
             "stordriver_lvcreate_type",
             "stordriver_wait_timeout_after_create",
             "sys_fs_blkio_throttle_read",
