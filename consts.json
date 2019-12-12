@@ -2452,6 +2452,11 @@
                 "type": "string"
         },
         {
+                "name": "FLAG_GROSS_SIZE",
+                "value": "GROSS_SIZE",
+                "type": "string"
+        },
+        {
                 "name": "FLAG_SUCCESSFUL",
                 "value": "SUCCESSFUL",
                 "type": "string"
