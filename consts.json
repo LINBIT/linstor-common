@@ -59,6 +59,11 @@
                 "type": "long"
         },
         {
+                "name": "MASK_PHYSICAL_DEVICE",
+                "value": "0x00000000004C0000L",
+                "type": "long"
+        },
+        {
                 "name": "MASK_VLM_GRP",
                 "value": "0x0000000000480000L",
                 "type": "long"
@@ -2467,6 +2472,11 @@
         {
                 "name": "KEY_SEC_PASSWORD",
                 "value": "SecPassword",
+                "type": "string"
+        },
+        {
+                "name": "KEY_POOL_NAME",
+                "value": "PoolName",
                 "type": "string"
         },
         {
