@@ -1,3 +1,4 @@
+PYTHON ?= python3
 COMMONDRBDOPTS=drbdoptions.json
 COMMONPROPERTIES=properties.json
 
@@ -21,28 +22,28 @@ all: java
 	;
 
 $(PYCONSTS): genconsts.py consts.json
-	./genconsts.py python > $@
+	$(PYTHON) ./genconsts.py python > $@
 
 $(JAVAPROPOUT):
 	mkdir -p $@
 
 $(JAVAPROPERTYRULES): genproperties.py $(COMMONPROPERTIES) $(COMMONDRBDOPTS) $(JAVAPROPOUT)
-	./genproperties.py java $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
+	$(PYTHON) ./genproperties.py java $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
 
 $(PYPROPS): genproperties.py $(COMMONPROPERTIES) $(COMMONDRBDOPTS)
-	./genproperties.py python $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
+	$(PYTHON) ./genproperties.py python $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
 
 $(COMMONDRBDOPTS): gendrbdoptions.py
-	./gendrbdoptions.py $(COMMONDRBDOPTS)
+	$(PYTHON) ./gendrbdoptions.py $(COMMONDRBDOPTS)
 
 $(JAVAAPIOUT):
 	mkdir -p $@
 
 $(JAVACONSTS): genconsts.py consts.json $(JAVAAPIOUT)
-	./genconsts.py java > $@
+	$(PYTHON) ./genconsts.py java > $@
 
 $(GOCONSTS): genconsts.py consts.json
-	./genconsts.py golang | gofmt > $@
+	$(PYTHON) ./genconsts.py golang | gofmt > $@
 
 python: $(PYCONSTS) $(PYPROPS)
 
