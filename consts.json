@@ -2516,59 +2516,55 @@
                 "blockcomment": "Satellite connection statuses"
         },
         {
-                "name": "CONN_STATUS_OFFLINE",
-                "value": 0,
-                "type": "int"
-        },
-        {
-                "name": "CONN_STATUS_CONNECTED",
-                "value": 1,
-                "type": "int"
-        },
-        {
-                "name": "CONN_STATUS_ONLINE",
-                "value": 2,
-                "type": "int"
-        },
-        {
-                "name": "CONN_STATUS_VERSION_MISMATCH",
-                "value": 3,
-                "type": "int"
-        },
-        {
-                "name": "CONN_STATUS_FULL_SYNC_FAILED",
-                "value": 4,
-                "type": "int"
-        },
-        {
-                "name": "CONN_STATUS_AUTHENTICATION_ERROR",
-                "value": 5,
-                "type": "int"
-        },
-        {
-                "name": "CONN_STATUS_UNKNOWN",
-                "value": 6,
-                "type": "int"
-        },
-        {
-                "name": "CONN_STATUS_HOSTNAME_MISMATCH",
-                "value": 7,
-                "type": "int"
-        },
-        {
-                "name": "CONN_STATUS_OTHER_CONTROLLER",
-                "value": 8,
-                "type": "int"
-        },
-        {
-                "name": "CONN_STATUS_AUTHENTICATED",
-                "value": 9,
-                "type": "int"
-        },
-        {
-                "name": "CONN_STATUS_NO_STLT_CONN",
-                "value": 10,
-                "type": "int"
+                "name": "ConnectionStatus",
+                "type": "enum",
+                "enumtype": "int",
+                "values": [
+                        {
+                                "name": "OFFLINE",
+                                "value": 0
+                        },
+                        {
+                                "name": "CONNECTED",
+                                "value": 1
+                        },
+                        {
+                                "name": "ONLINE",
+                                "value": 2
+                        },
+                        {
+                                "name": "VERSION_MISMATCH",
+                                "value": 3
+                        },
+                        {
+                                "name": "FULL_SYNC_FAILED",
+                                "value": 4
+                        },
+                        {
+                                "name": "AUTHENTICATION_ERROR",
+                                "value": 5
+                        },
+                        {
+                                "name": "UNKNOWN",
+                                "value": 6
+                        },
+                        {
+                                "name": "HOSTNAME_MISMATCH",
+                                "value": 7
+                        },
+                        {
+                                "name": "OTHER_CONTROLLER",
+                                "value": 8
+                        },
+                        {
+                                "name": "AUTHENTICATED",
+                                "value": 9
+                        },
+                        {
+                                "name": "NO_STLT_CONN",
+                                "value": 10
+                        }
+                ]
         },
         {
                 "blockcomment": "Default names"

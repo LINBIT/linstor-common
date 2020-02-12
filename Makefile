@@ -22,7 +22,7 @@ all: java
 	;
 
 $(PYCONSTS): genconsts.py consts.json
-	$(PYTHON) ./genconsts.py python > $@
+	$(PYTHON) ./genconsts.py python ../linstor
 
 $(JAVAPROPOUT):
 	mkdir -p $@
@@ -40,10 +40,10 @@ $(JAVAAPIOUT):
 	mkdir -p $@
 
 $(JAVACONSTS): genconsts.py consts.json $(JAVAAPIOUT)
-	$(PYTHON) ./genconsts.py java > $@
+	$(PYTHON) ./genconsts.py java $(JAVAAPIOUT)
 
 $(GOCONSTS): genconsts.py consts.json
-	$(PYTHON) ./genconsts.py golang | gofmt > $@
+	$(PYTHON) ./genconsts.py golang ../
 
 python: $(PYCONSTS) $(PYPROPS)
 
