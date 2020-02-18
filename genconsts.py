@@ -225,6 +225,10 @@ from enum import Enum
         print(num_str + " = " + " | ". join(mask))
 """)
 
+def to_camel_case(snake_str):
+    components = snake_str.split('_')  # split by underscore and .title() items
+    return ''.join(x.title() for x in components)
+
 
 def golang(consts, outdir):
     apiconsts_path = os.path.join(outdir, "apiconsts.go")
@@ -254,21 +258,24 @@ def golang(consts, outdir):
             _type = e['type']
 
             if _type == 'enum':
-                outfile.write('// enum generated in package -> "golinstor/{p}"\n'.format(p=e['name']))
-                subpkg = os.path.join(outdir, e['name'])
+                package_name = e['name'].lower()
+                enum_type_name = e['name']
+                outfile.write('// enum generated in package -> "golinstor/{p}"\n'.format(p=package_name))
+                subpkg = os.path.join(outdir, package_name)
                 os.makedirs(subpkg, exist_ok=True)
-                subpkg_file_path = os.path.join(subpkg, e['name'] + '.go')
+                subpkg_file_path = os.path.join(subpkg, package_name + '.go')
                 files_written.append(subpkg_file_path)
                 with open(subpkg_file_path, "w+") as subfile:
-                    subfile.write("package {p}\n\n".format(p=e['name']))
+                    subfile.write("package {p}\n\n".format(p=package_name))
 
-                    subfile.write("type {p} {t}\n\n".format(p=e['name'], t=e['enumtype']))
+                    subfile.write("type {p} {t}\n\n".format(p=enum_type_name, t=e['enumtype']))
                     subfile.write("const (\n")
                     for enum_entry in e['values']:
+                        enum_name = to_camel_case(enum_entry['name'])
                         outfile.write('// {p}.{en} = {v}\n'.format(
-                            p=e['name'], en=enum_entry['name'], v=enum_entry['value']))
+                            p=package_name, en=enum_name, v=enum_entry['value']))
                         subfile.write("    {en} {t} = {v}\n".format(
-                            en=enum_entry['name'], t=e['name'], v=enum_entry['value']))
+                            en=enum_name, t=enum_type_name, v=enum_entry['value']))
                     subfile.write(")\n")
             else:
                 value = e['value']
