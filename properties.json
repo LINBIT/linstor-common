@@ -103,6 +103,79 @@
                 "internal"
             ]
         },
+        "storage_pool_openflex_api_host": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_OPENFLEX_API_HOST"
+            ],
+            "type": "regex",
+            "value": ".+"
+        },
+        "storage_pool_openflex_api_port": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_OPENFLEX_API_PORT"
+            ],
+            "type": "regex",
+            "value": "[0-9]+"
+        },
+        "storage_pool_openflex_stor_dev": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_OPENFLEX_STOR_DEV"
+            ],
+            "type": "regex",
+            "value": ".+"
+        },
+        "storage_pool_openflex_stor_dev_host": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_OPENFLEX_STOR_DEV_HOST"
+            ],
+            "type": "regex",
+            "value": ".+"
+        },
+        "storage_pool_openflex_stor_pool": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_OPENFLEX_STOR_POOL"
+            ],
+            "type": "regex",
+            "value": "[0-9]+"
+        },
+        "storage_pool_openflex_user_name": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_OPENFLEX_USER_NAME"
+            ],
+            "type": "regex",
+            "value": ".+"
+        },
+        "storage_pool_openflex_user_pw": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_OPENFLEX_USER_PW"
+            ],
+            "type": "regex",
+            "value": ".+"
+        },
+        "storage_pool_openflex_job_wait_max_count": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_OPENFLEX_JOB_WAIT_MAX_COUNT"
+            ],
+            "type": "regex",
+            "value": "[0-9]+"
+        },
+        "storage_pool_openflex_job_wait_delay": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_OPENFLEX_JOB_WAIT_DELAY"
+            ],
+            "type": "regex",
+            "value": "[0-9]+",
+            "info": "Delay in milliseconds linstor waits between fetching the job status"
+        },
         "preferred_nic": {
             "key": [
                 "KEY_STOR_POOL_PREF_NIC"
@@ -674,7 +747,13 @@
             "writecache_opt_autocommit_blocks",
             "writecache_opt_autocommit_time",
             "writecache_opt_fua",
-            "writecache_opt_additional"
+            "writecache_opt_additional",
+            "storage_pool_openflex_api_host",
+            "storage_pool_openflex_api_port",
+            "storage_pool_openflex_user_name",
+            "storage_pool_openflex_user_pw",
+            "storage_pool_openflex_job_wait_delay",
+            "storage_pool_openflex_job_wait_max_count"
         ],
         "node": [
             "preferred_nic",
@@ -693,7 +772,15 @@
             "writecache_opt_autocommit_blocks",
             "writecache_opt_autocommit_time",
             "writecache_opt_fua",
-            "writecache_opt_additional"
+            "writecache_opt_additional",
+            "storage_pool_openflex_api_host",
+            "storage_pool_openflex_api_port",
+            "storage_pool_openflex_user_name",
+            "storage_pool_openflex_user_pw",
+            "storage_pool_openflex_stor_dev",
+            "storage_pool_openflex_stor_dev_host",
+            "storage_pool_openflex_job_wait_delay",
+            "storage_pool_openflex_job_wait_max_count"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",
@@ -711,7 +798,14 @@
             "stordriver_lvcreate_type",
             "stordriver_wait_timeout_after_create",
             "sys_fs_blkio_throttle_read",
-            "sys_fs_blkio_throttle_write"
+            "sys_fs_blkio_throttle_write",
+            "storage_pool_openflex_api_host",
+            "storage_pool_openflex_api_port",
+            "storage_pool_openflex_user_name",
+            "storage_pool_openflex_user_pw",
+            "storage_pool_openflex_stor_dev",
+            "storage_pool_openflex_stor_dev_host",
+            "storage_pool_openflex_stor_pool"
         ],
         "resource-definition": [
             "storage_pool_name",

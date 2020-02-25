@@ -339,6 +339,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_VLM_COUNT",
+                "value": [229, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -663,6 +668,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_EXISTS_OPENFLEX_TARGET_PER_RSC_DFN",
+                "value": [524, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 600-699: data missing failures"
         },
         {
@@ -708,6 +718,11 @@
         {
                 "name": "FAIL_NO_STLT_CONN_DEFINED",
                 "value": [609, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_MISSING_OPENFLEX_TARGET",
+                "value": [610, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -802,7 +817,17 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_POOL_EXHAUSTED_OPENFLEX_TCP_PORT",
+                "value": [805, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Other failures"
+        },
+        {
+                "name": "FAIL_LINSTOR_MANAGED_SATELLITE_DID_NOT_START_PROPERLY",
+                "value": [987, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_STLT_DOES_NOT_SUPPORT_LAYER",
@@ -1097,6 +1122,11 @@
         {
                 "name": "API_CRT_CRYPT_PASS",
                 "value": "CrtCryptPass",
+                "type": "string"
+        },
+        {
+                "name": "API_CRT_OF_TARGET_NODE",
+                "value": "CrtOfTargetNode",
                 "type": "string"
         },
         {
@@ -1976,6 +2006,51 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_OPENFLEX_API_HOST",
+                "value": "Openflex/ApiHost",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_OPENFLEX_API_PORT",
+                "value": "Openflex/ApiPort",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_OPENFLEX_STOR_DEV",
+                "value": "Openflex/StorDev",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_OPENFLEX_STOR_DEV_HOST",
+                "value": "Openflex/StorDevHost",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_OPENFLEX_STOR_POOL",
+                "value": "Openflex/StorPool",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_OPENFLEX_USER_NAME",
+                "value": "Openflex/UserName",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_OPENFLEX_USER_PW",
+                "value": "Openflex/UserPassword",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_OPENFLEX_JOB_WAIT_MAX_COUNT",
+                "value": "Openflex/JobWaitMaxCount",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_OPENFLEX_JOB_WAIT_DELAY",
+                "value": "Openflex/JobWaitDelay",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool traits keys"
         },
         {
@@ -2096,6 +2171,11 @@
         {
                 "name": "KEY_GLOBAL_SEQ_API_CALLS",
                 "value": "GlobSeqApiCalls",
+                "type": "string"
+        },
+        {
+                "name": "KEY_OF_TARGET_PORT_AUTO_RANGE",
+                "value": "OpenflexTargetPortAutoRange",
                 "type": "string"
         },
         {
@@ -2281,6 +2361,11 @@
         {
                 "name": "VAL_NODE_TYPE_AUX",
                 "value": "Auxiliary",
+                "type": "string"
+        },
+        {
+                "name": "VAL_NODE_TYPE_OPENFLEX_TARGET",
+                "value": "Openflex_Target",
                 "type": "string"
         },
         {
