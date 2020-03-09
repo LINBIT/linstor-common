@@ -119,18 +119,6 @@
             "value": "^|.internal|[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
             "info": "Linstor storage pool name to use for external metadata."
         },
-        "storage_pool_drbd_meta_type": {
-            "key": [
-                "KEY_STOR_POOL_DRBD_META_TYPE"
-            ],
-            "type": "symbol",
-            "default": "internal",
-            "values": [
-                "external",
-                "internal"
-            ],
-            "info": "Where to place DRBD meta data"
-        },
         "storage_pool_openflex_api_host": {
             "key": [
                 "NAMESPC_STORAGE_DRIVER",
@@ -236,13 +224,6 @@
             "value": "[0-9]+-[0-9]+",
             "info": "Range for auto-allocation of volume minor numbers"
         },
-        "global_seq_api_calls": {
-            "key": [
-                "KEY_GLOBAL_SEQ_API_CALLS"
-            ],
-            "type": "boolean_true_false",
-            "info": "Globally sequentialize all ctrl -> stlt api calls"
-        },
         "peer_slots_new_resource": {
             "key": [
                 "KEY_PEER_SLOTS_NEW_RESOURCE"
@@ -261,13 +242,6 @@
             "max": 31,
             "info": "DRBD peer slots present on resource",
             "internal": true
-        },
-        "allow_larger_volume_size": {
-            "key": [
-                "KEY_ALLOW_LARGER_VOLUME_SIZE"
-            ],
-            "type": "boolean_true_false",
-            "info": "Do not fail when the underlying volume is larger than expected"
         },
         "dm_stats": {
             "key": [
@@ -521,35 +495,6 @@
             "value": "[a-fA-F0-9]{16}",
             "info": "Initial DRBD generation id, if initial sync is skipped, this ID will be set"
         },
-        "rest_listen_addr": {
-            "internal": false,
-            "key": [
-                "NAMESPC_REST",
-                "KEY_BIND_ADDR"
-            ],
-            "type": "string",
-            "info": "Bind address of the REST API"
-        },
-        "rest_listen_port": {
-            "internal": false,
-            "key": [
-                "NAMESPC_REST",
-                "KEY_BIND_PORT"
-            ],
-            "type": "range",
-            "min": 1,
-            "max": 65535,
-            "info": "TCP Port of the REST API"
-        },
-        "rest_enabled": {
-            "internal": false,
-            "key": [
-                "NAMESPC_REST",
-                "KEY_ENABLED"
-            ],
-            "info": "Bool if REST API should be enabled",
-            "type": "boolean_true_false"
-        },
         "rest_disable_http_metrics": {
             "internal": false,
             "key": [
@@ -646,6 +591,15 @@
             "info": "Wait timeout for an external command in milliseconds",
             "type": "long"
         },
+        "node_max_offline_time": {
+            "internal": false,
+            "key": [
+                "NAMESPC_NODE",
+                "KEY_NODE_MAX_OFFLINE_TIME"
+            ],
+            "info": "Time a node can be offline before it is declared DEAD in milliseconds",
+            "type": "long"
+        },
         "drbd_auto_quorum": {
             "internal": false,
             "key":  [
@@ -704,15 +658,6 @@
             "type": "regex",
             "value": "^100%|[0-9]{1,2}([.][0-9]*)?%|[1-9][0-9]{2,}$",
             "info": "Size of the writecache in % (0-100) or KiB otherwise"
-        },
-        "writecache_block_size": {
-            "key": [
-                "NAMESPC_WRITECACHE",
-                "KEY_WRITECACHE_BLOCKSIZE"
-            ],
-            "type": "long",
-            "info": "4096 is recommended; the maximum block size is the page size",
-            "default": "4096"
         },
         "writecache_opt_start_sector":
         {
@@ -1032,11 +977,8 @@
             "minor_nr_range",
             "peer_slots_new_resource",
             "dm_stats",
-            "global_seq_api_calls",
-            "rest_listen_addr",
-            "rest_listen_port",
-            "rest_enabled",
             "rest_disable_http_metrics",
+            "node_max_offline_time",
             "nvme_tr_type",
             "nvme_port",
             "nvme_preferred_nic",
@@ -1051,7 +993,6 @@
             "drbd_auto_diskful_allow_cleanup",
             "writecache_pool_name",
             "writecache_size",
-            "writecache_block_size",
             "writecache_opt_start_sector",
             "writecache_opt_high_watermark",
             "writecache_opt_low_watermark",
@@ -1090,12 +1031,11 @@
             "preferred_nic",
             "storage_pool_name",
             "storage_pool_drbd_meta_name",
-            "storage_pool_drbd_meta_type",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
+            "node_max_offline_time",
             "writecache_pool_name",
             "writecache_size",
-            "writecache_block_size",
             "writecache_opt_start_sector",
             "writecache_opt_high_watermark",
             "writecache_opt_low_watermark",
@@ -1158,7 +1098,6 @@
         "resource-definition": [
             "storage_pool_name",
             "storage_pool_drbd_meta_name",
-            "storage_pool_drbd_meta_type",
             "peer_slots_new_resource",
             "proxy_compression_type",
             "fs_type",
@@ -1176,7 +1115,6 @@
             "drbd_auto_diskful_allow_cleanup",
             "writecache_pool_name",
             "writecache_size",
-            "writecache_block_size",
             "writecache_opt_start_sector",
             "writecache_opt_high_watermark",
             "writecache_opt_low_watermark",
@@ -1203,7 +1141,6 @@
         "resource": [
             "storage_pool_name",
             "storage_pool_drbd_meta_name",
-            "storage_pool_drbd_meta_type",
             "preferred_nic",
             "peer_slots",
             "fs_type",
@@ -1216,9 +1153,7 @@
         "volume-definition": [
             "storage_pool_name",
             "storage_pool_drbd_meta_name",
-            "storage_pool_drbd_meta_type",
             "override_vlm_id",
-            "allow_larger_volume_size",
             "fs_type",
             "fs_mkfsparameters",
             "stordriver_lvcreate_type",
@@ -1229,7 +1164,6 @@
             "sys_fs_blkio_throttle_write",
             "writecache_pool_name",
             "writecache_size",
-            "writecache_block_size",
             "writecache_opt_start_sector",
             "writecache_opt_high_watermark",
             "writecache_opt_low_watermark",

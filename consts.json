@@ -1667,171 +1667,11 @@
                 "type": "string"
         },
         {
-                "blockcomment": "Object property keys"
-        },
-        {
-                "name": "KEY_KVS",
-                "value": "Kvs",
-                "type": "string"
+                "blockcomment": "DRBD property keys"
         },
         {
                 "name": "KEY_UUID",
                 "value": "UUID",
-                "type": "string"
-        },
-        {
-                "name": "KEY_NODE",
-                "value": "Node",
-                "type": "string"
-        },
-        {
-                "name": "KEY_RSC_DFN",
-                "value": "RscDfn",
-                "type": "string"
-        },
-        {
-                "name": "KEY_RSC_GRP",
-                "value": "RscGrp",
-                "type": "string"
-        },
-        {
-                "name": "KEY_VLM_GRP",
-                "value": "VlmGrp",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_DFN",
-                "value": "StorPoolDfn",
-                "type": "string"
-        },
-        {
-                "name": "KEY_1ST_NODE",
-                "value": "FirstNode",
-                "type": "string"
-        },
-        {
-                "name": "KEY_2ND_NODE",
-                "value": "SecondNode",
-                "type": "string"
-        },
-        {
-                "name": "KEY_SNAPSHOT",
-                "value": "Snapshot",
-                "type": "string"
-        },
-        {
-                "name": "KEY_NODE_NAME",
-                "value": "NodeName",
-                "type": "string"
-        },
-        {
-                "name": "KEY_NODE_TYPE",
-                "value": "NodeType",
-                "type": "string"
-        },
-        {
-                "name": "KEY_NODE_FLAGS",
-                "value": "NodeFlags",
-                "type": "string"
-        },
-        {
-                "name": "KEY_NODE_ID",
-                "value": "NodeId",
-                "type": "string"
-        },
-        {
-                "name": "KEY_1ST_NODE_NAME",
-                "value": "FirstNodeName",
-                "type": "string"
-        },
-        {
-                "name": "KEY_2ND_NODE_NAME",
-                "value": "SecondNodeName",
-                "type": "string"
-        },
-        {
-                "name": "KEY_RSC_NAME",
-                "value": "RscName",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_NAME",
-                "value": "StorPoolName",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_DRBD_META_NAME",
-                "value": "StorPoolNameDrbdMeta",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_DRBD_META_TYPE",
-                "value": "DrbdMetaType",
-                "type": "string"
-        },
-        {
-                "name": "KEY_NET_IF_NAME",
-                "value": "NetIfName",
-                "type": "string"
-        },
-        {
-                "name": "KEY_SNAPSHOT_NAME",
-                "value": "SnapshotName",
-                "type": "string"
-        },
-        {
-                "name": "KEY_VLM_NR",
-                "value": "VlmNr",
-                "type": "string"
-        },
-        {
-                "name": "KEY_VLM_SIZE",
-                "value": "VlmSize",
-                "type": "string"
-        },
-        {
-                "name": "KEY_MINOR_NR",
-                "value": "MinorNr",
-                "type": "string"
-        },
-        {
-                "name": "KEY_PEER_COUNT",
-                "value": "PeerCount",
-                "type": "string"
-        },
-        {
-                "name": "KEY_AL_SIZE",
-                "value": "AlSize",
-                "type": "string"
-        },
-        {
-                "name": "KEY_AL_STRIPES",
-                "value": "AlStripes",
-                "type": "string"
-        },
-        {
-                "name": "KEY_ID",
-                "value": "ID",
-                "type": "string"
-        },
-        {
-                "name": "KEY_ROLE",
-                "value": "Role",
-                "type": "string"
-        },
-        {
-                "name": "KEY_MISSING_NAMESPC",
-                "value": "MissingNameSpace",
-                "type": "string"
-        },
-        {
-                "name": "KEY_VLM_RESTORE_FROM_RESOURCE",
-                "value": "RestoreFromResource",
-                "type": "string"
-        },
-        {
-                "name": "KEY_VLM_RESTORE_FROM_SNAPSHOT",
-                "value": "RestoreFromSnapshot",
                 "type": "string"
         },
         {
@@ -1840,28 +1680,8 @@
                 "type": "string"
         },
         {
-                "name": "KEY_DRBD_BITMAP_GI",
-                "value": "DrbdBitmapGi",
-                "type": "string"
-        },
-        {
-                "name": "KEY_DRBD_HISTORY_1_GI",
-                "value": "DrbdHistory1Gi",
-                "type": "string"
-        },
-        {
-                "name": "KEY_DRBD_HISTORY_2_GI",
-                "value": "DrbdHistory2Gi",
-                "type": "string"
-        },
-        {
                 "name": "KEY_DMSTATS",
                 "value": "DMStats",
-                "type": "string"
-        },
-        {
-                "name": "KEY_SNAPSHOT_DFN_SEQUENCE_NUMBER",
-                "value": "SequenceNumber",
                 "type": "string"
         },
         {
@@ -1875,9 +1695,143 @@
                 "type": "string"
         },
         {
+                "name": "KEY_MINOR_NR_AUTO_RANGE",
+                "value": "MinorNrAutoRange",
+                "type": "string"
+        },
+        {
                 "name": "KEY_DRBD_AUTO_DISKFUL",
                 "value": "auto-diskful",
                 "type": "string"
+        },
+        {
+                "blockcomment": "Node property keys"
+        },
+        {
+                "name": "KEY_NODE",
+                "value": "Node",
+                "type": "string"
+        },
+        {
+                "name": "KEY_1ST_NODE",
+                "value": "FirstNode",
+                "type": "string"
+        },
+        {
+                "name": "KEY_2ND_NODE",
+                "value": "SecondNode",
+                "type": "string"
+        },
+        {
+                "name": "KEY_NODE_MAX_OFFLINE_TIME",
+                "value": "NodeMaxOfflineTime",
+                "type": "string"
+        },
+        {
+                "name": "KEY_CUR_STLT_CONN_NAME",
+                "value": "CurStltConnName",
+                "type": "string"
+        },
+        {
+                "blockcomment": "Resource property keys"
+        },
+        {
+                "name": "KEY_RSC_DFN",
+                "value": "RscDfn",
+                "type": "string"
+        },
+        {
+                "name": "KEY_RSC_GRP",
+                "value": "RscGrp",
+                "type": "string"
+        },
+        {
+                "name": "KEY_TCP_PORT_AUTO_RANGE",
+                "value": "TcpPortAutoRange",
+                "type": "string"
+        },
+        {
+                "name": "KEY_PEER_SLOTS_NEW_RESOURCE",
+                "value": "PeerSlotsNewResource",
+                "type": "string"
+        },
+        {
+                "name": "KEY_PEER_SLOTS",
+                "value": "PeerSlots",
+                "type": "string"
+        },
+        {
+                "name": "KEY_RSC_ROLLBACK_TARGET",
+                "value": "RollbackTarget",
+                "type": "string"
+        },
+        {
+                "name": "KEY_RSC_MIGRATE_FROM",
+                "value": "MigrateFrom",
+                "type": "string"
+        },
+        {
+                "blockcomment": "Volume property keys"
+        },
+        {
+                "name": "KEY_VLM_GRP",
+                "value": "VlmGrp",
+                "type": "string"
+        },
+        {
+                "name": "KEY_VLM_NR",
+                "value": "VlmNr",
+                "type": "string"
+        },
+        {
+                "name": "KEY_VLM_RESTORE_FROM_RESOURCE",
+                "value": "RestoreFromResource",
+                "type": "string"
+        },
+        {
+                "name": "KEY_VLM_RESTORE_FROM_SNAPSHOT",
+                "value": "RestoreFromSnapshot",
+                "type": "string"
+        },
+        {
+                "blockcomment": "ldap property keys"
+        },
+        {
+                "name": "KEY_SEARCH_DOMAIN",
+                "value": "SearchDomain",
+                "type": "string"
+        },
+        {
+                "blockcomment": "nvme property keys"
+        },
+        {
+                "name": "KEY_TR_TYPE",
+                "value": "enabled",
+                "type": "string"
+        },
+        {
+                "blockcomment": "Snapshot property keys"
+        },
+        {
+                "name": "KEY_SNAPSHOT",
+                "value": "Snapshot",
+                "type": "string"
+        },
+        {
+                "name": "KEY_SNAPSHOT_DFN_SEQUENCE_NUMBER",
+                "value": "SequenceNumber",
+                "type": "string"
+        },
+        {
+                "blockcomment": "Network Interface property keys"
+        },
+        {
+                "name": "KEY_PORT",
+                "value": "enabled",
+                "type": "string"
+        },
+        {
+                "blockcomment": "Writecache property keys"
         },
         {
                 "name": "KEY_DRBD_AUTO_DISKFUL_ALLOW_CLEANUP",
@@ -2073,6 +2027,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_NODE",
+                "value": "Node",
+                "type": "string"
+        },
+        {
                 "name": "NAMESPC_STORAGE_DRIVER",
                 "value": "StorDriver",
                 "type": "string"
@@ -2201,6 +2160,21 @@
                 "blockcomment": "Storage pool property keys"
         },
         {
+                "name": "KEY_STOR_POOL_DFN",
+                "value": "StorPoolDfn",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_NAME",
+                "value": "StorPoolName",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_DRBD_META_NAME",
+                "value": "StorPoolNameDrbdMeta",
+                "type": "string"
+        },
+        {
                 "name": "KEY_STOR_POOL_VOLUME_GROUP",
                 "value": "LvmVg",
                 "type": "string"
@@ -2308,6 +2282,11 @@
         {
                 "name": "KEY_STOR_POOL_OPENFLEX_JOB_WAIT_DELAY",
                 "value": "Openflex/JobWaitDelay",
+                "type": "string"
+        },
+        {
+                "name": "KEY_PREF_NIC",
+                "value": "PrefNic",
                 "type": "string"
         },
         {
