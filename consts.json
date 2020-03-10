@@ -1532,38 +1532,6 @@
                 "type": "string"
         },
         {
-                "blockcomment": "Event stream actions"
-        },
-        {
-                "name": "EVENT_STREAM_VALUE",
-                "value": "Value",
-                "type": "string"
-        },
-        {
-                "name": "EVENT_STREAM_CLOSE_NO_CONNECTION",
-                "value": "CloseNoConnection",
-                "type": "string"
-        },
-        {
-                "name": "EVENT_STREAM_CLOSE_REMOVED",
-                "value": "CloseRemoved",
-                "type": "string"
-        },
-        {
-                "blockcomment": "Events"
-        },
-        {
-                "name": "EVENT_VOLUME_DISK_STATE",
-                "value": "VlmDiskState",
-                "type": "string"
-        },
-        {
-                "name": "EVENT_RESOURCE_STATE",
-                "value": "ResourceState",
-                "type": "string",
-                "comment": "State of resource based on DRBD status (or other underlying system)"
-        },
-        {
                 "blockcomment": "Object property keys"
         },
         {
