@@ -597,8 +597,30 @@
                 "NAMESPC_NODE",
                 "KEY_NODE_MAX_OFFLINE_TIME"
             ],
-            "info": "Time a node can be offline before it is declared DEAD in milliseconds",
-            "type": "long"
+            "info": "Time a node can be offline before it is declared DEAD in minutes",
+            "type": "long",
+            "default": "1 hour"
+        },
+        "max_disconnected_nodes": {
+            "internal": false,
+            "key": [
+                "NAMESPC_NODE",
+                "KEY_MAX_DISCONNECTED_NODES"
+            ],
+            "info": "Percentage(0-100) of nodes that can disconnect at the same time without the controller stopping the max_offline_time timer",
+            "type": "range",
+            "min": 0,
+            "max": 100,
+            "default": 20
+        },
+        "min_replica_count": {
+            "internal": false,
+            "key": [
+                "KEY_MIN_REPLICA_COUNT"
+            ],
+            "info": "The minimum amount of replicas that should be present for a resource at all times.",
+            "type": "long",
+            "default": "The place count set for the resource group"
         },
         "drbd_auto_quorum": {
             "internal": false,
@@ -979,6 +1001,8 @@
             "dm_stats",
             "rest_disable_http_metrics",
             "node_max_offline_time",
+            "max_disconnected_nodes",
+            "min_replica_count",
             "nvme_tr_type",
             "nvme_port",
             "nvme_preferred_nic",
@@ -1100,6 +1124,7 @@
             "storage_pool_drbd_meta_name",
             "peer_slots_new_resource",
             "proxy_compression_type",
+            "min_replica_count",
             "fs_type",
             "fs_mkfsparameters",
             "nvme_tr_type",
