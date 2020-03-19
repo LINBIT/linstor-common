@@ -26,19 +26,22 @@ _ObjectCategories = {
 
 
 def get_drbd_setup_xml(from_file):
+    if from_file:
+        with open(from_file) as f:
+            return f.read()
+
     drbdsetup_cmd = ['/usr/sbin/drbdsetup', 'xml-help']
     opts = ['disk-options', 'peer-device-options', 'resource-options', 'new-peer']
-    # try:
-    #     xml_opts = [subprocess.check_output(drbdsetup_cmd + [x]) for x in opts]
-    # except OSError as oe:
-    #     sys.stderr.write("Unable to execute drbdsetup: {cmd}\nUsing local file {f}\n".format(
-    #         cmd=" ".join(drbdsetup_cmd),
-    #         f=from_file)
-    #     )
-    with open(from_file) as f:
-        return f.read()
+    xml_opts = []
+    try:
+        xml_opts = [subprocess.check_output(drbdsetup_cmd + [x]) for x in opts]
+    except OSError as oe:
+        sys.stderr.write("Unable to execute drbdsetup: {cmd}\nUsing local file {f}\n".format(
+            cmd=" ".join(drbdsetup_cmd),
+            f=from_file)
+        )
 
-    # return '<root>\n' + "".join(xml_opts) + '</root>'
+    return '<root>\n' + "".join(xml_opts) + '</root>'
 
 
 def create_and_add_handlers_option(properties, option_name):
