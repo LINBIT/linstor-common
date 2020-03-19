@@ -1,11 +1,11 @@
 <root>
 <!--
-DRBDADM_BUILDTAG=GIT-hash:\ c30216b49330216bf8a567b7727da6e24f099f08\ build\ by\ buildd@lgw01-amd64-032\,\ 2019-01-16\ 12:54:20
+DRBDADM_BUILDTAG=GIT-hash:\ 91629a4cce49ca0d4f917fe0bffa25cfe8db3052\ build\ by\ buildd@lcy01-amd64-020\,\ 2020-02-18\ 11:53:23
 DRBDADM_API_VERSION=2
-DRBD_KERNEL_VERSION_CODE=0x090011
-DRBD_KERNEL_VERSION=9.0.17
-DRBDADM_VERSION_CODE=0x090800
-DRBDADM_VERSION=9.8.0
+DRBD_KERNEL_VERSION_CODE=0x090016
+DRBD_KERNEL_VERSION=9.0.22
+DRBDADM_VERSION_CODE=0x090c00
+DRBDADM_VERSION=9.12.0
 -->
 <command name="disk-options">
 	<summary>Change the disk options of an attached lower-level device.</summary>
@@ -300,6 +300,7 @@ DRBDADM_VERSION=9.8.0
 		<handler>disconnect</handler>
 		<handler>call-pri-lost</handler>
 		<handler>violently</handler>
+		<handler>retry-connect</handler>
 	</option>
 	<option name="ping-timeout" type="numeric">
 		<min>1</min>
@@ -357,6 +358,9 @@ DRBDADM_VERSION=9.8.0
 		<max>131072</max>
 		<default>2048</default>
 		<unit_prefix>1</unit_prefix>
+	</option>
+	<option name="allow-remote-read" type="boolean">
+		<default>yes</default>
 	</option>
 	<option name="_name" type="string">
 	</option>
