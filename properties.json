@@ -715,6 +715,88 @@
             ],
             "type": "string",
             "info": "Additional arguments passed through"
+        },
+        "cache_op_mode":
+        {
+            "key": [
+                "NAMESPC_CACHE",
+                "KEY_CACHE_OPERATING_MODE"
+            ],
+            "type": "symbol",
+            "values": [
+                "writeback",
+                "writethrough",
+                "passthrough"
+            ],
+            "info": "Operation mode",
+            "default": "writethrough"
+        },
+        "cache_meta_pool":
+        {
+            "key": [
+                "NAMESPC_CACHE",
+                "KEY_CACHE_META_POOL_NAME"
+            ],
+            "type": "regex",
+            "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+            "info": "Name of the storage pool used for the cache metadata. If not specified, this will default to the CachePool property"
+        },
+        "cache_meta_size":
+        {
+            "key": [
+                "NAMESPC_CACHE",
+                "KEY_CACHE_META_SIZE"
+            ],
+            "type": "regex",
+            "value": "^100%|[0-9]{1,2}([.][0-9]*)?%|[1-9][0-9]{2,}$",
+            "info": "Size of the cache in % (0-100) or KiB otherwise.",
+            "default": "12288"
+        },
+        "cache_cache_pool":
+        {
+            "key": [
+                "NAMESPC_CACHE",
+                "KEY_CACHE_CACHE_POOL_NAME"
+            ],
+            "type": "regex",
+            "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+            "info": "Name of the storage pool used for the cache cache device"
+        },
+        "cache_cache_size":
+        {
+            "key": [
+                "NAMESPC_CACHE",
+                "KEY_CACHE_META_SIZE"
+            ],
+            "type": "regex",
+            "value": "^100%|[0-9]{1,2}([.][0-9]*)?%|[1-9][0-9]{2,}$",
+            "info": "Size of the cache in % (0-100) or KiB otherwise.",
+            "default": "5%"
+        },
+        "cache_blocksize":
+        {
+            "key": [
+                "NAMESPC_CACHE",
+                "KEY_CACHE_BLOCK_SIZE"
+            ],
+            "type": "long",
+            "info": "Block size",
+            "default": "4096"
+        },
+        "cache_policy":
+        {
+            "key": [
+                "NAMESPC_CACHE",
+                "KEY_CACHE_POLICY"
+            ],
+            "type": "symbol",
+            "values": [
+                "mq",
+                "smq",
+                "cleaner"
+            ],
+            "info": "Replacemant policy",
+            "default": "smq"
         }
     },
     "objects": {
@@ -748,6 +830,13 @@
             "writecache_opt_autocommit_time",
             "writecache_opt_fua",
             "writecache_opt_additional",
+            "cache_op_mode",
+            "cache_meta_pool",
+            "cache_meta_size",
+            "cache_cache_pool",
+            "cache_cache_size",
+            "cache_blocksize",
+            "cache_policy",
             "storage_pool_openflex_api_host",
             "storage_pool_openflex_api_port",
             "storage_pool_openflex_user_name",
@@ -773,6 +862,13 @@
             "writecache_opt_autocommit_time",
             "writecache_opt_fua",
             "writecache_opt_additional",
+            "cache_op_mode",
+            "cache_meta_pool",
+            "cache_meta_size",
+            "cache_cache_pool",
+            "cache_cache_size",
+            "cache_blocksize",
+            "cache_policy",
             "storage_pool_openflex_api_host",
             "storage_pool_openflex_api_port",
             "storage_pool_openflex_user_name",
@@ -832,7 +928,14 @@
             "writecache_opt_autocommit_blocks",
             "writecache_opt_autocommit_time",
             "writecache_opt_fua",
-            "writecache_opt_additional"
+            "writecache_opt_additional",
+            "cache_op_mode",
+            "cache_meta_pool",
+            "cache_meta_size",
+            "cache_cache_pool",
+            "cache_cache_size",
+            "cache_blocksize",
+            "cache_policy"
         ],
         "resource": [
             "storage_pool_name",
@@ -868,7 +971,14 @@
             "writecache_opt_autocommit_blocks",
             "writecache_opt_autocommit_time",
             "writecache_opt_fua",
-            "writecache_opt_additional"
+            "writecache_opt_additional",
+            "cache_op_mode",
+            "cache_meta_pool",
+            "cache_meta_size",
+            "cache_cache_pool",
+            "cache_cache_size",
+            "cache_blocksize",
+            "cache_policy"
         ],
         "volume": [
             "sys_fs_blkio_throttle_read",

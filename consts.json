@@ -1825,6 +1825,41 @@
                 "type": "string"
         },
         {
+                "name": "KEY_CACHE_OPERATING_MODE",
+                "value": "OpMode",
+                "type": "string"
+        },
+        {
+                "name": "KEY_CACHE_META_POOL_NAME",
+                "value": "MetaPool",
+                "type": "string"
+        },
+        {
+                "name": "KEY_CACHE_CACHE_POOL_NAME",
+                "value": "CachePool",
+                "type": "string"
+        },
+        {
+                "name": "KEY_CACHE_META_SIZE",
+                "value": "Metasize",
+                "type": "string"
+        },
+        {
+                "name": "KEY_CACHE_CACHE_SIZE",
+                "value": "Cachesize",
+                "type": "string"
+        },
+        {
+                "name": "KEY_CACHE_BLOCK_SIZE",
+                "value": "Blocksize",
+                "type": "string"
+        },
+        {
+                "name": "KEY_CACHE_POLICY",
+                "value": "Policy",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property namespaces"
         },
         {
@@ -1945,6 +1980,21 @@
         {
                 "name": "NAMESPC_WRITECACHE_OPTIONS",
                 "value": "Writecache/Options",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_CACHE",
+                "value": "Cache",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_CACHE_FEATURES",
+                "value": "Cache/Features",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_CACHE_POLICY_ARGS",
+                "value": "Cache/Policy",
                 "type": "string"
         },
         {
