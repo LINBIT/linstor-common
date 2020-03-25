@@ -86,7 +86,8 @@ def java(consts, outdir):
                 outfile.write('%spublic enum %s\n%s{\n' % (indent, e['name'], indent))
                 enum_strs = []
                 for enum_entry in e['values']:
-                    enum_strs.append('%s%s(%s)' % (indent * 2, enum_entry['name'], str(enum_entry['value'])))
+                    enum_value = '"%s"' % enum_entry['value'] if enum_type == 'string' else enum_entry['value']
+                    enum_strs.append('%s%s(%s)' % (indent * 2, enum_entry['name'], str(enum_value)))
                 outfile.write(",\n".join(enum_strs) + ';\n\n')
 
                 outfile.write("%sprivate final %s enumValue;\n" % (indent * 2, native_type))
@@ -225,6 +226,7 @@ from enum import Enum
         print(num_str + " = " + " | ". join(mask))
 """)
 
+
 def to_camel_case(snake_str):
     components = snake_str.split('_')  # split by underscore and .title() items
     return ''.join(x.title() for x in components)
@@ -272,10 +274,11 @@ def golang(consts, outdir):
                     subfile.write("const (\n")
                     for enum_entry in e['values']:
                         enum_name = to_camel_case(enum_entry['name'])
+                        enum_value = '"%s"' % enum_entry['value'] if e['enumtype'] == 'string' else enum_entry['value']
                         outfile.write('// {p}.{en} = {v}\n'.format(
-                            p=package_name, en=enum_name, v=enum_entry['value']))
+                            p=package_name, en=enum_name, v=enum_value))
                         subfile.write("    {en} {t} = {v}\n".format(
-                            en=enum_name, t=enum_type_name, v=enum_entry['value']))
+                            en=enum_name, t=enum_type_name, v=enum_value))
                     subfile.write(")\n")
             else:
                 value = e['value']
