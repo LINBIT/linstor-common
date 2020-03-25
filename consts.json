@@ -2614,7 +2614,44 @@
                 "value": "NVME_INITIATOR",
                 "type": "string"
         },
-        
+        {
+                "blockcomment": "Device layer kinds"
+        },
+        {
+                "name": "DeviceLayerKind",
+                "type": "enum",
+                "enumtype": "string",
+                "values": [
+                        {
+                                "name": "DRBD",
+                                "value": "drbd"
+                        },
+                        {
+                                "name": "LUKS",
+                                "value": "luks"
+                        },
+                        {
+                                "name": "STORAGE",
+                                "value": "storage"
+                        },
+                        {
+                                "name": "NVME",
+                                "value": "nvme"
+                        },
+                        {
+                                "name": "OPENFLEX",
+                                "value": "openflex"
+                        },
+                        {
+                                "name": "WRITECACHE",
+                                "value": "writecache"
+                        },
+                        {
+                                "name": "CACHE",
+                                "value": "cache"
+                        }
+                ]
+        },
         {
                 "blockcomment": "Satellite connection statuses"
         },
