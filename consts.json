@@ -825,6 +825,11 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_PRE_SELECT_SCRIPT_DID_NOT_TERMINATE",
+                "value": [986, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_LINSTOR_MANAGED_SATELLITE_DID_NOT_START_PROPERLY",
                 "value": [987, "MASK_ERROR"],
                 "type": "BOR"
