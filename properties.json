@@ -797,6 +797,26 @@
             ],
             "info": "Replacemant policy",
             "default": "smq"
+        },
+        "autoplacer_strat_weights_freespace":
+        {
+            "key": [
+                "NAMESPC_AUTOPLACER_WEIGHTS",
+                "KEY_AUTOPLACE_STRAT_WEIGHT_FREESPACE"
+            ],
+            "type": "regex",
+            "value": "^[0-9]+([.][0-9]+)?}",
+            "info": "Weight of 'FreeSpace' autoplacer-strategy",
+            "default": "1.0"
+        },
+        "autoplacer_pre_select_script_filename":
+        {
+            "key": [
+                "NAMESPC_AUTOPLACER",
+                "KEY_AUTOPLACE_PRE_SELECT_FILE_NAME"
+            ],
+            "type": "string",
+            "info": "Filename of the preselection script. File must be in /etc/linstor/selector/"
         }
     },
     "objects": {
@@ -842,7 +862,9 @@
             "storage_pool_openflex_user_name",
             "storage_pool_openflex_user_pw",
             "storage_pool_openflex_job_wait_delay",
-            "storage_pool_openflex_job_wait_max_count"
+            "storage_pool_openflex_job_wait_max_count",
+            "autoplacer_strat_weights_freespace",
+            "autoplacer_pre_select_script_filename"
         ],
         "node": [
             "preferred_nic",

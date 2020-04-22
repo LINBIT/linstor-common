@@ -1865,6 +1865,16 @@
                 "type": "string"
         },
         {
+                "name": "KEY_AUTOPLACE_STRAT_WEIGHT_FREESPACE",
+                "value": "FreeSpace",
+                "type": "string"
+        },
+        {
+                "name": "KEY_AUTOPLACE_PRE_SELECT_FILE_NAME",
+                "value": "PreSelectScript",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property namespaces"
         },
         {
@@ -2000,6 +2010,16 @@
         {
                 "name": "NAMESPC_CACHE_POLICY_ARGS",
                 "value": "Cache/Policy",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_AUTOPLACER",
+                "value": "Autoplacer",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_AUTOPLACER_WEIGHTS",
+                "value": "Autoplacer/Weights",
                 "type": "string"
         },
         {
