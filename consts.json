@@ -1875,6 +1875,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_AUTOPLACE_PRE_SELECT_SCRIPT_TIMEOUT",
+                "value": "PreSelectScriptTimeout",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property namespaces"
         },
         {

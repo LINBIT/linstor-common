@@ -817,7 +817,17 @@
             ],
             "type": "string",
             "info": "Filename of the preselection script. File must be in /etc/linstor/selector/"
-        }
+        },
+        "autoplacer_pre_select_script_timeout":
+        {
+            "key": [
+                "NAMESPC_AUTOPLACER",
+                "KEY_AUTOPLACE_PRE_SELECT_SCRIPT_TIMEOUT"
+            ],
+            "type": "long",
+            "info": "Timeout in ms Linstor waits for the script to run.",
+            "default": "5000"
+        } 
     },
     "objects": {
         "controller": [
@@ -864,7 +874,8 @@
             "storage_pool_openflex_job_wait_delay",
             "storage_pool_openflex_job_wait_max_count",
             "autoplacer_strat_weights_freespace",
-            "autoplacer_pre_select_script_filename"
+            "autoplacer_pre_select_script_filename",
+            "autoplacer_pre_select_script_timeout"
         ],
         "node": [
             "preferred_nic",
