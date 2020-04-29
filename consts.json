@@ -1875,6 +1875,16 @@
                 "type": "string"
         },
         {
+                "name": "KEY_AUTOPLACE_STRAT_WEIGHT_MIN_RESERVED_SPACE",
+                "value": "MinReservedSpace",
+                "type": "string"
+        },
+        {
+                "name": "KEY_AUTOPLACE_STRAT_WEIGHT_MIN_RSC_COUNT",
+                "value": "MinRscCount",
+                "type": "string"
+        },
+        {
                 "name": "KEY_AUTOPLACE_PRE_SELECT_FILE_NAME",
                 "value": "PreSelectScript",
                 "type": "string"

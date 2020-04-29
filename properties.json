@@ -798,16 +798,38 @@
             "info": "Replacemant policy",
             "default": "smq"
         },
-        "autoplacer_strat_weights_freespace":
+        "autoplacer_strat_weights_max_freespace":
         {
             "key": [
                 "NAMESPC_AUTOPLACER_WEIGHTS",
-                "KEY_AUTOPLACE_STRAT_WEIGHT_FREESPACE"
+                "KEY_AUTOPLACE_STRAT_WEIGHT_MAX_FREESPACE"
             ],
             "type": "regex",
             "value": "^[0-9]+([.][0-9]+)?}",
-            "info": "Weight of 'FreeSpace' autoplacer-strategy",
+            "info": "Weight of 'MaxFreeSpace' autoplacer-strategy",
             "default": "1.0"
+        },
+        "autoplacer_strat_weights_min_reserved_space":
+        {
+            "key": [
+                "NAMESPC_AUTOPLACER_WEIGHTS",
+                "KEY_AUTOPLACE_STRAT_WEIGHT_MIN_RESERVED_SPACE"
+            ],
+            "type": "regex",
+            "value": "^[0-9]+([.][0-9]+)?}",
+            "info": "Weight of 'MinReservedSpace' autoplacer-strategy",
+            "default": "0.0"
+        },
+        "autoplacer_strat_weights_min_rsc_count":
+        {
+            "key": [
+                "NAMESPC_AUTOPLACER_WEIGHTS",
+                "KEY_AUTOPLACE_STRAT_WEIGHT_MIN_RSC_COUNT"
+            ],
+            "type": "regex",
+            "value": "^[0-9]+([.][0-9]+)?}",
+            "info": "Weight of 'MinRscCount' autoplacer-strategy",
+            "default": "0.0"
         },
         "autoplacer_pre_select_script_filename":
         {
@@ -873,7 +895,9 @@
             "storage_pool_openflex_user_pw",
             "storage_pool_openflex_job_wait_delay",
             "storage_pool_openflex_job_wait_max_count",
-            "autoplacer_strat_weights_freespace",
+            "autoplacer_strat_weights_max_freespace",
+            "autoplacer_strat_weights_min_reserved_space",
+            "autoplacer_strat_weights_min_rsc_count",
             "autoplacer_pre_select_script_filename",
             "autoplacer_pre_select_script_timeout"
         ],
