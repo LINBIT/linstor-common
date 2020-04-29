@@ -1870,8 +1870,8 @@
                 "type": "string"
         },
         {
-                "name": "KEY_AUTOPLACE_STRAT_WEIGHT_FREESPACE",
-                "value": "FreeSpace",
+                "name": "KEY_AUTOPLACE_STRAT_WEIGHT_MAX_FREESPACE",
+                "value": "MaxFreeSpace",
                 "type": "string"
         },
         {
