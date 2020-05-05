@@ -461,6 +461,25 @@
             "default": 0,
             "max": 253
         },
+        "proxy_auto_enable": {
+            "internal": true,
+            "key": [
+                "NAMESPC_DRBD_PROXY", "KEY_DRBD_PROXY_AUTO_ENABLE"
+            ],
+            "type": "symbol",
+            "default": "true",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        "proxy_auto_site": {
+            "internal": true,
+            "key": [
+                "NAMESPC_DRBD_PROXY", "KEY_DRBD_PROXY_SITE"
+            ],
+            "type": "string"
+        },
         "drbd_current_gi": {
             "internal": false,
             "key": [
@@ -899,7 +918,9 @@
             "autoplacer_strat_weights_min_reserved_space",
             "autoplacer_strat_weights_min_rsc_count",
             "autoplacer_pre_select_script_filename",
-            "autoplacer_pre_select_script_timeout"
+            "autoplacer_pre_select_script_timeout",
+            "proxy_auto_enable",
+            "proxy_auto_site"
         ],
         "node": [
             "preferred_nic",
@@ -933,7 +954,9 @@
             "storage_pool_openflex_stor_dev",
             "storage_pool_openflex_stor_dev_host",
             "storage_pool_openflex_job_wait_delay",
-            "storage_pool_openflex_job_wait_max_count"
+            "storage_pool_openflex_job_wait_max_count",
+            "proxy_auto_enable",
+            "proxy_auto_site"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",

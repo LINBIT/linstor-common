@@ -973,6 +973,11 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_UNEFFECTIVE_PROP",
+                "value": [1015, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "name": "WARN_NOT_FOUND",
                 "value": [3000, "MASK_WARN"],
                 "type": "BOR"
@@ -1013,6 +1018,11 @@
         {
                 "name": "INFO_PROP_REMOVED",
                 "value": [10005, "MASK_INFO"],
+                "type": "BOR"
+        },
+        {
+                "name": "INFO_AUTO_DRBD_PROXY_CREATED",
+                "value": [10007, "MASK_INFO"],
                 "type": "BOR"
         },
         {
@@ -2188,6 +2198,16 @@
         {
                 "name": "KEY_DRBD_PROXY_COMPRESSION_TYPE",
                 "value": "CompressionType",
+                "type": "string"
+        },
+        {
+                "name": "KEY_DRBD_PROXY_AUTO_ENABLE",
+                "value": "AutoEnable",
+                "type": "string"
+        },
+        {
+                "name": "KEY_DRBD_PROXY_SITE",
+                "value": "Site",
                 "type": "string"
         },
         {
