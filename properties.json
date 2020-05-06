@@ -937,8 +937,10 @@
             "autoplacer_strat_weights_max_freespace",
             "autoplacer_strat_weights_min_reserved_space",
             "autoplacer_strat_weights_min_rsc_count",
+            "autoplacer_strat_weights_max_throughput",
             "autoplacer_pre_select_script_filename",
             "autoplacer_pre_select_script_timeout",
+            "autoplacer_max_throughput",
             "proxy_auto_enable",
             "proxy_auto_site"
         ],
@@ -975,6 +977,7 @@
             "storage_pool_openflex_stor_dev_host",
             "storage_pool_openflex_job_wait_delay",
             "storage_pool_openflex_job_wait_max_count",
+            "autoplacer_max_throughput",
             "proxy_auto_enable",
             "proxy_auto_site"
         ],
@@ -1001,7 +1004,8 @@
             "storage_pool_openflex_user_pw",
             "storage_pool_openflex_stor_dev",
             "storage_pool_openflex_stor_dev_host",
-            "storage_pool_openflex_stor_pool"
+            "storage_pool_openflex_stor_pool",
+            "autoplacer_max_throughput"
         ],
         "resource-definition": [
             "storage_pool_name",
