@@ -1905,6 +1905,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_AUTOPLACE_MAX_THROUGHPUT",
+                "value": "MaxThroughput",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property namespaces"
         },
         {
