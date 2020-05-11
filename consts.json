@@ -2211,11 +2211,6 @@
                 "type": "string"
         },
         {
-                "name": "KEY_DRBD_PROXY_SITE",
-                "value": "Site",
-                "type": "string"
-        },
-        {
                 "blockcomment": "Property keys"
         },
         {
@@ -2361,6 +2356,11 @@
         {
                 "name": "KEY_SEARCH_DOMAIN",
                 "value": "SearchDomain",
+                "type": "string"
+        },
+        {
+                "name": "KEY_SITE",
+                "value": "Site",
                 "type": "string"
         },
         {
@@ -2594,6 +2594,16 @@
         {
                 "name": "VAL_FALSE",
                 "value": "False",
+                "type": "string"
+        },
+        {
+                "name": "VAL_YES",
+                "value": "Yes",
+                "type": "string"
+        },
+        {
+                "name": "VAL_NO",
+                "value": "No",
                 "type": "string"
         },
         {

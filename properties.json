@@ -466,17 +466,13 @@
             "key": [
                 "NAMESPC_DRBD_PROXY", "KEY_DRBD_PROXY_AUTO_ENABLE"
             ],
-            "type": "symbol",
-            "default": "true",
-            "values": [
-                "true",
-                "false"
-            ]
+            "type": "boolean_true_false",
+            "default": "false"
         },
-        "proxy_auto_site": {
+        "site": {
             "internal": true,
             "key": [
-                "NAMESPC_DRBD_PROXY", "KEY_DRBD_PROXY_SITE"
+                "KEY_SITE"
             ],
             "type": "string"
         },
@@ -942,7 +938,7 @@
             "autoplacer_pre_select_script_timeout",
             "autoplacer_max_throughput",
             "proxy_auto_enable",
-            "proxy_auto_site"
+            "site"
         ],
         "node": [
             "preferred_nic",
@@ -979,7 +975,7 @@
             "storage_pool_openflex_job_wait_max_count",
             "autoplacer_max_throughput",
             "proxy_auto_enable",
-            "proxy_auto_site"
+            "site"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",
