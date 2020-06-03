@@ -349,6 +349,16 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_SNAPSHOT_SHIPPING_SOURCE",
+                "value": [231, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_INVLD_SNAPSHOT_SHIPPING_TARGET",
+                "value": [232, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -678,6 +688,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_EXISTS_SNAPSHOT_SHIPPING",
+                "value": [525, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 600-699: data missing failures"
         },
         {
@@ -827,10 +842,25 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_POOL_EXHAUSTED_SNAPSHOT_SHIPPING_TCP_PORT",
+                "value": [806, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Other failures"
         },
         {
                 "name": "FAIL_CRYPT_INIT",
+                "value": [982, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_SNAPSHOT_SHIPPING_NOT_SUPPORTED",
+                "value": [983, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_SNAPSHOT_SHIPPING_IN_PROGRESS",
                 "value": [984, "MASK_ERROR"],
                 "type": "BOR"
         },
@@ -988,6 +1018,11 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_INVLD_SNAPSHOT_SHIPPING_PREFIX",
+                "value": [1016, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "name": "WARN_NOT_FOUND",
                 "value": [3000, "MASK_WARN"],
                 "type": "BOR"
@@ -1032,6 +1067,11 @@
         },
         {
                 "name": "INFO_AUTO_DRBD_PROXY_CREATED",
+                "value": [10007, "MASK_INFO"],
+                "type": "BOR"
+        },
+        {
+                "name": "INFO_NOOP",
                 "value": [10007, "MASK_INFO"],
                 "type": "BOR"
         },
@@ -1283,6 +1323,11 @@
                 "type": "string"
         },
         {
+                "name": "API_SHIP_SNAPSHOT",
+                "value": "ShipSnapshot",
+                "type": "string"
+        },
+        {
                 "name": "API_MOD_KVS",
                 "value": "ModifyKvs",
                 "type": "string"
@@ -1295,6 +1340,16 @@
         {
                 "name": "API_MOD_VLM_GRP",
                 "value": "ModifyVlmGrp",
+                "type": "string"
+        },
+        {
+                "name": "API_ACTIVATE_RSC",
+                "value": "ActivateRsc",
+                "type": "string"
+        },
+        {
+                "name": "API_DEACTIVATE_RSC",
+                "value": "DeactivateRsc",
                 "type": "string"
         },
         {
@@ -1925,6 +1980,41 @@
                 "type": "string"
         },
         {
+                "name": "KEY_SNAPSHOT_SHIPPING_PREFIX",
+                "value": "SnapshotShippingPrefix",
+                "type": "string"
+        },
+        {
+                "name": "KEY_TARGET_NODE",
+                "value": "TargetNode",
+                "type": "string"
+        },
+        {
+                "name": "KEY_SOURCE_NODE",
+                "value": "SourceNode",
+                "type": "string"
+        },
+        {
+                "name": "KEY_RUN_EVERY",
+                "value": "RunEvery",
+                "type": "string"
+        },
+        {
+                "name": "KEY_AUTO_SNAPSHOT_PREFIX",
+                "value": "Prefix",
+                "type": "string"
+        },
+        {
+                "name": "KEY_KEEP",
+                "value": "Keep",
+                "type": "string"
+        },
+        {
+                "name": "KEY_AUTO_SNAPSHOT_NEXT_ID",
+                "value": "NextAutoId",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property namespaces"
         },
         {
@@ -2070,6 +2160,16 @@
         {
                 "name": "NAMESPC_AUTOPLACER_WEIGHTS",
                 "value": "Autoplacer/Weights",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_SNAPSHOT_SHIPPING",
+                "value": "SnapshotShipping",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_AUTO_SNAPSHOT",
+                "value": "AutoSnapshot",
                 "type": "string"
         },
         {
@@ -2627,6 +2727,14 @@
                 "type": "string"
         },
         {
+                "blockcomment": "Snapshot-shipping values"
+        },
+        {
+                "name": "VAL_SNAP_SHIP_NAME",
+                "value": "SnapshotShipping",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Flag string values"
         },
         {
@@ -2712,6 +2820,11 @@
         {
                 "name": "FLAG_NVME_INITIATOR",
                 "value": "NVME_INITIATOR",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_RSC_INACTIVE",
+                "value": "INACTIVE",
                 "type": "string"
         },
         {
@@ -2812,6 +2925,24 @@
         {
                 "name": "DEFAULT_NETIF",
                 "value": "default",
+                "type": "string"
+        },
+        {
+                "name": "DFLT_SNAPSHOT_SHIPPING_PREFIX",
+                "value": "ship",
+                "type": "string"
+        },
+        {
+                "blockcomment": "Default values"
+        },
+        {
+                "name": "DFLT_AUTO_SNAPSHOT_KEEP",
+                "value": "10",
+                "type": "string"
+        },
+        {
+                "name": "DFLT_SHIPPED_SNAPSHOT_KEEP",
+                "value": "10",
                 "type": "string"
         }
 ]

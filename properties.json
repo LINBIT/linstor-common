@@ -914,6 +914,71 @@
             ],
             "type": "long",
             "info": "The maximum throughput the given storage pool is capable of."
+        },
+        "auto_snapshot_run_every":
+        {
+            "key": [
+                "NAMESPC_AUTO_SNAPSHOT",
+                "KEY_RUN_EVERY"
+            ],
+            "type": "long",
+            "info": "Runs every X minutes an snapshot-creation. Removing this property or having a value <= 0 disables auto-snapshotting."
+        },
+        "auto_snapshot_keep":
+        {
+            "key": [
+                "NAMESPC_AUTO_SNAPSHOT",
+                "KEY_KEEP"
+            ],
+            "type": "long",
+            "info": "Keeps the last X auto-snapshots. Removing this property or having a value <= 0 disables auto-cleanup, all auto-snapshots will be kept",
+            "default": "10"
+        },
+        "auto_snapshot_next_id":
+        {
+            "key": [
+                "NAMESPC_AUTO_SNAPSHOT",
+                "KEY_AUTO_SNAPSHOT_NEXT_ID"
+            ],
+            "type": "long",
+            "info": "The next ID to try for auto-snapshots"
+        },
+        "snapshot_shipping_run_every":
+        {
+            "key": [
+                "NAMESPC_SNAPSHOT_SHIPPING",
+                "KEY_RUN_EVERY"
+            ],
+            "type": "long",
+            "info": "Runs every X minutes an auto-snapshot-shipping unless the current snapshot-shipping is still running. In this case a new one will be started asap."
+        },
+        "snapshot_shipping_keep":
+        {
+            "key": [
+                "NAMESPC_SNAPSHOT_SHIPPING",
+                "KEY_KEEP"
+            ],
+            "type": "long",
+            "info": "Keeps the last X sihpped snapshots. Removing this property or having a value <= 0 disables auto-cleanup, all auto-snapshots will be kept",
+            "default": "10"
+        },
+        "snapshot_shipping_target":
+        {
+            "key": [
+                "NAMESPC_SNAPSHOT_SHIPPING",
+                "KEY_TARGET_NODE"
+            ],
+            "type": "string",
+            "info": "Node name of the snapshot shipping target"
+        },
+        "snapshot_shipping_source":
+        {
+            "key": [
+                "NAMESPC_SNAPSHOT_SHIPPING",
+                "KEY_SOURCE_NODE"
+            ],
+            "type": "string",
+            "info": "Node name of the snapshot shipping source"
         }
     },
     "objects": {
@@ -1070,7 +1135,14 @@
             "cache_cache_pool",
             "cache_cache_size",
             "cache_blocksize",
-            "cache_policy"
+            "cache_policy",
+            "snapshot_shipping_source",
+            "snapshot_shipping_target",
+            "snapshot_shipping_run_every",
+            "snapshot_shipping_keep",
+            "auto_snapshot_run_every",
+            "auto_snapshot_keep",
+            "auto_snapshot_next_id"
         ],
         "resource": [
             "storage_pool_name",
