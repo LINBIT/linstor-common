@@ -90,7 +90,7 @@
             ],
             "type": "regex",
             "value": "^|.internal|[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
-            "info": "Linstor storage pool name to use."
+            "info": "Linstor storage pool name to use for external metadata."
         },
         "storage_pool_drbd_meta_type": {
             "key": [
