@@ -9,6 +9,15 @@
             "value": "[a-zA-Z0-9_/-]+",
             "internal": true
         },
+        "stordriver_volumegroup": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_VOLUME_GROUP"
+            ],
+            "type": "regex",
+            "value": "[a-zA-Z0-9_-]+",
+            "internal": true
+        },
         "stordriver_lvcreate_type": {
             "key": [
                 "NAMESPC_STORAGE_DRIVER",
@@ -29,6 +38,42 @@
                 "lzma",
                 "lz4"
             ],
+            "internal": true
+        },
+        "stordriver_thinpool": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_THIN_POOL"
+            ],
+            "type": "regex",
+            "value": "[a-zA-Z0-9_-]+",
+            "internal": true
+        },
+        "stordriver_zpool": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_ZPOOL"
+            ],
+            "type": "regex",
+            "value": "[a-zA-Z0-9_/-]+",
+            "internal": true
+        },
+        "stordriver_zpool_thin": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_ZPOOLTHIN"
+            ],
+            "type": "regex",
+            "value": "[a-zA-Z0-9_/-]+",
+            "internal": true
+        },
+        "stordriver_file_dir": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_FILE_DIRECTORY"
+            ],
+            "type": "regex",
+            "value": ".*",
             "internal": true
         },
         "stordriver_wait_timeout_after_create": {
@@ -948,6 +993,11 @@
         ],
         "storagepool": [
             "stordriver_pool_name",
+            "stordriver_volumegroup",
+            "stordriver_thinpool",
+            "stordriver_zpool",
+            "stordriver_zpool_thin",
+            "stordriver_file_dir",
             "preferred_nic",
             "nvme_preferred_nic",
             "stordriver_lvcreate_type",
