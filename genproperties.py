@@ -8,6 +8,8 @@ import copy
 import pprint
 import re
 import sys
+from typing import Dict, Any
+
 
 if sys.version_info > (3, 0):
     PYTHON2 = False
@@ -60,6 +62,32 @@ def merge_props(prop_a, prop_b):
             prps['objects'][obj].append(e)
 
     return prps
+
+
+def check_duplicate_keys(propdata: Dict[str, Any]):
+    with open("consts.json") as constfile:
+        constjson = json.load(constfile)
+        consts = {e['name']: e['value'] for e in constjson if e.get('type') == 'string'}
+
+    prop_map = {}
+    for prop_name in propdata['properties']:
+        key = propdata['properties'][prop_name]['key']
+        if isinstance(key, list):
+            key = "/".join([consts[x] for x in key])
+        if prop_name in prop_map:
+            print("ERROR: DUPLICATE property name '{k}' for prop '{p}'".format(k=key, p=prop_name), file=sys.stderr)
+            sys.exit(9)
+        prop_map[prop_name] = key
+
+    for obj in propdata['objects']:
+        key_map = {}
+        for prop_name in propdata['objects'][obj]:
+            key = prop_map[prop_name]
+            if key in key_map:
+                print("ERROR: DUPLICATE property key '{k}' for prop '{p}' in obj '{o}'".format(
+                    k=key, p=prop_name, o=obj), file=sys.stderr)
+                sys.exit(9)
+            key_map[prop_map[prop_name]] = prop_name
 
 
 def lang_python(data):
@@ -195,6 +223,9 @@ def main():
     for propfile_name in args.propfile:
         with open(propfile_name) as propfile:
             propdata = merge_props(propdata, json.load(propfile))
+
+    # check duplicate keys
+    check_duplicate_keys(propdata)
 
     if args.language == 'python':
         lang_python(propdata)
