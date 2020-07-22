@@ -119,7 +119,8 @@
             "values": [
                 "external",
                 "internal"
-            ]
+            ],
+            "info": "Where to place DRBD meta data"
         },
         "storage_pool_openflex_api_host": {
             "key": [
@@ -127,7 +128,8 @@
                 "KEY_STOR_POOL_OPENFLEX_API_HOST"
             ],
             "type": "regex",
-            "value": ".+"
+            "value": ".+",
+            "info": "Openflex API host name"
         },
         "storage_pool_openflex_api_port": {
             "key": [
@@ -135,7 +137,8 @@
                 "KEY_STOR_POOL_OPENFLEX_API_PORT"
             ],
             "type": "regex",
-            "value": "[0-9]+"
+            "value": "[0-9]+",
+            "info": "Openflex API port"
         },
         "storage_pool_openflex_stor_dev": {
             "key": [
@@ -143,7 +146,8 @@
                 "KEY_STOR_POOL_OPENFLEX_STOR_DEV"
             ],
             "type": "regex",
-            "value": ".+"
+            "value": ".+",
+            "info": "Openflex storage device"
         },
         "storage_pool_openflex_stor_dev_host": {
             "key": [
@@ -151,7 +155,8 @@
                 "KEY_STOR_POOL_OPENFLEX_STOR_DEV_HOST"
             ],
             "type": "regex",
-            "value": ".+"
+            "value": ".+",
+            "info": "Openflex storage device host"
         },
         "storage_pool_openflex_stor_pool": {
             "key": [
@@ -159,7 +164,8 @@
                 "KEY_STOR_POOL_OPENFLEX_STOR_POOL"
             ],
             "type": "regex",
-            "value": "[0-9]+"
+            "value": "[0-9]+",
+            "info": "Openflex storage pool name"
         },
         "storage_pool_openflex_user_name": {
             "key": [
@@ -167,7 +173,8 @@
                 "KEY_STOR_POOL_OPENFLEX_USER_NAME"
             ],
             "type": "regex",
-            "value": ".+"
+            "value": ".+",
+            "info": "Openflex user name"
         },
         "storage_pool_openflex_user_pw": {
             "key": [
@@ -175,7 +182,8 @@
                 "KEY_STOR_POOL_OPENFLEX_USER_PW"
             ],
             "type": "regex",
-            "value": ".+"
+            "value": ".+",
+            "info": "Openflex password"
         },
         "storage_pool_openflex_job_wait_max_count": {
             "key": [
@@ -183,7 +191,8 @@
                 "KEY_STOR_POOL_OPENFLEX_JOB_WAIT_MAX_COUNT"
             ],
             "type": "regex",
-            "value": "[0-9]+"
+            "value": "[0-9]+",
+            "info": "Maximum retries with wait delay until openflex fails"
         },
         "storage_pool_openflex_job_wait_delay": {
             "key": [
@@ -500,7 +509,8 @@
                 "KEY_DRBD_CURRENT_GI"
             ],
             "type": "regex",
-            "value": "[a-fA-F0-9]{16}"
+            "value": "[a-fA-F0-9]{16}",
+            "info": "Initial DRBD generation id, if initial sync is skipped, this ID will be set"
         },
         "rest_listen_addr": {
             "internal": false,
@@ -542,7 +552,8 @@
             "values": [
                 "rdma",
                 "tcp"
-            ]
+            ],
+            "info": "NVMe transportion type"
         },
         "nvme_port": {
             "internal": false,
@@ -552,7 +563,8 @@
             ],
             "type": "range",
             "min": 1,
-            "max": 65535
+            "max": 65535,
+            "info": "NVMe port"
         },
         "nvme_preferred_nic": {
             "internal": false,
