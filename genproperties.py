@@ -90,6 +90,19 @@ def check_duplicate_keys(propdata: Dict[str, Any]):
             key_map[prop_map[prop_name]] = prop_name
 
 
+def check_info_prop(propdata: Dict[str, Any]):
+    """
+    Checks if all non internal properties do have an info string
+    :param propdata: dict with all properties
+    :return:
+    """
+    for pn in propdata['properties']:
+        prop = propdata['properties'][pn]
+        if not prop.get('internal', False) and 'info' not in prop:
+            print("ERROR: Public property '{p}' does not have an info.".format(p=pn), file=sys.stderr)
+            sys.exit(8)
+
+
 def lang_python(data):
     print('"""')
     print('{h}\n{lic}'.format(h=hdr, lic=license))
@@ -226,6 +239,9 @@ def main():
 
     # check duplicate keys
     check_duplicate_keys(propdata)
+
+    # check info prop
+    check_info_prop(propdata)
 
     if args.language == 'python':
         lang_python(propdata)
