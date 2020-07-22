@@ -2081,6 +2081,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_LVCREATE_OPTIONS",
+                "value": "LvcreateOptions",
+                "type": "string"
+        },
+        {
                 "name": "KEY_STOR_POOL_THIN_POOL",
                 "value": "ThinPool",
                 "type": "string"

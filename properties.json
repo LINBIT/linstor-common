@@ -40,6 +40,15 @@
             ],
             "internal": true
         },
+        "stordriver_lvcreate_options": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_LVCREATE_OPTIONS"
+            ],
+            "type": "regex",
+            "value": ".*",
+            "info": "Additional parameters added to every 'lvcreate ... ' command"
+        },
         "stordriver_thinpool": {
             "key": [
                 "NAMESPC_STORAGE_DRIVER",
@@ -933,6 +942,7 @@
             "cache_cache_size",
             "cache_blocksize",
             "cache_policy",
+            "stordriver_lvcreate_options",
             "storage_pool_openflex_api_host",
             "storage_pool_openflex_api_port",
             "storage_pool_openflex_user_name",
@@ -974,6 +984,7 @@
             "cache_cache_size",
             "cache_blocksize",
             "cache_policy",
+            "stordriver_lvcreate_options",
             "storage_pool_openflex_api_host",
             "storage_pool_openflex_api_port",
             "storage_pool_openflex_user_name",
@@ -1001,6 +1012,7 @@
             "preferred_nic",
             "nvme_preferred_nic",
             "stordriver_lvcreate_type",
+            "stordriver_lvcreate_options",
             "stordriver_wait_timeout_after_create",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
@@ -1024,6 +1036,7 @@
             "nvme_tr_type",
             "nvme_port",
             "stordriver_lvcreate_type",
+            "stordriver_lvcreate_options",            
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
             "drbd_auto_quorum",
@@ -1068,6 +1081,7 @@
             "fs_type",
             "fs_mkfsparameters",
             "stordriver_lvcreate_type",
+            "stordriver_lvcreate_options",
             "drbd_current_gi",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
