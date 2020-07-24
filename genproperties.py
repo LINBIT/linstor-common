@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from __future__ import print_function
 
 import argparse
 import json
@@ -8,7 +9,6 @@ import copy
 import pprint
 import re
 import sys
-from typing import Dict, Any
 
 
 if sys.version_info > (3, 0):
@@ -64,7 +64,7 @@ def merge_props(prop_a, prop_b):
     return prps
 
 
-def check_duplicate_keys(propdata: Dict[str, Any]):
+def check_duplicate_keys(propdata):
     with open("consts.json") as constfile:
         constjson = json.load(constfile)
         consts = {e['name']: e['value'] for e in constjson if e.get('type') == 'string'}
@@ -90,7 +90,7 @@ def check_duplicate_keys(propdata: Dict[str, Any]):
             key_map[prop_map[prop_name]] = prop_name
 
 
-def check_info_prop(propdata: Dict[str, Any]):
+def check_info_prop(propdata):
     """
     Checks if all non internal properties do have an info string
     :param propdata: dict with all properties
