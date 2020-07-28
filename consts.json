@@ -830,6 +830,11 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_CRYPT_INIT",
+                "value": [984, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_UNDECIDABLE_AUTOPLACMENT",
                 "value": [985, "MASK_ERROR"],
                 "type": "BOR"
