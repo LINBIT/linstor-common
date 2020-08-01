@@ -28,7 +28,7 @@ Author: %s
   WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
   License for the specific language governing permissions and limitations
   under the License.""" % (
-    now.year, ', '.join(['Robert Altnoeder', 'Roland Kammerer', 'Gabor Hernadi', 'Rene Peinthor']))
+    2020, ', '.join(['Robert Altnoeder', 'Roland Kammerer', 'Gabor Hernadi', 'Rene Peinthor']))
 
 
 def get_native_java_type(type_str):

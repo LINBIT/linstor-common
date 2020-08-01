@@ -33,7 +33,7 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.""" % (
-    now.year, ', '.join(['Rene Peinthor', 'Gabor Hernadi']))
+    2020, ', '.join(['Rene Peinthor', 'Gabor Hernadi']))
 
 
 class MyPyKey(object):
