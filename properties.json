@@ -660,6 +660,15 @@
             "info": "Enables automatic management (creation and deletion) of tie breaking resource",
             "type": "boolean_true_false"
         },
+        "drbd_auto_diskful": {
+            "internal": false,
+            "key": [
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_DRBD_AUTO_DISKFUL"
+            ],
+            "info": "Makes a resource diskful if it was continously diskless primary for X minutes",
+            "type": "long"
+        },
         "writecache_pool_name": {
             "key": [
                 "NAMESPC_WRITECACHE",
@@ -1011,6 +1020,7 @@
             "ext_cmd_wait_to",
             "drbd_auto_quorum",
             "drbd_auto_add_quorum_tie_breaker",
+            "drbd_auto_diskful",
             "writecache_pool_name",
             "writecache_size",
             "writecache_block_size",
@@ -1082,7 +1092,8 @@
             "storage_pool_openflex_job_wait_max_count",
             "autoplacer_max_throughput",
             "proxy_auto_enable",
-            "site"
+            "site",
+            "drbd_auto_diskful"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",
@@ -1128,6 +1139,7 @@
             "sys_fs_blkio_throttle_write",
             "drbd_auto_quorum",
             "drbd_auto_add_quorum_tie_breaker",
+            "drbd_auto_diskful",
             "writecache_pool_name",
             "writecache_size",
             "writecache_block_size",
@@ -1164,7 +1176,8 @@
             "fs_mkfsparameters",
             "nvme_preferred_nic",
             "sys_fs_blkio_throttle_read",
-            "sys_fs_blkio_throttle_write"
+            "sys_fs_blkio_throttle_write",
+            "drbd_auto_diskful"
         ],
         "volume-definition": [
             "storage_pool_name",

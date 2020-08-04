@@ -1865,6 +1865,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_AUTO_DISKFUL",
+                "value": "auto-diskful",
+                "type": "string"
+        },
+        {
                 "name": "KEY_WRITECACHE_BLOCKSIZE",
                 "value": "Blocksize",
                 "type": "string"
