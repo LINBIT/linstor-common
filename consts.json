@@ -1572,6 +1572,11 @@
                 "value": "LstPhysicalStorage",
                 "type": "string"
         },
+                {
+                "name": "API_LST_SNAPSHOT_SHIPPINGS",
+                "value": "LstSnapShips",
+                "type": "string"
+        },
         {
                 "blockcomment": "Query APIs"
         },
@@ -2733,6 +2738,21 @@
                 "name": "VAL_SNAP_SHIP_NAME",
                 "value": "SnapshotShipping",
                 "type": "string"
+        },
+        {
+                "name": "SnapshotShipStatus",
+                "type": "enum",
+                "enumtype": "string",
+                "values": [
+                        {
+                                "name": "RUNNING",
+                                "value": "Running"
+                        },
+                        {
+                                "name": "COMPLETE",
+                                "value": "Complete"
+                        }
+                ]
         },
         {
                 "blockcomment": "Flag string values"
