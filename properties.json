@@ -541,6 +541,15 @@
             "info": "Bool if REST API should be enabled",
             "type": "boolean_true_false"
         },
+        "rest_disable_http_metrics": {
+            "internal": false,
+            "key": [
+                "NAMESPC_REST",
+                "KEY_DISABLE_HTTP_METRICS"
+            ],
+            "info": "Disable Prometheus /metrics on HTTP, if HTTPS is enabled",
+            "type": "boolean_true_false"
+        },
         "nvme_tr_type": {
             "internal": false,
             "key": [
@@ -991,6 +1000,7 @@
             "rest_listen_addr",
             "rest_listen_port",
             "rest_enabled",
+            "rest_disable_http_metrics",
             "nvme_tr_type",
             "nvme_port",
             "nvme_preferred_nic",

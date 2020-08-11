@@ -2489,6 +2489,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DISABLE_HTTP_METRICS",
+                "value": "disable-http-metrics",
+                "type": "string"
+        },
+        {
                 "blockcomment": "File system property keys"
         },
         {
