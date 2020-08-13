@@ -1880,6 +1880,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_AUTO_DISKFUL_ALLOW_CLEANUP",
+                "value": "auto-diskful-allow-cleanup",
+                "type": "string"
+        },
+        {
                 "name": "KEY_WRITECACHE_BLOCKSIZE",
                 "value": "Blocksize",
                 "type": "string"

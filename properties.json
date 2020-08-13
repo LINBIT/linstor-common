@@ -678,6 +678,15 @@
             "info": "Makes a resource diskful if it was continously diskless primary for X minutes",
             "type": "long"
         },
+        "drbd_auto_diskful_allow_cleanup": {
+            "internal": false,
+            "key": [
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_DRBD_AUTO_DISKFUL_ALLOW_CLEANUP"
+            ],
+            "info": "Allows this resource to be cleaned up after toggle-disk + resync is finished",
+            "type": "boolean_true_false"
+        },
         "writecache_pool_name": {
             "key": [
                 "NAMESPC_WRITECACHE",
@@ -1039,6 +1048,7 @@
             "drbd_auto_quorum",
             "drbd_auto_add_quorum_tie_breaker",
             "drbd_auto_diskful",
+            "drbd_auto_diskful_allow_cleanup",
             "writecache_pool_name",
             "writecache_size",
             "writecache_block_size",
@@ -1114,7 +1124,7 @@
             "autoplacer_max_throughput",
             "proxy_auto_enable",
             "site",
-            "drbd_auto_diskful"
+            "drbd_auto_diskful_allow_cleanup"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",
@@ -1163,6 +1173,7 @@
             "drbd_auto_quorum",
             "drbd_auto_add_quorum_tie_breaker",
             "drbd_auto_diskful",
+            "drbd_auto_diskful_allow_cleanup",
             "writecache_pool_name",
             "writecache_size",
             "writecache_block_size",
@@ -1200,7 +1211,7 @@
             "nvme_preferred_nic",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
-            "drbd_auto_diskful"
+            "drbd_auto_diskful_allow_cleanup"
         ],
         "volume-definition": [
             "storage_pool_name",
