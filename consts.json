@@ -2216,6 +2216,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_ZFS_CREATE_OPTIONS",
+                "value": "ZfscreateOptions",
+                "type": "string"
+        },
+        {
                 "name": "KEY_STOR_POOL_FILE_DIRECTORY",
                 "value": "FileDir",
                 "type": "string"

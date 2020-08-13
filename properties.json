@@ -76,6 +76,15 @@
             "value": "[a-zA-Z0-9_/-]+",
             "internal": true
         },
+        "stordriver_zfs_create_options": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_ZFS_CREATE_OPTIONS"
+            ],
+            "type": "regex",
+            "value": ".*",
+            "info": "Additional parameters added to every 'zfs create ... ' command"
+        },
         "stordriver_file_dir": {
             "key": [
                 "NAMESPC_STORAGE_DRIVER",
@@ -1040,6 +1049,7 @@
             "cache_blocksize",
             "cache_policy",
             "stordriver_lvcreate_options",
+            "stordriver_zfs_create_options",
             "storage_pool_openflex_api_host",
             "storage_pool_openflex_api_port",
             "storage_pool_openflex_user_name",
@@ -1082,6 +1092,7 @@
             "cache_blocksize",
             "cache_policy",
             "stordriver_lvcreate_options",
+            "stordriver_zfs_create_options",
             "storage_pool_openflex_api_host",
             "storage_pool_openflex_api_port",
             "storage_pool_openflex_user_name",
@@ -1111,6 +1122,7 @@
             "nvme_preferred_nic",
             "stordriver_lvcreate_type",
             "stordriver_lvcreate_options",
+            "stordriver_zfs_create_options",
             "stordriver_wait_timeout_after_create",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
@@ -1134,7 +1146,8 @@
             "nvme_tr_type",
             "nvme_port",
             "stordriver_lvcreate_type",
-            "stordriver_lvcreate_options",            
+            "stordriver_lvcreate_options",
+            "stordriver_zfs_create_options",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
             "drbd_auto_quorum",
@@ -1189,6 +1202,7 @@
             "fs_mkfsparameters",
             "stordriver_lvcreate_type",
             "stordriver_lvcreate_options",
+            "stordriver_zfs_create_options",
             "drbd_current_gi",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
