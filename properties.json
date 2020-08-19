@@ -1006,6 +1006,15 @@
             ],
             "type": "string",
             "info": "Node name of the snapshot shipping source"
+        },
+        "update_cache_interval":
+        {
+            "key": [
+                "KEY_UPDATE_CACHE_INTERVAL"
+            ],
+            "type": "long",
+            "info": "Interval for space cache background updates in seconds",
+            "default": "180"
         }
     },
     "objects": {
@@ -1064,7 +1073,8 @@
             "autoplacer_pre_select_script_timeout",
             "autoplacer_max_throughput",
             "proxy_auto_enable",
-            "site"
+            "site",
+            "update_cache_interval"
         ],
         "node": [
             "preferred_nic",

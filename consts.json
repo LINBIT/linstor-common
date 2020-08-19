@@ -2504,6 +2504,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_UPDATE_CACHE_INTERVAL",
+                "value": "UpdateCacheInterval",
+                "type": "string"
+        },
+        {
                 "blockcomment": "File system property keys"
         },
         {
