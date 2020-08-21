@@ -1538,6 +1538,16 @@
                 "type": "string"
         },
         {
+                "name": "API_DEL_ERROR_REPORT",
+                "value": "DelErrorReport",
+                "type": "string"
+        },
+        {
+                "name": "API_DEL_ERROR_REPORTS",
+                "value": "DelErrorReports",
+                "type": "string"
+        },
+        {
                 "name": "API_REQ_SOS_REPORT",
                 "value": "ReqSosReport",
                 "type": "string"
