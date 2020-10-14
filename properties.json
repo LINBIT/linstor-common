@@ -597,7 +597,7 @@
                 "NAMESPC_NODE",
                 "KEY_NODE_MAX_OFFLINE_TIME"
             ],
-            "info": "Time a node can be offline before it is declared DEAD in minutes",
+            "info": "Time a node can be offline before it is declared EVICTED in minutes",
             "type": "long",
             "default": "1 hour"
         },

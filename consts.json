@@ -2653,8 +2653,8 @@
                 "type": "string"
         },
         {
-                "name": "FLAG_DEAD",
-                "value": "DEAD",
+                "name": "FLAG_EVICTED",
+                "value": "EVICTED",
                 "type": "string"
         },
         {
