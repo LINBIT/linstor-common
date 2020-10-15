@@ -591,21 +591,21 @@
             "info": "Wait timeout for an external command in milliseconds",
             "type": "long"
         },
-        "node_max_offline_time": {
+        "auto_evict_after_time": {
             "internal": false,
             "key": [
-                "NAMESPC_NODE",
-                "KEY_NODE_MAX_OFFLINE_TIME"
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_AUTO_EVICT_AFTER_TIME"
             ],
             "info": "Time a node can be offline before it is declared EVICTED in minutes",
             "type": "long",
             "default": "1 hour"
         },
-        "max_disconnected_nodes": {
+        "auto_evict_max_disconnected_nodes": {
             "internal": false,
             "key": [
-                "NAMESPC_NODE",
-                "KEY_MAX_DISCONNECTED_NODES"
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_AUTO_EVICT_MAX_DISCONNECTED_NODES"
             ],
             "info": "Percentage(0-100) of nodes that can disconnect at the same time without the controller stopping the max_offline_time timer",
             "type": "range",
@@ -613,10 +613,11 @@
             "max": 100,
             "default": 20
         },
-        "min_replica_count": {
+        "auto_evict_min_replica_count": {
             "internal": false,
             "key": [
-                "KEY_MIN_REPLICA_COUNT"
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_AUTO_EVICT_MIN_REPLICA_COUNT"
             ],
             "info": "The minimum amount of replicas that should be present for a resource at all times.",
             "type": "long",
@@ -1000,9 +1001,9 @@
             "peer_slots_new_resource",
             "dm_stats",
             "rest_disable_http_metrics",
-            "node_max_offline_time",
-            "max_disconnected_nodes",
-            "min_replica_count",
+            "auto_evict_after_time",
+            "auto_evict_max_disconnected_nodes",
+            "auto_evict_min_replica_count",
             "nvme_tr_type",
             "nvme_port",
             "nvme_preferred_nic",
@@ -1057,7 +1058,7 @@
             "storage_pool_drbd_meta_name",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
-            "node_max_offline_time",
+            "auto_evict_after_time",
             "writecache_pool_name",
             "writecache_size",
             "writecache_opt_start_sector",
@@ -1124,7 +1125,7 @@
             "storage_pool_drbd_meta_name",
             "peer_slots_new_resource",
             "proxy_compression_type",
-            "min_replica_count",
+            "auto_evict_min_replica_count",
             "fs_type",
             "fs_mkfsparameters",
             "nvme_tr_type",

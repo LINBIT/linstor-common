@@ -1728,16 +1728,6 @@
                 "type": "string"
         },
         {
-                "name": "KEY_NODE_MAX_OFFLINE_TIME",
-                "value": "NodeMaxOfflineTime",
-                "type": "string"
-        },
-        {
-                "name": "KEY_MAX_DISCONNECTED_NODES",
-                "value": "MaxDisconnectedNodes",
-                "type": "string"
-        },
-        {
                 "name": "KEY_CUR_STLT_CONN_NAME",
                 "value": "CurStltConnName",
                 "type": "string"
@@ -1778,11 +1768,6 @@
         {
                 "name": "KEY_RSC_MIGRATE_FROM",
                 "value": "MigrateFrom",
-                "type": "string"
-        },
-        {
-                "name": "KEY_MIN_REPLICA_COUNT",
-                "value": "MinReplicaCount",
                 "type": "string"
         },
         {
@@ -1987,6 +1972,24 @@
         {
                 "name": "KEY_SITE",
                 "value": "Site",
+                "type": "string"
+        },
+        {
+                "blockcomment": "Auto-Evict property keys"
+        },
+        {
+                "name": "KEY_AUTO_EVICT_MIN_REPLICA_COUNT",
+                "value": "AutoEvictMinReplicaCount",
+                "type": "string"
+        },
+        {
+                "name": "KEY_AUTO_EVICT_AFTER_TIME",
+                "value": "AutoEvictAfterTime",
+                "type": "string"
+        },
+        {
+                "name": "KEY_AUTO_EVICT_MAX_DISCONNECTED_NODES",
+                "value": "AutoEvictMaxDisconnectedNodes",
                 "type": "string"
         },
         {
