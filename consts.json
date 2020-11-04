@@ -2418,6 +2418,16 @@
                 "type": "string"
         },
         {
+                "name": "KEY_SYS_FS_BLKIO_THROTTLE_READ_IOPS",
+                "value": "blkio_throttle_read_iops",
+                "type": "string"
+        },
+        {
+                "name": "KEY_SYS_FS_BLKIO_THROTTLE_WRITE_IOPS",
+                "value": "blkio_throttle_write_iops",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property values"
         },
         {

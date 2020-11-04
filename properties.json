@@ -579,6 +579,24 @@
             "info": "Sets the /sys/fs/cgroup/blkio/blkio.throttle.write_bps_device",
             "type": "long"
         },
+        "sys_fs_blkio_throttle_read_iops": {
+            "internal": false,
+            "key": [
+                "NAMESPC_SYS_FS",
+                "KEY_SYS_FS_BLKIO_THROTTLE_READ_IOPS"
+            ],
+            "info": "Sets the /sys/fs/cgroup/blkio/blkio.throttle.read_iops_device",
+            "type": "long"
+        },
+        "sys_fs_blkio_throttle_write_iops": {
+            "internal": false,
+            "key": [
+                "NAMESPC_SYS_FS",
+                "KEY_SYS_FS_BLKIO_THROTTLE_WRITE_IOPS"
+            ],
+            "info": "Sets the /sys/fs/cgroup/blkio/blkio.throttle.write_iops_device",
+            "type": "long"
+        },
         "search_domain": {
             "internal": false,
             "key": ["KEY_SEARCH_DOMAIN"],
@@ -1010,6 +1028,8 @@
             "stordriver_wait_timeout_after_create",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
+            "sys_fs_blkio_throttle_read_iops",
+            "sys_fs_blkio_throttle_write_iops",
             "search_domain",
             "ext_cmd_wait_to",
             "drbd_auto_quorum",
@@ -1058,6 +1078,8 @@
             "storage_pool_drbd_meta_name",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
+            "sys_fs_blkio_throttle_read_iops",
+            "sys_fs_blkio_throttle_write_iops",
             "auto_evict_after_time",
             "writecache_pool_name",
             "writecache_size",
@@ -1094,7 +1116,9 @@
         "storagepool-definition": [
             "max_oversubscription_ratio",
             "sys_fs_blkio_throttle_read",
-            "sys_fs_blkio_throttle_write"
+            "sys_fs_blkio_throttle_write",
+            "sys_fs_blkio_throttle_read_iops",
+            "sys_fs_blkio_throttle_write_iops"
         ],
         "storagepool": [
             "stordriver_pool_name",
@@ -1111,6 +1135,8 @@
             "stordriver_wait_timeout_after_create",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
+            "sys_fs_blkio_throttle_read_iops",
+            "sys_fs_blkio_throttle_write_iops",
             "storage_pool_openflex_api_host",
             "storage_pool_openflex_api_port",
             "storage_pool_openflex_user_name",
@@ -1135,6 +1161,8 @@
             "stordriver_zfs_create_options",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
+            "sys_fs_blkio_throttle_read_iops",
+            "sys_fs_blkio_throttle_write_iops",
             "drbd_auto_quorum",
             "drbd_auto_add_quorum_tie_breaker",
             "drbd_auto_diskful",
@@ -1174,6 +1202,8 @@
             "nvme_preferred_nic",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
+            "sys_fs_blkio_throttle_read_iops",
+            "sys_fs_blkio_throttle_write_iops",
             "drbd_auto_diskful_allow_cleanup"
         ],
         "volume-definition": [
@@ -1188,6 +1218,8 @@
             "drbd_current_gi",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
+            "sys_fs_blkio_throttle_read_iops",
+            "sys_fs_blkio_throttle_write_iops",
             "writecache_pool_name",
             "writecache_size",
             "writecache_opt_start_sector",
@@ -1208,7 +1240,9 @@
         ],
         "volume": [
             "sys_fs_blkio_throttle_read",
-            "sys_fs_blkio_throttle_write"
+            "sys_fs_blkio_throttle_write",
+            "sys_fs_blkio_throttle_read_iops",
+            "sys_fs_blkio_throttle_write_iops"
         ],
         "drbd-proxy": [
             "proxy_memlimit",
