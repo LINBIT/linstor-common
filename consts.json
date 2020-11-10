@@ -1582,9 +1582,14 @@
                 "value": "LstPhysicalStorage",
                 "type": "string"
         },
-                {
+        {
                 "name": "API_LST_SNAPSHOT_SHIPPINGS",
                 "value": "LstSnapShips",
+                "type": "string"
+        },
+        {
+                "name": "API_LST_PROPS_INFO",
+                "value": "LstPropsInfo",
                 "type": "string"
         },
         {

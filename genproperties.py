@@ -176,6 +176,8 @@ def lang_java(data):
                     _print(4,     '.values(')
                     _print(5,         '"%s"' % ('",\n' + _indent(5) + '"').join(sorted(propVal)))
                     _print(4,     ')')
+                elif propKey == "default":
+                    _print(4, '.dflt("%s")' % (propVal))
                 else:
                     _print(4,     '.%s("%s")' % (propKey, propVal))
         _print(4,             '.build()')
@@ -211,7 +213,7 @@ def _indent(indent_level):
 
 
 def _relevant_for_java(propKey):
-    return propKey not in ['default', 'drbd_option_name', 'unit_prefix', 'unit']
+    return propKey not in ['drbd_option_name', 'unit_prefix']
 
 
 def _as_java_rule_name(name):
