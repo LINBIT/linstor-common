@@ -540,7 +540,7 @@
             "info": "Preferred network interface to use"
         },
         "fs_type": {
-            "internal": true,
+            "internal": false,
             "key": [
                 "NAMESPC_FILESYSTEM",
                 "KEY_FS_TYPE"
