@@ -629,7 +629,7 @@
             "type": "range",
             "min": 0,
             "max": 100,
-            "default": 20
+            "default": 34
         },
         "auto_evict_min_replica_count": {
             "internal": false,
