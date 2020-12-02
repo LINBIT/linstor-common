@@ -2003,6 +2003,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_AUTO_EVICT_ALLOW_EVICTION",
+                "value": "AutoEvictAllowEviction",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Snapshot shipping property keys"
         },
         {

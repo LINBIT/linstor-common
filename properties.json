@@ -641,6 +641,16 @@
             "type": "long",
             "default": "The place count set for the resource group"
         },
+        "auto_evict_allow_eviction": {
+            "internal": false,
+            "key": [
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_AUTO_EVICT_ALLOW_EVICTION"
+            ],
+            "info": "If set to true on a node, it cannot be evicted anymore",
+            "type": "boolean_true_false",
+            "default": "true"
+        },
         "drbd_auto_quorum": {
             "internal": false,
             "key":  [
@@ -1022,6 +1032,7 @@
             "auto_evict_after_time",
             "auto_evict_max_disconnected_nodes",
             "auto_evict_min_replica_count",
+            "auto_evict_allow_eviction",
             "nvme_tr_type",
             "nvme_port",
             "nvme_preferred_nic",
@@ -1081,6 +1092,7 @@
             "sys_fs_blkio_throttle_read_iops",
             "sys_fs_blkio_throttle_write_iops",
             "auto_evict_after_time",
+            "auto_evict_allow_eviction",
             "writecache_pool_name",
             "writecache_size",
             "writecache_opt_start_sector",
