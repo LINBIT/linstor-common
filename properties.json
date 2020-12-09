@@ -200,6 +200,42 @@
             "value": "[0-9]+",
             "info": "Delay in milliseconds linstor waits between fetching the job status"
         },
+        "storage_pool_exos_vlm_type": {
+            "key": [
+                "NAMESPC_EXOS",
+                "KEY_STOR_POOL_EXOS_VLM_TYPE"
+            ],
+            "type": "symbol",
+            "values": [
+                "linear",
+                "virtual"
+            ],
+            "info": "linear: Volumes are created from Disk Groups (vdisks), virtual: Volumes are created from Pools which is a set of Disk Groups (vdisks)"
+        },
+        "storage_pool_exos_create_vlm_options": {
+            "key": [
+                "NAMESPC_EXOS",
+                "KEY_STOR_POOL_EXOS_CREATE_VOLUME_OPTIONS"
+            ],
+            "type": "string",
+            "info": "Any additional parameters appended to /create/volume/pool/${poolName}/size/${size}KiB/${vlmName}"
+        },
+        "storage_pool_exos_enclosure": {
+            "key": [
+                "NAMESPC_EXOS",
+                "KEY_STOR_POOL_EXOS_ENCLOSURE"
+            ],
+            "type": "string",
+            "info": "Name of the Exos enclosure"
+        },
+        "storage_pool_exos_pool_sn": {
+            "key": [
+                "NAMESPC_EXOS",
+                "KEY_STOR_POOL_EXOS_POOL_SN"
+            ],
+            "type": "string",
+            "info": "Serial number of the Exos pool"
+        },
         "preferred_nic": {
             "key": [
                 "KEY_STOR_POOL_PREF_NIC"
@@ -1102,6 +1138,8 @@
             "storage_pool_openflex_user_pw",
             "storage_pool_openflex_job_wait_delay",
             "storage_pool_openflex_job_wait_max_count",
+            "storage_pool_exos_vlm_type",
+            "storage_pool_exos_create_vlm_options",
             "autoplacer_strat_weights_max_freespace",
             "autoplacer_strat_weights_min_reserved_space",
             "autoplacer_strat_weights_min_rsc_count",
@@ -1151,6 +1189,8 @@
             "storage_pool_openflex_stor_dev_host",
             "storage_pool_openflex_job_wait_delay",
             "storage_pool_openflex_job_wait_max_count",
+            "storage_pool_exos_vlm_type",
+            "storage_pool_exos_create_vlm_options",
             "autoplacer_max_throughput",
             "proxy_auto_enable",
             "site",
@@ -1187,6 +1227,10 @@
             "storage_pool_openflex_stor_dev",
             "storage_pool_openflex_stor_dev_host",
             "storage_pool_openflex_stor_pool",
+            "storage_pool_exos_vlm_type",
+            "storage_pool_exos_create_vlm_options",
+            "storage_pool_exos_enclosure",
+            "storage_pool_exos_pool_sn",
             "autoplacer_max_throughput"
         ],
         "resource-definition": [
@@ -1234,7 +1278,9 @@
             "snapshot_shipping_keep",
             "auto_snapshot_run_every",
             "auto_snapshot_keep",
-            "auto_snapshot_next_id"
+            "auto_snapshot_next_id",
+            "storage_pool_exos_vlm_type",
+            "storage_pool_exos_create_vlm_options"
         ],
         "resource": [
             "storage_pool_name",
@@ -1248,7 +1294,8 @@
             "sys_fs_blkio_throttle_write",
             "sys_fs_blkio_throttle_read_iops",
             "sys_fs_blkio_throttle_write_iops",
-            "drbd_auto_diskful_allow_cleanup"
+            "drbd_auto_diskful_allow_cleanup",
+            "storage_pool_exos_create_vlm_options"
         ],
         "volume-definition": [
             "storage_pool_name",
@@ -1280,7 +1327,9 @@
             "cache_cache_pool",
             "cache_cache_size",
             "cache_blocksize",
-            "cache_policy"
+            "cache_policy",
+            "storage_pool_exos_vlm_type",
+            "storage_pool_exos_create_vlm_options"
         ],
         "volume": [
             "sys_fs_blkio_throttle_read",

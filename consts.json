@@ -842,7 +842,7 @@
                 "type": "BOR"
         },
         {
-                "name": "FAIL_POOL_EXHAUSTED_OPENFLEX_TCP_PORT",
+                "name": "FAIL_POOL_EXHAUSTED_SPECIAL_SATELLTE_TCP_PORT",
                 "value": [805, "MASK_ERROR"],
                 "type": "BOR"
         },
@@ -2259,6 +2259,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_EXOS",
+                "value": "StorDriver/Exos",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
@@ -2389,6 +2394,46 @@
         {
                 "name": "KEY_OF_TARGET_PORT_AUTO_RANGE",
                 "value": "OpenflexTargetPortAutoRange",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_EXOS_API_IP",
+                "value": "IP",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_EXOS_API_PORT",
+                "value": "Port",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_EXOS_API_USER",
+                "value": "Username",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_EXOS_API_PASSWORD",
+                "value": "Password",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_EXOS_VLM_TYPE",
+                "value": "VolumeType",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_EXOS_CREATE_VOLUME_OPTIONS",
+                "value": "CreateVolumeOptions",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_EXOS_ENCLOSURE",
+                "value": "Enclosure",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_EXOS_POOL_SN",
+                "value": "PoolSN",
                 "type": "string"
         },
         {
@@ -2579,6 +2624,11 @@
         {
                 "name": "VAL_NODE_TYPE_OPENFLEX_TARGET",
                 "value": "Openflex_Target",
+                "type": "string"
+        },
+        {
+                "name": "VAL_NODE_TYPE_EXOS_TARGET",
+                "value": "Exos_Target",
                 "type": "string"
         },
         {
@@ -2847,6 +2897,10 @@
                         {
                                 "name": "OPENFLEX",
                                 "value": "openflex"
+                        },
+                        {
+                                "name": "EXOS",
+                                "value": "exos"
                         },
                         {
                                 "name": "WRITECACHE",
