@@ -17,6 +17,15 @@ _CategoryNamespaces = {
     'peer-device-options': "DrbdOptions/PeerDevice"
 }
 
+# map a CategoryNamespace to a .res file section
+_ResfileSections = {
+    'DrbdOptions/Net': 'net',
+    'DrbdOptions/Disk': 'disk',
+    'DrbdOptions/Resource': 'options',
+    'DrbdOptions/PeerDevice': 'disk',
+    'DrbdOptions/Handlers': 'handlers'
+}
+
 _ObjectCategories = {
     "controller": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options'],
     "resource-definition": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options'],
@@ -48,10 +57,12 @@ def create_and_add_handlers_option(properties, option_name):
     if option_name in properties:
         raise RuntimeError("drbd option name already in use: " + option_name)
 
+    cmd_namespace = 'DrbdOptions/Handlers'
     properties[option_name] = {
         'internal': True,
-        'key':  'DrbdOptions/Handlers/' + option_name,
+        'key':  cmd_namespace + '/' + option_name,
         'drbd_option_name': option_name,
+        'drbd_res_file_section': _ResfileSections[cmd_namespace],
         'type': 'string'
     }
 
@@ -125,7 +136,8 @@ def convert_option(cmd_namespace, option_name, option):
     prop = {
         'internal': True,
         'key': cmd_namespace + '/' + option_name,
-        'drbd_option_name': option_name
+        'drbd_option_name': option_name,
+        'drbd_res_file_section': _ResfileSections[cmd_namespace]
     }
 
     if option_type == 'string':
