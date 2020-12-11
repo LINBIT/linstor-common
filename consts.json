@@ -2056,6 +2056,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_TCP_PORT_RANGE",
+                "value": "TcpPortRange",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property namespaces"
         },
         {

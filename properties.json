@@ -1012,6 +1012,16 @@
             "type": "string",
             "info": "Node name of the snapshot shipping source"
         },
+        "snapshot_shipping_port_range":
+        {
+            "key": [
+                "NAMESPC_SNAPSHOT_SHIPPING",
+                "KEY_TCP_PORT_RANGE"
+            ],
+            "type": "regex",
+            "value": "[0-9]+-[0-9]+",
+            "info": "Range for allocation of snapshot shipping TCP ports"
+        },
         "update_cache_interval":
         {
             "key": [
@@ -1081,7 +1091,8 @@
             "autoplacer_max_throughput",
             "proxy_auto_enable",
             "site",
-            "update_cache_interval"
+            "update_cache_interval",
+            "snapshot_shipping_port_range"
         ],
         "node": [
             "preferred_nic",
