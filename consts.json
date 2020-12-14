@@ -359,6 +359,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_NODE_HAS_USED_RSC",
+                "value": [232, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
