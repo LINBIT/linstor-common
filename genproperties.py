@@ -213,7 +213,7 @@ def _indent(indent_level):
 
 
 def _relevant_for_java(propKey):
-    return propKey not in ['drbd_option_name', 'unit_prefix']
+    return propKey not in ['drbd_option_name', 'unit_prefix', 'drbd_res_file_section']
 
 
 def _as_java_rule_name(name):
