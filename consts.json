@@ -1091,6 +1091,11 @@
                 "type": "BOR"
         },
         {
+                "name": "INFO_RSC_ALREADY_EXISTS",
+                "value": [10008, "MASK_INFO"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Special codes"
         },
         {
