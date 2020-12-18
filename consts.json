@@ -1500,6 +1500,11 @@
                 "type": "string"
         },
         {
+                "name": "API_NODE_RESTORE",
+                "value": "NodeRestore",
+                "type": "string"
+        },
+        {
                 "blockcomment": "List object APIs"
         },
         {
