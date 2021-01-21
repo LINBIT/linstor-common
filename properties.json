@@ -692,6 +692,15 @@
             "info": "Allows this resource to be cleaned up after toggle-disk + resync is finished",
             "type": "boolean_true_false"
         },
+        "drbd_auto_verify_algo_disable": {
+            "internal": false,
+            "key": [
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_DRBD_DISABLE_AUTO_VERIFY_ALGO"
+            ],
+            "info": "If set to true it will disable automatic setting of DRBD verify algorithm",
+            "type": "boolean_true_false"
+        },
         "writecache_pool_name": {
             "key": [
                 "NAMESPC_WRITECACHE",
@@ -1057,6 +1066,7 @@
             "drbd_auto_add_quorum_tie_breaker",
             "drbd_auto_diskful",
             "drbd_auto_diskful_allow_cleanup",
+            "drbd_auto_verify_algo_disable",
             "writecache_pool_name",
             "writecache_size",
             "writecache_opt_start_sector",
@@ -1190,6 +1200,7 @@
             "drbd_auto_add_quorum_tie_breaker",
             "drbd_auto_diskful",
             "drbd_auto_diskful_allow_cleanup",
+            "drbd_auto_verify_algo_disable",
             "writecache_pool_name",
             "writecache_size",
             "writecache_opt_start_sector",
