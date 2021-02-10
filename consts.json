@@ -1038,6 +1038,11 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_RSC_DEACTIVATED",
+                "value": [1018, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "name": "WARN_NOT_FOUND",
                 "value": [3000, "MASK_WARN"],
                 "type": "BOR"
