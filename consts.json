@@ -2407,6 +2407,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_EXOS_API_IP_ENV",
+                "value": "IPEnv",
+                "type": "string"
+        },
+        {
                 "name": "KEY_STOR_POOL_EXOS_API_PORT",
                 "value": "Port",
                 "type": "string"
@@ -2417,8 +2422,18 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_EXOS_API_USER_ENV",
+                "value": "UsernameEnv",
+                "type": "string"
+        },
+        {
                 "name": "KEY_STOR_POOL_EXOS_API_PASSWORD",
                 "value": "Password",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_EXOS_API_PASSWORD_ENV",
+                "value": "PasswordEnv",
                 "type": "string"
         },
         {
