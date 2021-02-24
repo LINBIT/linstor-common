@@ -1718,6 +1718,11 @@
                 "type": "string"
         },
         {
+                "name": "API_LST_BACKUPS",
+                "value": "LstBackups",
+                "type": "string"
+        },
+        {
                 "name": "API_LST_PROPS_INFO",
                 "value": "LstPropsInfo",
                 "type": "string"
@@ -2307,6 +2312,11 @@
         {
                 "name": "KEY_BACKUP_S3_ENDPOINT",
                 "value": "BackupS3Endpoint",
+                "type": "string"
+        },
+        {
+                "name": "KEY_BACKUP_TIMEOUT",
+                "value": "BackupTimeout",
                 "type": "string"
         },
         {

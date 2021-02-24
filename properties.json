@@ -1254,6 +1254,17 @@
             "type": "string",
             "info": "The endpoint (base url, e.g. s3.us-west-1.amazonaws.com) to be used when shipping backups"
         },
+        "backup_shipping_timeout":
+        {
+            "key": [
+                "NAMESPC_BACKUP_SHIPPING",
+                "KEY_BACKUP_TIMEOUT"
+            ],
+            "type": "long",
+            "info": "The timeout in seconds to be used for API-requests during backup list and backup delete",
+            "default": "5",
+            "unit": "seconds"
+        },
         "update_cache_interval":
         {
             "key": [
