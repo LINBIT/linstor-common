@@ -360,7 +360,7 @@
         },
         {
                 "name": "FAIL_NODE_HAS_USED_RSC",
-                "value": [232, "MASK_ERROR"],
+                "value": [233, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
