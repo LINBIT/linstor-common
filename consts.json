@@ -1745,6 +1745,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_AUTO_VERIFY_ALGO_ALLOWED_USER",
+                "value": "auto-verify-algo-allowed-user-list",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Node property keys"
         },
         {

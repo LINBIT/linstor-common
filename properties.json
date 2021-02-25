@@ -701,6 +701,15 @@
             "info": "If set to true it will disable automatic setting of DRBD verify algorithm",
             "type": "boolean_true_false"
         },
+        "drbd_auto_verify_algo_allowed_user": {
+            "internal": false,
+            "key": [
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_DRBD_AUTO_VERIFY_ALGO_ALLOWED_USER"
+            ],
+            "info": "A list of verify algorithms allowed by user, semicolon separated",
+            "type": "string"
+        },
         "writecache_pool_name": {
             "key": [
                 "NAMESPC_WRITECACHE",
@@ -1067,6 +1076,7 @@
             "drbd_auto_diskful",
             "drbd_auto_diskful_allow_cleanup",
             "drbd_auto_verify_algo_disable",
+            "drbd_auto_verify_algo_allowed_user",
             "writecache_pool_name",
             "writecache_size",
             "writecache_opt_start_sector",
