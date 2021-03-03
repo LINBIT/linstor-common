@@ -149,6 +149,11 @@
                 "type": "long"
         },
         {
+                "name": "MASK_BACKUP",
+                "value": "0x0000000000080000L",
+                "type": "long"
+        },
+        {
                 "blockcomment": "Codes"
         },
         {
@@ -369,7 +374,7 @@
                 "type": "BOR"
         },
         {
-                "name": "FAIL_INVLD_RSC_GRP_NAME",
+                "name": "FAIL_INVLD_REQUEST",
                 "value": [234, "MASK_ERROR"],
                 "type": "BOR"
         },
@@ -381,6 +386,16 @@
         {
                 "name": "FAIL_INVLD_EXT_FILE",
                 "value": [236, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_INVLD_RSC_GRP_NAME",
+                "value": [237, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_INVLD_BACKUP_CONFIG",
+                "value": [238, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -1538,6 +1553,11 @@
         {
                 "name": "API_DEL_VLM_GRP",
                 "value": "DelVlmGrp",
+                "type": "string"
+        },
+        {
+                "name": "API_DEL_BACKUP",
+                "value": "DelBackup",
                 "type": "string"
         },
         {
