@@ -2249,6 +2249,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_DEV_SYMLINKS",
+                "value": "Device/Symlinks",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
