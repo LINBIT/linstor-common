@@ -1510,6 +1510,11 @@
                 "type": "string"
         },
         {
+                "name": "API_NODE_EVICT",
+                "value": "NodeEvict",
+                "type": "string"
+        },
+        {
                 "blockcomment": "List object APIs"
         },
         {
