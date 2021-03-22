@@ -462,6 +462,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_NOT_FOUND_EXOS_ENCLOSURE",
+                "value": [319, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 400-499: access denied failures"
         },
         {
@@ -695,6 +700,11 @@
         {
                 "name": "FAIL_EXISTS_SNAPSHOT_SHIPPING",
                 "value": [525, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_EXISTS_EXOS_ENCLOSURE",
+                "value": [526, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -1260,6 +1270,11 @@
                 "type": "string"
         },
         {
+                "name": "API_CRT_EXOS_ENCLOSURE",
+                "value": "CrtExosEnclosure",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Modify object APIs"
         },
         {
@@ -1383,6 +1398,16 @@
                 "type": "string"
         },
         {
+                "name": "API_MOD_EXOS_DFLTS",
+                "value": "ModifyExosDefaults",
+                "type": "string"
+        },
+        {
+                "name": "API_MOD_EXOS_ENCLOSURE",
+                "value": "ModExosEnclosure",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Delete object APIs"
         },
         {
@@ -1463,6 +1488,11 @@
         {
                 "name": "API_LOST_STOR_POOL",
                 "value": "LostStorPool",
+                "type": "string"
+        },
+        {
+                "name": "API_DEL_EXOS_ENCLOSURE",
+                "value": "DelExosEnclosure",
                 "type": "string"
         },
         {
@@ -1630,6 +1660,31 @@
         {
                 "name": "API_LST_PROPS_INFO",
                 "value": "LstPropsInfo",
+                "type": "string"
+        },
+        {
+                "name": "API_LST_EXOS_DFLTS",
+                "value": "LstExosDefaults",
+                "type": "string"
+        },
+        {
+                "name": "API_LST_EXOS_ENCLOSURES",
+                "value": "LstExosEnclosures",
+                "type": "string"
+        },
+        {
+                "name": "API_EXOS_ENCLOSURE_EVENTS",
+                "value": "ExosEvents",
+                "type": "string"
+        },
+        {
+                "name": "API_EXOS_EXEC",
+                "value": "ExosExec",
+                "type": "string"
+        },
+        {
+                "name": "API_EXOS_MAP",
+                "value": "ExosMap",
                 "type": "string"
         },
         {
