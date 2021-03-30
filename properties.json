@@ -516,7 +516,7 @@
                 "rdma",
                 "tcp"
             ],
-            "info": "NVMe transportion type"
+            "info": "NVMe transportation type"
         },
         "nvme_port": {
             "internal": false,
@@ -657,7 +657,7 @@
                 "NAMESPC_DRBD_OPTIONS",
                 "KEY_DRBD_AUTO_QUORUM"
             ],
-            "info": "Enables automatic setting of the 'quroum' and 'on-no-quroum' property",
+            "info": "Enables automatic setting of the 'quorum' and 'on-no-quorum' property",
             "type": "symbol",
             "values": [
                 "io-error",
@@ -680,7 +680,7 @@
                 "NAMESPC_DRBD_OPTIONS",
                 "KEY_DRBD_AUTO_DISKFUL"
             ],
-            "info": "Makes a resource diskful if it was continously diskless primary for X minutes",
+            "info": "Makes a resource diskful if it was continuously diskless primary for X minutes",
             "type": "long"
         },
         "drbd_auto_diskful_allow_cleanup": {
@@ -775,7 +775,7 @@
                 "KEY_WRITECACHE_OPTION_AUTOCOMMIT_BLOCKS"
             ],
             "type": "long",
-            "info": "when the application writes this amount of blocks without issuing the FLUSH request, the blocks are automatically commited",
+            "info": "when the application writes this amount of blocks without issuing the FLUSH request, the blocks are automatically committed",
             "default": "64 for pmem, 65536 for ssd"
         },
         "writecache_opt_autocommit_time":
@@ -785,7 +785,7 @@
                 "KEY_WRITECACHE_OPTION_AUTOCOMMIT_TIME"
             ],
             "type": "long",
-            "info": "autocommit time in milliseconds. The data is automatically commited if this time passes and no FLUSH request is received",
+            "info": "autocommit time in milliseconds. The data is automatically committed if this time passes and no FLUSH request is received",
             "default": "1000"
         },
         "writecache_opt_fua":
@@ -890,7 +890,7 @@
                 "smq",
                 "cleaner"
             ],
-            "info": "Replacemant policy",
+            "info": "Replacement policy",
             "default": "smq"
         },
         "autoplacer_strat_weights_max_freespace":
