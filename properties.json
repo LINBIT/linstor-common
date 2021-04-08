@@ -1332,6 +1332,8 @@
             "storage_pool_exos_create_vlm_options"
         ],
         "volume": [
+            "storage_pool_name",
+            "storage_pool_drbd_meta_name",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
             "sys_fs_blkio_throttle_read_iops",
