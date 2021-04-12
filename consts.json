@@ -1405,6 +1405,11 @@
                 "type": "string"
         },
         {
+                "name": "API_SHIP_BACKUP",
+                "value": "ShipBackup",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Modify object APIs"
         },
         {
