@@ -2314,8 +2314,8 @@
                 "type": "string"
         },
         {
-                "name": "NAMESPC_DEV_SYMLINKS",
-                "value": "Device/Symlinks",
+                "name": "NAMESPC_STLT_DEV_SYMLINKS",
+                "value": "Satellite/Device/Symlinks",
                 "type": "string"
         },
         {
