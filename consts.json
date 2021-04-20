@@ -59,6 +59,11 @@
                 "type": "long"
         },
         {
+                "name": "MASK_EXT_FILES",
+                "value": "0x0000000000500000L",
+                "type": "long"
+        },
+        {
                 "name": "MASK_PHYSICAL_DEVICE",
                 "value": "0x00000000004C0000L",
                 "type": "long"
@@ -364,6 +369,21 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_RSC_GRP_NAME",
+                "value": [234, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_INVLD_EXT_FILE_NAME",
+                "value": [235, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_INVLD_EXT_FILE",
+                "value": [236, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -464,6 +484,11 @@
         {
                 "name": "FAIL_NOT_FOUND_EXOS_ENCLOSURE",
                 "value": [319, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_NOT_FOUND_EXT_FILE",
+                "value": [320, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -577,6 +602,11 @@
         {
                 "name": "FAIL_ACC_DENIED_SNAP_DFN",
                 "value": [421, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_ACC_DENIED_EXT_FILE",
+                "value": [422, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -1688,6 +1718,11 @@
                 "type": "string"
         },
         {
+                "name": "API_LST_EXT_FILES",
+                "value": "LstExtFiles",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Query APIs"
         },
         {
@@ -1764,6 +1799,29 @@
         {
                 "name": "API_ENTER_CRYPT_PASS",
                 "value": "EnterCryptPass",
+                "type": "string"
+        },
+        {
+                "blockcomment": "External files APIs"
+        },
+        {
+                "name": "API_SET_EXT_FILE",
+                "value": "SetExtFile",
+                "type": "string"
+        },
+        {
+                "name": "API_DEL_EXT_FILE",
+                "value": "DeleteExtFile",
+                "type": "string"
+        },
+        {
+                "name": "API_DEPLOY_EXT_FILE",
+                "value": "DeployExtFile",
+                "type": "string"
+        },
+        {
+                "name": "API_UNDEPLOY_EXT_FILE",
+                "value": "UndeployExtFile",
                 "type": "string"
         },
         {
@@ -2776,6 +2834,14 @@
         {
                 "name": "KEY_EXT_CMD_WAIT_TO",
                 "value": "ExtCmdWaitTimeout",
+                "type": "string"
+        },
+        {
+                "blockcomment": "External files keys"
+        },
+        {
+                "name": "KEY_EXT_FILE",
+                "value": "ExtFile",
                 "type": "string"
         },
         {
