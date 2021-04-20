@@ -154,6 +154,11 @@
                 "type": "long"
         },
         {
+                "name": "MASK_REMOTE",
+                "value": "0x0000000000040000L",
+                "type": "long"
+        },
+        {
                 "blockcomment": "Codes"
         },
         {
@@ -399,6 +404,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_REMOTE_NAME",
+                "value": [239, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -504,6 +514,11 @@
         {
                 "name": "FAIL_NOT_FOUND_EXT_FILE",
                 "value": [320, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_NOT_FOUND_REMOTE",
+                "value": [321, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -622,6 +637,11 @@
         {
                 "name": "FAIL_ACC_DENIED_EXT_FILE",
                 "value": [422, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_ACC_DENIED_REMOTE",
+                "value": [423, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -750,6 +770,11 @@
         {
                 "name": "FAIL_EXISTS_EXOS_ENCLOSURE",
                 "value": [526, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_EXISTS_REMOTE",
+                "value": [527, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -1350,6 +1375,11 @@
                 "type": "string"
         },
         {
+                "name": "API_SET_REMOTE",
+                "value": "SetRemote",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Modify object APIs"
         },
         {
@@ -1745,6 +1775,11 @@
         {
                 "name": "API_LST_PROPS_INFO",
                 "value": "LstPropsInfo",
+                "type": "string"
+        },
+        {
+                "name": "API_LST_REMOTE",
+                "value": "LstRemote",
                 "type": "string"
         },
         {
@@ -2337,6 +2372,11 @@
         {
                 "name": "KEY_BACKUP_TIMEOUT",
                 "value": "BackupTimeout",
+                "type": "string"
+        },
+        {
+                "name": "KEY_REMOTE",
+                "value": "Remote",
                 "type": "string"
         },
         {
