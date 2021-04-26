@@ -653,7 +653,7 @@
             ],
             "info": "Time a node can be offline before it is declared EVICTED in minutes",
             "type": "long",
-            "default": "1 hour"
+            "default": 60
         },
         "auto_evict_max_disconnected_nodes": {
             "internal": false,
