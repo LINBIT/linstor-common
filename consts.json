@@ -895,6 +895,11 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_NOT_ENOUGH_FREE_SPACE",
+                "value": [980, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_ONLY_ONE_ACT_RSC_PER_SHARED_STOR_POOL_ALLOWED",
                 "value": [981, "MASK_ERROR"],
                 "type": "BOR"
