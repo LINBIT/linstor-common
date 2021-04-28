@@ -1,11 +1,11 @@
 <root>
 <!--
-DRBDADM_BUILDTAG=GIT-hash:\ 91629a4cce49ca0d4f917fe0bffa25cfe8db3052\ build\ by\ buildd@lcy01-amd64-020\,\ 2020-02-18\ 11:53:23
+DRBDADM_BUILDTAG=GIT-hash:\ a7820b3c14497a34f955ba5ce56cf1bc9d2d353e\ build\ by\ @buildsystem\,\ 2021-02-09\ 09:27:28
 DRBDADM_API_VERSION=2
-DRBD_KERNEL_VERSION_CODE=0x090016
-DRBD_KERNEL_VERSION=9.0.22
-DRBDADM_VERSION_CODE=0x090c00
-DRBDADM_VERSION=9.12.0
+DRBD_KERNEL_VERSION_CODE=0x09001c
+DRBD_KERNEL_VERSION=9.0.28
+DRBDADM_VERSION_CODE=0x091000
+DRBDADM_VERSION=9.16.0
 -->
 <command name="disk-options">
 	<summary>Change the disk options of an attached lower-level device.</summary>
@@ -114,7 +114,7 @@ DRBDADM_VERSION=9.12.0
 		<unit>bytes</unit>
 	</option>
 	<option name="c-max-rate" type="numeric">
-		<min>250</min>
+		<min>0</min>
 		<max>4194304</max>
 		<default>102400</default>
 		<unit_prefix>k</unit_prefix>
