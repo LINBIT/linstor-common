@@ -2345,31 +2345,6 @@
                 "blockcomment": "Backup shipping property keys"
         },
         {
-                "name": "KEY_BACKUP_S3_BUCKET",
-                "value": "BackupS3Bucket",
-                "type": "string"
-        },
-        {
-                "name": "KEY_BACKUP_S3_ACCESS_KEY",
-                "value": "BackupS3AccessKey",
-                "type": "string"
-        },
-        {
-                "name": "KEY_BACKUP_S3_SECRET_KEY",
-                "value": "BackupS3SecretKey",
-                "type": "string"
-        },
-        {
-                "name": "KEY_BACKUP_S3_REGION",
-                "value": "BackupS3Region",
-                "type": "string"
-        },
-        {
-                "name": "KEY_BACKUP_S3_ENDPOINT",
-                "value": "BackupS3Endpoint",
-                "type": "string"
-        },
-        {
                 "name": "KEY_BACKUP_TIMEOUT",
                 "value": "BackupTimeout",
                 "type": "string"

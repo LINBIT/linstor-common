@@ -1209,51 +1209,6 @@
             "value": "[0-9]+-[0-9]+",
             "info": "Range for allocation of snapshot shipping TCP ports"
         },
-        "backup_shipping_s3_bucket":
-        {
-            "key": [
-                "NAMESPC_BACKUP_SHIPPING",
-                "KEY_BACKUP_S3_BUCKET"
-            ],
-            "type": "string",
-            "info": "The bucket name to be used when shipping backups"
-        },
-        "backup_shipping_s3_access_key":
-        {
-            "key": [
-                "NAMESPC_BACKUP_SHIPPING",
-                "KEY_BACKUP_S3_ACCESS_KEY"
-            ],
-            "type": "string",
-            "info": "The access key to be used when shipping backups"
-        },
-        "backup_shipping_s3_secret_key":
-        {
-            "key": [
-                "NAMESPC_BACKUP_SHIPPING",
-                "KEY_BACKUP_S3_SECRET_KEY"
-            ],
-            "type": "string",
-            "info": "The secret key to be used when shipping backups"
-        },
-        "backup_shipping_s3_region":
-        {
-            "key": [
-                "NAMESPC_BACKUP_SHIPPING",
-                "KEY_BACKUP_S3_REGION"
-            ],
-            "type": "string",
-            "info": "The region to be used for encryption when shipping backups"
-        },
-        "backup_shipping_s3_endpoint":
-        {
-            "key": [
-                "NAMESPC_BACKUP_SHIPPING",
-                "KEY_BACKUP_S3_ENDPOINT"
-            ],
-            "type": "string",
-            "info": "The endpoint (base url, e.g. s3.us-west-1.amazonaws.com) to be used when shipping backups"
-        },
         "backup_shipping_timeout":
         {
             "key": [
@@ -1354,11 +1309,7 @@
             "site",
             "update_cache_interval",
             "snapshot_shipping_port_range",
-            "backup_shipping_s3_bucket",
-            "backup_shipping_s3_access_key",
-            "backup_shipping_s3_secret_key",
-            "backup_shipping_s3_region",
-            "backup_shipping_s3_endpoint"
+            "backup_shipping_timeout"
         ],
         "node": [
             "preferred_nic",
