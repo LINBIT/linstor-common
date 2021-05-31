@@ -2110,6 +2110,49 @@
                 "type": "string"
         },
         {
+                "blockcomment": "BCache property keys"
+        },
+        {
+                "name": "KEY_BCACHE_POOL_NAME",
+                "value": "PoolName",
+                "type": "string"
+        },
+        {
+                "name": "KEY_BCACHE_SIZE",
+                "value": "Size",
+                "type": "string"
+        },
+        {
+                "name": "KEY_BCACHE_BLOCKSIZE",
+                "value": "Blocksize",
+                "type": "string"
+        },
+        {
+                "name": "KEY_BCACHE_BUCKETSIZE",
+                "value": "Bucketsize",
+                "type": "string"
+        },
+        {
+                "name": "KEY_BCACHE_DATA_OFFSET",
+                "value": "DataOffset",
+                "type": "string"
+        },
+        {
+                "name": "KEY_BCACHE_WRITEBACK",
+                "value": "Writeback",
+                "type": "string"
+        },
+        {
+                "name": "KEY_BCACHE_DISCARD",
+                "value": "Discard",
+                "type": "string"
+        },
+        {
+                "name": "KEY_BCACHE_CACHE_REPLACEMENT_POLICY",
+                "value": "CacheReplacementPolicy",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Autoplace property keys"
         },
         {
@@ -2354,6 +2397,11 @@
         {
                 "name": "NAMESPC_CACHE_POLICY_ARGS",
                 "value": "Cache/Policy",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_BCACHE",
+                "value": "BCache",
                 "type": "string"
         },
         {
