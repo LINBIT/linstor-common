@@ -1280,7 +1280,8 @@
             "auto_snapshot_keep",
             "auto_snapshot_next_id",
             "storage_pool_exos_vlm_type",
-            "storage_pool_exos_create_vlm_options"
+            "storage_pool_exos_create_vlm_options",
+            "preferred_nic"
         ],
         "resource": [
             "storage_pool_name",
