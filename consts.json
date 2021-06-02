@@ -3074,35 +3074,35 @@
                 "values": [
                         {
                                 "name": "DRBD",
-                                "value": "drbd"
+                                "value": "DRBD"
                         },
                         {
                                 "name": "LUKS",
-                                "value": "luks"
+                                "value": "LUKS"
                         },
                         {
                                 "name": "STORAGE",
-                                "value": "storage"
+                                "value": "STORAGE"
                         },
                         {
                                 "name": "NVME",
-                                "value": "nvme"
+                                "value": "NVME"
                         },
                         {
                                 "name": "OPENFLEX",
-                                "value": "openflex"
+                                "value": "OPENFLEX"
                         },
                         {
                                 "name": "EXOS",
-                                "value": "exos"
+                                "value": "EXOS"
                         },
                         {
                                 "name": "WRITECACHE",
-                                "value": "writecache"
+                                "value": "WRITECACHE"
                         },
                         {
                                 "name": "CACHE",
-                                "value": "cache"
+                                "value": "CACHE"
                         }
                 ]
         },
