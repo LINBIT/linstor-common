@@ -942,7 +942,17 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_POOL_EXHAUSTED_BACKUP_SHIPPING_TCP_PORT",
+                "value": [807, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Other failures"
+        },
+        {
+                "name": "FAIL_BACKUP_INCOMPATIBLE_VERSION",
+                "value": [978, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_DEPENDEND_BACKUP",
@@ -1145,6 +1155,11 @@
         {
                 "name": "WARN_RSC_DEACTIVATED",
                 "value": [1018, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
+                "name": "WARN_BACKUP_DL_ONLY",
+                "value": [1019, "MASK_WARN"],
                 "type": "BOR"
         },
         {
