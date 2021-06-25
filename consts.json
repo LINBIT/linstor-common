@@ -2563,6 +2563,16 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_CLUSTER",
+                "value": "Cluster",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_CLUSTER_REMOTE",
+                "value": "Cluster/Remote",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
