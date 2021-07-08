@@ -2623,6 +2623,36 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_REMOTE_SPDK_API_HOST",
+                "value": "RemoteSpdk/ApiHost",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_REMOTE_SPDK_API_PORT",
+                "value": "RemoteSpdk/ApiPort",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_REMOTE_SPDK_API_USER_NAME",
+                "value": "RemoteSpdk/UserName",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_REMOTE_SPDK_API_USER_PW",
+                "value": "RemoteSpdk/UserPassword",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_REMOTE_SPDK_API_USER_NAME_ENV",
+                "value": "RemoteSpdk/UserNameEnv",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_REMOTE_SPDK_API_USER_PW_ENV",
+                "value": "RemoteSpdk/UserPasswordEnv",
+                "type": "string"
+        },
+        {
                 "name": "KEY_PREF_NIC",
                 "value": "PrefNic",
                 "type": "string"
@@ -2810,6 +2840,11 @@
         {
                 "name": "VAL_NODE_TYPE_OPENFLEX_TARGET",
                 "value": "Openflex_Target",
+                "type": "string"
+        },
+        {
+                "name": "VAL_NODE_TYPE_REMOTE_SPDK",
+                "value": "Remote_Spdk",
                 "type": "string"
         },
         {

@@ -236,6 +236,60 @@
             "type": "string",
             "info": "Serial number of the Exos pool"
         },
+        "storage_pool_remote_spdk_api_host": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_REMOTE_SPDK_API_HOST"
+            ],
+            "type": "regex",
+            "value": ".+",
+            "info": "Remote SPDK API host name"
+        },
+        "storage_pool_remote_spdk_api_port": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_REMOTE_SPDK_API_PORT"
+            ],
+            "type": "regex",
+            "value": "[0-9]+",
+            "info": "Remote SPDK API port"
+        },
+        "storage_pool_remote_spdk_user_name": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_REMOTE_SPDK_API_USER_NAME"
+            ],
+            "type": "regex",
+            "value": ".+",
+            "info": "Remote SPDK API user name"
+        },
+        "storage_pool_remote_spdk_user_name_env": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_REMOTE_SPDK_API_USER_NAME_ENV"
+            ],
+            "type": "regex",
+            "value": ".+",
+            "info": "Environment variable containing remote SPDK API user name"
+        },
+        "storage_pool_remote_spdk_user_pw": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_REMOTE_SPDK_API_USER_PW"
+            ],
+            "type": "regex",
+            "value": ".+",
+            "info": "Remote SPDK API password"
+        },
+        "storage_pool_remote_spdk_user_pw_env": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_REMOTE_SPDK_API_USER_PW_ENV"
+            ],
+            "type": "regex",
+            "value": ".+",
+            "info": "Environment variable containing remote SPDK API password"
+        },
         "preferred_nic": {
             "key": [
                 "KEY_STOR_POOL_PREF_NIC"
@@ -1225,6 +1279,12 @@
             "storage_pool_openflex_user_pw",
             "storage_pool_openflex_job_wait_delay",
             "storage_pool_openflex_job_wait_max_count",
+            "storage_pool_remote_spdk_api_host",
+            "storage_pool_remote_spdk_api_port",
+            "storage_pool_remote_spdk_user_name",
+            "storage_pool_remote_spdk_user_name_env",
+            "storage_pool_remote_spdk_user_pw",
+            "storage_pool_remote_spdk_user_pw_env",
             "storage_pool_exos_vlm_type",
             "storage_pool_exos_create_vlm_options",
             "autoplacer_strat_weights_max_freespace",
@@ -1284,6 +1344,12 @@
             "storage_pool_openflex_stor_dev_host",
             "storage_pool_openflex_job_wait_delay",
             "storage_pool_openflex_job_wait_max_count",
+            "storage_pool_remote_spdk_api_host",
+            "storage_pool_remote_spdk_api_port",
+            "storage_pool_remote_spdk_user_name",
+            "storage_pool_remote_spdk_user_name_env",
+            "storage_pool_remote_spdk_user_pw",
+            "storage_pool_remote_spdk_user_pw_env",
             "storage_pool_exos_vlm_type",
             "storage_pool_exos_create_vlm_options",
             "autoplacer_max_throughput",
@@ -1322,6 +1388,12 @@
             "storage_pool_openflex_stor_dev",
             "storage_pool_openflex_stor_dev_host",
             "storage_pool_openflex_stor_pool",
+            "storage_pool_remote_spdk_api_host",
+            "storage_pool_remote_spdk_api_port",
+            "storage_pool_remote_spdk_user_name",
+            "storage_pool_remote_spdk_user_name_env",
+            "storage_pool_remote_spdk_user_pw",
+            "storage_pool_remote_spdk_user_pw_env",
             "storage_pool_exos_vlm_type",
             "storage_pool_exos_create_vlm_options",
             "storage_pool_exos_enclosure",
