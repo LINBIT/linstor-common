@@ -1260,6 +1260,16 @@
                 "type": "string"
         },
         {
+                "name": "API_CLONE_RSCDFN",
+                "value": "CloneRscDfn",
+                "type": "string"
+        },
+        {
+                "name": "API_CLONE_RSCDFN_STATUS",
+                "value": "CloneRscDfnStatus",
+                "type": "string"
+        },
+        {
                 "name": "API_CRT_CRYPT_PASS",
                 "value": "CrtCryptPass",
                 "type": "string"
@@ -3196,6 +3206,28 @@
                         {
                                 "name": "NO_STLT_CONN",
                                 "value": 10
+                        }
+                ]
+        },
+        {
+                "blockcomment": "Clone states"
+        },
+        {
+                "name": "CloneStatus",
+                "type": "enum",
+                "enumtype": "string",
+                "values": [
+                        {
+                                "name": "FAILED",
+                                "value": "FAILED"
+                        },
+                        {
+                                "name": "CLONING",
+                                "value": "CLONING"
+                        },
+                        {
+                                "name": "COMPLETE",
+                                "value": "COMPLETE"
                         }
                 ]
         },
