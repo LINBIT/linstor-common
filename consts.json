@@ -407,6 +407,11 @@
                 "name": "FAIL_INVLD_REMOTE_NAME",
                 "value": [239, "MASK_ERROR"],
                 "type": "BOR"
+        },        
+        {
+                "name": "FAIL_INVLD_TIME_PARAM",
+                "value": [240, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "blockcomment": "Codes 300-399: dependency not found failures"
@@ -519,6 +524,11 @@
         {
                 "name": "FAIL_NOT_FOUND_REMOTE",
                 "value": [321, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_NOT_FOUND_BACKUP",
+                "value": [322, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -933,6 +943,11 @@
         },
         {
                 "blockcomment": "Other failures"
+        },
+        {
+                "name": "FAIL_DEPENDEND_BACKUP",
+                "value": [978, "MASK_ERROR"],
+                "type": "BOR"
         },
         {
                 "name": "FAIL_SNAPSHOT_NOT_UPTODATE",
@@ -1377,6 +1392,16 @@
         {
                 "name": "API_SET_REMOTE",
                 "value": "SetRemote",
+                "type": "string"
+        },
+        {
+                "name": "API_RESTORE_BACKUP",
+                "value": "RstBackup",
+                "type": "string"
+        },
+        {
+                "name": "API_ABORT_BACKUP",
+                "value": "AbortBackup",
                 "type": "string"
         },
         {
@@ -3145,6 +3170,26 @@
         {
                 "name": "FLAG_SUCCESSFUL",
                 "value": "SUCCESSFUL",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_SHIPPING",
+                "value": "SHIPPING",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_BACKUP",
+                "value": "BACKUP",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_BACKUP_TARGET",
+                "value": "BACKUP_TARGET",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_BACKUP_SOURCE",
+                "value": "BACKUP_SOURCE",
                 "type": "string"
         },
         {
