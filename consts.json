@@ -2395,6 +2395,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_BACKUP_S3_SUFFIX",
+                "value": "S3KeySuffix",
+                "type": "string"
+        },
+        {
                 "name": "KEY_REMOTE",
                 "value": "Remote",
                 "type": "string"

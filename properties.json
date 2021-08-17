@@ -1220,6 +1220,16 @@
             "default": "5",
             "unit": "seconds"
         },
+        "backup_shipping_s3_key_suffix":
+        {
+            "key": [
+                "NAMESPC_BACKUP_SHIPPING",
+                "KEY_BACKUP_S3_SUFFIX"
+            ],
+            "type": "string",
+            "info": "A suffix to be appended in order to distiguish same backup names from different Linstor clusters",
+            "default": ""
+        },
         "update_cache_interval":
         {
             "key": [
@@ -1309,7 +1319,8 @@
             "site",
             "update_cache_interval",
             "snapshot_shipping_port_range",
-            "backup_shipping_timeout"
+            "backup_shipping_timeout",
+            "backup_shipping_s3_key_suffix"
         ],
         "node": [
             "preferred_nic",
