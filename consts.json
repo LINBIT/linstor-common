@@ -1310,6 +1310,11 @@
                 "type": "string"
         },
         {
+                "name": "API_ADJUST_RSC_GRP",
+                "value": "AdjustRscGrp",
+                "type": "string"
+        },
+        {
                 "name": "API_CREATE_DEVICE_POOL",
                 "value": "CreateDevicePool",
                 "type": "string"
