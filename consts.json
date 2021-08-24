@@ -895,6 +895,11 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_SNAPSHOT_NOT_UPTODATE",
+                "value": [979, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_NOT_ENOUGH_FREE_SPACE",
                 "value": [980, "MASK_ERROR"],
                 "type": "BOR"
