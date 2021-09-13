@@ -950,12 +950,17 @@
                 "blockcomment": "Other failures"
         },
         {
-                "name": "FAIL_BACKUP_INCOMPATIBLE_VERSION",
-                "value": [978, "MASK_ERROR"],
+                "name": "FAIL_BACKUP_UNKNOWN_CLUSTER",
+                "value": [976, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
                 "name": "FAIL_DEPENDEND_BACKUP",
+                "value": [977, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_BACKUP_INCOMPATIBLE_VERSION",
                 "value": [978, "MASK_ERROR"],
                 "type": "BOR"
         },
