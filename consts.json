@@ -1818,6 +1818,11 @@
                 "type": "string"
         },
         {
+                "name": "API_BACKUP_INFO",
+                "value": "BackupInfo",
+                "type": "string"
+        },
+        {
                 "name": "API_LST_PROPS_INFO",
                 "value": "LstPropsInfo",
                 "type": "string"
