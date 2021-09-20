@@ -1931,6 +1931,11 @@
                 "type": "string"
         },
         {
+                "name": "API_RSCDFN_SYNC_STATUS",
+                "value": "RscDfnSyncStatus",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Event APIs"
         },
         {
