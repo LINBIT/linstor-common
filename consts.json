@@ -1863,6 +1863,36 @@
                 "type": "string"
         },
         {
+                "name": "API_NODE_STATS",
+                "value": "NodeStats",
+                "type": "string"
+        },
+        {
+                "name": "API_RSC_GRP_STATS",
+                "value": "RscGrpStats",
+                "type": "string"
+        },
+        {
+                "name": "API_RSC_DFN_STATS",
+                "value": "RscDfnStats",
+                "type": "string"
+        },
+        {
+                "name": "API_RSC_STATS",
+                "value": "RscStats",
+                "type": "string"
+        },
+        {
+                "name": "API_STOR_POOL_STATS",
+                "value": "StorPoolStats",
+                "type": "string"
+        },
+        {
+                "name": "API_ERR_REPORT_STATS",
+                "value": "ErrReportStats",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Query APIs"
         },
         {
