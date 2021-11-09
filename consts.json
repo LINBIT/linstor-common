@@ -950,6 +950,11 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_EVACUATING",
+                "value": [975, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_BACKUP_UNKNOWN_CLUSTER",
                 "value": [976, "MASK_ERROR"],
                 "type": "BOR"
