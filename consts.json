@@ -1710,6 +1710,11 @@
                 "type": "string"
         },
         {
+                "name": "API_NODE_EVACUATE",
+                "value": "NodeEvacuate",
+                "type": "string"
+        },
+        {
                 "blockcomment": "List object APIs"
         },
         {
@@ -3215,6 +3220,11 @@
         {
                 "name": "FLAG_EVICTED",
                 "value": "EVICTED",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_EVACUATE",
+                "value": "EVACUATE",
                 "type": "string"
         },
         {
