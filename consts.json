@@ -950,6 +950,11 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_NOT_ALL_UPTODATE",
+                "value": [974, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_EVACUATING",
                 "value": [975, "MASK_ERROR"],
                 "type": "BOR"
