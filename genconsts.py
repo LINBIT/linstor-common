@@ -93,9 +93,17 @@ def java(consts, outdir):
                     enum_strs.append('%s%s(%s)' % (indent * 2, enum_entry['name'], str(enum_value)))
                 outfile.write(",\n".join(enum_strs) + ';\n\n')
 
-                outfile.write("%sprivate final %s enumValue;\n" % (indent * 2, native_type))
-                outfile.write("%s%s(final %s val) { enumValue=val; }\n" % (indent * 2, e['name'], native_type))
-                outfile.write("%spublic %s getValue() { return enumValue; }\n" % (indent * 2, native_type))
+                outfile.write("%sprivate final %s enumValue;\n\n" % (indent * 2, native_type))
+
+                outfile.write("%s%s(final %s val)\n" % (indent * 2, e['name'], native_type))
+                outfile.write("%s{\n" % (indent * 2))
+                outfile.write("%senumValue = val;\n" % (indent * 3))
+                outfile.write("%s}\n\n" % (indent * 2))
+
+                outfile.write("%spublic %s getValue()\n" % (indent * 2, native_type))
+                outfile.write("%s{\n" % (indent * 2))
+                outfile.write("%sreturn enumValue;\n" % (indent * 3))
+                outfile.write("%s}\n\n" % (indent * 2))
 
                 outfile.write('%s}\n' % indent)
             else:

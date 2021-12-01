@@ -145,8 +145,6 @@ def lang_java(data):
 
     _print(0, 'package com.linbit.linstor.api.prop;')
     _print(0, '')
-    _print(0, 'import com.linbit.linstor.api.prop.LinStorObject;')
-    _print(0, '')
     _print(0, 'import java.util.ArrayList;')
     _print(0, 'import java.util.Arrays;')
     _print(0, 'import java.util.List;')
