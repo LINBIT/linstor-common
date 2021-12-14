@@ -2465,6 +2465,14 @@
                 "type": "string"
         },
         {
+                "blockcomment": "Clone property keys"
+        },
+        {
+                "name": "KEY_USE_ZFS_CLONE",
+                "value": "UseZFSClone",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property namespaces"
         },
         {

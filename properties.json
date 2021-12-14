@@ -1238,6 +1238,13 @@
             "type": "long",
             "info": "Interval for space cache background updates in seconds",
             "default": "180"
+        },
+        "clone_use_zfs_clone":
+        {
+            "key": ["KEY_USE_ZFS_CLONE"],
+            "type": "boolean_true_false",
+            "info": "if true: Zfs clone will use snapshot clone, instead of send/receive",
+            "default": "false"
         }
     },
     "objects": {
@@ -1320,7 +1327,8 @@
             "update_cache_interval",
             "snapshot_shipping_port_range",
             "backup_shipping_timeout",
-            "backup_shipping_s3_key_suffix"
+            "backup_shipping_s3_key_suffix",
+            "clone_use_zfs_clone"
         ],
         "node": [
             "preferred_nic",
@@ -1479,7 +1487,8 @@
             "auto_snapshot_next_id",
             "storage_pool_exos_vlm_type",
             "storage_pool_exos_create_vlm_options",
-            "preferred_nic"
+            "preferred_nic",
+            "clone_use_zfs_clone"
         ],
         "resource": [
             "storage_pool_name",
