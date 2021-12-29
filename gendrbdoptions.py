@@ -44,7 +44,7 @@ def get_drbd_setup_xml(from_file):
     xml_opts = []
     try:
         xml_opts = [subprocess.check_output(drbdsetup_cmd + [x]) for x in opts]
-    except OSError as oe:
+    except OSError:
         sys.stderr.write("Unable to execute drbdsetup: {cmd}\nUsing local file {f}\n".format(
             cmd=" ".join(drbdsetup_cmd),
             f=from_file)
@@ -60,7 +60,7 @@ def create_and_add_handlers_option(properties, option_name):
     cmd_namespace = 'DrbdOptions/Handlers'
     properties[option_name] = {
         'internal': True,
-        'key':  cmd_namespace + '/' + option_name,
+        'key': cmd_namespace + '/' + option_name,
         'drbd_option_name': option_name,
         'drbd_res_file_section': _ResfileSections[cmd_namespace],
         'type': 'string'

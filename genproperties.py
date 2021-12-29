@@ -138,8 +138,8 @@ def lang_java(data):
     objects = data['objects']
 
     license_hdr = ''
-    for l in license.split('\n'):
-        license_hdr += (' * ' + l).rstrip() + '\n'
+    for line in license.split('\n'):
+        license_hdr += (' * ' + line).rstrip() + '\n'
 
     print('/*\n * %s\n%s */\n' % (hdr, license_hdr))
 

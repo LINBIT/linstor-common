@@ -61,8 +61,8 @@ def java(consts, outdir):
     indent = ' ' * 4
 
     license_hdr = ''
-    for l in license_text.split('\n'):
-        license_hdr += (' * ' + l).rstrip() + '\n'
+    for line in license_text.split('\n'):
+        license_hdr += (' * ' + line).rstrip() + '\n'
 
     with open(os.path.join(outdir, "ApiConsts.java"), "w+") as outfile:
         outfile.write('/*\n * %s\n%s */\n' % (hdr, license_hdr) + '\n')
@@ -159,7 +159,8 @@ def get_native_python_type(type_str):
 def python(consts, outdir):
     with open(os.path.join(outdir, "sharedconsts.py"), "w+") as outfile:
         outfile.write('# %s\n' % hdr)
-        outfile.write('# '.join([l.strip() + '\n' for l in license_text.split('\n')]) + '\n')
+        for line in license_text.split('\n'):
+            outfile.write(('# ' + line).rstrip() + '\n')
         outfile.write("""import sys
 if sys.version_info > (3,):
     long = int
@@ -185,7 +186,7 @@ from enum import Enum
 
             _type = e['type']
             if _type == 'enum':
-                outfile.write('class %s(Enum):\n' % (e['name']))
+                outfile.write('\n\nclass %s(Enum):\n' % (e['name']))
                 for enum_entry in e['values']:
                     fmt_str = '%s%s = "%s"' if e['enumtype'] == 'string' else '%s%s = %s'
                     outfile.write(fmt_str % (indent, enum_entry['name'], enum_entry['value']) + '\n')
@@ -248,7 +249,7 @@ def golang(consts, outdir):
     files_written = [apiconsts_path]
     with open(apiconsts_path, "w+") as outfile:
         outfile.write('// %s\n\n' % hdr)
-        outfile.write('// '.join([l.strip() + '\n' for l in license_text.split('\n')]) + '\n')
+        outfile.write('// '.join([line.strip() + '\n' for line in license_text.split('\n')]) + '\n')
 
         outfile.write('package linstor\n')
 
