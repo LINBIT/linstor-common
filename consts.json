@@ -3286,8 +3286,33 @@
                 "type": "string"
         },
         {
+                "name": "FLAG_SHIPPING_CLEANUP",
+                "value": "SHIPPING_CLEANUP",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_SHIPPING_ABORT",
+                "value": "SHIPPING_ABORT",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_SHIPPED",
+                "value": "SHIPPED",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_AUTO_SNAPSHOT",
+                "value": "AUTO_SNAPSHOT",
+                "type": "string"
+        },
+        {
                 "name": "FLAG_BACKUP",
                 "value": "BACKUP",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_RESTORE_BACKUP_ON_SUCCESS",
+                "value": "RESTORE_BACKUP_ON_SUCCESS",
                 "type": "string"
         },
         {
