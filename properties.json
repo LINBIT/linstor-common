@@ -1253,6 +1253,13 @@
             "type": "boolean_true_false",
             "info": "if true: Zfs clone will use snapshot clone, instead of send/receive",
             "default": "false"
+        },
+        "allow_mixing_device_kind":
+        {
+            "key": ["KEY_RSC_ALLOW_MIXING_DEVICE_KIND"],
+            "type": "boolean_true_false",
+            "info": "Allow mixing storage pool drivers for migration purpose",
+            "default": "false"
         }
     },
     "objects": {
@@ -1498,7 +1505,8 @@
             "storage_pool_exos_vlm_type",
             "storage_pool_exos_create_vlm_options",
             "preferred_nic",
-            "clone_use_zfs_clone"
+            "clone_use_zfs_clone",
+            "allow_mixing_device_kind"
         ],
         "resource": [
             "storage_pool_name",

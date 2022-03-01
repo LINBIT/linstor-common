@@ -2144,6 +2144,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_RSC_ALLOW_MIXING_DEVICE_KIND",
+                "value": "AllowMixingStoragePoolDriver",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Volume property keys"
         },
         {
