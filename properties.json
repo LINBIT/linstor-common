@@ -1134,6 +1134,14 @@
             "type": "long",
             "info": "The maximum throughput the given storage pool is capable of."
         },
+        "autoplacer_allow_target":
+        {
+            "key": [
+                "KEY_AUTOPLACE_ALLOW_TARGET"
+            ],
+            "type": "boolean_true_false",
+            "info": "Specifies if the storagepool(s) of the given node can be targeted by the autoplacer"
+        },
         "auto_snapshot_run_every":
         {
             "key": [
@@ -1322,6 +1330,7 @@
             "autoplacer_pre_select_script_filename",
             "autoplacer_pre_select_script_timeout",
             "autoplacer_max_throughput",
+            "autoplacer_allow_target",
             "proxy_auto_enable",
             "site",
             "update_cache_interval",
@@ -1384,6 +1393,7 @@
             "storage_pool_exos_vlm_type",
             "storage_pool_exos_create_vlm_options",
             "autoplacer_max_throughput",
+            "autoplacer_allow_target",
             "proxy_auto_enable",
             "site",
             "drbd_auto_diskful_allow_cleanup"
