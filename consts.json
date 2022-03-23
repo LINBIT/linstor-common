@@ -1183,6 +1183,11 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_INVLD_CONF",
+                "value": [1021, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "name": "WARN_NOT_FOUND",
                 "value": [3000, "MASK_WARN"],
                 "type": "BOR"
@@ -2480,6 +2485,59 @@
         {
                 "name": "KEY_USE_ZFS_CLONE",
                 "value": "UseZFSClone",
+                "type": "string"
+        },
+        {
+                "blockcomment": "NetCom namespaces"
+        },
+        {
+                "name": "KEY_NETCOM_ENABLED",
+                "value": "Enabled",
+                "type": "string"
+        },
+        {
+                "name": "KEY_NETCOM_BIND_ADDRESS",
+                "value": "BindAddress",
+                "type": "string"
+        },
+        {
+                "name": "KEY_NETCOM_KEY_PASSWD",
+                "value": "KeyPasswd",
+                "type": "string"
+        },
+        {
+                "name": "KEY_NETCOM_KEY_STORE",
+                "value": "KeyStore",
+                "type": "string"
+        },
+        {
+                "name": "KEY_NETCOM_KEY_STORE_PASSWD",
+                "value": "KeyStorePasswd",
+                "type": "string"
+        },
+        {
+                "name": "KEY_NETCOM_PORT",
+                "value": "Port",
+                "type": "string"
+        },
+        {
+                "name": "KEY_NETCOM_SSL_PROTOCOL",
+                "value": "SslProtocol",
+                "type": "string"
+        },
+        {
+                "name": "KEY_NETCOM_TRUST_STORE",
+                "value": "TrustStore",
+                "type": "string"
+        },
+        {
+                "name": "KEY_NETCOM_TRUST_STORE_PASSWD",
+                "value": "TrustStorePasswd",
+                "type": "string"
+        },
+        {
+                "name": "KEY_NETCOM_TYPE",
+                "value": "Type",
                 "type": "string"
         },
         {
