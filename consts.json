@@ -3062,7 +3062,7 @@
         },
         {
                 "name": "VAL_NETCOM_TYPE_PLAIN",
-                "value": "Plain",
+                "value": "PLAIN",
                 "type": "string"
         },
         {
