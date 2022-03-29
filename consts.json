@@ -3236,12 +3236,12 @@
         },
         {
                 "name": "DFLT_CTRL_PORT_SSL",
-                "value": 3377,
+                "value": 3371,
                 "type": "int"
         },
         {
                 "name": "DFLT_CTRL_PORT_PLAIN",
-                "value": 3376,
+                "value": 3370,
                 "type": "int"
         },
         {
