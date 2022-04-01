@@ -59,6 +59,11 @@
                 "type": "long"
         },
         {
+                "name": "MASK_SCHEDULE",
+                "value": "0x0000000000540000L",
+                "type": "long"
+        },
+        {
                 "name": "MASK_EXT_FILES",
                 "value": "0x0000000000500000L",
                 "type": "long"
@@ -407,10 +412,15 @@
                 "name": "FAIL_INVLD_REMOTE_NAME",
                 "value": [239, "MASK_ERROR"],
                 "type": "BOR"
-        },        
+        },
         {
                 "name": "FAIL_INVLD_TIME_PARAM",
                 "value": [240, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_INVLD_SCHEDULE_NAME",
+                "value": [241, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -529,6 +539,11 @@
         {
                 "name": "FAIL_NOT_FOUND_BACKUP",
                 "value": [322, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_NOT_FOUND_SCHEDULE",
+                "value": [323, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -652,6 +667,11 @@
         {
                 "name": "FAIL_ACC_DENIED_REMOTE",
                 "value": [423, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_ACC_DENIED_SCHEDULE",
+                "value": [424, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -785,6 +805,11 @@
         {
                 "name": "FAIL_EXISTS_REMOTE",
                 "value": [527, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_EXISTS_SCHEDULE",
+                "value": [528, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -1450,6 +1475,11 @@
                 "type": "string"
         },
         {
+                "name": "API_CRT_SCHEDULE",
+                "value": "CrtSchedule",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Modify object APIs"
         },
         {
@@ -1583,6 +1613,11 @@
                 "type": "string"
         },
         {
+                "name": "API_MOD_SCHEDULE",
+                "value": "ModSchedule",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Delete object APIs"
         },
         {
@@ -1673,6 +1708,11 @@
         {
                 "name": "API_DEL_EXOS_ENCLOSURE",
                 "value": "DelExosEnclosure",
+                "type": "string"
+        },
+        {
+                "name": "API_DEL_SCHEDULE",
+                "value": "DelSchedule",
                 "type": "string"
         },
         {
@@ -1920,6 +1960,11 @@
         {
                 "name": "API_ERR_REPORT_STATS",
                 "value": "ErrReportStats",
+                "type": "string"
+        },
+        {
+                "name": "API_LST_SCHEDULE",
+                "value": "LstSchedule",
                 "type": "string"
         },
         {
