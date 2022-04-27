@@ -33,7 +33,7 @@ $(JAVAPROPERTYRULES): genproperties.py $(COMMONPROPERTIES) $(COMMONDRBDOPTS) $(J
 $(PYPROPS): genproperties.py $(COMMONPROPERTIES) $(COMMONDRBDOPTS)
 	$(PYTHON) ./genproperties.py python $(COMMONPROPERTIES) $(COMMONDRBDOPTS) > $@
 
-$(COMMONDRBDOPTS): gendrbdoptions.py
+$(COMMONDRBDOPTS): gendrbdoptions.py drbdsetup.xml
 	$(PYTHON) ./gendrbdoptions.py $(COMMONDRBDOPTS)
 
 $(JAVAAPIOUT):

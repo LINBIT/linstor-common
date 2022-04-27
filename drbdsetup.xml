@@ -1,11 +1,11 @@
 <root>
 <!--
-DRBDADM_BUILDTAG=GIT-hash:\ a7820b3c14497a34f955ba5ce56cf1bc9d2d353e\ build\ by\ @buildsystem\,\ 2021-02-09\ 09:27:28
+DRBDADM_BUILDTAG=GIT-hash:\ 900bbac4cc81befb630692c1378ed59b345e087f\ build\ by\ @buildsystem\,\ 2022-04-27\ 06:14:19
 DRBDADM_API_VERSION=2
-DRBD_KERNEL_VERSION_CODE=0x09001c
-DRBD_KERNEL_VERSION=9.0.28
-DRBDADM_VERSION_CODE=0x091000
-DRBDADM_VERSION=9.16.0
+DRBD_KERNEL_VERSION_CODE=0x090200
+DRBD_KERNEL_VERSION=9.2.0
+DRBDADM_VERSION_CODE=0x091501
+DRBDADM_VERSION=9.21.1
 -->
 <command name="disk-options">
 	<summary>Change the disk options of an attached lower-level device.</summary>
@@ -206,6 +206,10 @@ DRBDADM_VERSION=9.16.0
 		<symbol>majority</symbol>
 		<symbol>all</symbol>
 	</option>
+	<option name="on-suspended-primary-outdated" type="handler">
+		<handler>disconnect</handler>
+		<handler>force-secondary</handler>
+	</option>
 </command>
 <command name="new-peer">
 	<summary>Make a peer host known to a resource.</summary>
@@ -301,6 +305,7 @@ DRBDADM_VERSION=9.16.0
 		<handler>call-pri-lost</handler>
 		<handler>violently</handler>
 		<handler>retry-connect</handler>
+		<handler>auto-discard</handler>
 	</option>
 	<option name="ping-timeout" type="numeric">
 		<min>1</min>
