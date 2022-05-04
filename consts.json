@@ -1188,6 +1188,11 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_IGNORED_UNKNOWN_ERROR",
+                "value": [2998, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "name": "WARN_NOT_FOUND",
                 "value": [3000, "MASK_WARN"],
                 "type": "BOR"
