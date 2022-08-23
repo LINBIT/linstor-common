@@ -103,6 +103,16 @@
             "value": "[0-9]+",
             "internal": true
         },
+        "stordriver_ebs_remote_name": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "NAMESPC_EBS",
+                "KEY_REMOTE"
+            ],
+            "type": "regex",
+            "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+            "internal": true
+        },
         "storage_pool_name": {
             "key": [
                 "KEY_STOR_POOL_NAME"
@@ -1428,6 +1438,7 @@
             "stordriver_lvcreate_options",
             "stordriver_zfs_create_options",
             "stordriver_wait_timeout_after_create",
+            "stordriver_ebs_remote_name",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
             "sys_fs_blkio_throttle_read_iops",

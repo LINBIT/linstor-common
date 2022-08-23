@@ -866,6 +866,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_MISSING_EBS_TARGET",
+                "value": [611, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 700-799: uuid mismatch failures"
         },
         {
@@ -2789,6 +2794,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_EBS",
+                "value": "EBS",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
@@ -3047,6 +3057,16 @@
                 "name": "VAL_STOR_POOL_DRBD_META_INTERNAL",
                 "value": ".internal",
                 "type": "string"
+        },
+        {
+                "name": "VAL_STOR_POOL_SPACE_NOT_FOUND",
+                "value": -1,
+                "type": "long"
+        },
+        {
+                "name": "VAL_STOR_POOL_SPACE_ENOUGH",
+                "value": "9223372036854775807L",
+                "type": "long"
         },
         {
                 "blockcomment": "DRBD Proxy keys (other than 'options')"
@@ -3501,6 +3521,11 @@
         {
                 "name": "FLAG_RSC_INACTIVE",
                 "value": "INACTIVE",
+                "type": "string"
+        },
+                {
+                "name": "FLAG_EBS_INITIATOR",
+                "value": "EBS_INITIATOR",
                 "type": "string"
         },
         {
