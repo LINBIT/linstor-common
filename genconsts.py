@@ -130,7 +130,9 @@ def java(consts, outdir):
 
 
 def strip_l(value):
-    return value[:-1] if str(value).endswith('L') and str(value).startswith('0x') else value
+    if str(value).endswith('L') and (str(value).startswith('0x') or value[:-1].isnumeric()):
+        value = value[:-1]
+    return value
 
 
 def get_native_python_type(type_str):
@@ -162,10 +164,10 @@ def python(consts, outdir):
         for line in license_text.split('\n'):
             outfile.write(('# ' + line).rstrip() + '\n')
         outfile.write("""import sys
+from enum import Enum
+
 if sys.version_info > (3,):
     long = int
-
-from enum import Enum
 
 """)
 
