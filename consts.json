@@ -2784,6 +2784,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_SED",
+                "value": "SED",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
