@@ -211,7 +211,7 @@ from enum import Enum
                 if store_mask:
                     masks.append(e['name'])
 
-                assert(native_type is not None)
+                assert (native_type is not None)
                 if 'comment' in e:
                     outfile.write("# %s\n" % (e['comment']))
                 c = "%s = %s(%s)" % (e['name'], native_type, value)
