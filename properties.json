@@ -1196,7 +1196,7 @@
                 "KEY_KEEP"
             ],
             "type": "long",
-            "info": "Keeps the last X sihpped snapshots. Removing this property or having a value <= 0 disables auto-cleanup, all auto-snapshots will be kept",
+            "info": "Keeps the last X shipped snapshots. Removing this property or having a value <= 0 disables auto-cleanup, all auto-snapshots will be kept",
             "default": "10"
         },
         "snapshot_shipping_target":
