@@ -2199,6 +2199,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_RSC_DISKFUL_BY",
+                "value": "DiskfulBy",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Volume property keys"
         },
         {
