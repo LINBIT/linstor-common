@@ -2804,6 +2804,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_TAGS",
+                "value": "Tags",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
