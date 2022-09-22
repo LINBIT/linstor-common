@@ -3027,6 +3027,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_EBS_VOLUME_TYPE",
+                "value": "EBS/VolumeType",
+                "type": "string"
+        },
+        {
                 "name": "KEY_PREF_NIC",
                 "value": "PrefNic",
                 "type": "string"

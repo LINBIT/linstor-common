@@ -1270,6 +1270,13 @@
             "type": "boolean_true_false",
             "info": "Allow mixing storage pool drivers for migration purpose",
             "default": "false"
+        },
+        "ebs_volume_type":
+        {
+            "key": ["KEY_EBS_VOLUME_TYPE"],
+            "type": "string",
+            "info": "Sets the Volume Type for the EBS device (like gp2, gp3, etc..)",
+            "default": "gp2"
         }
     },
     "objects": {
@@ -1357,7 +1364,8 @@
             "clone_use_zfs_clone",
             "auto_snapshot_run_every",
             "auto_snapshot_keep",
-            "auto_snapshot_next_id"
+            "auto_snapshot_next_id",
+            "ebs_volume_type"
         ],
         "node": [
             "preferred_nic",
@@ -1416,7 +1424,8 @@
             "autoplacer_allow_target",
             "proxy_auto_enable",
             "site",
-            "drbd_auto_diskful_allow_cleanup"
+            "drbd_auto_diskful_allow_cleanup",
+            "ebs_volume_type"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",
@@ -1460,7 +1469,8 @@
             "storage_pool_exos_create_vlm_options",
             "storage_pool_exos_enclosure",
             "storage_pool_exos_pool_sn",
-            "autoplacer_max_throughput"
+            "autoplacer_max_throughput",
+            "ebs_volume_type"
         ],
         "resource-definition": [
             "storage_pool_name",
@@ -1520,7 +1530,8 @@
             "storage_pool_exos_create_vlm_options",
             "preferred_nic",
             "clone_use_zfs_clone",
-            "allow_mixing_device_kind"
+            "allow_mixing_device_kind",
+            "ebs_volume_type"
         ],
         "resource": [
             "storage_pool_name",
@@ -1577,7 +1588,8 @@
             "bcache_discard",
             "bcache_cache_replacement_policy",
             "storage_pool_exos_vlm_type",
-            "storage_pool_exos_create_vlm_options"
+            "storage_pool_exos_create_vlm_options",
+            "ebs_volume_type"
         ],
         "volume": [
             "storage_pool_name",
