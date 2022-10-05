@@ -980,6 +980,11 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_EBS_COOLDOWN",
+                "value": [973, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_NOT_ALL_UPTODATE",
                 "value": [974, "MASK_ERROR"],
                 "type": "BOR"
