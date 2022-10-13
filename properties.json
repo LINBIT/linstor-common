@@ -1314,6 +1314,16 @@
             "info": "Forces any thin volumes to do the initial sync. Any resources created while this is true will behave so permanently.",
             "default": "false"
         },
+        "backup_shipping_max_concurrent_backups_per_node":
+        {
+            "key": [
+                "NAMESPC_BACKUP_SHIPPING",
+                "KEY_MAX_CONCURRENT_BACKUPS_PER_NODE"
+            ],
+            "type": "long",
+            "info": "The maximum number of backups that can be shipped at the same time per node, negative means no limit",
+            "default": "-1"
+        },
         "update_cache_interval":
         {
             "key": [
@@ -1431,6 +1441,7 @@
             "snapshot_shipping_port_range",
             "backup_shipping_timeout",
             "backup_shipping_s3_key_suffix",
+            "backup_shipping_max_concurrent_backups_per_node",
             "clone_use_zfs_clone",
             "auto_snapshot_run_every",
             "auto_snapshot_keep",
@@ -1498,7 +1509,8 @@
             "proxy_auto_enable",
             "site",
             "drbd_auto_diskful_allow_cleanup",
-            "ebs_volume_type"
+            "ebs_volume_type",
+            "backup_shipping_max_concurrent_backups_per_node"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",

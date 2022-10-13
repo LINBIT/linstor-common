@@ -2580,6 +2580,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_MAX_CONCURRENT_BACKUPS_PER_NODE",
+                "value": "MaxConcurrentBackupsPerNode",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Clone property keys"
         },
         {
