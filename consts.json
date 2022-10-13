@@ -2138,6 +2138,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_FORCE_INITIAL_SYNC",
+                "value": "ForceInitialSync",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Node property keys"
         },
         {

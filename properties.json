@@ -1248,6 +1248,16 @@
             "info": "A suffix to be appended in order to distiguish same backup names from different Linstor clusters",
             "default": ""
         },
+        "drbd_options_force_initial_sync":
+        {
+            "key": [
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_FORCE_INITIAL_SYNC"
+            ],
+            "type": "boolean_true_false",
+            "info": "Forces any thin volumes to do the initial sync. Any resources created while this is true will behave so permanently.",
+            "default": "false"
+        },
         "update_cache_interval":
         {
             "key": [
@@ -1365,7 +1375,8 @@
             "auto_snapshot_run_every",
             "auto_snapshot_keep",
             "auto_snapshot_next_id",
-            "ebs_volume_type"
+            "ebs_volume_type",
+            "drbd_options_force_initial_sync"
         ],
         "node": [
             "preferred_nic",
@@ -1531,7 +1542,8 @@
             "preferred_nic",
             "clone_use_zfs_clone",
             "allow_mixing_device_kind",
-            "ebs_volume_type"
+            "ebs_volume_type",
+            "drbd_options_force_initial_sync"
         ],
         "resource": [
             "storage_pool_name",
