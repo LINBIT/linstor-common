@@ -1793,6 +1793,11 @@
                 "type": "string"
         },
         {
+                "name": "API_LST_NODE_CONN",
+                "value": "LstNodeConn",
+                "type": "string"
+        },
+        {
                 "name": "API_LST_RSC",
                 "value": "LstRsc",
                 "type": "string"
