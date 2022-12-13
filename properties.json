@@ -326,6 +326,14 @@
             "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
             "info": "Preferred network interface to use"
         },
+        "outside_nic": {
+            "key": [
+                "KEY_STOR_POOL_OUTSIDE_ADDRESS"
+            ],
+            "type": "regex",
+            "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+            "info": "Preferred network interface to use as outside-address "
+        },
         "tcp_port_range": {
             "key": [
                 "KEY_TCP_PORT_AUTO_RANGE"
@@ -1451,6 +1459,7 @@
         ],
         "node": [
             "preferred_nic",
+            "outside_nic",
             "storage_pool_name",
             "storage_pool_drbd_meta_name",
             "sys_fs_blkio_throttle_read",
@@ -1527,6 +1536,7 @@
             "stordriver_zpool_thin",
             "stordriver_file_dir",
             "preferred_nic",
+            "outside_nic",
             "nvme_preferred_nic",
             "stordriver_lvcreate_type",
             "stordriver_lvcreate_options",
@@ -1620,6 +1630,7 @@
             "storage_pool_exos_vlm_type",
             "storage_pool_exos_create_vlm_options",
             "preferred_nic",
+            "outside_nic",
             "clone_use_zfs_clone",
             "allow_mixing_device_kind",
             "ebs_volume_type",
@@ -1630,6 +1641,7 @@
             "storage_pool_name",
             "storage_pool_drbd_meta_name",
             "preferred_nic",
+            "outside_nic",
             "peer_slots",
             "fs_type",
             "fs_user",
