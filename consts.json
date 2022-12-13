@@ -3038,6 +3038,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_OUTSIDE_ADDRESS",
+                "value": "OutsideAddress",
+                "type": "string"
+        },
+        {
                 "name": "KEY_STOR_POOL_CRYPT_PASSWD",
                 "value": "CryptPasswd",
                 "type": "string"
