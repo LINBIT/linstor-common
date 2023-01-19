@@ -30,7 +30,8 @@ _ObjectCategories = {
     "controller": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options'],
     "resource-definition": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options'],
     "volume-definition": ['disk-options'],  # TODO add volume connection -> 'peer-device-options'
-    "rsc-conn": ['peer-device-options', 'new-peer']
+    "rsc-conn": ['peer-device-options', 'new-peer'],
+    "volume": ['disk-options'],
 }
 
 

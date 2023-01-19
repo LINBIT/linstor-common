@@ -2133,6 +2133,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_DISABLE_AUTO_RESYNC_AFTER",
+                "value": "auto-resync-after-disable",
+                "type": "string"
+        },
+        {
                 "name": "KEY_DRBD_DISABLE_AUTO_VERIFY_ALGO",
                 "value": "auto-verify-algo-disable",
                 "type": "string"

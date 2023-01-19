@@ -792,6 +792,15 @@
             "info": "Allows this resource to be cleaned up after toggle-disk + resync is finished",
             "type": "boolean_true_false"
         },
+        "drbd_auto_resync_after_disable": {
+            "internal": false,
+            "key": [
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_DRBD_DISABLE_AUTO_RESYNC_AFTER"
+            ],
+            "info": "If set to true it will disable automatic setting of DRBD resync-after options",
+            "type": "boolean_true_false"
+        },
         "drbd_auto_verify_algo_disable": {
             "internal": false,
             "key": [
@@ -1314,6 +1323,7 @@
             "drbd_auto_add_quorum_tie_breaker",
             "drbd_auto_diskful",
             "drbd_auto_diskful_allow_cleanup",
+            "drbd_auto_resync_after_disable",
             "drbd_auto_verify_algo_disable",
             "drbd_auto_verify_algo_allowed_user",
             "writecache_pool_name",
