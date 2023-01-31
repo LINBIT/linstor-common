@@ -2157,6 +2157,11 @@
                 "value": "auto-verify-algo-allowed-user-list",
                 "type": "string"
         },
+            {
+                "name": "KEY_DRBD_AUTO_RS_DISCARD_GRANULARITY",
+                "value": "auto-rs-discard-granularity",
+                "type": "string"
+        },
         {
                 "name": "KEY_FORCE_INITIAL_SYNC",
                 "value": "ForceInitialSync",

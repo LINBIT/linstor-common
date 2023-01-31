@@ -819,6 +819,15 @@
             "info": "A list of verify algorithms allowed by user, semicolon separated",
             "type": "string"
         },
+        "drbd_auto_rs_discard_granularity": {
+            "internal": false,
+            "key": [
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_DRBD_AUTO_RS_DISCARD_GRANULARITY"
+            ],
+            "info": "If set to false it will disable automatic setting of DRBD rs-discard-granularity. If not set or set to true, automatically setting the rs-discard-granularity property might override previously values specified by the user on volume-definition level",
+            "type": "string"
+        },
         "writecache_pool_name": {
             "key": [
                 "NAMESPC_WRITECACHE",
@@ -1326,6 +1335,7 @@
             "drbd_auto_resync_after_disable",
             "drbd_auto_verify_algo_disable",
             "drbd_auto_verify_algo_allowed_user",
+            "drbd_auto_rs_discard_granularity",
             "writecache_pool_name",
             "writecache_size",
             "writecache_opt_start_sector",
@@ -1553,7 +1563,8 @@
             "clone_use_zfs_clone",
             "allow_mixing_device_kind",
             "ebs_volume_type",
-            "drbd_options_force_initial_sync"
+            "drbd_options_force_initial_sync",
+            "drbd_auto_rs_discard_granularity"
         ],
         "resource": [
             "storage_pool_name",
@@ -1580,6 +1591,7 @@
             "stordriver_lvcreate_options",
             "stordriver_zfs_create_options",
             "drbd_current_gi",
+            "drbd_auto_rs_discard_granularity",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
             "sys_fs_blkio_throttle_read_iops",
