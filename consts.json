@@ -1996,6 +1996,16 @@
                 "type": "string"
         },
         {
+                "name": "API_QRY_SIZE_INFO",
+                "value": "QrySizeInfo",
+                "type": "string"
+        },
+        {
+                "name": "API_RSP_SIZE_INFO",
+                "value": "RspSizeInfo",
+                "type": "string"
+        },
+        {
                 "name": "API_RSCDFN_SYNC_STATUS",
                 "value": "RscDfnSyncStatus",
                 "type": "string"
