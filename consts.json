@@ -1365,6 +1365,11 @@
                 "type": "string"
         },
         {
+                "name": "API_CRT_SNAPSHOT_MULTI",
+                "value": "CrtSnapshotMulti",
+                "type": "string"
+        },
+        {
                 "name": "API_CRT_BACKUP",
                 "value": "CrtBackup",
                 "type": "string"
