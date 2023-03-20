@@ -49,6 +49,15 @@
             "value": ".*",
             "info": "Additional parameters added to every 'lvcreate ... ' command"
         },
+        "stordriver_lvcreate_snapshot_options": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_LVCREATE_SNAPSHOT_OPTIONS"
+            ],
+            "type": "regex",
+            "value": ".*",
+            "info": "Additional parameters added to every 'lvcreate --snapshot ... ' command"
+        },
         "stordriver_thinpool": {
             "key": [
                 "NAMESPC_STORAGE_DRIVER",
@@ -84,6 +93,15 @@
             "type": "regex",
             "value": ".*",
             "info": "Additional parameters added to every 'zfs create ... ' command"
+        },
+        "stordriver_zfs_snapshot_options": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_ZFS_SNAPSHOT_OPTIONS"
+            ],
+            "type": "regex",
+            "value": ".*",
+            "info": "Additional parameters added to every 'zfs snapshot ... ' command"
         },
         "stordriver_file_dir": {
             "key": [
@@ -1362,7 +1380,9 @@
             "bcache_discard",
             "bcache_cache_replacement_policy",
             "stordriver_lvcreate_options",
+            "stordriver_lvcreate_snapshot_options",
             "stordriver_zfs_create_options",
+            "stordriver_zfs_snapshot_options",
             "storage_pool_openflex_api_host",
             "storage_pool_openflex_api_port",
             "storage_pool_openflex_user_name",
@@ -1434,7 +1454,9 @@
             "bcache_discard",
             "bcache_cache_replacement_policy",
             "stordriver_lvcreate_options",
+            "stordriver_lvcreate_snapshot_options",
             "stordriver_zfs_create_options",
+            "stordriver_zfs_snapshot_options",
             "storage_pool_openflex_api_host",
             "storage_pool_openflex_api_port",
             "storage_pool_openflex_user_name",
@@ -1476,7 +1498,9 @@
             "nvme_preferred_nic",
             "stordriver_lvcreate_type",
             "stordriver_lvcreate_options",
+            "stordriver_lvcreate_snapshot_options",
             "stordriver_zfs_create_options",
+            "stordriver_zfs_snapshot_options",
             "stordriver_wait_timeout_after_create",
             "stordriver_ebs_remote_name",
             "sys_fs_blkio_throttle_read",
@@ -1515,7 +1539,9 @@
             "nvme_port",
             "stordriver_lvcreate_type",
             "stordriver_lvcreate_options",
+            "stordriver_lvcreate_snapshot_options",
             "stordriver_zfs_create_options",
+            "stordriver_zfs_snapshot_options",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
             "sys_fs_blkio_throttle_read_iops",
@@ -1589,7 +1615,9 @@
             "fs_mkfsparameters",
             "stordriver_lvcreate_type",
             "stordriver_lvcreate_options",
+            "stordriver_lvcreate_snapshot_options",
             "stordriver_zfs_create_options",
+            "stordriver_zfs_snapshot_options",
             "drbd_current_gi",
             "drbd_auto_rs_discard_granularity",
             "sys_fs_blkio_throttle_read",

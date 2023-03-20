@@ -2882,6 +2882,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_LVCREATE_SNAPSHOT_OPTIONS",
+                "value": "LvcreateSnapshotOptions",
+                "type": "string"
+        },
+        {
                 "name": "KEY_STOR_POOL_THIN_POOL",
                 "value": "ThinPool",
                 "type": "string"
@@ -2899,6 +2904,11 @@
         {
                 "name": "KEY_STOR_POOL_ZFS_CREATE_OPTIONS",
                 "value": "ZfscreateOptions",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_ZFS_SNAPSHOT_OPTIONS",
+                "value": "ZfsSnapshotOptions",
                 "type": "string"
         },
         {
