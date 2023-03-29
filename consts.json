@@ -1988,6 +1988,11 @@
                 "type": "string"
         },
         {
+                "name": "API_LST_QUEUE",
+                "value": "LstQueue",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Query APIs"
         },
         {
@@ -2582,6 +2587,11 @@
         {
                 "name": "KEY_MAX_CONCURRENT_BACKUPS_PER_NODE",
                 "value": "MaxConcurrentBackupsPerNode",
+                "type": "string"
+        },
+        {
+                "name": "VAL_NODE_UNDECIDED",
+                "value": "<undecided>",
                 "type": "string"
         },
         {
