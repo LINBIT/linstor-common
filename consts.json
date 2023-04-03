@@ -3160,6 +3160,16 @@
                 "type": "string"
         },
         {
+                "name": "KEY_FS_USER",
+                "value": "User",
+                "type": "string"
+        },
+        {
+                "name": "KEY_FS_GROUP",
+                "value": "Group",
+                "type": "string"
+        },
+        {
                 "name": "VAL_FS_TYPE_EXT4",
                 "value": "ext4",
                 "type": "string"

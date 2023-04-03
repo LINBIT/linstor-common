@@ -670,6 +670,26 @@
                 "xfs"
             ]
         },
+        "fs_user": {
+            "internal": false,
+            "key": [
+                "NAMESPC_FILESYSTEM",
+                "KEY_FS_USER"
+            ],
+            "info": "Owner user (name or ID) of the created file system",
+            "type": "string",
+            "default": "If neither user nor group is given, use the current user of the Linstor process. If only Group is given, use 'nobody' as user"
+        },
+        "fs_group": {
+            "internal": false,
+            "key": [
+                "NAMESPC_FILESYSTEM",
+                "KEY_FS_GROUP"
+            ],
+            "info": "Owner group (name or ID) of the created file system",
+            "type": "string",
+            "default": "If neither user nor group is given, use the current user of the Linstor process. If only User is given, use the user's group"
+        },
         "fs_mkfsparameters": {
             "internal": false,
             "key": [
@@ -1534,6 +1554,8 @@
             "proxy_compression_type",
             "auto_evict_min_replica_count",
             "fs_type",
+            "fs_user",
+            "fs_group",
             "fs_mkfsparameters",
             "nvme_tr_type",
             "nvme_port",
@@ -1598,6 +1620,8 @@
             "preferred_nic",
             "peer_slots",
             "fs_type",
+            "fs_user",
+            "fs_group",
             "fs_mkfsparameters",
             "nvme_preferred_nic",
             "sys_fs_blkio_throttle_read",
@@ -1612,6 +1636,8 @@
             "storage_pool_drbd_meta_name",
             "override_vlm_id",
             "fs_type",
+            "fs_user",
+            "fs_group",
             "fs_mkfsparameters",
             "stordriver_lvcreate_type",
             "stordriver_lvcreate_options",
