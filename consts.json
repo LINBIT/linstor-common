@@ -2006,8 +2006,8 @@
                 "type": "string"
         },
         {
-                "name": "API_RSP_SIZE_INFO",
-                "value": "RspSizeInfo",
+                "name": "API_QRY_ALL_SIZE_INFO",
+                "value": "QryAllSizeInfo",
                 "type": "string"
         },
         {
