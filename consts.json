@@ -2191,6 +2191,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_SKIP_DISK",
+                "value": "SkipDisk",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Node property keys"
         },
         {

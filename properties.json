@@ -866,6 +866,18 @@
             "info": "If set to false it will disable automatic setting of DRBD rs-discard-granularity. If not set or set to true, automatically setting the rs-discard-granularity property might override previously values specified by the user on volume-definition level",
             "type": "string"
         },
+        "drbd_skip_disk": {
+            "internal": false,
+            "key": [
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_DRBD_SKIP_DISK"
+            ],
+            "info": "Appends '--skip-disk' to 'drbdadm adjust' commands. Is automatically set if a disk failure is detected. In order to disable, remove this property",
+            "type": "symbol",
+            "values": [
+                "True"
+            ]
+        },
         "writecache_pool_name": {
             "key": [
                 "NAMESPC_WRITECACHE",
@@ -1384,6 +1396,7 @@
             "drbd_auto_verify_algo_disable",
             "drbd_auto_verify_algo_allowed_user",
             "drbd_auto_rs_discard_granularity",
+            "drbd_skip_disk",
             "writecache_pool_name",
             "writecache_size",
             "writecache_opt_start_sector",
@@ -1509,6 +1522,7 @@
             "proxy_auto_enable",
             "site",
             "drbd_auto_diskful_allow_cleanup",
+            "drbd_skip_disk",
             "ebs_volume_type",
             "backup_shipping_max_concurrent_backups_per_node"
         ],
@@ -1557,7 +1571,8 @@
             "storage_pool_exos_enclosure",
             "storage_pool_exos_pool_sn",
             "autoplacer_max_throughput",
-            "ebs_volume_type"
+            "ebs_volume_type",
+            "drbd_skip_disk"
         ],
         "resource-definition": [
             "storage_pool_name",
@@ -1585,6 +1600,7 @@
             "drbd_auto_diskful",
             "drbd_auto_diskful_allow_cleanup",
             "drbd_auto_verify_algo_disable",
+            "drbd_skip_disk",
             "writecache_pool_name",
             "writecache_size",
             "writecache_opt_start_sector",
@@ -1641,6 +1657,7 @@
             "sys_fs_blkio_throttle_read_iops",
             "sys_fs_blkio_throttle_write_iops",
             "drbd_auto_diskful_allow_cleanup",
+            "drbd_skip_disk",
             "storage_pool_exos_create_vlm_options"
         ],
         "volume-definition": [
