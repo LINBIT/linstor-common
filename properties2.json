@@ -1,0 +1,1623 @@
+[
+  {
+    "key": "DrbdOptions/Proxy/memlimit",
+    "type": "range",
+    "unit": "bytes",
+    "unit_prefix": "1",
+    "min": 16777216,
+    "default": 16777216,
+    "max": 9223372036854776000,
+    "internal": true,
+    "current_wl": ["proxy"],
+    "order": ["r", "rd", "rg", "n", "c"],
+    "drbd_option_name": "memlimit"
+  },
+  {
+    "key": "DrbdOptions/Proxy/ping-timeout",
+    "type": "range",
+    "unit": "1/10 seconds",
+    "unit_prefix": "1",
+    "min": 1,
+    "default": 200,
+    "max": 300,
+    "internal": true,
+    "current_wl": ["proxy"],
+    "order": ["r", "rd", "rg", "n", "c"],
+    "drbd_option_name": "ping-timeout"
+  },
+  {
+    "key": "DrbdOptions/Proxy/rcvbuf-size",
+    "type": "range",
+    "unit": "bytes",
+    "unit_prefix": "1",
+    "min": 0,
+    "default": 0,
+    "max": 10485760,
+    "internal": true,
+    "current_wl": ["proxy"],
+    "order": ["r", "rd", "rg", "n", "c"],
+    "drbd_option_name": "rcvbuf-size"
+  },
+  {
+    "key": "DrbdOptions/Proxy/read-loops",
+    "type": "range",
+    "unit_prefix": "1",
+    "min": 0,
+    "default": 0,
+    "max": 2147483647,
+    "internal": true,
+    "current_wl": ["proxy"],
+    "order": ["r", "rd", "rg", "n", "c"],
+    "drbd_option_name": "read-loops"
+  },
+  {
+    "key": "DrbdOptions/Proxy/sndbuf-size",
+    "type": "range",
+    "unit": "bytes",
+    "unit_prefix": "1",
+    "min": 0,
+    "default": 0,
+    "max": 10485760,
+    "internal": true,
+    "current_wl": ["proxy"],
+    "order": ["r", "rd", "rg", "n", "c"],
+    "drbd_option_name": "sndbuf-size"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/contexts",
+    "type": "range",
+    "min": 1,
+    "default": "thread count",
+    "max": 253,
+    "internal": true,
+    "current_wl": ["proxy-lzma"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "contexts"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/depth",
+    "type": "range",
+    "min": 0,
+    "default": 0,
+    "max": 1000,
+    "internal": true,
+    "current_wl": ["proxy-lzma"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "depth"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/dict-size",
+    "type": "range",
+    "min": 4096,
+    "default": 32768,
+    "max": 1610612736,
+    "internal": true,
+    "current_wl": ["proxy-lzma"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "dict-size"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/fallback-to-zlib",
+    "type": "symbol",
+    "default": "off",
+    "values": [
+      "off",
+      "on"
+    ],
+    "internal": true,
+    "current_wl": ["proxy-lzma"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "fallback-to-zlib"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/lc",
+    "type": "range",
+    "min": 0,
+    "default": 3,
+    "max": 4,
+    "internal": true,
+    "current_wl": ["proxy-lzma"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "lc"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/level",
+    "type": "range",
+    "min": 1,
+    "default": 3,
+    "max": 22,
+    "internal": true,
+    "current_wl": ["proxy-zstd"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "level"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/level",
+    "type": "range",
+    "min": 1,
+    "default": 2,
+    "max": 9,
+    "internal": true,
+    "current_wl": ["proxy-zlib"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "level"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/level",
+    "type": "range",
+    "min": 1,
+    "default": 4,
+    "max": 9,
+    "internal": true,
+    "current_wl": ["proxy-lzma"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "level"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/lp",
+    "type": "range",
+    "min": 0,
+    "default": 0,
+    "max": 4,
+    "internal": true,
+    "current_wl": ["proxy-lzma"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "lp"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/mf",
+    "type": "symbol",
+    "default": "hc3",
+    "values": [
+      "hc4",
+      "hc3",
+      "bt2",
+      "bt3",
+      "bt4"
+    ],
+    "internal": true,
+    "current_wl": ["proxy-lzma"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "mf"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/mode",
+    "type": "symbol",
+    "default": "fast",
+    "values": [
+      "fast",
+      "normal"
+    ],
+    "internal": true,
+    "current_wl": ["proxy-lzma"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "mode"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/nice-len",
+    "type": "range",
+    "min": 0,
+    "default": 273,
+    "max": 273,
+    "internal": true,
+    "current_wl": ["proxy-lzma"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "nice-len"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/numa-threshold",
+    "type": "range",
+    "min": 0,
+    "default": 0,
+    "max": 253,
+    "internal": true,
+    "current_wl": ["proxy-lzma"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "numa-threshold"
+  },
+  {
+    "key": "DrbdOptions/ProxyCompression/pb",
+    "type": "range",
+    "min": 0,
+    "default": 2,
+    "max": 4,
+    "internal": true,
+    "current_wl": ["proxy-lzma"],
+    "order": ["rd", "rg", "s"],
+    "drbd_option_name": "pb"
+  },
+  {
+    "key": [
+      "KEY_AUTOPLACE_ALLOW_TARGET"
+    ],
+    "type": "boolean_true_false",
+    "info": "Specifies if the storagepool(s) of the given node can be targeted by the autoplacer",
+    "current_wl": ["c", "n"],
+    "order": ["c", "n"],
+    "visible": ["sp"]
+  },
+  {
+    "key": [
+      "KEY_DRBD_CURRENT_GI"
+    ],
+    "type": "regex",
+    "value": "[a-fA-F0-9]{16}",
+    "internal": false,
+    "info": "Initial DRBD generation id, if initial sync is skipped, this ID will be set",
+    "current_wl": ["vd"],
+    "order": ["vd"]
+  },
+  {
+    "key": [
+      "KEY_EBS_VOLUME_TYPE"
+    ],
+    "type": "string",
+    "default": "gp2",
+    "info": "Sets the Volume Type for the EBS device (like gp2, gp3, etc..)",
+    "current_wl": ["c", "n", "sp", "rd", "vd"],
+    "order": ["v", "r", "sp", "n", "vd", "rd", "vg", "rg", "s"]
+  },
+  {
+    "key": [
+      "KEY_EXT_CMD_WAIT_TO"
+    ],
+    "type": "long",
+    "internal": false,
+    "info": "Wait timeout for an external command in milliseconds",
+    "current_wl": ["c"],
+    "order": ["s"]
+  },
+  {
+    "key": [
+      "KEY_MINOR_NR_AUTO_RANGE"
+    ],
+    "type": "regex",
+    "value": "[0-9]+-[0-9]+",
+    "info": "Range for auto-allocation of volume minor numbers",
+    "current_wl": ["c"],
+    "order": ["c"]
+  },
+  {
+    "key": [
+      "KEY_PEER_SLOTS"
+    ],
+    "type": "range",
+    "min": 1,
+    "max": 31,
+    "internal": true,
+    "info": "DRBD peer slots present on resource",
+    "current_wl": ["r"]
+  },
+  {
+    "key": [
+      "KEY_PEER_SLOTS_NEW_RESOURCE"
+    ],
+    "type": "range",
+    "min": 1,
+    "max": 31,
+    "info": "DRBD peer slots to allocate for newly created resources (default 7), the number of peer slots cannot be changed once the resource is created, so allow sufficient slots to increase redundancy in the future",
+    "current_wl": ["c", "rd"],
+    "order": ["rd", "rg", "s"]
+  },
+  {
+    "key": [
+      "KEY_RSC_ALLOW_MIXING_DEVICE_KIND"
+    ],
+    "type": "boolean_true_false",
+    "default": "false",
+    "info": "Allow mixing storage pool drivers for migration purpose",
+    "current_wl": ["rd"],
+    "order": ["rd"]
+  },
+  {
+    "key": [
+      "KEY_SEARCH_DOMAIN"
+    ],
+    "type": "string",
+    "internal": false,
+    "info": "Search domain node names, if no FQDN is given.",
+    "current_wl": ["c"],
+    "order": ["c"]
+  },
+  {
+    "key": [
+      "KEY_SITE"
+    ],
+    "type": "string",
+    "internal": true,
+    "current_wl": ["c", "n"],
+    "order": ["r", "rd", "rg", "n", "c"]
+  },
+  {
+    "key": [
+      "KEY_STOR_POOL_DFN_MAX_OVERSUBSCRIPTION_RATIO"
+    ],
+    "type": "range",
+    "min": 1,
+    "max": 1000,
+    "info": "Maximum allowed ratio of the sum of volume sizes in a thin pool to the total capacity of the pool (default 20)",
+    "current_wl": ["sp", "spd"],
+    "order": ["sp", "spd"]
+  },
+  {
+    "key": [
+      "KEY_STOR_POOL_DRBD_META_NAME"
+    ],
+    "type": "regex",
+    "value": "^|.internal|[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+    "info": "Linstor storage pool name to use for external metadata.",
+    "current_wl": ["n", "r", "rd", "v", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n"]
+  },
+  {
+    "key": [
+      "KEY_STOR_POOL_NAME"
+    ],
+    "type": "regex",
+    "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+    "info": "Linstor storage pool name to use.",
+    "current_wl": ["sp"],
+    "order": ["sp"]
+  },
+  {
+    "key": [
+      "KEY_STOR_POOL_OVERRIDE_VLM_ID"
+    ],
+    "type": "regex",
+    "value": ".*",
+    "info": "Overwrites the generated '<resource-name>_<5 digit volume number>' volume name for migration purposes",
+    "current_wl": ["vd"],
+    "order": ["vd"]
+  },
+  {
+    "key": [
+      "KEY_STOR_POOL_PREF_NIC"
+    ],
+    "type": "regex",
+    "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+    "info": "Preferred network interface to use",
+    "current_wl": ["n", "r", "rd", "sp"],
+    "order": ["sp", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "KEY_TCP_PORT_AUTO_RANGE"
+    ],
+    "type": "regex",
+    "value": "[0-9]+-[0-9]+",
+    "info": "Range for auto-allocation of resource TCP ports",
+    "current_wl": ["c"],
+    "order": ["c"]
+  },
+  {
+    "key": [
+      "KEY_UPDATE_CACHE_INTERVAL"
+    ],
+    "type": "long",
+    "default": "180",
+    "info": "Interval for space cache background updates in seconds",
+    "current_wl": ["c"],
+    "order": ["c"]
+  },
+  {
+    "key": [
+      "KEY_USE_ZFS_CLONE"
+    ],
+    "type": "boolean_true_false",
+    "default": "false",
+    "info": "if true: Zfs clone will use snapshot clone, instead of send/receive",
+    "current_wl": ["c", "rd"],
+    "order": ["rg", "c"]
+  },
+  {
+    "key": [
+      "NAMESPC_AUTOPLACER",
+      "KEY_AUTOPLACE_MAX_THROUGHPUT"
+    ],
+    "type": "long",
+    "info": "The maximum throughput the given storage pool is capable of.",
+    "current_wl": ["c", "n", "sp"],
+    "order": ["sp", "spd", "c"]
+  },
+  {
+    "key": [
+      "NAMESPC_AUTOPLACER",
+      "KEY_AUTOPLACE_PRE_SELECT_FILE_NAME"
+    ],
+    "type": "string",
+    "info": "Filename of the preselection script. File must be in /etc/linstor/selector/",
+    "current_wl": ["c"],
+    "order": ["c"]
+  },
+  {
+    "key": [
+      "NAMESPC_AUTOPLACER",
+      "KEY_AUTOPLACE_PRE_SELECT_SCRIPT_TIMEOUT"
+    ],
+    "type": "long",
+    "default": "5000",
+    "info": "Timeout in ms Linstor waits for the script to run.",
+    "current_wl": ["c"],
+    "order": ["c"]
+  },
+  {
+    "key": [
+      "NAMESPC_AUTOPLACER_WEIGHTS",
+      "KEY_AUTOPLACE_MAX_THROUGHPUT"
+    ],
+    "type": "regex",
+    "value": "^[0-9]+([.][0-9]+)?",
+    "default": "0.0",
+    "info": "Weight of 'MaxThroughput' autoplacer-strategy",
+    "current_wl": ["c"],
+    "order": ["c"]
+  },
+  {
+    "key": [
+      "NAMESPC_AUTOPLACER_WEIGHTS",
+      "KEY_AUTOPLACE_STRAT_WEIGHT_MAX_FREESPACE"
+    ],
+    "type": "regex",
+    "value": "^[0-9]+([.][0-9]+)?",
+    "default": "1.0",
+    "info": "Weight of 'MaxFreeSpace' autoplacer-strategy",
+    "current_wl": ["c"],
+    "order": ["c"]
+  },
+  {
+    "key": [
+      "NAMESPC_AUTOPLACER_WEIGHTS",
+      "KEY_AUTOPLACE_STRAT_WEIGHT_MIN_RESERVED_SPACE"
+    ],
+    "type": "regex",
+    "value": "^[0-9]+([.][0-9]+)?",
+    "default": "0.0",
+    "info": "Weight of 'MinReservedSpace' autoplacer-strategy",
+    "current_wl": ["c"],
+    "order": ["c"]
+  },
+  {
+    "key": [
+      "NAMESPC_AUTOPLACER_WEIGHTS",
+      "KEY_AUTOPLACE_STRAT_WEIGHT_MIN_RSC_COUNT"
+    ],
+    "type": "regex",
+    "value": "^[0-9]+([.][0-9]+)?",
+    "default": "0.0",
+    "info": "Weight of 'MinRscCount' autoplacer-strategy",
+    "current_wl": ["c"],
+    "order": ["c"]
+  },
+  {
+    "key": [
+      "NAMESPC_AUTO_SNAPSHOT",
+      "KEY_AUTO_SNAPSHOT_NEXT_ID"
+    ],
+    "type": "long",
+    "info": "The next ID to try for auto-snapshots",
+    "current_wl": ["c", "rd"],
+    "order": ["rd"]
+  },
+  {
+    "key": [
+      "NAMESPC_AUTO_SNAPSHOT",
+      "KEY_KEEP"
+    ],
+    "type": "long",
+    "default": "10",
+    "info": "Keeps the last X auto-snapshots. Removing this property or having a value <= 0 disables auto-cleanup, all auto-snapshots will be kept",
+    "current_wl": ["c", "rd"],
+    "order": ["rd", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_AUTO_SNAPSHOT",
+      "KEY_RUN_EVERY"
+    ],
+    "type": "long",
+    "info": "Runs every X minutes an snapshot-creation. Removing this property or having a value <= 0 disables auto-snapshotting.",
+    "current_wl": ["c", "rd"],
+    "order": ["rd", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_BACKUP_SHIPPING",
+      "KEY_BACKUP_S3_SUFFIX"
+    ],
+    "type": "string",
+    "default": "",
+    "info": "A suffix to be appended in order to distiguish same backup names from different Linstor clusters",
+    "current_wl": ["c"],
+    "order": ["s"]
+  },
+  {
+    "key": [
+      "NAMESPC_BACKUP_SHIPPING",
+      "KEY_BACKUP_TIMEOUT"
+    ],
+    "type": "long",
+    "default": "5",
+    "unit": "seconds",
+    "info": "The timeout in seconds to be used for API-requests during backup list and backup delete",
+    "current_wl": ["c"],
+    "order": ["s"]
+  },
+  {
+    "key": [
+      "NAMESPC_BACKUP_SHIPPING",
+      "KEY_MAX_CONCURRENT_BACKUPS_PER_NODE"
+    ],
+    "type": "long",
+    "default": "-1",
+    "info": "The maximum number of backups that can be shipped at the same time per node, negative means no limit",
+    "current_wl": ["c", "n"],
+    "order": ["n", "c"]
+  },
+  {
+    "key": [
+      "NAMESPC_BCACHE",
+      "KEY_BCACHE_BLOCKSIZE"
+    ],
+    "type": "long",
+    "info": "Block size",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_BCACHE",
+      "KEY_BCACHE_BUCKETSIZE"
+    ],
+    "type": "long",
+    "info": "Bucket size",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_BCACHE",
+      "KEY_BCACHE_CACHE_REPLACEMENT_POLICY"
+    ],
+    "type": "symbol",
+    "values": [
+      "lru",
+      "fifo"
+    ],
+    "info": "Cache replacement policy. Default: lru",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_BCACHE",
+      "KEY_BCACHE_DATA_OFFSET"
+    ],
+    "type": "long",
+    "info": "Data offset",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_BCACHE",
+      "KEY_BCACHE_DISCARD"
+    ],
+    "type": "boolean_true_false",
+    "info": "Enable discard if set to true",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_BCACHE",
+      "KEY_BCACHE_POOL_NAME"
+    ],
+    "type": "regex",
+    "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+    "info": "Name of the storage pool used for the bcache",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_BCACHE",
+      "KEY_BCACHE_SIZE"
+    ],
+    "type": "regex",
+    "value": "^100%|[0-9]{1,2}([.][0-9]*)?%|[1-9][0-9]{2,}$",
+    "default": "5%",
+    "info": "Size of the cache in % (0-100) or KiB otherwise. Minimum 524288",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_BCACHE",
+      "KEY_BCACHE_WRITEBACK"
+    ],
+    "type": "boolean_true_false",
+    "info": "Enable writeback if set to true",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_CACHE",
+      "KEY_CACHE_BLOCK_SIZE"
+    ],
+    "type": "long",
+    "default": "4096",
+    "info": "Block size",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_CACHE",
+      "KEY_CACHE_CACHE_POOL_NAME"
+    ],
+    "type": "regex",
+    "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+    "info": "Name of the storage pool used for the cache cache device",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_CACHE",
+      "KEY_CACHE_CACHE_SIZE"
+    ],
+    "type": "regex",
+    "value": "^100%|[0-9]{1,2}([.][0-9]*)?%|[1-9][0-9]{2,}$",
+    "default": "5%",
+    "info": "Size of the cache in % (0-100) or KiB otherwise.",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_CACHE",
+      "KEY_CACHE_META_POOL_NAME"
+    ],
+    "type": "regex",
+    "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+    "info": "Name of the storage pool used for the cache metadata. If not specified, this will default to the CachePool property",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_CACHE",
+      "KEY_CACHE_META_SIZE"
+    ],
+    "type": "regex",
+    "value": "^100%|[0-9]{1,2}([.][0-9]*)?%|[1-9][0-9]{2,}$",
+    "default": "12288",
+    "info": "Size of the cache in % (0-100) or KiB otherwise.",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_CACHE",
+      "KEY_CACHE_OPERATING_MODE"
+    ],
+    "type": "symbol",
+    "values": [
+      "writeback",
+      "writethrough",
+      "passthrough"
+    ],
+    "default": "writethrough",
+    "info": "Operation mode",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_CACHE",
+      "KEY_CACHE_POLICY"
+    ],
+    "type": "symbol",
+    "values": [
+      "mq",
+      "smq",
+      "cleaner"
+    ],
+    "default": "smq",
+    "info": "Replacement policy",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_AUTO_EVICT_AFTER_TIME"
+    ],
+    "type": "long",
+    "default": 60,
+    "internal": false,
+    "info": "Time a node can be offline before it is declared EVICTED in minutes",
+    "current_wl": ["c", "n"],
+    "order": ["n", "c"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_AUTO_EVICT_ALLOW_EVICTION"
+    ],
+    "type": "boolean_true_false",
+    "default": "true",
+    "internal": false,
+    "info": "If set to false on a node, it cannot be evicted anymore",
+    "current_wl": ["c", "n"],
+    "order": ["n", "c"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_AUTO_EVICT_MAX_DISCONNECTED_NODES"
+    ],
+    "type": "range",
+    "min": 0,
+    "max": 100,
+    "default": 34,
+    "internal": false,
+    "info": "Percentage(0-100) of nodes that can disconnect at the same time without the controller stopping the max_offline_time timer",
+    "current_wl": ["c"],
+    "order": ["n", "c"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_AUTO_EVICT_MIN_REPLICA_COUNT"
+    ],
+    "type": "long",
+    "default": "The place count set for the resource group",
+    "internal": false,
+    "info": "The minimum amount of replicas that should be present for a resource at all times.",
+    "current_wl": ["c", "rd"],
+    "order": ["rd", "rg", "c"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_DRBD_AUTO_ADD_QUORUM_TIEBREAKER"
+    ],
+    "type": "boolean_true_false",
+    "internal": false,
+    "info": "Enables automatic management (creation and deletion) of tie breaking resource",
+    "current_wl": ["c", "rd"],
+    "order": ["rd", "rg", "c"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_DRBD_AUTO_DISKFUL"
+    ],
+    "type": "long",
+    "internal": false,
+    "info": "Makes a resource diskful if it was continuously diskless primary for X minutes",
+    "current_wl": ["c", "rd"],
+    "order": ["r", "n", "rd", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_DRBD_AUTO_DISKFUL_ALLOW_CLEANUP"
+    ],
+    "type": "boolean_true_false",
+    "internal": false,
+    "info": "Allows this resource to be cleaned up after toggle-disk + resync is finished",
+    "current_wl": ["c", "n", "r", "rd"],
+    "order": ["r", "n", "rd", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_DRBD_AUTO_QUORUM"
+    ],
+    "type": "symbol",
+    "values": [
+      "io-error",
+      "suspend-io",
+      "disabled"
+    ],
+    "internal": false,
+    "info": "Enables automatic setting of the 'quorum' and 'on-no-quorum' property",
+    "current_wl": ["c", "rd"],
+    "order": ["rd", "rg", "c"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_DRBD_AUTO_RS_DISCARD_GRANULARITY"
+    ],
+    "type": "string",
+    "internal": false,
+    "info": "If set to false it will disable automatic setting of DRBD rs-discard-granularity. If not set or set to true, automatically setting the rs-discard-granularity property might override previously values specified by the user on volume-definition level",
+    "current_wl": ["c", "rd", "vd"],
+    "order": ["vd", "rd", "vg", "rg", "c"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_DRBD_AUTO_VERIFY_ALGO_ALLOWED_USER"
+    ],
+    "type": "string",
+    "internal": false,
+    "info": "A list of verify algorithms allowed by user, semicolon separated",
+    "current_wl": ["c"],
+    "order": ["rd", "rg", "c"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_DRBD_DISABLE_AUTO_RESYNC_AFTER"
+    ],
+    "type": "boolean_true_false",
+    "internal": false,
+    "info": "If set to true it will disable automatic setting of DRBD resync-after options",
+    "current_wl": ["c"],
+    "order": ["c"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_DRBD_DISABLE_AUTO_VERIFY_ALGO"
+    ],
+    "type": "boolean_true_false",
+    "internal": false,
+    "info": "If set to true it will disable automatic setting of DRBD verify algorithm",
+    "current_wl": ["c", "rd"],
+    "order": ["rd", "rg", "c"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_DRBD_SKIP_DISK"
+    ],
+    "type": "symbol",
+    "values": [
+      "True"
+    ],
+    "internal": false,
+    "info": "Appends '--skip-disk' to 'drbdadm adjust' commands. Is automatically set if a disk failure is detected. In order to disable, remove this property",
+    "current_wl": ["c", "n", "r", "rd", "sp"],
+    "order": ["r", "sp", "n", "rd", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_OPTIONS",
+      "KEY_FORCE_INITIAL_SYNC"
+    ],
+    "type": "boolean_true_false",
+    "default": "false",
+    "info": "Forces any thin volumes to do the initial sync. Any resources created while this is true will behave so permanently.",
+    "current_wl": ["c", "rd"],
+    "order": ["rd", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_PROXY",
+      "KEY_DRBD_PROXY_AUTO_ENABLE"
+    ],
+    "type": "boolean_true_false",
+    "default": "false",
+    "internal": true,
+    "current_wl": ["c", "n"],
+    "order": ["rc", "r", "rd", "n", "c"]
+  },
+  {
+    "key": [
+      "NAMESPC_DRBD_PROXY",
+      "KEY_DRBD_PROXY_COMPRESSION_TYPE"
+    ],
+    "type": "symbol",
+    "values": [
+      "zlib",
+      "lzma",
+      "lz4",
+      "zstd"
+    ],
+    "internal": true,
+    "current_wl": ["rd"],
+    "order": ["r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_EXOS",
+      "KEY_STOR_POOL_EXOS_CREATE_VOLUME_OPTIONS"
+    ],
+    "type": "string",
+    "info": "Any additional parameters appended to /create/volume/pool/${poolName}/size/${size}KiB/${vlmName}",
+    "current_wl": ["c", "n", "r", "rd", "sp", "vd"],
+    "order": ["v", "r", "sp", "n", "vd", "rd", "vg", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_EXOS",
+      "KEY_STOR_POOL_EXOS_ENCLOSURE"
+    ],
+    "type": "string",
+    "info": "Name of the Exos enclosure",
+    "current_wl": ["sp"],
+    "order": ["sp"]
+  },
+  {
+    "key": [
+      "NAMESPC_EXOS",
+      "KEY_STOR_POOL_EXOS_POOL_SN"
+    ],
+    "type": "string",
+    "info": "Serial number of the Exos pool",
+    "current_wl": ["sp"],
+    "order": ["sp"]
+  },
+  {
+    "key": [
+      "NAMESPC_EXOS",
+      "KEY_STOR_POOL_EXOS_VLM_TYPE"
+    ],
+    "type": "symbol",
+    "values": [
+      "linear",
+      "virtual"
+    ],
+    "info": "linear: Volumes are created from Disk Groups (vdisks), virtual: Volumes are created from Pools which is a set of Disk Groups (vdisks)",
+    "current_wl": ["c", "n", "rd", "sp", "vd"]
+  },
+  {
+    "internal": false,
+    "key": [
+      "NAMESPC_FILESYSTEM",
+      "KEY_FS_GROUP"
+    ],
+    "info": "Owner group (name or ID) of the created file system",
+    "type": "string",
+    "default": "If neither user nor group is given, use the current user of the Linstor process. If only User is given, use the user's group",
+    "current_wl": ["r", "rd", "vd"],
+    "order": ["r", "vd","vg", "rd", "rg"]
+  },
+  {
+    "internal": false,
+    "key": [
+      "NAMESPC_FILESYSTEM",
+      "KEY_FS_MKFSPARAMETERS"
+    ],
+    "info": "Additional parameters for the mkfs command",
+    "type": "string"
+  },
+  {
+    "internal": false,
+    "key": [
+      "NAMESPC_FILESYSTEM",
+      "KEY_FS_TYPE"
+    ],
+    "type": "symbol",
+    "values": [
+      "ext4",
+      "xfs"
+    ],
+    "info": "File system type to use",
+    "current_wl": ["r", "rd", "vd"],
+    "order": ["r", "vd","vg", "rd", "rg"]
+  },
+  {
+    "internal": false,
+    "key": [
+      "NAMESPC_FILESYSTEM",
+      "KEY_FS_USER"
+    ],
+    "type": "string",
+    "default": "If neither user nor group is given, use the current user of the Linstor process. If only Group is given, use 'nobody' as user",
+    "info": "Owner user (name or ID) of the created file system",
+    "current_wl": ["r", "rd", "vd"],
+    "order": ["r", "vd","vg", "rd", "rg"]
+  },
+  {
+    "key": [
+      "NAMESPC_NVME",
+      "KEY_PORT"
+    ],
+    "type": "range",
+    "min": 1,
+    "max": 65535,
+    "internal": false,
+    "info": "NVMe port",
+    "current_wl": ["c", "rd"],
+    "order": ["rd", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_NVME",
+      "KEY_PREF_NIC"
+    ],
+    "type": "regex",
+    "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+    "internal": false,
+    "info": "Preferred network interface to use",
+    "current_wl": ["c", "r", "sp"],
+    "order": ["v", "sp", "r", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_NVME",
+      "KEY_TR_TYPE"
+    ],
+    "type": "symbol",
+    "default": "rdma",
+    "values": [
+      "rdma",
+      "tcp"
+    ],
+    "internal": false,
+    "info": "NVMe transportation type",
+    "current_wl": ["c", "rd"],
+    "order": ["rd", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_REST",
+      "KEY_DISABLE_HTTP_METRICS"
+    ],
+    "type": "boolean_true_false",
+    "internal": false,
+    "info": "Disable Prometheus /metrics on HTTP, if HTTPS is enabled",
+    "current_wl": ["c"],
+    "order": ["c"]
+  },
+  {
+    "key": [
+      "NAMESPC_SNAPSHOT_SHIPPING",
+      "KEY_KEEP"
+    ],
+    "type": "long",
+    "default": "10",
+    "info": "Keeps the last X shipped snapshots. Removing this property or having a value <= 0 disables auto-cleanup, all auto-snapshots will be kept",
+    "current_wl": ["rd"],
+    "order": ["rd", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_SNAPSHOT_SHIPPING",
+      "KEY_RUN_EVERY"
+    ],
+    "type": "long",
+    "info": "Runs every X minutes an auto-snapshot-shipping unless the current snapshot-shipping is still running. In this case a new one will be started asap.",
+    "current_wl": ["rd"],
+    "order": ["rd", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_SNAPSHOT_SHIPPING",
+      "KEY_SOURCE_NODE"
+    ],
+    "type": "string",
+    "info": "Node name of the snapshot shipping source",
+    "current_wl": ["rd"],
+    "order": ["rd"]
+  },
+  {
+    "key": [
+      "NAMESPC_SNAPSHOT_SHIPPING",
+      "KEY_TARGET_NODE"
+    ],
+    "type": "string",
+    "info": "Node name of the snapshot shipping target",
+    "current_wl": ["rd"],
+    "order": ["rd"]
+  },
+  {
+    "key": [
+      "NAMESPC_SNAPSHOT_SHIPPING",
+      "KEY_TCP_PORT_RANGE"
+    ],
+    "type": "regex",
+    "value": "[0-9]+-[0-9]+",
+    "info": "Range for allocation of snapshot shipping TCP ports",
+    "current_wl": ["c"],
+    "order": ["c"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_DMSTATS"
+    ],
+    "type": "boolean_true_false",
+    "info": "Enable dmstats on lvm create",
+    "current_wl": ["c"],
+    "order": ["s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_FILE_DIRECTORY"
+    ],
+    "type": "regex",
+    "value": ".*",
+    "internal": true,
+    "current_wl": ["sp"],
+    "deprecate_info": {
+        "use_instead": "StorDriver/StorPoolName"
+    }
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_LVCREATE_OPTIONS"
+    ],
+    "type": "regex",
+    "value": ".*",
+    "info": "Additional parameters added to every 'lvcreate ... ' command",
+    "current_wl": ["c", "n", "rd", "sp", "vd"],
+    "order": ["v", "r", "sp", "n", "vd", "rd", "vg", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_LVCREATE_SNAPSHOT_OPTIONS"
+    ],
+    "type": "regex",
+    "value": ".*",
+    "info": "Additional parameters added to every 'lvcreate --snapshot ... ' command",
+    "current_wl": ["c", "n", "rd", "sp", "vd"],
+    "order": ["v", "r", "sp", "n", "vd", "rd", "vg", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_LVCREATE_TYPE"
+    ],
+    "type": "symbol",
+    "default": "linear",
+    "values": [
+      "linear",
+      "striped",
+      "mirror",
+      "raid0",
+      "raid1",
+      "raid4",
+      "raid5",
+      "raid6",
+      "raid10",
+      "lzma",
+      "lz4"
+    ],
+    "internal": true,
+    "current_wl": ["rd", "sp", "vd"],
+    "order": ["v", "r", "sp", "n", "vd", "rd", "vg", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_NAME"
+    ],
+    "type": "regex",
+    "value": "[a-zA-Z0-9_/-]+",
+    "internal": true,
+    "current_wl": ["sp"],
+    "order": ["sp"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_OPENFLEX_API_HOST"
+    ],
+    "type": "regex",
+    "value": ".+",
+    "info": "Openflex API host name",
+    "current_wl": ["c", "n", "sp"],
+    "order": ["sp", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_OPENFLEX_API_PORT"
+    ],
+    "type": "regex",
+    "value": "[0-9]+",
+    "info": "Openflex API port",
+    "current_wl": ["c", "n", "sp"],
+    "order": ["sp", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_OPENFLEX_JOB_WAIT_DELAY"
+    ],
+    "type": "regex",
+    "value": "[0-9]+",
+    "info": "Delay in milliseconds linstor waits between fetching the job status",
+    "current_wl": ["c", "n"],
+    "order": ["sp", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_OPENFLEX_JOB_WAIT_MAX_COUNT"
+    ],
+    "type": "regex",
+    "value": "[0-9]+",
+    "info": "Maximum retries with wait delay until openflex fails",
+    "current_wl": ["c", "n"],
+    "order": ["sp", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_OPENFLEX_STOR_DEV"
+    ],
+    "type": "regex",
+    "value": ".+",
+    "info": "Openflex storage device",
+    "current_wl": ["n", "sp"],
+    "order": ["sp", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_OPENFLEX_STOR_DEV_HOST"
+    ],
+    "type": "regex",
+    "value": ".+",
+    "info": "Openflex storage device host",
+    "current_wl": ["n", "sp"],
+    "order": ["r", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_OPENFLEX_STOR_POOL"
+    ],
+    "type": "regex",
+    "value": "[0-9]+",
+    "info": "Openflex storage pool name",
+    "current_wl": ["sp"],
+    "deprecate_info": {
+        "use_instead": "StorDriver/StorPoolName"
+    }
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_OPENFLEX_USER_NAME"
+    ],
+    "type": "regex",
+    "value": ".+",
+    "info": "Openflex user name",
+    "current_wl": ["c", "n", "sp"],
+    "order": ["sp", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_OPENFLEX_USER_PW"
+    ],
+    "type": "regex",
+    "value": ".+",
+    "info": "Openflex password",
+    "current_wl": ["c", "n", "sp"],
+    "order": ["sp", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_REMOTE_SPDK_API_HOST"
+    ],
+    "type": "regex",
+    "value": ".+",
+    "info": "Remote SPDK API host name",
+    "current_wl": ["c", "n", "sp"],
+    "order": ["n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_REMOTE_SPDK_API_PORT"
+    ],
+    "type": "regex",
+    "value": "[0-9]+",
+    "info": "Remote SPDK API port",
+    "current_wl": ["c", "n", "sp"],
+    "order": ["n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_REMOTE_SPDK_API_USER_NAME"
+    ],
+    "type": "regex",
+    "value": ".+",
+    "info": "Remote SPDK API user name",
+    "current_wl": ["c", "n", "sp"],
+    "order": ["n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_REMOTE_SPDK_API_USER_NAME_ENV"
+    ],
+    "type": "regex",
+    "value": ".+",
+    "info": "Environment variable containing remote SPDK API user name",
+    "current_wl": ["c", "n", "sp"],
+    "order": ["n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_REMOTE_SPDK_API_USER_PW"
+    ],
+    "type": "regex",
+    "value": ".+",
+    "info": "Remote SPDK API password",
+    "current_wl": ["c", "n", "sp"],
+    "order": ["n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_REMOTE_SPDK_API_USER_PW_ENV"
+    ],
+    "type": "regex",
+    "value": ".+",
+    "info": "Environment variable containing remote SPDK API password",
+    "current_wl": ["c", "n", "sp"],
+    "order": ["n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_THIN_POOL"
+    ],
+    "type": "regex",
+    "value": "[a-zA-Z0-9_-]+",
+    "internal": true,
+    "current_wl": ["sp"],
+    "deprecate_info": {
+        "use_instead": "StorDriver/StorPoolName"
+    }
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_VOLUME_GROUP"
+    ],
+    "type": "regex",
+    "value": "[a-zA-Z0-9_-]+",
+    "internal": true,
+    "current_wl": ["sp"],
+    "deprecate_info": {
+        "use_instead": "StorDriver/StorPoolName"
+    }
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_WAIT_TIMEOUT_AFTER_CREATE"
+    ],
+    "type": "regex",
+    "value": "[0-9]+",
+    "internal": true,
+    "current_wl": ["c", "sp"],
+    "order": ["sp", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_ZFS_CREATE_OPTIONS"
+    ],
+    "type": "regex",
+    "value": ".*",
+    "info": "Additional parameters added to every 'zfs create ... ' command",
+    "current_wl": ["c", "n", "rd", "sp", "vd"],
+    "order": ["v", "r", "sp", "n", "vd", "rd", "vg", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_ZFS_SNAPSHOT_OPTIONS"
+    ],
+    "type": "regex",
+    "value": ".*",
+    "info": "Additional parameters added to every 'zfs snapshot ... ' command",
+    "current_wl": ["c", "n", "rd", "sp", "vd"],
+    "order": ["v", "r", "sp", "n", "vd", "rd", "vg", "rg", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_ZPOOL"
+    ],
+    "type": "regex",
+    "value": "[a-zA-Z0-9_/-]+",
+    "internal": true,
+    "current_wl": ["sp"],
+    "deprecate_info": {
+        "use_instead": "StorDriver/StorPoolName"
+    }
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "KEY_STOR_POOL_ZPOOLTHIN"
+    ],
+    "type": "regex",
+    "value": "[a-zA-Z0-9_/-]+",
+    "internal": true,
+    "current_wl": ["sp"],
+    "deprecate_info": {
+        "use_instead": "StorDriver/StorPoolName"
+    }
+  },
+  {
+    "key": [
+      "NAMESPC_STORAGE_DRIVER",
+      "NAMESPC_EBS",
+      "KEY_REMOTE"
+    ],
+    "type": "regex",
+    "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+    "internal": true,
+    "current_wl": ["sp"],
+    "order": ["sp", "n", "s"]
+  },
+  {
+    "internal": false,
+    "key": [
+      "NAMESPC_SYS_FS",
+      "KEY_SYS_FS_BLKIO_THROTTLE_READ"
+    ],
+    "type": "long",
+    "info": "Sets the /sys/fs/cgroup/blkio/blkio.throttle.read_bps_device",
+    "current_wl": ["c", "n", "r", "rd", "sp", "spd", "v", "vd"],
+    "order": ["v", "vd", "vg", "r", "rd", "rg", "sp", "spd", "n", "s"]
+  },
+  {
+    "internal": false,
+    "key": [
+      "NAMESPC_SYS_FS",
+      "KEY_SYS_FS_BLKIO_THROTTLE_READ_IOPS"
+    ],
+    "type": "long",
+    "info": "Sets the /sys/fs/cgroup/blkio/blkio.throttle.read_iops_device",
+    "current_wl": ["c", "n", "r", "rd", "sp", "spd", "v", "vd"],
+    "order": ["v", "vd", "vg", "r", "rd", "rg", "sp", "spd", "n", "s"]
+  },
+  {
+    "internal": false,
+    "key": [
+      "NAMESPC_SYS_FS",
+      "KEY_SYS_FS_BLKIO_THROTTLE_WRITE"
+    ],
+    "type": "long",
+    "info": "Sets the /sys/fs/cgroup/blkio/blkio.throttle.write_bps_device",
+    "current_wl": ["c", "n", "r", "rd", "sp", "spd", "v", "vd"],
+    "order": ["v", "vd", "vg", "r", "rd", "rg", "sp", "spd", "n", "s"]
+  },
+  {
+    "internal": false,
+    "key": [
+      "NAMESPC_SYS_FS",
+      "KEY_SYS_FS_BLKIO_THROTTLE_WRITE_IOPS"
+    ],
+    "type": "long",
+    "info": "Sets the /sys/fs/cgroup/blkio/blkio.throttle.write_iops_device",
+    "current_wl": ["c", "n", "r", "rd", "sp", "spd", "v", "vd"],
+    "order": ["v", "vd", "vg", "r", "rd", "rg", "sp", "spd", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_WRITECACHE",
+      "KEY_WRITECACHE_POOL_NAME"
+    ],
+    "type": "regex",
+    "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
+    "info": "Linstor storage pool name for writecache",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_WRITECACHE",
+      "KEY_WRITECACHE_SIZE"
+    ],
+    "type": "regex",
+    "value": "^100%|[0-9]{1,2}([.][0-9]*)?%|[1-9][0-9]{2,}$",
+    "info": "Size of the writecache in % (0-100) or KiB otherwise",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["vd", "vg", "r", "rd", "rg", "n"]
+  },
+  {
+    "key": [
+      "NAMESPC_WRITECACHE_OPTIONS",
+      "KEY_WRITECACHE_OPTION_ADDITIONAL"
+    ],
+    "type": "string",
+    "info": "Additional arguments passed through",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["v", "vd", "rd", "vg", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_WRITECACHE_OPTIONS",
+      "KEY_WRITECACHE_OPTION_AUTOCOMMIT_BLOCKS"
+    ],
+    "type": "long",
+    "default": "64 for pmem, 65536 for ssd",
+    "info": "when the application writes this amount of blocks without issuing the FLUSH request, the blocks are automatically committed",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["v", "vd", "rd", "vg", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_WRITECACHE_OPTIONS",
+      "KEY_WRITECACHE_OPTION_AUTOCOMMIT_TIME"
+    ],
+    "type": "long",
+    "default": "1000",
+    "info": "autocommit time in milliseconds. The data is automatically committed if this time passes and no FLUSH request is received",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["v", "vd", "rd", "vg", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_WRITECACHE_OPTIONS",
+      "KEY_WRITECACHE_OPTION_FUA"
+    ],
+    "type": "symbol",
+    "values": [
+      "On",
+      "Off"
+    ],
+    "default": "On",
+    "info": "\"On\" results in \"fua\" as argument, whereas the value \"Off\" results in \"nofua\" argument",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["v", "vd", "rd", "vg", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_WRITECACHE_OPTIONS",
+      "KEY_WRITECACHE_OPTION_HIGH_WATERMARK"
+    ],
+    "type": "long",
+    "default": "50",
+    "info": "start writeback when the number of used blocks reach this watermark",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["v", "vd", "rd", "vg", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_WRITECACHE_OPTIONS",
+      "KEY_WRITECACHE_OPTION_LOW_WATERMARK"
+    ],
+    "type": "long",
+    "default": "45",
+    "info": "stop writeback when the number of used blocks drops below this watermark",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["v", "vd", "rd", "vg", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_WRITECACHE_OPTIONS",
+      "KEY_WRITECACHE_OPTION_START_SECTOR"
+    ],
+    "type": "long",
+    "default": "0",
+    "info": "offset from the start of cache device in 512-byte sectors",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["v", "vd", "rd", "vg", "rg", "n", "s"]
+  },
+  {
+    "key": [
+      "NAMESPC_WRITECACHE_OPTIONS",
+      "KEY_WRITECACHE_OPTION_WRITEBACK_JOBS"
+    ],
+    "type": "long",
+    "default": "unlimited",
+    "info": "limit the number of blocks that are in flight during writeback. Setting this value reduces writeback throughput, but it may improve latency of read requests",
+    "current_wl": ["c", "n", "rd", "vd"],
+    "order": ["v", "vd", "rd", "vg", "rg", "n", "s"]
+  }
+]
