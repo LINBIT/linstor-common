@@ -3507,6 +3507,11 @@
                 "type": "string"
         },
         {
+                "name": "FLAG_DRBD_DELETE",
+                "value": "DRBD_DELETE",
+                "type": "string"
+        },
+        {
                 "name": "FLAG_DISKLESS",
                 "value": "DISKLESS",
                 "type": "string"
