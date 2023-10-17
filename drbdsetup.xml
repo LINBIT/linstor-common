@@ -1,11 +1,11 @@
 <root>
 <!--
-DRBDADM_BUILDTAG=GIT-hash:\ 900bbac4cc81befb630692c1378ed59b345e087f\ build\ by\ @buildsystem\,\ 2022-04-27\ 06:14:19
+DRBDADM_BUILDTAG=GIT-hash:\ 6044e1e906347156b125e8e132d3d84364fa1380\ build\ by\ @buildsystem\,\ 2023-10-16\ 12:32:53
 DRBDADM_API_VERSION=2
-DRBD_KERNEL_VERSION_CODE=0x090200
-DRBD_KERNEL_VERSION=9.2.0
-DRBDADM_VERSION_CODE=0x091501
-DRBDADM_VERSION=9.21.1
+DRBD_KERNEL_VERSION_CODE=0x090205
+DRBD_KERNEL_VERSION=9.2.5
+DRBDADM_VERSION_CODE=0x091a00
+DRBDADM_VERSION=9.26.0-rc.1
 -->
 <command name="disk-options">
 	<summary>Change the disk options of an attached lower-level device.</summary>
@@ -366,6 +366,15 @@ DRBDADM_VERSION=9.21.1
 	</option>
 	<option name="allow-remote-read" type="boolean">
 		<default>yes</default>
+	</option>
+	<option name="tls" type="boolean">
+		<default>no</default>
+	</option>
+	<option name="tls-keyring" type="string">
+	</option>
+	<option name="tls-privkey" type="string">
+	</option>
+	<option name="tls-certificate" type="string">
 	</option>
 	<option name="_name" type="string">
 	</option>
