@@ -1,11 +1,11 @@
 <root>
 <!--
-DRBDADM_BUILDTAG=GIT-hash:\ 6044e1e906347156b125e8e132d3d84364fa1380\ build\ by\ @buildsystem\,\ 2023-10-16\ 12:32:53
+DRBDADM_BUILDTAG=GIT-hash:\ 03932e3edf6a996b14efd6176172c4998af48cc2\ build\ by\ @buildsystem\,\ 2023-10-20\ 10:46:29
 DRBDADM_API_VERSION=2
 DRBD_KERNEL_VERSION_CODE=0x090205
 DRBD_KERNEL_VERSION=9.2.5
 DRBDADM_VERSION_CODE=0x091a00
-DRBDADM_VERSION=9.26.0-rc.1
+DRBDADM_VERSION=9.26.0-rc.2
 -->
 <command name="disk-options">
 	<summary>Change the disk options of an attached lower-level device.</summary>
@@ -217,6 +217,9 @@ DRBDADM_VERSION=9.26.0-rc.1
 	<argument>peer_node_id</argument>
 	<option name="transport" type="string">
 	</option>
+	<option name="load-balance-paths" type="boolean">
+		<default>no</default>
+	</option>
 	<option name="protocol" type="handler">
 		<handler>A</handler>
 		<handler>B</handler>
@@ -375,6 +378,18 @@ DRBDADM_VERSION=9.26.0-rc.1
 	<option name="tls-privkey" type="string">
 	</option>
 	<option name="tls-certificate" type="string">
+	</option>
+	<option name="rdma-ctrl-rcvbuf-size" type="numeric">
+		<min>0</min>
+		<max>10485760</max>
+		<default>0</default>
+		<unit_prefix>1</unit_prefix>
+	</option>
+	<option name="rdma-ctrl-sndbuf-size" type="numeric">
+		<min>0</min>
+		<max>10485760</max>
+		<default>0</default>
+		<unit_prefix>1</unit_prefix>
 	</option>
 	<option name="_name" type="string">
 	</option>
