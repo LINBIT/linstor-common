@@ -2036,6 +2036,11 @@
                 "type": "string"
         },
         {
+                "name": "API_CHECK_EXT_FILE",
+                "value": "CheckExtFile",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Event APIs"
         },
         {
