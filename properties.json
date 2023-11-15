@@ -1310,6 +1310,27 @@
             "type": "string",
             "info": "Sets the Volume Type for the EBS device (like gp2, gp3, etc..)",
             "default": "gp2"
+        },
+        "balance_resources_enabled": {
+            "internal": false,
+            "key": ["KEY_BALANCE_RESOURCES_ENABLED"],
+            "info": "If set to false it will disable the balance resource task",
+            "type": "boolean_true_false",
+            "default": "true"
+        },
+        "balance_resources_interval":
+        {
+            "key": ["KEY_BALANCE_RESOURCES_INTERVAL"],
+            "type": "long",
+            "info": "Interval between balance resources task runs",
+            "default": "3600"
+        },
+        "balance_resources_grace_period":
+        {
+            "key": ["KEY_BALANCE_RESOURCES_GRACE_PERIOD"],
+            "type": "long",
+            "info": "Seconds a resource must exists before balance resource task might delete it",
+            "default": "3600"
         }
     },
     "objects": {
@@ -1403,7 +1424,10 @@
             "drbd_options_force_initial_sync",
             "max_oversubscription_ratio",
             "max_free_space_based_oversubscription_ratio",
-            "max_total_capacity_based_oversubscription_ratio"
+            "max_total_capacity_based_oversubscription_ratio",
+            "balance_resources_enabled",
+            "balance_resources_interval",
+            "balance_resources_grace_period"
         ],
         "node": [
             "preferred_nic",
@@ -1573,7 +1597,8 @@
             "allow_mixing_device_kind",
             "ebs_volume_type",
             "drbd_options_force_initial_sync",
-            "drbd_auto_rs_discard_granularity"
+            "drbd_auto_rs_discard_granularity",
+            "balance_resources_enabled"
         ],
         "resource": [
             "storage_pool_name",

@@ -2257,6 +2257,21 @@
                 "type": "string"
         },
         {
+                "name": "KEY_BALANCE_RESOURCES_ENABLED",
+                "value": "BalanceResourcesEnabled",
+                "type": "string"
+        },
+        {
+                "name": "KEY_BALANCE_RESOURCES_INTERVAL",
+                "value": "BalanceResourcesInterval",
+                "type": "string"
+        },
+        {
+                "name": "KEY_BALANCE_RESOURCES_GRACE_PERIOD",
+                "value": "BalanceResourcesGracePeriod",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Volume property keys"
         },
         {
