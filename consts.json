@@ -793,11 +793,6 @@
                 "type": "BOR"
         },
         {
-                "name": "FAIL_EXISTS_OPENFLEX_TARGET_PER_RSC_DFN",
-                "value": [524, "MASK_ERROR"],
-                "type": "BOR"
-        },
-        {
                 "name": "FAIL_EXISTS_SNAPSHOT_SHIPPING",
                 "value": [525, "MASK_ERROR"],
                 "type": "BOR"
@@ -863,11 +858,6 @@
         {
                 "name": "FAIL_NO_STLT_CONN_DEFINED",
                 "value": [609, "MASK_ERROR"],
-                "type": "BOR"
-        },
-        {
-                "name": "FAIL_MISSING_OPENFLEX_TARGET",
-                "value": [610, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -1422,11 +1412,6 @@
         {
                 "name": "API_CRT_CRYPT_PASS",
                 "value": "CrtCryptPass",
-                "type": "string"
-        },
-        {
-                "name": "API_CRT_OF_TARGET_NODE",
-                "value": "CrtOfTargetNode",
                 "type": "string"
         },
         {
@@ -2975,53 +2960,8 @@
                 "type": "string"
         },
         {
-                "name": "KEY_STOR_POOL_OPENFLEX_API_HOST",
-                "value": "Openflex/ApiHost",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_OPENFLEX_API_PORT",
-                "value": "Openflex/ApiPort",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_OPENFLEX_STOR_DEV",
-                "value": "Openflex/StorDev",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_OPENFLEX_STOR_DEV_HOST",
-                "value": "Openflex/StorDevHost",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_OPENFLEX_STOR_POOL",
-                "value": "Openflex/StorPool",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_OPENFLEX_USER_NAME",
-                "value": "Openflex/UserName",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_OPENFLEX_USER_PW",
-                "value": "Openflex/UserPassword",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_OPENFLEX_JOB_WAIT_MAX_COUNT",
-                "value": "Openflex/JobWaitMaxCount",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_OPENFLEX_JOB_WAIT_DELAY",
-                "value": "Openflex/JobWaitDelay",
-                "type": "string"
-        },
-        {
-                "name": "KEY_OF_TARGET_PORT_AUTO_RANGE",
-                "value": "OpenflexTargetPortAutoRange",
+                "name": "KEY_SPEC_STLT_PORT_AUTO_RANGE",
+                "value": "SpecStltPortAutoRange",
                 "type": "string"
         },
         {
@@ -3317,11 +3257,6 @@
         {
                 "name": "VAL_NODE_TYPE_AUX",
                 "value": "Auxiliary",
-                "type": "string"
-        },
-        {
-                "name": "VAL_NODE_TYPE_OPENFLEX_TARGET",
-                "value": "Openflex_Target",
                 "type": "string"
         },
         {
@@ -3664,10 +3599,6 @@
                         {
                                 "name": "NVME",
                                 "value": "NVME"
-                        },
-                        {
-                                "name": "OPENFLEX",
-                                "value": "OPENFLEX"
                         },
                         {
                                 "name": "EXOS",
