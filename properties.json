@@ -306,12 +306,30 @@
         },
         "max_oversubscription_ratio": {
             "key": [
-                "KEY_STOR_POOL_DFN_MAX_OVERSUBSCRIPTION_RATIO"
+                "KEY_STOR_POOL_MAX_OVERSUBSCRIPTION_RATIO"
             ],
             "type": "range",
             "min": 1,
             "max": 1000,
-            "info": "Maximum allowed ratio of the sum of volume sizes in a thin pool to the total capacity of the pool (default 20)"
+            "info": "Default value for MaxFreeCapacityOversubscriptionRatio and MaxTotalCapacityOversubscriptionRatio (default 20)"
+        },
+        "max_free_space_based_oversubscription_ratio": {
+            "key": [
+                "KEY_STOR_POOL_MAX_FREE_CAPACITY_OVERSUBSCRIPTION_RATIO"
+            ],
+            "type": "range",
+            "min": 1,
+            "max": 1000,
+            "info": "Maximum allowed ratio the remaining free space can be overprovisioned (default 20)"
+        },
+        "max_total_capacity_based_oversubscription_ratio": {
+            "key": [
+                "KEY_STOR_POOL_MAX_TOTAL_CAPACITY_OVERSUBSCRIPTION_RATIO"
+            ],
+            "type": "range",
+            "min": 1,
+            "max": 1000,
+            "info": "Maximum allowed ratio the capacity can be overprovisioned (default 20)"
         },
         "proxy_memlimit": {
             "unit_prefix": "1",
@@ -1382,7 +1400,10 @@
             "auto_snapshot_keep",
             "auto_snapshot_next_id",
             "ebs_volume_type",
-            "drbd_options_force_initial_sync"
+            "drbd_options_force_initial_sync",
+            "max_oversubscription_ratio",
+            "max_free_space_based_oversubscription_ratio",
+            "max_total_capacity_based_oversubscription_ratio"
         ],
         "node": [
             "preferred_nic",
@@ -1442,12 +1463,17 @@
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",
+            "max_free_space_based_oversubscription_ratio",
+            "max_total_capacity_based_oversubscription_ratio",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
             "sys_fs_blkio_throttle_read_iops",
             "sys_fs_blkio_throttle_write_iops"
         ],
         "storagepool": [
+            "max_oversubscription_ratio",
+            "max_free_space_based_oversubscription_ratio",
+            "max_total_capacity_based_oversubscription_ratio",
             "stordriver_pool_name",
             "stordriver_volumegroup",
             "stordriver_thinpool",

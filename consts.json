@@ -2955,8 +2955,18 @@
                 "type": "string"
         },
         {
-                "name": "KEY_STOR_POOL_DFN_MAX_OVERSUBSCRIPTION_RATIO",
+                "name": "KEY_STOR_POOL_MAX_OVERSUBSCRIPTION_RATIO",
                 "value": "MaxOversubscriptionRatio",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_MAX_FREE_CAPACITY_OVERSUBSCRIPTION_RATIO",
+                "value": "MaxFreeCapacityOversubscriptionRatio",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_POOL_MAX_TOTAL_CAPACITY_OVERSUBSCRIPTION_RATIO",
+                "value": "MaxTotalCapacityOversubscriptionRatio",
                 "type": "string"
         },
         {
