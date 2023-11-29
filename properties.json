@@ -308,27 +308,27 @@
             "key": [
                 "KEY_STOR_POOL_MAX_OVERSUBSCRIPTION_RATIO"
             ],
-            "type": "range",
-            "min": 1,
-            "max": 1000,
+            "type": "range-float",
+            "min_float": 0.0,
+            "max_float": 1000.0,
             "info": "Default value for MaxFreeCapacityOversubscriptionRatio and MaxTotalCapacityOversubscriptionRatio (default 20)"
         },
         "max_free_space_based_oversubscription_ratio": {
             "key": [
                 "KEY_STOR_POOL_MAX_FREE_CAPACITY_OVERSUBSCRIPTION_RATIO"
             ],
-            "type": "range",
-            "min": 1,
-            "max": 1000,
+            "type": "range-float",
+            "min_float": 0.0,
+            "max_float": 1000.0,
             "info": "Maximum allowed ratio the remaining free space can be overprovisioned (default 20)"
         },
         "max_total_capacity_based_oversubscription_ratio": {
             "key": [
                 "KEY_STOR_POOL_MAX_TOTAL_CAPACITY_OVERSUBSCRIPTION_RATIO"
             ],
-            "type": "range",
-            "min": 1,
-            "max": 1000,
+            "type": "range-float",
+            "min_float": 0.0,
+            "max_float": 1000.0,
             "info": "Maximum allowed ratio the capacity can be overprovisioned (default 20)"
         },
         "proxy_memlimit": {
