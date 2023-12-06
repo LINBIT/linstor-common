@@ -1223,6 +1223,11 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_DEPRECATED",
+                "value": [4000, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 10000-19999: info"
         },
         {
