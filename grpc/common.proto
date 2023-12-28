@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.linbit.linstor.api.grpc";
+option java_outer_classname = "CommonProto";
+
+package linbit.linstor;
+
+message Uuid {
+  fixed64 high = 1;
+  fixed64 low = 2;
+}
+
+message Paging {
+  uint64 count = 1;
+  uint64 limit = 2;
+  uint64 offset = 3;
+}
+
+message PagingRequest {
+  uint64 limit = 2;
+  uint64 offset = 3;
+}
+
+// Common api reply structure
+message Answer {
+  // A masked error number
+  uint64 ret_code = 1;
+  string message = 2;
+  // Cause of the error
+  string cause = 3;
+  // Details to the error message
+  string details = 4;
+  // Possible correction options
+  string correction = 5;
+  // List of error report ids related to this api call return code.
+  repeated string error_report_ids = 6;
+  // Map of objection that have been involved by the operation.
+  map<string, string> obj_refs = 7;
+}
