@@ -1,0 +1,106 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.linbit.linstor.api.grpc";
+option java_outer_classname = "NodeProto";
+
+package linbit.linstor;
+
+import "common.proto";
+
+enum EncryptionType {
+  PLAIN = 0;
+  SSL = 1;
+}
+
+enum NodeType {
+  CONTROLLER = 0;
+  SATELLITE = 1;
+  COMBINED = 2;
+  AUXILIARY = 3;
+  OPENFLEX_TARGET = 4;
+}
+
+enum ConnectionStatus {
+  OFFLINE = 0;
+  CONNECTED = 1;
+  ONLINE = 2;
+  VERSION_MISMATCH = 3;
+  FULL_SYNC_FAILED = 4;
+  AUTHENTICATION_ERROR = 5;
+  UNKNOWN = 6;
+  HOSTNAME_MISMATCH = 7;
+  OTHER_CONTROLLER = 8;
+  AUTHENTICATED = 9;
+  NO_STLT_CON = 10;
+}
+
+message NetInterface {
+  string name = 1;
+  string address = 2;
+  uint32 satellite_port = 3;
+  EncryptionType satellite_encryption_type = 4;
+  // Defines if this netinterface should be used for the satellite connection
+  bool is_active = 5;
+  // unique object id
+  Uuid uuid = 6;
+}
+
+message UnSupportedInfo {
+  repeated string info = 1;
+}
+
+message Node {
+  string name = 1;
+  NodeType type = 2;
+  repeated string flags = 3;
+  map<string, string> props = 4;
+  repeated NetInterface net_interfaces = 5;
+  // Enum describing the current connection status.
+  ConnectionStatus connection_status = 6;
+  // unique object id
+  Uuid uuid = 7;
+  repeated string storage_providers = 8;
+  repeated string resource_layers = 9;
+  map<string, UnSupportedInfo> unsupported_providers = 10;
+  map<string, UnSupportedInfo> unsupported_layers = 11;
+  // milliseconds since unix epoch in UTC
+  uint64 eviction_timestamp = 12;
+}
+
+message NodeListRequest {
+  repeated string filter_nodes = 1;
+  repeated string filter_props = 2;
+  optional PagingRequest paging = 3;
+}
+
+message NodeListResponse {
+  repeated Node nodes = 1;
+  Paging paging = 2;
+}
+
+message NodeCreateRequest {
+  string name = 1;
+  string ip = 2;
+  NodeType node_type = 3;
+  uint32 satellite_port = 4;
+  EncryptionType encryption_type = 5;
+  string interface_name = 6;
+  map<string, string> props = 7;
+}
+
+message NodeModifyRequest {
+  string name = 1;
+  optional NodeType node_type = 2;
+  map<string, string> override_props = 3;
+  repeated string delete_props = 4;
+  repeated string delete_namespaces = 5;
+}
+
+message NodeDeleteRequest {
+  string name = 1;
+}
+
+message NodeReconnectRequest {
+  repeated string names = 1;
+}
