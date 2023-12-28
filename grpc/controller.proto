@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.linbit.linstor.api.grpc";
+option java_outer_classname = "ControllerProto";
+
+package linbit.linstor;
+
+import "common.proto";
+import "node.proto";
+import "resource_group.proto";
+
+service Controller {
+  rpc NodeList(NodeListRequest) returns (NodeListResponse);
+  rpc NodeCreate(NodeCreateRequest) returns (stream Answer);
+  rpc NodeModify(NodeModifyRequest) returns (stream Answer);
+  rpc NodeDelete(NodeDeleteRequest) returns (stream Answer);
+  rpc NodeReconnect(NodeReconnectRequest) returns (stream Answer);
+  rpc ResourceGroupAdjust(RGAdjustReq) returns (stream Answer);
+  rpc ResourceGroupModify(ResourceGroupModifyRequest) returns (stream Answer);
+}
