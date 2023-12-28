@@ -1,0 +1,151 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.linbit.linstor.api.grpc";
+option java_outer_classname = "ControllerProto";
+
+package linbit.linstor;
+
+service Controller {
+  rpc NodeList(NodeListRequest) returns (NodeListResponse);
+  rpc NodeCreate(NodeCreateRequest) returns (stream Answer);
+  rpc NodeDelete(NodeDeleteRequest) returns (stream Answer);
+  rpc NodeReconnect(NodeReconnectRequest) returns (stream Answer);
+  rpc ResourceGroupAdjust(RGAdjustReq) returns (stream Answer);
+  rpc ResourceGroupModify(ResourceGroupModifyRequest) returns (stream Answer);
+}
+
+message PagingRequest {
+  uint64 limit = 2;
+  uint64 offset = 3;
+}
+
+message NodeListRequest {
+  repeated string filter_nodes = 1;
+  repeated string filter_props = 2;
+  optional PagingRequest paging = 3;
+}
+
+message Paging {
+  uint64 count = 1;
+  uint64 limit = 2;
+  uint64 offset = 3;
+}
+
+message NodeListResponse {
+  repeated Node nodes = 1;
+  Paging paging = 2;
+}
+
+message NodeCreateRequest {
+  string name = 1;
+  string ip = 2;
+  NodeType node_type = 3;
+  uint32 satellite_port = 4;
+  EncryptionType encryption_type = 5;
+  string interface_name = 6;
+  map<string, string> props = 7;
+}
+
+message NodeDeleteRequest {
+  string name = 1;
+}
+
+message NodeReconnectRequest {
+  repeated string names = 1;
+}
+
+message RGAdjustReq {
+
+}
+
+message ResourceGroupModifyRequest {
+  string rsc_group_name = 1;
+  optional string description = 2;
+  map<string, string> override_props = 3;
+  repeated string delete_props = 4;
+  repeated string delete_namespaces = 5;
+  optional uint32 peer_slots = 6;
+}
+
+// Common api reply structure
+message Answer {
+  // A masked error number
+  uint64 ret_code = 1;
+  string message = 2;
+  // Cause of the error
+  string cause = 3;
+  // Details to the error message
+  string details = 4;
+  // Possible correction options
+  string correction = 5;
+  // List of error report ids related to this api call return code.
+  repeated string error_report_ids = 6;
+  // Map of objection that have been involved by the operation.
+  map<string, string> obj_refs = 7;
+}
+
+enum NodeType {
+  CONTROLLER = 0;
+  SATELLITE = 1;
+  COMBINED = 2;
+  AUXILIARY = 3;
+  OPENFLEX_TARGET = 4;
+}
+
+enum ConnectionStatus {
+  OFFLINE = 0;
+  CONNECTED = 1;
+  ONLINE = 2;
+  VERSION_MISMATCH = 3;
+  FULL_SYNC_FAILED = 4;
+  AUTHENTICATION_ERROR = 5;
+  UNKNOWN = 6;
+  HOSTNAME_MISMATCH = 7;
+  OTHER_CONTROLLER = 8;
+  AUTHENTICATED = 9;
+  NO_STLT_CON = 10;
+}
+
+enum EncryptionType {
+  PLAIN = 0;
+  SSL = 1;
+}
+
+message Uuid {
+  fixed64 high = 1;
+  fixed64 low = 2;
+}
+
+message NetInterface {
+  string name = 1;
+  string address = 2;
+  uint32 satellite_port = 3;
+  EncryptionType satellite_encryption_type = 4;
+  // Defines if this netinterface should be used for the satellite connection
+  bool is_active = 5;
+  // unique object id
+  Uuid uuid = 6;
+}
+
+message UnSupportedInfo {
+  repeated string info = 1;
+}
+
+message Node {
+  string name = 1;
+  NodeType type = 2;
+  repeated string flags = 3;
+  map<string, string> props = 4;
+  repeated NetInterface net_interfaces = 5;
+  // Enum describing the current connection status.
+  ConnectionStatus connection_status = 6;
+  // unique object id
+  Uuid uuid = 7;
+  repeated string storage_providers = 8;
+  repeated string resource_layers = 9;
+  map<string, UnSupportedInfo> unsupported_providers = 10;
+  map<string, UnSupportedInfo> unsupported_layers = 11;
+  // milliseconds since unix epoch in UTC
+  uint64 eviction_timestamp = 12;
+}
