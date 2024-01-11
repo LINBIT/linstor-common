@@ -1228,6 +1228,11 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_STORPOOL_RENAME_NOT_ALLOWED",
+                "value": [1022, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "name": "WARN_NOT_FOUND",
                 "value": [3000, "MASK_WARN"],
                 "type": "BOR"
