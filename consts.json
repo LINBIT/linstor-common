@@ -975,6 +975,11 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_SNAPSHOT_ROLLBACK_IN_PROGRESS",
+                "value": [971, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_SP_MIXING_NOT_ALLOWED",
                 "value": [972, "MASK_ERROR"],
                 "type": "BOR"
@@ -1283,6 +1288,16 @@
         {
                 "name": "INFO_RSC_ALREADY_EXISTS",
                 "value": [10008, "MASK_INFO"],
+                "type": "BOR"
+        },
+        {
+                "name": "INFO_ABORTED_FAILED_SNAPSHOT_ROLLBACK",
+                "value": [10009, "MASK_INFO"],
+                "type": "BOR"
+        },
+        {
+                "name": "INFO_RECOVERING_FAILED_SNAPSHOT_ROLLBACK",
+                "value": [10010, "MASK_INFO"],
                 "type": "BOR"
         },
         {
