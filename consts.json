@@ -975,6 +975,11 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_SP_MIXING_NOT_ALLOWED",
+                "value": [972, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_EBS_COOLDOWN",
                 "value": [973, "MASK_ERROR"],
                 "type": "BOR"
