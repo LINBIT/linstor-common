@@ -1417,6 +1417,7 @@
             "backup_shipping_s3_key_suffix",
             "backup_shipping_max_concurrent_backups_per_node",
             "clone_use_zfs_clone",
+            "allow_mixing_device_kind",
             "auto_snapshot_run_every",
             "auto_snapshot_keep",
             "auto_snapshot_next_id",
