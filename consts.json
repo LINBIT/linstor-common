@@ -2661,6 +2661,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_ALLOW_FORCE_RESTORE",
+                "value": "AllowForceRestore",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Clone property keys"
         },
         {

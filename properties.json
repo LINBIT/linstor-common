@@ -1261,6 +1261,16 @@
             "info": "A suffix to be appended in order to distiguish same backup names from different Linstor clusters",
             "default": ""
         },
+        "backup_shipping_allow_force_restore":
+        {
+            "key": [
+                "NAMESPC_BACKUP_SHIPPING",
+                "KEY_ALLOW_FORCE_RESTORE"
+            ],
+            "type": "string",
+            "info": "If true, an existing resource can be deleted in order to restore a received backup",
+            "default": "false"
+        },
         "drbd_options_force_initial_sync":
         {
             "key": [
@@ -1423,6 +1433,7 @@
             "backup_shipping_timeout",
             "backup_shipping_s3_key_suffix",
             "backup_shipping_max_concurrent_backups_per_node",
+            "backup_shipping_allow_force_restore",
             "clone_use_zfs_clone",
             "allow_mixing_device_kind",
             "auto_snapshot_run_every",
@@ -1606,7 +1617,8 @@
             "ebs_volume_type",
             "drbd_options_force_initial_sync",
             "drbd_auto_rs_discard_granularity",
-            "balance_resources_enabled"
+            "balance_resources_enabled",
+            "backup_shipping_allow_force_restore"
         ],
         "resource": [
             "storage_pool_name",
