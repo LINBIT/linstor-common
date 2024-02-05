@@ -1331,6 +1331,13 @@
             "type": "long",
             "info": "Seconds a resource must exists before balance resource task might delete it",
             "default": "3600"
+        },
+        "encryption_passphrase":
+        {
+            "key": ["NAMESPC_ENCRYPTION", "KEY_PASSPHRASE"],
+            "type": "string",
+            "info": "External set volume encryption passphrase",
+            "internal": false
         }
     },
     "objects": {
@@ -1665,7 +1672,8 @@
             "bcache_cache_replacement_policy",
             "storage_pool_exos_vlm_type",
             "storage_pool_exos_create_vlm_options",
-            "ebs_volume_type"
+            "ebs_volume_type",
+            "encryption_passphrase"
         ],
         "volume": [
             "storage_pool_name",

@@ -2239,6 +2239,14 @@
                 "type": "string"
         },
         {
+                "blockcomment": "Volume-definition property keys"
+        },
+        {
+                "name": "KEY_PASSPHRASE",
+                "value": "Passphrase",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Resource property keys"
         },
         {
@@ -2914,6 +2922,11 @@
         {
                 "name": "NAMESPC_TAGS",
                 "value": "Tags",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_ENCRYPTION",
+                "value": "Encryption",
                 "type": "string"
         },
         {
