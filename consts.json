@@ -3729,6 +3729,10 @@
                         {
                                 "name": "NO_STLT_CONN",
                                 "value": 10
+                        },
+                        {
+                                "name": "MISSING_EXT_TOOLS",
+                                "value": 11
                         }
                 ]
         },
