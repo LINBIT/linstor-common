@@ -1568,6 +1568,11 @@
                 "type": "string"
         },
         {
+                "name": "API_MOD_VLM_DFN_PASS",
+                "value": "ModVlmDfnPassphrase",
+                "type": "string"
+        },
+        {
                 "name": "API_MOD_VLM",
                 "value": "ModVlm",
                 "type": "string"
