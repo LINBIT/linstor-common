@@ -2221,6 +2221,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_EXACT_SIZE",
+                "value": "ExactSize",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Node property keys"
         },
         {

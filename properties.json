@@ -823,6 +823,15 @@
                 "True"
             ]
         },
+        "drbd_exact_size": {
+            "internal": false,
+            "key": [
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_DRBD_EXACT_SIZE"
+            ],
+            "info": "Adds a 'size' property into the .res file containing the exact size defined in the volume-definition",
+            "type": "boolean_true_false"
+        },
         "writecache_pool_name": {
             "key": [
                 "NAMESPC_WRITECACHE",
@@ -1577,6 +1586,7 @@
             "drbd_auto_diskful_allow_cleanup",
             "drbd_auto_verify_algo_disable",
             "drbd_skip_disk",
+            "drbd_exact_size",
             "writecache_pool_name",
             "writecache_size",
             "writecache_opt_start_sector",
