@@ -2671,6 +2671,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_RECV_TIMEOUT_IN_MS",
+                "value": "L2LReceiveStartedTimeout",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Clone property keys"
         },
         {

@@ -1280,6 +1280,16 @@
             "info": "If true, an existing resource can be deleted in order to restore a received backup",
             "default": "false"
         },
+        "backup_shipping_recv_timeout_in_ms":
+        {
+            "key": [
+                "NAMESPC_BACKUP_SHIPPING",
+                "KEY_RECV_TIMEOUT_IN_MS"
+            ],
+            "type": "long",
+            "info": "How long the target-cluster waits for an incoming connection before it aborts in ms. -1 to wait indefinitely.",
+            "default": "300000"
+        },
         "drbd_options_force_initial_sync":
         {
             "key": [
@@ -1455,7 +1465,8 @@
             "max_total_capacity_based_oversubscription_ratio",
             "balance_resources_enabled",
             "balance_resources_interval",
-            "balance_resources_grace_period"
+            "balance_resources_grace_period",
+            "backup_shipping_recv_timeout_in_ms"
         ],
         "node": [
             "preferred_nic",
@@ -1511,7 +1522,8 @@
             "drbd_auto_diskful_allow_cleanup",
             "drbd_skip_disk",
             "ebs_volume_type",
-            "backup_shipping_max_concurrent_backups_per_node"
+            "backup_shipping_max_concurrent_backups_per_node",
+            "backup_shipping_recv_timeout_in_ms"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",
@@ -1628,7 +1640,8 @@
             "drbd_options_force_initial_sync",
             "drbd_auto_rs_discard_granularity",
             "balance_resources_enabled",
-            "backup_shipping_allow_force_restore"
+            "backup_shipping_allow_force_restore",
+            "backup_shipping_recv_timeout_in_ms"
         ],
         "resource": [
             "storage_pool_name",
