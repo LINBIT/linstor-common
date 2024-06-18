@@ -33,6 +33,7 @@ _ObjectCategories = {
     "rsc-conn": ['peer-device-options', 'new-peer'],
     "node-conn": ['peer-device-options', 'new-peer'],
     "volume": ['disk-options'],
+    "path-mesh": ['peer-device-options', 'new-peer']
 }
 
 

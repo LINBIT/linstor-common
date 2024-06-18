@@ -59,6 +59,11 @@
                 "type": "long"
         },
         {
+                "name": "MASK_PATH_MESH",
+                "value": "0x0000000000540000L",
+                "type": "long"
+        },
+        {
                 "name": "MASK_SCHEDULE",
                 "value": "0x0000000000540000L",
                 "type": "long"
@@ -429,6 +434,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_PATH_MESH_NAME",
+                "value": [243, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -549,6 +559,11 @@
         {
                 "name": "FAIL_NOT_FOUND_SCHEDULE",
                 "value": [323, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_NOT_FOUND_PATH_MESH",
+                "value": [324, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -677,6 +692,11 @@
         {
                 "name": "FAIL_ACC_DENIED_SCHEDULE",
                 "value": [424, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_ACC_DENIED_PATH_MESH",
+                "value": [425, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -810,6 +830,11 @@
         {
                 "name": "FAIL_EXISTS_SCHEDULE",
                 "value": [528, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_EXISTS_PATH_MESH",
+                "value": [529, "MASK_ERROR"],
                 "type": "BOR"
         },
         {
@@ -1515,6 +1540,11 @@
                 "type": "string"
         },
         {
+                "name": "API_CRT_PATH_MESH",
+                "value": "CrtPathMesh",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Modify object APIs"
         },
         {
@@ -1658,6 +1688,11 @@
                 "type": "string"
         },
         {
+                "name": "API_MOD_PATH_MESH",
+                "value": "ModifyPathMesh",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Delete object APIs"
         },
         {
@@ -1753,6 +1788,11 @@
         {
                 "name": "API_DEL_SCHEDULE",
                 "value": "DelSchedule",
+                "type": "string"
+        },
+        {
+                "name": "API_DEL_PATH_MESH",
+                "value": "DelPathMesh",
                 "type": "string"
         },
         {
@@ -2015,6 +2055,11 @@
         {
                 "name": "API_LST_QUEUE",
                 "value": "LstQueue",
+                "type": "string"
+        },
+        {
+                "name": "API_LST_PATH_MESH",
+                "value": "LstPathMesh",
                 "type": "string"
         },
         {
@@ -3510,6 +3555,14 @@
                                 "value": "Complete"
                         }
                 ]
+        },
+        {
+                "blockcomment": "PathMesh keys"
+        },
+        {
+                "name": "KEY_PATH_MESH",
+                "value": "PathMesh",
+                "type": "string"
         },
         {
                 "blockcomment": "Flag string values"
