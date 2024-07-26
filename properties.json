@@ -251,7 +251,7 @@
             ],
             "type": "regex",
             "value": "[0-9]+-[0-9]+",
-            "info": "Range for auto-allocation of resource TCP ports"
+            "info": "Range for auto-allocation of resource TCP ports (default=7000-7999)"
         },
         "minor_nr_range": {
             "key": [
