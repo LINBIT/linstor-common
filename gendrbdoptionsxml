@@ -1,0 +1,18 @@
+#!/bin/bash
+OUTFILE="drbdsetup.xml"
+subcommands="disk-options peer-device-options resource-options new-peer new-minor"
+echo "Generating file ${OUTFILE} for drbdsetup xml-help subcommands:"
+for cmd in ${subcommands}; do
+    echo "    ${cmd}"
+done
+(
+    echo "<root>"
+    echo "<"\!"--"
+    drbdadm --version
+    echo "-->"
+    for cmd in ${subcommands}; do
+        drbdsetup xml-help ${cmd}
+    done
+    echo "</root>"
+) > ${OUTFILE}
+
