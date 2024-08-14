@@ -12,6 +12,7 @@ This script translates xml output from drbdsetup options to JSON
 
 _CategoryNamespaces = {
     'new-peer': "DrbdOptions/Net",
+    'new-minor': "DrbdOptions/Disk",
     'disk-options': "DrbdOptions/Disk",
     'resource-options': "DrbdOptions/Resource",
     'peer-device-options': "DrbdOptions/PeerDevice"
@@ -29,12 +30,13 @@ _ResfileSections = {
 _ObjectCategories = {
     "controller": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options'],
     "resource-definition": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options'],
-    "volume-definition": ['disk-options'],  # TODO add volume connection -> 'peer-device-options'
+    "volume-definition": ['disk-options', 'new-minor'],  # TODO add volume connection -> 'peer-device-options'
     "rsc-conn": ['peer-device-options', 'new-peer'],
     "node-conn": ['peer-device-options', 'new-peer'],
-    "volume": ['disk-options'],
+    "volume": ['disk-options', 'new-minor'],
 }
 
+_ExcludedOptions = ['set-defaults', '_name', 'diskless']
 
 def get_drbd_setup_xml(from_file):
     if from_file:
@@ -42,7 +44,7 @@ def get_drbd_setup_xml(from_file):
             return f.read()
 
     drbdsetup_cmd = ['/usr/sbin/drbdsetup', 'xml-help']
-    opts = ['disk-options', 'peer-device-options', 'resource-options', 'new-peer']
+    opts = ['disk-options', 'peer-device-options', 'resource-options', 'new-peer', 'new-minor']
     xml_opts = []
     try:
         xml_opts = [subprocess.check_output(drbdsetup_cmd + [x]) for x in opts]
@@ -108,7 +110,7 @@ def parse_drbd_setup_xml(xmlout):
         cmd_properties = {}
         for option in command.findall('option'):
             option_name = option.attrib['name']
-            if option_name not in ['set-defaults', '_name']:
+            if option_name not in _ExcludedOptions:
                 cmd_properties[option_name] = convert_option(cmd_namespace, option_name, option)
 
         for obj, categories in _ObjectCategories.items():
