@@ -67,6 +67,14 @@
             "value": "[a-zA-Z0-9_-]+",
             "internal": true
         },
+        "stordriver_lvm_sizes_cache_time": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_LVM_SIZES_CACHE_TIME"
+            ],
+            "type": "long",
+            "info": "How long LINSTOR should cache the results of lvs and vgs in milliseconds."
+        },
         "stordriver_zpool": {
             "key": [
                 "NAMESPC_STORAGE_DRIVER",
@@ -1427,6 +1435,7 @@
             "bcache_cache_replacement_policy",
             "stordriver_lvcreate_options",
             "stordriver_lvcreate_snapshot_options",
+            "stordriver_lvm_sizes_cache_time",
             "stordriver_zfs_create_options",
             "stordriver_zfs_snapshot_options",
             "storage_pool_remote_spdk_api_host",
@@ -1505,6 +1514,7 @@
             "bcache_cache_replacement_policy",
             "stordriver_lvcreate_options",
             "stordriver_lvcreate_snapshot_options",
+            "stordriver_lvm_sizes_cache_time",
             "stordriver_zfs_create_options",
             "stordriver_zfs_snapshot_options",
             "storage_pool_remote_spdk_api_host",

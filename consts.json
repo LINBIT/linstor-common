@@ -2993,6 +2993,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_LVM_SIZES_CACHE_TIME",
+                "value": "SizesCacheTime",
+                "type": "string"
+        },
+        {
                 "name": "KEY_STOR_POOL_ZPOOL",
                 "value": "ZPool",
                 "type": "string"
