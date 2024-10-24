@@ -38,6 +38,26 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.""" % (
     COPY_YEAR, ', '.join(['Rene Peinthor', 'Gabor Hernadi']))
 
+"""
+This dict only contains keys that are currently needed. LinStorObject enum
+has more values declared than listed / mapped here.
+"""
+linstor_obj_java_enum_dict = {
+    "controller": "CTRL",
+    "node": "NODE",
+    "node-conn": "NODE_CONN",
+    "resource-definition": "RSC_DFN",
+    "resource": "RSC",
+    "rsc-conn": "RSC_CONN",
+    "storagepool-definition": "STOR_POOL_DFN",
+    "storagepool": "STOR_POOL",
+    "volume-definition": "VLM_DFN",
+    "volume": "VLM",
+    "drbd-proxy": "DRBD_PROXY",
+    "drbd-proxy-lzma": "DRBD_PROXY_LZMA",
+    "drbd-proxy-zlib": "DRBD_PROXY_ZLIB",
+    "drbd-proxy-zstd": "DRBD_PROXY_ZSTD",
+}
 
 class MyPyKey(object):
     def __init__(self, keypath):
@@ -219,7 +239,7 @@ def _as_java_rule_name(name):
 
 
 def _as_java_enum_name(name):
-    return re.sub(r'-', '_', name).upper()
+    return linstor_obj_java_enum_dict[name]
 
 
 def main():
