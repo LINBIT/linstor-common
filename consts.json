@@ -2676,6 +2676,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_BACKUP_L2L_SKIP_WAIT_FOR_START",
+                "value": "L2LSkipWaitForStart",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Clone property keys"
         },
         {

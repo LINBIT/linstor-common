@@ -1318,6 +1318,16 @@
             "info": "The maximum number of backups that can be shipped at the same time per node, negative means no limit",
             "default": "-1"
         },
+        "backup_shipping_l2l_skip_wait_for_start":
+        {
+            "key": [
+                "NAMESPC_BACKUP_SHIPPING",
+                "KEY_BACKUP_L2L_SKIP_WAIT_FOR_START"
+            ],
+            "type": "boolean_true_false",
+            "info": "If true, only wait until the snapshot is created. LINSTOR will start the actual shipment in the background.",
+            "default": "false"
+        },
         "update_cache_interval":
         {
             "key": [
@@ -1462,6 +1472,7 @@
             "backup_shipping_s3_key_suffix",
             "backup_shipping_max_concurrent_backups_per_node",
             "backup_shipping_allow_force_restore",
+            "backup_shipping_l2l_skip_wait_for_start",
             "clone_use_zfs_clone",
             "allow_mixing_device_kind",
             "auto_snapshot_run_every",
@@ -1533,7 +1544,8 @@
             "drbd_skip_disk",
             "ebs_volume_type",
             "backup_shipping_max_concurrent_backups_per_node",
-            "backup_shipping_recv_timeout_in_ms"
+            "backup_shipping_recv_timeout_in_ms",
+            "backup_shipping_l2l_skip_wait_for_start"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",
@@ -1651,7 +1663,8 @@
             "drbd_auto_rs_discard_granularity",
             "balance_resources_enabled",
             "backup_shipping_allow_force_restore",
-            "backup_shipping_recv_timeout_in_ms"
+            "backup_shipping_recv_timeout_in_ms",
+            "backup_shipping_l2l_skip_wait_for_start"
         ],
         "resource": [
             "storage_pool_name",
