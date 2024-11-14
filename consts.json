@@ -429,6 +429,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_RSC_STATE",
+                "value": [243, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
