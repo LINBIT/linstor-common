@@ -59,6 +59,7 @@ linstor_obj_java_enum_dict = {
     "drbd-proxy-zstd": "DRBD_PROXY_ZSTD",
 }
 
+
 class MyPyKey(object):
     def __init__(self, keypath):
         self._keys = keypath

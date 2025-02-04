@@ -3689,9 +3689,24 @@
                 "value": "INACTIVE",
                 "type": "string"
         },
-                {
+        {
                 "name": "FLAG_EBS_INITIATOR",
                 "value": "EBS_INITIATOR",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_CLONING",
+                "value": "CLONING",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_FAILED",
+                "value": "FAILED",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_RESTORE_TARGET",
+                "value": "RESTORE_TARGET",
                 "type": "string"
         },
         {
