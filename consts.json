@@ -1455,6 +1455,11 @@
                 "type": "string"
         },
         {
+                "name": "API_STATUS_CRYPT_PASS",
+                "value": "StatusCryptPass",
+                "type": "string"
+        },
+        {
                 "name": "API_RESTORE_VLM_DFN",
                 "value": "RestoreVlmDfn",
                 "type": "string"
