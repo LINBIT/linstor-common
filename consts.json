@@ -2181,8 +2181,8 @@
                 "type": "string"
         },
         {
-                "name": "KEY_DRBD_AUTO_QUORUM",
-                "value": "auto-quorum",
+                "name": "KEY_QUORUM_SET_BY",
+                "value": "QuorumSetBy",
                 "type": "string"
         },
         {
@@ -2852,6 +2852,11 @@
         {
                 "name": "NAMESPC_CONNECTION_PATHS",
                 "value": "Paths",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_INTERNAL_DRBD",
+                "value": "Internal/Drbd",
                 "type": "string"
         },
         {
