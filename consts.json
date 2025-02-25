@@ -2815,6 +2815,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_CONFIGURATION",
+                "value": "Configuration",
+                "type": "string"
+        },
+        {
                 "name": "NAMESPC_DRBD_OPTIONS",
                 "value": "DrbdOptions",
                 "type": "string"
