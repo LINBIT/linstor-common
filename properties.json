@@ -1344,6 +1344,13 @@
             "type": "string",
             "info": "External set volume encryption passphrase",
             "internal": false
+        },
+        "auto_block_size":
+        {
+            "key": ["NAMESPC_CONFIGURATION", "KEY_DRBD_AUTO_BLOCK_SIZE"],
+            "type": "string",
+            "info": "Enable/disable automatic management of the block-size DRBD option",
+            "internal": false
         }
     },
     "objects": {
@@ -1446,7 +1453,8 @@
             "zfs_rollback_strat",
             "zfs_delete_strat",
             "stordriver_lukscreate_options",
-            "stordriver_luksopen_options"
+            "stordriver_luksopen_options",
+            "auto_block_size"
         ],
         "node": [
             "preferred_nic",
@@ -1620,7 +1628,8 @@
             "zfs_rollback_strat",
             "zfs_delete_strat",
             "stordriver_lukscreate_options",
-            "stordriver_luksopen_options"
+            "stordriver_luksopen_options",
+            "auto_block_size"
         ],
         "resource": [
             "storage_pool_name",
@@ -1688,7 +1697,8 @@
             "ebs_volume_type",
             "encryption_passphrase",
             "stordriver_lukscreate_options",
-            "stordriver_luksopen_options"
+            "stordriver_luksopen_options",
+            "auto_block_size"
         ],
         "volume": [
             "storage_pool_name",
