@@ -434,6 +434,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_BLK_SIZE",
+                "value": [244, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
@@ -2136,6 +2141,16 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_AUTO_BLOCK_SIZE",
+                "value": "auto-block-size",
+                "type": "string"
+        },
+        {
+                "name": "KEY_DRBD_FREEZE_BLOCK_SIZE",
+                "value": "freeze-block-size",
+                "type": "string"
+        },
+        {
                 "name": "KEY_DRBD_AUTO_ADD_QUORUM_TIEBREAKER",
                 "value": "auto-add-quorum-tiebreaker",
                 "type": "string"
@@ -2752,6 +2767,11 @@
         {
                 "name": "NAMESPC_AUXILIARY",
                 "value": "Aux",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_LINSTOR_DRBD",
+                "value": "Linstor/Drbd",
                 "type": "string"
         },
         {
