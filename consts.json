@@ -2191,6 +2191,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_AUTO_BLOCK_SIZE",
+                "value": "auto-block-size",
+                "type": "string"
+        },
+        {
                 "name": "KEY_DRBD_AUTO_ADD_QUORUM_TIEBREAKER",
                 "value": "auto-add-quorum-tiebreaker",
                 "type": "string"
