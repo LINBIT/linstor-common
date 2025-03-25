@@ -742,6 +742,20 @@
             "type": "boolean_true_false",
             "default": "true"
         },
+        "drbd_auto_quorum": {
+            "internal": false,
+            "key":  [
+                "NAMESPC_DRBD_OPTIONS",
+                "KEY_DRBD_AUTO_QUORUM"
+            ],
+            "info": "DEPRECATED and not functional anymore, will be removed in 1.35.0",
+            "type": "symbol",
+            "values": [
+                "io-error",
+                "suspend-io",
+                "disabled"
+            ]
+        },
         "drbd_auto_add_quorum_tie_breaker": {
             "internal": false,
             "key": [
@@ -1395,6 +1409,7 @@
             "sys_fs_blkio_throttle_write_iops",
             "search_domain",
             "ext_cmd_wait_to",
+            "drbd_auto_quorum",
             "drbd_auto_add_quorum_tie_breaker",
             "drbd_auto_diskful",
             "drbd_auto_diskful_allow_cleanup",
@@ -1599,6 +1614,7 @@
             "sys_fs_blkio_throttle_write",
             "sys_fs_blkio_throttle_read_iops",
             "sys_fs_blkio_throttle_write_iops",
+            "drbd_auto_quorum",
             "drbd_auto_add_quorum_tie_breaker",
             "drbd_auto_diskful",
             "drbd_auto_diskful_allow_cleanup",

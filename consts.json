@@ -2186,6 +2186,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_AUTO_QUORUM",
+                "value": "auto-quorum",
+                "type": "string"
+        },
+        {
                 "name": "KEY_DRBD_AUTO_ADD_QUORUM_TIEBREAKER",
                 "value": "auto-add-quorum-tiebreaker",
                 "type": "string"
