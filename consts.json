@@ -3816,6 +3816,10 @@
                         {
                                 "name": "MISSING_EXT_TOOLS",
                                 "value": 11
+                        },
+                        {
+                                "name": "DUPLICATE_UNAME",
+                                "value": 12
                         }
                 ]
         },
