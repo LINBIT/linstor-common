@@ -1385,6 +1385,13 @@
             "type": "string",
             "info": "External set volume encryption passphrase",
             "internal": false
+        },
+        "auto_block_size":
+        {
+            "key": ["NAMESPC_CONFIGURATION", "KEY_DRBD_AUTO_BLOCK_SIZE"],
+            "type": "string",
+            "info": "Enable/disable automatic management of the block-size DRBD option",
+            "internal": false
         }
     },
     "objects": {
@@ -1486,7 +1493,8 @@
             "balance_resources_enabled",
             "balance_resources_interval",
             "balance_resources_grace_period",
-            "backup_shipping_recv_timeout_in_ms"
+            "backup_shipping_recv_timeout_in_ms",
+            "auto_block_size"
         ],
         "node": [
             "preferred_nic",
@@ -1664,7 +1672,8 @@
             "balance_resources_enabled",
             "backup_shipping_allow_force_restore",
             "backup_shipping_recv_timeout_in_ms",
-            "backup_shipping_l2l_skip_wait_for_start"
+            "backup_shipping_l2l_skip_wait_for_start",
+            "auto_block_size"
         ],
         "resource": [
             "storage_pool_name",
@@ -1731,7 +1740,8 @@
             "storage_pool_exos_vlm_type",
             "storage_pool_exos_create_vlm_options",
             "ebs_volume_type",
-            "encryption_passphrase"
+            "encryption_passphrase",
+            "auto_block_size"
         ],
         "volume": [
             "storage_pool_name",
