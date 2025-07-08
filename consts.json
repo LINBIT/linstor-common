@@ -3163,6 +3163,19 @@
                 "type": "string"
         },
         {
+                "blockcomment": "Storage driver options"
+        },
+        {
+                "name": "KEY_STOR_DRIVER_LUKS_FORMAT_OPTIONS",
+                "value": "LuksFormatOptions",
+                "type": "string"
+        },
+        {
+                "name": "KEY_STOR_DRIVER_LUKS_OPEN_OPTIONS",
+                "value": "LuksOpenOptions",
+                "type": "string"
+        },
+        {
                 "blockcomment": "DRBD Proxy keys (other than 'options')"
         },
         {
