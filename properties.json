@@ -139,6 +139,24 @@
             "value": "^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
             "internal": true
         },
+        "stordriver_lukscreate_options": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_DRIVER_LUKS_FORMAT_OPTIONS"
+            ],
+            "type": "string",
+            "internal": false,
+            "info": "User specified command line arguments for the lukscreate command"
+        },
+        "stordriver_luksopen_options": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_DRIVER_LUKS_OPEN_OPTIONS"
+            ],
+            "type": "string",
+            "internal": false,
+            "info": "User specified command line arguments for the luksopen command"
+        },
         "storage_pool_name": {
             "key": [
                 "KEY_STOR_POOL_NAME"
