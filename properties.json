@@ -1174,53 +1174,6 @@
             "type": "long",
             "info": "The next ID to try for auto-snapshots"
         },
-        "snapshot_shipping_run_every":
-        {
-            "key": [
-                "NAMESPC_SNAPSHOT_SHIPPING",
-                "KEY_RUN_EVERY"
-            ],
-            "type": "long",
-            "info": "Runs every X minutes an auto-snapshot-shipping unless the current snapshot-shipping is still running. In this case a new one will be started asap."
-        },
-        "snapshot_shipping_keep":
-        {
-            "key": [
-                "NAMESPC_SNAPSHOT_SHIPPING",
-                "KEY_KEEP"
-            ],
-            "type": "long",
-            "info": "Keeps the last X shipped snapshots. Removing this property or having a value <= 0 disables auto-cleanup, all auto-snapshots will be kept",
-            "default": "10"
-        },
-        "snapshot_shipping_target":
-        {
-            "key": [
-                "NAMESPC_SNAPSHOT_SHIPPING",
-                "KEY_TARGET_NODE"
-            ],
-            "type": "string",
-            "info": "Node name of the snapshot shipping target"
-        },
-        "snapshot_shipping_source":
-        {
-            "key": [
-                "NAMESPC_SNAPSHOT_SHIPPING",
-                "KEY_SOURCE_NODE"
-            ],
-            "type": "string",
-            "info": "Node name of the snapshot shipping source"
-        },
-        "snapshot_shipping_port_range":
-        {
-            "key": [
-                "NAMESPC_SNAPSHOT_SHIPPING",
-                "KEY_TCP_PORT_RANGE"
-            ],
-            "type": "regex",
-            "value": "[0-9]+-[0-9]+",
-            "info": "Range for allocation of snapshot shipping TCP ports"
-        },
         "backup_shipping_timeout":
         {
             "key": [
@@ -1429,7 +1382,6 @@
             "proxy_auto_enable",
             "site",
             "update_cache_interval",
-            "snapshot_shipping_port_range",
             "backup_shipping_timeout",
             "backup_shipping_s3_key_suffix",
             "backup_shipping_max_concurrent_backups_per_node",
@@ -1602,10 +1554,6 @@
             "bcache_writeback",
             "bcache_discard",
             "bcache_cache_replacement_policy",
-            "snapshot_shipping_source",
-            "snapshot_shipping_target",
-            "snapshot_shipping_run_every",
-            "snapshot_shipping_keep",
             "auto_snapshot_run_every",
             "auto_snapshot_keep",
             "auto_snapshot_next_id",
