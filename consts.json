@@ -1628,11 +1628,6 @@
                 "type": "string"
         },
         {
-                "name": "API_SHIP_SNAPSHOT",
-                "value": "ShipSnapshot",
-                "type": "string"
-        },
-        {
                 "name": "API_MOD_KVS",
                 "value": "ModifyKvs",
                 "type": "string"
@@ -1935,11 +1930,6 @@
         {
                 "name": "API_LST_PHYS_STOR",
                 "value": "LstPhysicalStorage",
-                "type": "string"
-        },
-        {
-                "name": "API_LST_SNAPSHOT_SHIPPINGS",
-                "value": "LstSnapShips",
                 "type": "string"
         },
         {
@@ -2616,11 +2606,6 @@
         },
         {
                 "blockcomment": "Snapshot shipping property keys"
-        },
-        {
-                "name": "KEY_SNAPSHOT_SHIPPING_PREFIX",
-                "value": "SnapshotShippingPrefix",
-                "type": "string"
         },
         {
                 "name": "KEY_TARGET_NODE",
@@ -3522,29 +3507,6 @@
                 "name": "VAL_NO",
                 "value": "No",
                 "type": "string"
-        },
-        {
-                "blockcomment": "Snapshot-shipping values"
-        },
-        {
-                "name": "VAL_SNAP_SHIP_NAME",
-                "value": "SnapshotShipping",
-                "type": "string"
-        },
-        {
-                "name": "SnapshotShipStatus",
-                "type": "enum",
-                "enumtype": "string",
-                "values": [
-                        {
-                                "name": "RUNNING",
-                                "value": "Running"
-                        },
-                        {
-                                "name": "COMPLETE",
-                                "value": "Complete"
-                        }
-                ]
         },
         {
                 "blockcomment": "Flag string values"
