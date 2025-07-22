@@ -155,42 +155,6 @@
             "value": "^|.internal|[a-zA-Z0-9_][a-zA-Z0-9_-]{2,47}$",
             "info": "Linstor storage pool name to use for external metadata."
         },
-        "storage_pool_exos_vlm_type": {
-            "key": [
-                "NAMESPC_EXOS",
-                "KEY_STOR_POOL_EXOS_VLM_TYPE"
-            ],
-            "type": "symbol",
-            "values": [
-                "linear",
-                "virtual"
-            ],
-            "info": "linear: Volumes are created from Disk Groups (vdisks), virtual: Volumes are created from Pools which is a set of Disk Groups (vdisks)"
-        },
-        "storage_pool_exos_create_vlm_options": {
-            "key": [
-                "NAMESPC_EXOS",
-                "KEY_STOR_POOL_EXOS_CREATE_VOLUME_OPTIONS"
-            ],
-            "type": "string",
-            "info": "Any additional parameters appended to /create/volume/pool/${poolName}/size/${size}KiB/${vlmName}"
-        },
-        "storage_pool_exos_enclosure": {
-            "key": [
-                "NAMESPC_EXOS",
-                "KEY_STOR_POOL_EXOS_ENCLOSURE"
-            ],
-            "type": "string",
-            "info": "Name of the Exos enclosure"
-        },
-        "storage_pool_exos_pool_sn": {
-            "key": [
-                "NAMESPC_EXOS",
-                "KEY_STOR_POOL_EXOS_POOL_SN"
-            ],
-            "type": "string",
-            "info": "Serial number of the Exos pool"
-        },
         "storage_pool_remote_spdk_api_host": {
             "key": [
                 "NAMESPC_STORAGE_DRIVER",
@@ -1454,8 +1418,6 @@
             "storage_pool_remote_spdk_user_name_env",
             "storage_pool_remote_spdk_user_pw",
             "storage_pool_remote_spdk_user_pw_env",
-            "storage_pool_exos_vlm_type",
-            "storage_pool_exos_create_vlm_options",
             "autoplacer_strat_weights_max_freespace",
             "autoplacer_strat_weights_min_reserved_space",
             "autoplacer_strat_weights_min_rsc_count",
@@ -1534,8 +1496,6 @@
             "storage_pool_remote_spdk_user_name_env",
             "storage_pool_remote_spdk_user_pw",
             "storage_pool_remote_spdk_user_pw_env",
-            "storage_pool_exos_vlm_type",
-            "storage_pool_exos_create_vlm_options",
             "autoplacer_max_throughput",
             "autoplacer_allow_target",
             "proxy_auto_enable",
@@ -1585,10 +1545,6 @@
             "storage_pool_remote_spdk_user_name_env",
             "storage_pool_remote_spdk_user_pw",
             "storage_pool_remote_spdk_user_pw_env",
-            "storage_pool_exos_vlm_type",
-            "storage_pool_exos_create_vlm_options",
-            "storage_pool_exos_enclosure",
-            "storage_pool_exos_pool_sn",
             "autoplacer_max_throughput",
             "ebs_volume_type",
             "drbd_skip_disk"
@@ -1653,8 +1609,6 @@
             "auto_snapshot_run_every",
             "auto_snapshot_keep",
             "auto_snapshot_next_id",
-            "storage_pool_exos_vlm_type",
-            "storage_pool_exos_create_vlm_options",
             "preferred_nic",
             "clone_use_zfs_clone",
             "allow_mixing_device_kind",
@@ -1681,8 +1635,7 @@
             "sys_fs_blkio_throttle_read_iops",
             "sys_fs_blkio_throttle_write_iops",
             "drbd_auto_diskful_allow_cleanup",
-            "drbd_skip_disk",
-            "storage_pool_exos_create_vlm_options"
+            "drbd_skip_disk"
         ],
         "volume-definition": [
             "storage_pool_name",
@@ -1728,8 +1681,6 @@
             "bcache_writeback",
             "bcache_discard",
             "bcache_cache_replacement_policy",
-            "storage_pool_exos_vlm_type",
-            "storage_pool_exos_create_vlm_options",
             "ebs_volume_type",
             "encryption_passphrase"
         ],

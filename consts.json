@@ -1500,11 +1500,6 @@
                 "type": "string"
         },
         {
-                "name": "API_CRT_EXOS_ENCLOSURE",
-                "value": "CrtExosEnclosure",
-                "type": "string"
-        },
-        {
                 "name": "API_SET_REMOTE",
                 "value": "SetRemote",
                 "type": "string"
@@ -1658,16 +1653,6 @@
                 "type": "string"
         },
         {
-                "name": "API_MOD_EXOS_DFLTS",
-                "value": "ModifyExosDefaults",
-                "type": "string"
-        },
-        {
-                "name": "API_MOD_EXOS_ENCLOSURE",
-                "value": "ModExosEnclosure",
-                "type": "string"
-        },
-        {
                 "name": "API_MOD_SCHEDULE",
                 "value": "ModSchedule",
                 "type": "string"
@@ -1758,11 +1743,6 @@
         {
                 "name": "API_LOST_STOR_POOL",
                 "value": "LostStorPool",
-                "type": "string"
-        },
-        {
-                "name": "API_DEL_EXOS_ENCLOSURE",
-                "value": "DelExosEnclosure",
                 "type": "string"
         },
         {
@@ -1960,31 +1940,6 @@
         {
                 "name": "API_LST_REMOTE",
                 "value": "LstRemote",
-                "type": "string"
-        },
-        {
-                "name": "API_LST_EXOS_DFLTS",
-                "value": "LstExosDefaults",
-                "type": "string"
-        },
-        {
-                "name": "API_LST_EXOS_ENCLOSURES",
-                "value": "LstExosEnclosures",
-                "type": "string"
-        },
-        {
-                "name": "API_EXOS_ENCLOSURE_EVENTS",
-                "value": "ExosEvents",
-                "type": "string"
-        },
-        {
-                "name": "API_EXOS_EXEC",
-                "value": "ExosExec",
-                "type": "string"
-        },
-        {
-                "name": "API_EXOS_MAP",
-                "value": "ExosMap",
                 "type": "string"
         },
         {
@@ -2940,11 +2895,6 @@
                 "type": "string"
         },
         {
-                "name": "NAMESPC_EXOS",
-                "value": "StorDriver/Exos",
-                "type": "string"
-        },
-        {
                 "name": "NAMESPC_BACKUP_SHIPPING",
                 "value": "BackupShipping",
                 "type": "string"
@@ -3090,61 +3040,6 @@
         {
                 "name": "KEY_SPEC_STLT_PORT_AUTO_RANGE",
                 "value": "SpecStltPortAutoRange",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_EXOS_API_IP",
-                "value": "IP",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_EXOS_API_IP_ENV",
-                "value": "IPEnv",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_EXOS_API_PORT",
-                "value": "Port",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_EXOS_API_USER",
-                "value": "Username",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_EXOS_API_USER_ENV",
-                "value": "UsernameEnv",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_EXOS_API_PASSWORD",
-                "value": "Password",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_EXOS_API_PASSWORD_ENV",
-                "value": "PasswordEnv",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_EXOS_VLM_TYPE",
-                "value": "VolumeType",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_EXOS_CREATE_VOLUME_OPTIONS",
-                "value": "CreateVolumeOptions",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_EXOS_ENCLOSURE",
-                "value": "Enclosure",
-                "type": "string"
-        },
-        {
-                "name": "KEY_STOR_POOL_EXOS_POOL_SN",
-                "value": "PoolSN",
                 "type": "string"
         },
         {
@@ -3390,11 +3285,6 @@
         {
                 "name": "VAL_NODE_TYPE_REMOTE_SPDK",
                 "value": "Remote_Spdk",
-                "type": "string"
-        },
-        {
-                "name": "VAL_NODE_TYPE_EXOS_TARGET",
-                "value": "Exos_Target",
                 "type": "string"
         },
         {
@@ -3742,10 +3632,6 @@
                         {
                                 "name": "NVME",
                                 "value": "NVME"
-                        },
-                        {
-                                "name": "EXOS",
-                                "value": "EXOS"
                         },
                         {
                                 "name": "WRITECACHE",
