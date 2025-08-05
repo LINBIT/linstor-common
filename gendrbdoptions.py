@@ -15,7 +15,8 @@ _CategoryNamespaces = {
     'new-peer': "DrbdOptions/Net",
     'disk-options': "DrbdOptions/Disk",
     'resource-options': "DrbdOptions/Resource",
-    'peer-device-options': "DrbdOptions/PeerDevice"
+    'peer-device-options': "DrbdOptions/PeerDevice",
+    'new-minor': 'DrbdOptions/Disk',
 }
 
 # map a CategoryNamespace to a .res file section
@@ -24,16 +25,16 @@ _ResfileSections = {
     'DrbdOptions/Disk': 'disk',
     'DrbdOptions/Resource': 'options',
     'DrbdOptions/PeerDevice': 'disk',
-    'DrbdOptions/Handlers': 'handlers'
+    'DrbdOptions/Handlers': 'handlers',
 }
 
 _ObjectCategories = {
-    "controller": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options'],
-    "resource-definition": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options'],
-    "volume-definition": ['disk-options'],  # TODO add volume connection -> 'peer-device-options'
+    "controller": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options', 'new-minor'],
+    "resource-definition": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options', 'new-minor'],
+    "volume-definition": ['disk-options', 'new-minor'],  # TODO add volume connection -> 'peer-device-options'
     "rsc-conn": ['peer-device-options', 'new-peer'],
     "node-conn": ['peer-device-options', 'new-peer'],
-    "volume": ['disk-options'],
+    "volume": ['disk-options', 'new-minor'],
 }
 
 
