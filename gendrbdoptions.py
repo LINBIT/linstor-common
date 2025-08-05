@@ -43,7 +43,8 @@ def get_drbd_setup_xml(from_file):
             return f.read()
 
     drbdsetup_cmd = ['/usr/sbin/drbdsetup', 'xml-help']
-    opts = ['disk-options', 'peer-device-options', 'resource-options', 'new-peer']
+    opts = list(_CategoryNamespaces.keys())
+    opts.sort()
     xml_opts = ["<!--\n" + subprocess.check_output(["drbdadm", "--version"]).decode("utf-8") + "-->\n"]
     try:
         xml_opts += [subprocess.check_output(drbdsetup_cmd + [x]).decode("utf-8") for x in opts]
@@ -52,7 +53,7 @@ def get_drbd_setup_xml(from_file):
             cmd=" ".join(drbdsetup_cmd),
             f=from_file)
         )
-    xml = '<root>\n' + "".join(xml_opts) + '</root>'
+    xml = '<root>\n' + "".join(xml_opts) + '</root>\n'
     with open(from_file, 'wt') as f:
         f.write(xml)
     return xml
