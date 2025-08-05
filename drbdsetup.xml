@@ -1,11 +1,11 @@
 <root>
 <!--
-DRBDADM_BUILDTAG=GIT-hash:\ 03932e3edf6a996b14efd6176172c4998af48cc2\ build\ by\ @buildsystem\,\ 2023-10-20\ 10:46:29
+DRBDADM_BUILDTAG=GIT-hash:\ 529d38c7bfb1185280e7e590eb2344db06db6a95\ build\ by\ buildd@lcy02-amd64-042\,\ 2025-08-01\ 13:49:44
 DRBDADM_API_VERSION=2
-DRBD_KERNEL_VERSION_CODE=0x090205
-DRBD_KERNEL_VERSION=9.2.5
-DRBDADM_VERSION_CODE=0x091a00
-DRBDADM_VERSION=9.26.0-rc.2
+DRBD_KERNEL_VERSION_CODE=0x09020e
+DRBD_KERNEL_VERSION=9.2.14
+DRBDADM_VERSION_CODE=0x092000
+DRBDADM_VERSION=9.32.0-rc.1
 -->
 <command name="disk-options">
 	<summary>Change the disk options of an attached lower-level device.</summary>
@@ -78,6 +78,27 @@ DRBDADM_VERSION=9.26.0-rc.2
 		<unit>bytes</unit>
 	</option>
 </command>
+<command name="new-minor">
+	<summary>Create a new replicated device within a resource.</summary>
+	<argument>resource</argument>
+	<argument>minor</argument>
+	<argument>volume</argument>
+	<option name="max-bio-size" type="numeric">
+		<min>512</min>
+		<max>1048576</max>
+		<default>1048576</default>
+		<unit_prefix>1</unit_prefix>
+	</option>
+	<option name="diskless" type="boolean">
+		<default>no</default>
+	</option>
+	<option name="block-size" type="numeric">
+		<min>512</min>
+		<max>4096</max>
+		<default>512</default>
+		<unit_prefix>1</unit_prefix>
+	</option>
+</command>
 <command name="new-peer">
 	<summary>Make a peer host known to a resource.</summary>
 	<argument>resource</argument>
@@ -121,14 +142,14 @@ DRBDADM_VERSION=9.26.0-rc.2
 	</option>
 	<option name="sndbuf-size" type="numeric">
 		<min>0</min>
-		<max>10485760</max>
+		<max>134217728</max>
 		<default>0</default>
 		<unit_prefix>1</unit_prefix>
 		<unit>bytes</unit>
 	</option>
 	<option name="rcvbuf-size" type="numeric">
 		<min>0</min>
-		<max>10485760</max>
+		<max>134217728</max>
 		<default>0</default>
 		<unit_prefix>1</unit_prefix>
 		<unit>bytes</unit>
@@ -311,6 +332,9 @@ DRBDADM_VERSION=9.26.0-rc.2
 		<unit>bytes/second</unit>
 	</option>
 	<option name="bitmap" type="boolean">
+		<default>yes</default>
+	</option>
+	<option name="resync-without-replication" type="boolean">
 		<default>yes</default>
 	</option>
 </command>
