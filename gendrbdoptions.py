@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import os
 import sys
 import subprocess
 import xml.etree.ElementTree as ET
@@ -37,22 +38,24 @@ _ObjectCategories = {
 
 
 def get_drbd_setup_xml(from_file):
-    if from_file:
+    if from_file and os.path.exists(from_file):
         with open(from_file) as f:
             return f.read()
 
     drbdsetup_cmd = ['/usr/sbin/drbdsetup', 'xml-help']
     opts = ['disk-options', 'peer-device-options', 'resource-options', 'new-peer']
-    xml_opts = []
+    xml_opts = ["<!--\n" + subprocess.check_output(["drbdadm", "--version"]).decode("utf-8") + "-->\n"]
     try:
-        xml_opts = [subprocess.check_output(drbdsetup_cmd + [x]) for x in opts]
+        xml_opts += [subprocess.check_output(drbdsetup_cmd + [x]).decode("utf-8") for x in opts]
     except OSError:
         sys.stderr.write("Unable to execute drbdsetup: {cmd}\nUsing local file {f}\n".format(
             cmd=" ".join(drbdsetup_cmd),
             f=from_file)
         )
-
-    return '<root>\n' + "".join(xml_opts) + '</root>'
+    xml = '<root>\n' + "".join(xml_opts) + '</root>'
+    with open(from_file, 'wt') as f:
+        f.write(xml)
+    return xml
 
 
 def create_and_add_handlers_option(properties, option_name):
