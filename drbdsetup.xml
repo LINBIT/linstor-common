@@ -78,139 +78,6 @@ DRBDADM_VERSION=9.26.0-rc.2
 		<unit>bytes</unit>
 	</option>
 </command>
-<command name="peer-device-options">
-	<summary>Change peer-device options.</summary>
-	<argument>resource</argument>
-	<argument>peer_node_id</argument>
-	<argument>volume</argument>
-	<option name="set-defaults" type="flag">
-	</option>
-	<option name="resync-rate" type="numeric">
-		<min>1</min>
-		<max>8388608</max>
-		<default>250</default>
-		<unit_prefix>k</unit_prefix>
-		<unit>bytes/second</unit>
-	</option>
-	<option name="c-plan-ahead" type="numeric">
-		<min>0</min>
-		<max>300</max>
-		<default>20</default>
-		<unit_prefix>1</unit_prefix>
-		<unit>1/10 seconds</unit>
-	</option>
-	<option name="c-delay-target" type="numeric">
-		<min>1</min>
-		<max>100</max>
-		<default>10</default>
-		<unit_prefix>1</unit_prefix>
-		<unit>1/10 seconds</unit>
-	</option>
-	<option name="c-fill-target" type="numeric">
-		<min>0</min>
-		<max>1048576</max>
-		<default>100</default>
-		<unit_prefix>s</unit_prefix>
-		<unit>bytes</unit>
-	</option>
-	<option name="c-max-rate" type="numeric">
-		<min>0</min>
-		<max>4194304</max>
-		<default>102400</default>
-		<unit_prefix>k</unit_prefix>
-		<unit>bytes/second</unit>
-	</option>
-	<option name="c-min-rate" type="numeric">
-		<min>0</min>
-		<max>4194304</max>
-		<default>250</default>
-		<unit_prefix>k</unit_prefix>
-		<unit>bytes/second</unit>
-	</option>
-	<option name="bitmap" type="boolean">
-		<default>yes</default>
-	</option>
-</command>
-<command name="resource-options">
-	<summary>Change the resource options of an existing resource.</summary>
-	<argument>resource</argument>
-	<option name="set-defaults" type="flag">
-	</option>
-	<option name="cpu-mask" type="string">
-	</option>
-	<option name="on-no-data-accessible" type="handler">
-		<handler>io-error</handler>
-		<handler>suspend-io</handler>
-	</option>
-	<option name="auto-promote" type="boolean">
-		<default>yes</default>
-	</option>
-	<option name="peer-ack-window" type="numeric">
-		<min>2048</min>
-		<max>204800</max>
-		<default>4096</default>
-		<unit_prefix>s</unit_prefix>
-		<unit>bytes</unit>
-	</option>
-	<option name="peer-ack-delay" type="numeric">
-		<min>1</min>
-		<max>10000</max>
-		<default>100</default>
-		<unit_prefix>1</unit_prefix>
-		<unit>milliseconds</unit>
-	</option>
-	<option name="twopc-timeout" type="numeric">
-		<min>50</min>
-		<max>600</max>
-		<default>300</default>
-		<unit_prefix>1</unit_prefix>
-		<unit>1/10 seconds</unit>
-	</option>
-	<option name="twopc-retry-timeout" type="numeric">
-		<min>1</min>
-		<max>50</max>
-		<default>1</default>
-		<unit_prefix>1</unit_prefix>
-		<unit>1/10 seconds</unit>
-	</option>
-	<option name="auto-promote-timeout" type="numeric">
-		<min>0</min>
-		<max>600</max>
-		<default>20</default>
-		<unit_prefix>1</unit_prefix>
-		<unit>1/10 seconds</unit>
-	</option>
-	<option name="max-io-depth" type="numeric">
-		<min>4</min>
-		<max>4294967295</max>
-		<default>8000</default>
-		<unit_prefix>1</unit_prefix>
-	</option>
-	<option name="quorum" type="numeric-or-symbol">
-		<min>1</min>
-		<max>32</max>
-		<default>off</default>
-		<symbol>off</symbol>
-		<symbol>majority</symbol>
-		<symbol>all</symbol>
-	</option>
-	<option name="on-no-quorum" type="handler">
-		<handler>io-error</handler>
-		<handler>suspend-io</handler>
-	</option>
-	<option name="quorum-minimum-redundancy" type="numeric-or-symbol">
-		<min>1</min>
-		<max>32</max>
-		<default>off</default>
-		<symbol>off</symbol>
-		<symbol>majority</symbol>
-		<symbol>all</symbol>
-	</option>
-	<option name="on-suspended-primary-outdated" type="handler">
-		<handler>disconnect</handler>
-		<handler>force-secondary</handler>
-	</option>
-</command>
 <command name="new-peer">
 	<summary>Make a peer host known to a resource.</summary>
 	<argument>resource</argument>
@@ -392,6 +259,139 @@ DRBDADM_VERSION=9.26.0-rc.2
 		<unit_prefix>1</unit_prefix>
 	</option>
 	<option name="_name" type="string">
+	</option>
+</command>
+<command name="peer-device-options">
+	<summary>Change peer-device options.</summary>
+	<argument>resource</argument>
+	<argument>peer_node_id</argument>
+	<argument>volume</argument>
+	<option name="set-defaults" type="flag">
+	</option>
+	<option name="resync-rate" type="numeric">
+		<min>1</min>
+		<max>8388608</max>
+		<default>250</default>
+		<unit_prefix>k</unit_prefix>
+		<unit>bytes/second</unit>
+	</option>
+	<option name="c-plan-ahead" type="numeric">
+		<min>0</min>
+		<max>300</max>
+		<default>20</default>
+		<unit_prefix>1</unit_prefix>
+		<unit>1/10 seconds</unit>
+	</option>
+	<option name="c-delay-target" type="numeric">
+		<min>1</min>
+		<max>100</max>
+		<default>10</default>
+		<unit_prefix>1</unit_prefix>
+		<unit>1/10 seconds</unit>
+	</option>
+	<option name="c-fill-target" type="numeric">
+		<min>0</min>
+		<max>1048576</max>
+		<default>100</default>
+		<unit_prefix>s</unit_prefix>
+		<unit>bytes</unit>
+	</option>
+	<option name="c-max-rate" type="numeric">
+		<min>0</min>
+		<max>4194304</max>
+		<default>102400</default>
+		<unit_prefix>k</unit_prefix>
+		<unit>bytes/second</unit>
+	</option>
+	<option name="c-min-rate" type="numeric">
+		<min>0</min>
+		<max>4194304</max>
+		<default>250</default>
+		<unit_prefix>k</unit_prefix>
+		<unit>bytes/second</unit>
+	</option>
+	<option name="bitmap" type="boolean">
+		<default>yes</default>
+	</option>
+</command>
+<command name="resource-options">
+	<summary>Change the resource options of an existing resource.</summary>
+	<argument>resource</argument>
+	<option name="set-defaults" type="flag">
+	</option>
+	<option name="cpu-mask" type="string">
+	</option>
+	<option name="on-no-data-accessible" type="handler">
+		<handler>io-error</handler>
+		<handler>suspend-io</handler>
+	</option>
+	<option name="auto-promote" type="boolean">
+		<default>yes</default>
+	</option>
+	<option name="peer-ack-window" type="numeric">
+		<min>2048</min>
+		<max>204800</max>
+		<default>4096</default>
+		<unit_prefix>s</unit_prefix>
+		<unit>bytes</unit>
+	</option>
+	<option name="peer-ack-delay" type="numeric">
+		<min>1</min>
+		<max>10000</max>
+		<default>100</default>
+		<unit_prefix>1</unit_prefix>
+		<unit>milliseconds</unit>
+	</option>
+	<option name="twopc-timeout" type="numeric">
+		<min>50</min>
+		<max>600</max>
+		<default>300</default>
+		<unit_prefix>1</unit_prefix>
+		<unit>1/10 seconds</unit>
+	</option>
+	<option name="twopc-retry-timeout" type="numeric">
+		<min>1</min>
+		<max>50</max>
+		<default>1</default>
+		<unit_prefix>1</unit_prefix>
+		<unit>1/10 seconds</unit>
+	</option>
+	<option name="auto-promote-timeout" type="numeric">
+		<min>0</min>
+		<max>600</max>
+		<default>20</default>
+		<unit_prefix>1</unit_prefix>
+		<unit>1/10 seconds</unit>
+	</option>
+	<option name="max-io-depth" type="numeric">
+		<min>4</min>
+		<max>4294967295</max>
+		<default>8000</default>
+		<unit_prefix>1</unit_prefix>
+	</option>
+	<option name="quorum" type="numeric-or-symbol">
+		<min>1</min>
+		<max>32</max>
+		<default>off</default>
+		<symbol>off</symbol>
+		<symbol>majority</symbol>
+		<symbol>all</symbol>
+	</option>
+	<option name="on-no-quorum" type="handler">
+		<handler>io-error</handler>
+		<handler>suspend-io</handler>
+	</option>
+	<option name="quorum-minimum-redundancy" type="numeric-or-symbol">
+		<min>1</min>
+		<max>32</max>
+		<default>off</default>
+		<symbol>off</symbol>
+		<symbol>majority</symbol>
+		<symbol>all</symbol>
+	</option>
+	<option name="on-suspended-primary-outdated" type="handler">
+		<handler>disconnect</handler>
+		<handler>force-secondary</handler>
 	</option>
 </command>
 </root>
