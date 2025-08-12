@@ -3078,6 +3078,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_ZFS_DELETE_STRATEGY",
+                "value": "DeleteStrategy",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool traits keys"
         },
         {
@@ -3139,6 +3144,21 @@
         },
         {
                 "name": "VAL_STOR_POOL_ZFS_ROLLBACK_STRAT_DYNAMIC",
+                "value": "Dynamic",
+                "type": "string"
+        },
+        {
+                "name": "VAL_STOR_POOL_ZFS_DELETE_STRAT_DESTROY",
+                "value": "Destroy",
+                "type": "string"
+        },
+        {
+                "name": "VAL_STOR_POOL_ZFS_DELETE_STRAT_RENAME",
+                "value": "Rename",
+                "type": "string"
+        },
+        {
+                "name": "VAL_STOR_POOL_ZFS_DELETE_STRAT_DYNAMIC",
                 "value": "Dynamic",
                 "type": "string"
         },

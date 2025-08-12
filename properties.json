@@ -1273,6 +1273,18 @@
             ],
             "default": "Dynamic"
         },
+        "zfs_delete_strat":
+        {
+            "key": ["NAMESPC_STORAGE_DRIVER", "NAMESPC_ZFS", "KEY_ZFS_DELETE_STRATEGY"],
+            "type": "symbol",
+            "info": "'Delete' will fail if the given ZFS resource still has snapshots. 'Rename' will rename old ZVOL. 'Dynamic' will use 'Delete' if possible and fallback to 'Rename' otherwise",
+            "values": [
+                "Delete",
+                "Rename",
+                "Dynamic"
+            ],
+            "default": "Dynamic"
+        },
         "allow_mixing_device_kind":
         {
             "key": ["KEY_RSC_ALLOW_MIXING_DEVICE_KIND"],
@@ -1413,7 +1425,8 @@
             "balance_resources_interval",
             "balance_resources_grace_period",
             "backup_shipping_recv_timeout_in_ms",
-            "zfs_rollback_strat"
+            "zfs_rollback_strat",
+            "zfs_delete_strat"
         ],
         "node": [
             "preferred_nic",
@@ -1580,7 +1593,8 @@
             "backup_shipping_allow_force_restore",
             "backup_shipping_recv_timeout_in_ms",
             "backup_shipping_l2l_skip_wait_for_start",
-            "zfs_rollback_strat"
+            "zfs_rollback_strat",
+            "zfs_delete_strat"
         ],
         "resource": [
             "storage_pool_name",
