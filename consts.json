@@ -2915,6 +2915,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_ZFS",
+                "value": "Zfs",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
@@ -3068,6 +3073,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_ZFS_ROLLBACK_STRATEGY",
+                "value": "RollbackStrategy",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool traits keys"
         },
         {
@@ -3113,6 +3123,24 @@
                 "name": "VAL_STOR_POOL_SPACE_ENOUGH",
                 "value": "9223372036854775807L",
                 "type": "long"
+        },
+        {
+                "blockcomment": "Storage pool ZFS values"
+        },
+        {
+                "name": "VAL_STOR_POOL_ZFS_ROLLBACK_STRAT_ROLLBACK",
+                "value": "Rollback",
+                "type": "string"
+        },
+        {
+                "name": "VAL_STOR_POOL_ZFS_ROLLBACK_STRAT_CLONE",
+                "value": "Clone",
+                "type": "string"
+        },
+        {
+                "name": "VAL_STOR_POOL_ZFS_ROLLBACK_STRAT_DYNAMIC",
+                "value": "Dynamic",
+                "type": "string"
         },
         {
                 "blockcomment": "DRBD Proxy keys (other than 'options')"

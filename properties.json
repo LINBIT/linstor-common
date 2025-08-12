@@ -1261,6 +1261,18 @@
             "info": "if true: Zfs clone will use snapshot clone, instead of send/receive",
             "default": "false"
         },
+        "zfs_rollback_strat":
+        {
+            "key": ["NAMESPC_STORAGE_DRIVER", "NAMESPC_ZFS", "KEY_ZFS_ROLLBACK_STRATEGY"],
+            "type": "symbol",
+            "info": "'Rollback' will use 'zfs rollback', 'Clone' will rename old ZVOL and use 'zfs clone', 'Dynamic' will use 'Rollback' if possible and fallback to 'Clone' otherwise",
+            "values": [
+                "Rollback",
+                "Clone",
+                "Dynamic"
+            ],
+            "default": "Dynamic"
+        },
         "allow_mixing_device_kind":
         {
             "key": ["KEY_RSC_ALLOW_MIXING_DEVICE_KIND"],
@@ -1400,7 +1412,8 @@
             "balance_resources_enabled",
             "balance_resources_interval",
             "balance_resources_grace_period",
-            "backup_shipping_recv_timeout_in_ms"
+            "backup_shipping_recv_timeout_in_ms",
+            "zfs_rollback_strat"
         ],
         "node": [
             "preferred_nic",
@@ -1566,7 +1579,8 @@
             "balance_resources_enabled",
             "backup_shipping_allow_force_restore",
             "backup_shipping_recv_timeout_in_ms",
-            "backup_shipping_l2l_skip_wait_for_start"
+            "backup_shipping_l2l_skip_wait_for_start",
+            "zfs_rollback_strat"
         ],
         "resource": [
             "storage_pool_name",
