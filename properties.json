@@ -1273,6 +1273,23 @@
             "info": "If true, only wait until the snapshot is created. LINSTOR will start the actual shipment in the background.",
             "default": "false"
         },
+        "copy_all_snaps":
+        {
+            "key": [
+                "KEY_COPY_ALL_SNAPS"
+            ],
+            "type": "boolean_true_false",
+            "info": "If true, copy all existing snapshots of a resource to any newly created replicas."
+        },
+        "copy_all_snaps_on_evac":
+        {
+            "key": [
+                "KEY_COPY_ALL_SNAPS_ON_EVAC"
+            ],
+            "type": "boolean_true_false",
+            "info": "If true, evacuate all existing snapshots along with the resource.",
+            "default": "true"
+        },
         "update_cache_interval":
         {
             "key": [
@@ -1454,6 +1471,8 @@
             "backup_shipping_max_concurrent_backups_per_node",
             "backup_shipping_allow_force_restore",
             "backup_shipping_l2l_skip_wait_for_start",
+            "copy_all_snaps",
+            "copy_all_snaps_on_evac",
             "clone_use_zfs_clone",
             "allow_mixing_device_kind",
             "auto_snapshot_run_every",
@@ -1532,7 +1551,8 @@
             "backup_shipping_recv_timeout_in_ms",
             "backup_shipping_l2l_skip_wait_for_start",
             "stordriver_lukscreate_options",
-            "stordriver_luksopen_options"
+            "stordriver_luksopen_options",
+            "copy_all_snaps_on_evac"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",
@@ -1645,6 +1665,7 @@
             "backup_shipping_allow_force_restore",
             "backup_shipping_recv_timeout_in_ms",
             "backup_shipping_l2l_skip_wait_for_start",
+            "copy_all_snaps",
             "zfs_rollback_strat",
             "zfs_delete_strat",
             "stordriver_lukscreate_options",
