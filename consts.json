@@ -2641,6 +2641,16 @@
                 "type": "string"
         },
         {
+                "name": "KEY_COPY_ALL_SNAPS",
+                "value": "CopyAllSnaps",
+                "type": "string"
+        },
+        {
+                "name": "KEY_COPY_ALL_SNAPS_ON_EVAC",
+                "value": "CopyAllSnapsOnEvacuate",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Clone property keys"
         },
         {
