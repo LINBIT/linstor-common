@@ -1444,7 +1444,9 @@
             "balance_resources_grace_period",
             "backup_shipping_recv_timeout_in_ms",
             "zfs_rollback_strat",
-            "zfs_delete_strat"
+            "zfs_delete_strat",
+            "stordriver_lukscreate_options",
+            "stordriver_luksopen_options"
         ],
         "node": [
             "preferred_nic",
@@ -1501,7 +1503,9 @@
             "ebs_volume_type",
             "backup_shipping_max_concurrent_backups_per_node",
             "backup_shipping_recv_timeout_in_ms",
-            "backup_shipping_l2l_skip_wait_for_start"
+            "backup_shipping_l2l_skip_wait_for_start",
+            "stordriver_lukscreate_options",
+            "stordriver_luksopen_options"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",
@@ -1543,7 +1547,9 @@
             "storage_pool_remote_spdk_user_pw_env",
             "autoplacer_max_throughput",
             "ebs_volume_type",
-            "drbd_skip_disk"
+            "drbd_skip_disk",
+            "stordriver_lukscreate_options",
+            "stordriver_luksopen_options"
         ],
         "resource-definition": [
             "storage_pool_name",
@@ -1612,7 +1618,9 @@
             "backup_shipping_recv_timeout_in_ms",
             "backup_shipping_l2l_skip_wait_for_start",
             "zfs_rollback_strat",
-            "zfs_delete_strat"
+            "zfs_delete_strat",
+            "stordriver_lukscreate_options",
+            "stordriver_luksopen_options"
         ],
         "resource": [
             "storage_pool_name",
@@ -1629,7 +1637,9 @@
             "sys_fs_blkio_throttle_read_iops",
             "sys_fs_blkio_throttle_write_iops",
             "drbd_auto_diskful_allow_cleanup",
-            "drbd_skip_disk"
+            "drbd_skip_disk",
+            "stordriver_lukscreate_options",
+            "stordriver_luksopen_options"
         ],
         "volume-definition": [
             "storage_pool_name",
@@ -1676,7 +1686,9 @@
             "bcache_discard",
             "bcache_cache_replacement_policy",
             "ebs_volume_type",
-            "encryption_passphrase"
+            "encryption_passphrase",
+            "stordriver_lukscreate_options",
+            "stordriver_luksopen_options"
         ],
         "volume": [
             "storage_pool_name",
