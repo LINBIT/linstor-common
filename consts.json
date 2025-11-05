@@ -2466,6 +2466,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_CACHE_FLUSH_TIMEOUT",
+                "value": "FlushTimeout",
+                "type": "string"
+        },
+        {
                 "blockcomment": "BCache property keys"
         },
         {

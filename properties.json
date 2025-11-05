@@ -1005,6 +1005,16 @@
             "info": "Replacement policy",
             "default": "smq"
         },
+        "cache_flush_timeout":
+        {
+            "key": [
+                "NAMESPC_CACHE",
+                "KEY_CACHE_FLUSH_TIMEOUT"
+            ],
+            "type": "long",
+            "info": "Timeout to wait for data to get flushed to the origin device during suspend",
+            "default": "180000"
+        },
         "bcache_pool":
         {
             "key": [
@@ -1408,6 +1418,7 @@
             "cache_cache_size",
             "cache_blocksize",
             "cache_policy",
+            "cache_flush_timeout",
             "bcache_pool",
             "bcache_size",
             "bcache_block_size",
@@ -1490,6 +1501,7 @@
             "cache_cache_size",
             "cache_blocksize",
             "cache_policy",
+            "cache_flush_timeout",
             "bcache_pool",
             "bcache_size",
             "bcache_block_size",
@@ -1611,6 +1623,7 @@
             "cache_cache_size",
             "cache_blocksize",
             "cache_policy",
+            "cache_flush_timeout",
             "bcache_pool",
             "bcache_size",
             "bcache_block_size",
@@ -1693,6 +1706,7 @@
             "cache_cache_size",
             "cache_blocksize",
             "cache_policy",
+            "cache_flush_timeout",
             "bcache_pool",
             "bcache_size",
             "bcache_block_size",
