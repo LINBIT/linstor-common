@@ -439,6 +439,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_INVLD_DB_BACKUP_PATH",
+                "value": [245, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "blockcomment": "Codes 300-399: dependency not found failures"
         },
         {
