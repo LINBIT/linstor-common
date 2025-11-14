@@ -2737,13 +2737,13 @@
                 "type": "string"
         },
         {
-                "name": "NAMESPC_CLONE",
-                "value": "Clone",
+                "name": "KEY_CLONE_DD_BLOCKSIZE",
+                "value": "DdBlocksize",
                 "type": "string"
         },
         {
-                "name": "KEY_CLONE_DD_BLOCKSIZE",
-                "value": "DdBlocksize",
+                "name": "KEY_BALANCE_AFTER_CLONE",
+                "value": "BalanceAfterClone",
                 "type": "string"
         },
         {
@@ -3030,6 +3030,11 @@
         {
                 "name": "NAMESPC_AUTH",
                 "value": "Auth",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_CLONE",
+                "value": "Clone",
                 "type": "string"
         },
         {

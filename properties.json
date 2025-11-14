@@ -1475,6 +1475,13 @@
             "type": "boolean_true_false",
             "info": "Enables or disables the token authentication.",
             "internal": false
+        },
+        "balance_after_clone":
+        {
+            "key": ["NAMESPC_CLONE", "KEY_BALANCE_AFTER_CLONE"],
+            "type": "boolean_true_false",
+            "info": "After a clone is done, auto-place for an additional replica. The balance resource task will then remove the most allocated node resource.",
+            "internal": false
         }
     },
     "objects": {
@@ -1592,7 +1599,8 @@
             "stordriver_lukscreate_options",
             "stordriver_luksopen_options",
             "token_authentication_enabled",
-            "auto_block_size"
+            "auto_block_size",
+            "balance_after_clone"
         ],
         "node": [
             "preferred_nic",
@@ -1785,7 +1793,8 @@
             "zfs_delete_strat",
             "stordriver_lukscreate_options",
             "stordriver_luksopen_options",
-            "auto_block_size"
+            "auto_block_size",
+            "balance_after_clone"
         ],
         "resource": [
             "storage_pool_name",
