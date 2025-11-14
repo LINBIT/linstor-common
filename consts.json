@@ -2679,6 +2679,11 @@
                 "type": "string"
         },
         {
+            "name": "KEY_BALANCE_AFTER_CLONE",
+            "value": "BalanceAfterClone",
+            "type": "string"
+        },
+        {
                 "blockcomment": "NetCom namespaces"
         },
         {
@@ -2953,6 +2958,11 @@
                 "name": "NAMESPC_ZFS",
                 "value": "Zfs",
                 "type": "string"
+        },
+        {
+            "name": "NAMESPC_CLONE",
+            "value": "Clone",
+            "type": "string"
         },
         {
                 "blockcomment": "Storage pool property keys"

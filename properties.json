@@ -1385,6 +1385,13 @@
             "type": "string",
             "info": "Allow the block-size to change. block-size gets frozen automatically when a resource gets primary.",
             "internal": false
+        },
+        "balance_after_clone":
+        {
+            "key": ["NAMESPC_CLONE", "KEY_BALANCE_AFTER_CLONE"],
+            "type": "boolean_true_false",
+            "info": "After a clone is done, auto-place for an additional replica. The balance resource task will then remove the most allocated node resource.",
+            "internal": false
         }
     },
     "objects": {
@@ -1491,7 +1498,8 @@
             "zfs_delete_strat",
             "stordriver_lukscreate_options",
             "stordriver_luksopen_options",
-            "auto_block_size"
+            "auto_block_size",
+            "balance_after_clone"
         ],
         "node": [
             "preferred_nic",
@@ -1670,7 +1678,8 @@
             "zfs_delete_strat",
             "stordriver_lukscreate_options",
             "stordriver_luksopen_options",
-            "auto_block_size"
+            "auto_block_size",
+            "balance_after_clone"
         ],
         "resource": [
             "storage_pool_name",
