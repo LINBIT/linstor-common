@@ -1394,6 +1394,13 @@
             "type": "string",
             "info": "Allow the block-size to change. block-size gets frozen automatically when a resource gets primary.",
             "internal": false
+        },
+        "token_authentication_enabled":
+        {
+            "key": ["NAMESPC_AUTH", "KEY_TOKEN_AUTH_ENABLED"],
+            "type": "boolean_true_false",
+            "info": "Enables or disables the token authentication.",
+            "internal": false
         }
     },
     "objects": {
@@ -1501,6 +1508,7 @@
             "zfs_delete_strat",
             "stordriver_lukscreate_options",
             "stordriver_luksopen_options",
+            "token_authentication_enabled",
             "auto_block_size"
         ],
         "node": [

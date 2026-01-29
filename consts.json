@@ -1530,6 +1530,31 @@
                 "type": "string"
         },
         {
+                "name": "API_CTRL_CRT_AUTH_TOKEN",
+                "value": "CtrlCrtAuthToken",
+                "type": "string"
+        },
+        {
+                "name": "API_CTRL_LIST_AUTH_TOKEN",
+                "value": "CtrlListAuthToken",
+                "type": "string"
+        },
+        {
+                "name": "API_CTRL_MODIFY_AUTH_TOKEN",
+                "value": "CtrlModifyAuthToken",
+                "type": "string"
+        },
+        {
+                "name": "API_CTRL_DELETE_AUTH_TOKEN",
+                "value": "CtrlDeleteAuthToken",
+                "type": "string"
+        },
+        {
+                "name": "API_CTRL_INIT_AUTH_TOKEN",
+                "value": "CtrlInitAuthToken",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Modify object APIs"
         },
         {
@@ -2110,6 +2135,14 @@
         {
                 "name": "API_DB_EXPORT",
                 "value": "DbExport",
+                "type": "string"
+        },
+        {
+                "blockcomment": "Controller props"
+        },
+        {
+                "name": "KEY_TOKEN_AUTH_ENABLED",
+                "value": "TokenAuthenticationEnabled",
                 "type": "string"
         },
         {
@@ -2957,6 +2990,11 @@
         {
                 "name": "NAMESPC_ZFS",
                 "value": "Zfs",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_AUTH",
+                "value": "Auth",
                 "type": "string"
         },
         {
