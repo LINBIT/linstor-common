@@ -2265,6 +2265,16 @@
                 "type": "string"
         },
         {
+                "name": "KEY_BITMAP_BLOCK_SIZE_NEW_RESOURCE",
+                "value": "BitmapBlockSizeNewResource",
+                "type": "string"
+        },
+        {
+                "name": "KEY_BITMAP_BLOCK_SIZE",
+                "value": "BitmapBlockSize",
+                "type": "string"
+        },
+        {
                 "name": "KEY_RSC_ROLLBACK_TARGET",
                 "value": "RollbackTarget",
                 "type": "string"
