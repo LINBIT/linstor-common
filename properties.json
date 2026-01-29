@@ -314,6 +314,44 @@
             "info": "DRBD peer slots present on resource",
             "internal": true
         },
+        "bitmap_block_size_new_resource": {
+            "key": [
+                "KEY_BITMAP_BLOCK_SIZE_NEW_RESOURCE"
+            ],
+            "type": "symbol",
+            "values": [
+                "4",
+                "8",
+                "16",
+                "32",
+                "64",
+                "128",
+                "256",
+                "512",
+                "1024"
+            ],
+            "default": "4",
+            "info": "DRBD bitmap block size for newly created resources (default 4096 bytes). Cannot be changed after resource creation."
+        },
+        "bitmap_block_size": {
+            "key": [
+                "KEY_BITMAP_BLOCK_SIZE"
+            ],
+            "type": "symbol",
+            "values": [
+                "4",
+                "8",
+                "16",
+                "32",
+                "64",
+                "128",
+                "256",
+                "512",
+                "1024"
+            ],
+            "info": "DRBD bitmap block size on resource",
+            "internal": true
+        },
         "dm_stats": {
             "key": [
                 "NAMESPC_STORAGE_DRIVER",
@@ -1534,6 +1572,7 @@
             "minor_nr_range",
             "spec_stlt_auto_port_range",
             "peer_slots_new_resource",
+            "bitmap_block_size_new_resource",
             "dm_stats",
             "rest_disable_http_metrics",
             "rest_auto_https",
@@ -1775,6 +1814,7 @@
             "storage_pool_name",
             "storage_pool_drbd_meta_name",
             "peer_slots_new_resource",
+            "bitmap_block_size_new_resource",
             "proxy_compression_type",
             "auto_evict_min_replica_count",
             "fs_type",
@@ -1859,6 +1899,7 @@
             "preferred_nic",
             "outside_nic",
             "peer_slots",
+            "bitmap_block_size",
             "fs_type",
             "fs_user",
             "fs_group",
