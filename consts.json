@@ -3768,6 +3768,24 @@
                 ]
         },
         {
+                "blockcomment": "Satellite platform"
+        },
+        {
+                "name": "Platform",
+                "type": "enum",
+                "enumtype": "int",
+                "values": [
+                        {
+                                "name": "LINUX",
+                                "value": 0
+                        },
+                        {
+                                "name": "WINDOWS",
+                                "value": 1
+                        }
+                ]
+        },
+        {
                 "blockcomment": "Clone states"
         },
         {
