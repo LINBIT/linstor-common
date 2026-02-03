@@ -1385,6 +1385,13 @@
             "type": "string",
             "info": "Allow the block-size to change. block-size gets frozen automatically when a resource gets primary.",
             "internal": false
+        },
+        "node_connect_timeout":
+        {
+            "key": ["KEY_CONNECT_TIMEOUT_MS"],
+            "type": "long",
+            "info": "Milliseconds to wait for a connection to establish (including SSL handshake)",
+            "default": "10000"
         }
     },
     "objects": {
@@ -1491,7 +1498,8 @@
             "zfs_delete_strat",
             "stordriver_lukscreate_options",
             "stordriver_luksopen_options",
-            "auto_block_size"
+            "auto_block_size",
+            "node_connect_timeout"
         ],
         "node": [
             "preferred_nic",
@@ -1552,7 +1560,8 @@
             "backup_shipping_l2l_skip_wait_for_start",
             "stordriver_lukscreate_options",
             "stordriver_luksopen_options",
-            "copy_all_snaps_on_evac"
+            "copy_all_snaps_on_evac",
+            "node_connect_timeout"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",
