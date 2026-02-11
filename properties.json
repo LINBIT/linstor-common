@@ -557,6 +557,15 @@
             "info": "Disable Prometheus /metrics on HTTP, if HTTPS is enabled",
             "type": "boolean_true_false"
         },
+        "rest_auto_https": {
+            "internal": false,
+            "key": [
+                "NAMESPC_REST",
+                "KEY_AUTO_HTTPS"
+            ],
+            "info": "Automatically generate a self-signed certificate and enable HTTPS when no keystore is configured.",
+            "type": "boolean_true_false"
+        },
         "nvme_tr_type": {
             "internal": false,
             "key": [
@@ -1395,6 +1404,7 @@
             "peer_slots_new_resource",
             "dm_stats",
             "rest_disable_http_metrics",
+            "rest_auto_https",
             "auto_evict_after_time",
             "auto_evict_max_disconnected_nodes",
             "auto_evict_min_replica_count",
