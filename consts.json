@@ -2365,6 +2365,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_AUTO_HTTPS",
+                "value": "AutoHTTPS",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Writecache property keys"
         },
         {
