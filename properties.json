@@ -682,6 +682,30 @@
             "info": "Wait timeout for an external command in milliseconds",
             "type": "long"
         },
+        "ext_cmd_term_to": {
+            "internal": false,
+            "key": ["KEY_EXT_CMD_TERM_TO"],
+            "info": "Timeout in ms to wait for an external command to exit after SIGTERM",
+            "type": "long"
+        },
+        "ext_cmd_kill_to": {
+            "internal": false,
+            "key": ["KEY_EXT_CMD_KILL_TO"],
+            "info": "Timeout in ms to wait for an external command to exit after SIGKILL",
+            "type": "long"
+        },
+        "ext_cmd_io_stall_to": {
+            "internal": false,
+            "key": ["KEY_EXT_CMD_IO_STALL_TO"],
+            "info": "Max time in ms without I/O progress before an I/O-monitored command times out",
+            "type": "long"
+        },
+        "ext_cmd_io_poll_interval": {
+            "internal": false,
+            "key": ["KEY_EXT_CMD_IO_POLL_INTERVAL"],
+            "info": "Interval in ms between /proc/<pid>/io polls for I/O-monitored commands",
+            "type": "long"
+        },
         "auto_evict_after_time": {
             "internal": false,
             "key": [
@@ -1409,6 +1433,10 @@
             "sys_fs_blkio_throttle_write_iops",
             "search_domain",
             "ext_cmd_wait_to",
+            "ext_cmd_term_to",
+            "ext_cmd_kill_to",
+            "ext_cmd_io_stall_to",
+            "ext_cmd_io_poll_interval",
             "drbd_auto_quorum",
             "drbd_auto_add_quorum_tie_breaker",
             "drbd_auto_diskful",
@@ -1552,7 +1580,12 @@
             "backup_shipping_l2l_skip_wait_for_start",
             "stordriver_lukscreate_options",
             "stordriver_luksopen_options",
-            "copy_all_snaps_on_evac"
+            "copy_all_snaps_on_evac",
+            "ext_cmd_wait_to",
+            "ext_cmd_term_to",
+            "ext_cmd_kill_to",
+            "ext_cmd_io_stall_to",
+            "ext_cmd_io_poll_interval"
         ],
         "storagepool-definition": [
             "max_oversubscription_ratio",

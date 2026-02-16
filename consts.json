@@ -3441,6 +3441,26 @@
                 "type": "string"
         },
         {
+                "name": "KEY_EXT_CMD_TERM_TO",
+                "value": "ExtCmdTermTimeout",
+                "type": "string"
+        },
+        {
+                "name": "KEY_EXT_CMD_KILL_TO",
+                "value": "ExtCmdKillTimeout",
+                "type": "string"
+        },
+        {
+                "name": "KEY_EXT_CMD_IO_STALL_TO",
+                "value": "ExtCmdIoStallTimeout",
+                "type": "string"
+        },
+        {
+                "name": "KEY_EXT_CMD_IO_POLL_INTERVAL",
+                "value": "ExtCmdIoPollInterval",
+                "type": "string"
+        },
+        {
                 "blockcomment": "External files keys"
         },
         {
