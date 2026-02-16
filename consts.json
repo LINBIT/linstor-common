@@ -2955,6 +2955,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_EXT_CMD",
+                "value": "ExtCmd",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Storage pool property keys"
         },
         {
@@ -3441,23 +3446,28 @@
                 "type": "string"
         },
         {
-                "name": "KEY_EXT_CMD_TERM_TO",
-                "value": "ExtCmdTermTimeout",
+                "name": "KEY_WAIT_TO",
+                "value": "WaitTimeout",
                 "type": "string"
         },
         {
-                "name": "KEY_EXT_CMD_KILL_TO",
-                "value": "ExtCmdKillTimeout",
+                "name": "KEY_TERM_TO",
+                "value": "TermTimeout",
                 "type": "string"
         },
         {
-                "name": "KEY_EXT_CMD_IO_STALL_TO",
-                "value": "ExtCmdIoStallTimeout",
+                "name": "KEY_KILL_TO",
+                "value": "KillTimeout",
                 "type": "string"
         },
         {
-                "name": "KEY_EXT_CMD_IO_POLL_INTERVAL",
-                "value": "ExtCmdIoPollInterval",
+                "name": "KEY_IO_STALL_TO",
+                "value": "IoStallTimeout",
+                "type": "string"
+        },
+        {
+                "name": "KEY_IO_POLL_INTERVAL",
+                "value": "IoPollInterval",
                 "type": "string"
         },
         {
