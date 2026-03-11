@@ -2300,6 +2300,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_BALANCE_RESOURCES_SKIP_DISK_LIMIT",
+                "value": "BalanceResourcesSkipDiskLimit",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Volume property keys"
         },
         {

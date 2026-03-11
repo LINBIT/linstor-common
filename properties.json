@@ -1404,6 +1404,13 @@
             "info": "Seconds a resource must exists before balance resource task might delete it",
             "default": "3600"
         },
+        "balance_resources_skip_disk_limit":
+        {
+            "key": ["KEY_BALANCE_RESOURCES_SKIP_DISK_LIMIT"],
+            "type": "long",
+            "info": "Number of resources in SkipDisk state to tolerate before skipping balancing for the current resource-definition",
+            "default": "1"
+        },
         "encryption_passphrase":
         {
             "key": ["NAMESPC_ENCRYPTION", "KEY_PASSPHRASE"],
@@ -1531,6 +1538,7 @@
             "balance_resources_enabled",
             "balance_resources_interval",
             "balance_resources_grace_period",
+            "balance_resources_skip_disk_limit",
             "backup_shipping_recv_timeout_in_ms",
             "zfs_rollback_strat",
             "zfs_delete_strat",
@@ -1715,6 +1723,7 @@
             "drbd_options_force_initial_sync",
             "drbd_auto_rs_discard_granularity",
             "balance_resources_enabled",
+            "balance_resources_skip_disk_limit",
             "backup_shipping_allow_force_restore",
             "backup_shipping_recv_timeout_in_ms",
             "backup_shipping_l2l_skip_wait_for_start",
