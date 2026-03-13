@@ -2610,6 +2610,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_AUTOPLACE_MIN_THIN_FREE_SPACE",
+                "value": "MinThinFreeSpace",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Auto-Evict property keys"
         },
         {
