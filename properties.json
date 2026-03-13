@@ -1205,6 +1205,17 @@
             "type": "long",
             "info": "The maximum throughput the given storage pool is capable of."
         },
+        "autoplacer_min_thin_free_space":
+        {
+            "key": [
+                "NAMESPC_AUTOPLACER",
+                "KEY_AUTOPLACE_MIN_THIN_FREE_SPACE"
+            ],
+            "type": "regex",
+            "value": "(\\\\d+(?:[.]\\\\d+)?)\\\\s*([kKmMgGtT](?:i[bB]|[bB])?|[bB]|[sS]|%|)",
+            "default": "10%",
+            "info": "The minimum free space a thin storage pool has to have before getting disqualified. Either in percent or in absolute size, like '50GB'. If no unit (like 'GB', '%') is defined, 'KiB' is assumed."
+        },
         "autoplacer_allow_target":
         {
             "key": [
@@ -1515,6 +1526,7 @@
             "autoplacer_pre_select_script_timeout",
             "autoplacer_max_throughput",
             "autoplacer_allow_target",
+            "autoplacer_min_thin_free_space",
             "proxy_auto_enable",
             "site",
             "update_cache_interval",
@@ -1557,6 +1569,7 @@
             "sys_fs_blkio_throttle_write_iops",
             "auto_evict_after_time",
             "auto_evict_allow_eviction",
+            "autoplacer_min_thin_free_space",
             "writecache_pool_name",
             "writecache_size",
             "writecache_opt_start_sector",
@@ -1623,6 +1636,7 @@
             "sys_fs_blkio_throttle_write_iops"
         ],
         "storagepool": [
+            "autoplacer_min_thin_free_space",
             "max_oversubscription_ratio",
             "max_free_space_based_oversubscription_ratio",
             "max_total_capacity_based_oversubscription_ratio",
@@ -1659,6 +1673,7 @@
             "stordriver_luksopen_options"
         ],
         "resource-definition": [
+            "autoplacer_min_thin_free_space",
             "storage_pool_name",
             "storage_pool_drbd_meta_name",
             "peer_slots_new_resource",
