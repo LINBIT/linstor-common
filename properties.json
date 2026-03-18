@@ -284,17 +284,17 @@
             ],
             "type": "symbol",
             "values": [
-                "4096",
-                "8192",
-                "16384",
-                "32768",
-                "65536",
-                "131072",
-                "262144",
-                "524288",
-                "1048576"
+                "4",
+                "8",
+                "16",
+                "32",
+                "64",
+                "128",
+                "256",
+                "512",
+                "1024"
             ],
-            "default": "4096",
+            "default": "4",
             "info": "DRBD bitmap block size for newly created resources (default 4096 bytes). Cannot be changed after resource creation."
         },
         "bitmap_block_size": {
@@ -303,15 +303,15 @@
             ],
             "type": "symbol",
             "values": [
-                "4096",
-                "8192",
-                "16384",
-                "32768",
-                "65536",
-                "131072",
-                "262144",
-                "524288",
-                "1048576"
+                "4",
+                "8",
+                "16",
+                "32",
+                "64",
+                "128",
+                "256",
+                "512",
+                "1024"
             ],
             "info": "DRBD bitmap block size on resource",
             "internal": true
