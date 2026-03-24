@@ -849,6 +849,15 @@
             "info": "If set to false it will disable automatic setting of DRBD rs-discard-granularity. If not set or set to true, automatically setting the rs-discard-granularity property might override previously values specified by the user on volume-definition level",
             "type": "string"
         },
+        "drbd_auto_discard_granularity": {
+            "internal": false,
+            "key": [
+                "NAMESPC_LINSTOR_DRBD",
+                "KEY_DRBD_AUTO_DISCARD_GRANULARITY"
+            ],
+            "info": "If set to false it will disable automatic setting of DRBD discard-granularity. If not set or set to true, automatically setting the discard-granularity property might override previously values specified by the user on volume-definition level",
+            "type": "string"
+        },
         "drbd_skip_disk": {
             "internal": false,
             "key": [
@@ -1528,6 +1537,7 @@
             "drbd_auto_verify_algo_disable",
             "drbd_auto_verify_algo_allowed_user",
             "drbd_auto_rs_discard_granularity",
+            "drbd_auto_discard_granularity",
             "drbd_skip_disk",
             "writecache_pool_name",
             "writecache_size",
@@ -1791,6 +1801,7 @@
             "ebs_volume_type",
             "drbd_options_force_initial_sync",
             "drbd_auto_rs_discard_granularity",
+            "drbd_auto_discard_granularity",
             "balance_resources_enabled",
             "balance_resources_skip_disk_limit",
             "backup_shipping_allow_force_restore",
@@ -1840,6 +1851,7 @@
             "stordriver_zfs_snapshot_options",
             "drbd_current_gi",
             "drbd_auto_rs_discard_granularity",
+            "drbd_auto_discard_granularity",
             "linstor_drbd_initial_uptodate_on",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
