@@ -39,6 +39,12 @@ _ObjectCategories = {
 
 
 def get_drbd_setup_xml(from_file):
+    """
+    To create the drbdsetup.xml file on another host:
+    { echo '<root>'; echo '<!--'; drbdadm --version; echo '-->'; for cmd in disk-options new-minor new-peer peer-device-options resource-options; do drbdsetup xml-help $cmd; done; echo '</root>'; } > drbdsetup.xml
+    :param from_file:
+    :return:
+    """
     if from_file and os.path.exists(from_file):
         with open(from_file) as f:
             return f.read()
@@ -118,7 +124,11 @@ def parse_drbd_setup_xml(xmlout):
 
         for obj, categories in _ObjectCategories.items():
             if cmd_name in categories:
-                objects[obj].extend(cmd_properties.keys())
+                for prop_key in cmd_properties.keys():
+                    if prop_key not in objects[obj]:
+                        objects[obj].append(prop_key)
+                    else:
+                        print(f"warning: duplicate prop_key '{prop_key}' for object '{obj}'")
         properties.update(cmd_properties)
 
     # add handlers section options
