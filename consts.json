@@ -2234,6 +2234,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_AUTO_DISCARD_GRANULARITY",
+                "value": "auto-discard-granularity",
+                "type": "string"
+        },
+        {
                 "name": "KEY_FORCE_INITIAL_SYNC",
                 "value": "ForceInitialSync",
                 "type": "string"
