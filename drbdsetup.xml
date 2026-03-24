@@ -1,11 +1,11 @@
 <root>
 <!--
-DRBDADM_BUILDTAG=GIT-hash:\ 529d38c7bfb1185280e7e590eb2344db06db6a95\ build\ by\ buildd@lcy02-amd64-042\,\ 2025-08-01\ 13:49:44
+DRBDADM_BUILDTAG=GIT-hash:\ 7fe34d56a7264cfc92fc5270471827bb3f7773e6\ build\ by\ @buildsystem\,\ 2026-03-17\ 06:41:39
 DRBDADM_API_VERSION=2
-DRBD_KERNEL_VERSION_CODE=0x09020e
-DRBD_KERNEL_VERSION=9.2.14
-DRBDADM_VERSION_CODE=0x092000
-DRBDADM_VERSION=9.32.0-rc.1
+DRBD_KERNEL_VERSION_CODE=0x090301
+DRBD_KERNEL_VERSION=9.3.1
+DRBDADM_VERSION_CODE=0x092200
+DRBDADM_VERSION=9.34.0
 -->
 <command name="disk-options">
 	<summary>Change the disk options of an attached lower-level device.</summary>
@@ -77,6 +77,9 @@ DRBDADM_VERSION=9.32.0-rc.1
 		<unit_prefix>1</unit_prefix>
 		<unit>bytes</unit>
 	</option>
+	<option name="bitmap" type="boolean">
+		<default>yes</default>
+	</option>
 </command>
 <command name="new-minor">
 	<summary>Create a new replicated device within a resource.</summary>
@@ -96,6 +99,12 @@ DRBDADM_VERSION=9.32.0-rc.1
 		<min>512</min>
 		<max>4096</max>
 		<default>512</default>
+		<unit_prefix>1</unit_prefix>
+	</option>
+	<option name="discard-granularity" type="numeric">
+		<min>0</min>
+		<max>134217728</max>
+		<default>4294967295</default>
 		<unit_prefix>1</unit_prefix>
 	</option>
 </command>
@@ -337,6 +346,9 @@ DRBDADM_VERSION=9.32.0-rc.1
 	<option name="resync-without-replication" type="boolean">
 		<default>yes</default>
 	</option>
+	<option name="peer-tiebreaker" type="boolean">
+		<default>yes</default>
+	</option>
 </command>
 <command name="resource-options">
 	<summary>Change the resource options of an existing resource.</summary>
@@ -416,6 +428,9 @@ DRBDADM_VERSION=9.32.0-rc.1
 	<option name="on-suspended-primary-outdated" type="handler">
 		<handler>disconnect</handler>
 		<handler>force-secondary</handler>
+	</option>
+	<option name="drbd8-api-compatibility" type="boolean">
+		<default>no</default>
 	</option>
 </command>
 </root>
