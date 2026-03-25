@@ -1248,6 +1248,11 @@
                 "type": "BOR"
         },
         {
+                "name": "WARN_CORRUPT_CRYPT_KEY",
+                "value": [1024, "MASK_WARN"],
+                "type": "BOR"
+        },
+        {
                 "name": "WARN_NOT_FOUND",
                 "value": [3000, "MASK_WARN"],
                 "type": "BOR"
