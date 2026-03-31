@@ -1363,6 +1363,14 @@
             "info": "if true: Zfs clone will use snapshot clone, instead of send/receive",
             "default": "false"
         },
+        "clone_dd_blocksize":
+        {
+            "key": ["NAMESPC_CLONE", "KEY_CLONE_DD_BLOCKSIZE"],
+            "type": "regex",
+            "value": "[1-9][0-9]*(k|K|M|G)?",
+            "info": "Blocksize value for the dd command used during clone operations (e.g. 64k, 1M, 16M)",
+            "default": "64k"
+        },
         "zfs_rollback_strat":
         {
             "key": ["NAMESPC_STORAGE_DRIVER", "NAMESPC_ZFS", "KEY_ZFS_ROLLBACK_STRATEGY"],
@@ -1545,6 +1553,7 @@
             "copy_all_snaps",
             "copy_all_snaps_on_evac",
             "clone_use_zfs_clone",
+            "clone_dd_blocksize",
             "allow_mixing_device_kind",
             "auto_snapshot_run_every",
             "auto_snapshot_keep",
@@ -1639,7 +1648,8 @@
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
             "sys_fs_blkio_throttle_read_iops",
-            "sys_fs_blkio_throttle_write_iops"
+            "sys_fs_blkio_throttle_write_iops",
+            "clone_dd_blocksize"
         ],
         "storagepool": [
             "max_oversubscription_ratio",
@@ -1737,6 +1747,7 @@
             "preferred_nic",
             "outside_nic",
             "clone_use_zfs_clone",
+            "clone_dd_blocksize",
             "allow_mixing_device_kind",
             "ebs_volume_type",
             "drbd_options_force_initial_sync",

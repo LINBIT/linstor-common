@@ -2727,6 +2727,16 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_CLONE",
+                "value": "Clone",
+                "type": "string"
+        },
+        {
+                "name": "KEY_CLONE_DD_BLOCKSIZE",
+                "value": "DdBlocksize",
+                "type": "string"
+        },
+        {
                 "blockcomment": "NetCom namespaces"
         },
         {
