@@ -870,6 +870,17 @@
             "info": "Adds a 'size' property into the .res file containing the exact size defined in the volume-definition",
             "type": "boolean_true_false"
         },
+        "drbd_initial_uptodate_stage": {
+            "internal": false,
+            "key": [
+                "NAMESPC_LINSTOR_DRBD",
+                "KEY_LINSTOR_DRBD_INITIAL_UPTODATE_STAGE"
+            ],
+            "info": "Specifies the stage of initialization. Only modify if you know what you are doing!",
+            "type": "range",
+            "min": 1,
+            "max": 2
+        },
         "writecache_pool_name": {
             "key": [
                 "NAMESPC_WRITECACHE",
@@ -1778,6 +1789,7 @@
             "stordriver_zfs_snapshot_options",
             "drbd_current_gi",
             "drbd_auto_rs_discard_granularity",
+            "drbd_initial_uptodate_stage",
             "sys_fs_blkio_throttle_read",
             "sys_fs_blkio_throttle_write",
             "sys_fs_blkio_throttle_read_iops",

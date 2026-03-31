@@ -2244,6 +2244,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_LINSTOR_DRBD_INITIAL_UPTODATE_STAGE",
+                "value": "UptoDateStage",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Node property keys"
         },
         {
