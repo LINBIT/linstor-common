@@ -2747,6 +2747,11 @@
                 "type": "string"
         },
         {
+            "name": "KEY_BALANCE_AFTER_RESTORE",
+            "value": "BalanceAfterRestore",
+            "type": "string"
+        },
+        {
                 "blockcomment": "NetCom namespaces"
         },
         {
@@ -3035,6 +3040,11 @@
         {
                 "name": "NAMESPC_CLONE",
                 "value": "Clone",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_SNAPSHOT",
+                "value": "Snapshot",
                 "type": "string"
         },
         {

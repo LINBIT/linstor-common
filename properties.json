@@ -1482,6 +1482,13 @@
             "type": "boolean_true_false",
             "info": "After a clone is done, auto-place for an additional replica. The balance resource task will then remove the most allocated node resource.",
             "internal": false
+        },
+        "balance_after_restore":
+        {
+            "key": ["NAMESPC_SNAPSHOT", "KEY_BALANCE_AFTER_RESTORE"],
+            "type": "boolean_true_false",
+            "info": "After a snapshot restore is done, auto-place for an additional replica. The balance resource task will then remove the most allocated node resource.",
+            "internal": false
         }
     },
     "objects": {
@@ -1600,7 +1607,8 @@
             "stordriver_luksopen_options",
             "token_authentication_enabled",
             "auto_block_size",
-            "balance_after_clone"
+            "balance_after_clone",
+            "balance_after_restore"
         ],
         "node": [
             "preferred_nic",
@@ -1794,7 +1802,8 @@
             "stordriver_lukscreate_options",
             "stordriver_luksopen_options",
             "auto_block_size",
-            "balance_after_clone"
+            "balance_after_clone",
+            "balance_after_restore"
         ],
         "resource": [
             "storage_pool_name",
