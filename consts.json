@@ -2206,6 +2206,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_LINSTOR_DRBD_INITIAL_UPTODATE_ON",
+                "value": "InitialUptoDateOn",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Node property keys"
         },
         {
