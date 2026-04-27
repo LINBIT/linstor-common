@@ -3572,6 +3572,11 @@
                 "type": "string"
         },
         {
+                "name": "VAL_TOGGLE_DISK_OP_INTO_DRBD_CLIENT",
+                "value": "INTO_DRBD_CLIENT",
+                "type": "string"
+        },
+        {
                 "blockcomment": "External commands keys"
         },
         {
@@ -3799,6 +3804,11 @@
         {
                 "name": "FLAG_DRBD_DISKLESS",
                 "value": "DRBD_DISKLESS",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_DRBD_CLIENT",
+                "value": "CLIENT",
                 "type": "string"
         },
         {
