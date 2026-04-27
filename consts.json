@@ -2928,6 +2928,11 @@
                 "type": "string"
         },
         {
+                "name": "NAMESPC_LUKS",
+                "value": "Luks",
+                "type": "string"
+        },
+        {
                 "name": "NAMESPC_SYS_FS",
                 "value": "sys/fs",
                 "type": "string"
@@ -3306,6 +3311,14 @@
         {
                 "name": "KEY_STOR_DRIVER_LUKS_OPEN_OPTIONS",
                 "value": "LuksOpenOptions",
+                "type": "string"
+        },
+        {
+                "blockcomment": "LUKS keys"
+        },
+        {
+                "name": "KEY_LUKS_ALLOW_DISCARDS",
+                "value": "AllowDiscards",
                 "type": "string"
         },
         {

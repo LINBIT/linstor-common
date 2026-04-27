@@ -157,6 +157,16 @@
             "internal": false,
             "info": "User specified command line arguments for the luksopen command"
         },
+        "luks_allow_discards": {
+            "key": [
+                "NAMESPC_LUKS",
+                "KEY_LUKS_ALLOW_DISCARDS"
+            ],
+            "type": "boolean_true_false",
+            "default": "false",
+            "internal": false,
+            "info": "Opens LUKS devices with --allow-discards, enabling discard/TRIM pass-through. When LUKS sits under DRBD, rs-discard-granularity is set automatically from the underlying storage."
+        },
         "storage_pool_name": {
             "key": [
                 "KEY_STOR_POOL_NAME"
@@ -1605,6 +1615,7 @@
             "zfs_delete_strat",
             "stordriver_lukscreate_options",
             "stordriver_luksopen_options",
+            "luks_allow_discards",
             "token_authentication_enabled",
             "auto_block_size",
             "balance_after_clone",
@@ -1671,6 +1682,7 @@
             "backup_shipping_l2l_skip_wait_for_start",
             "stordriver_lukscreate_options",
             "stordriver_luksopen_options",
+            "luks_allow_discards",
             "copy_all_snaps_on_evac",
             "ext_cmd_wait_to",
             "ext_cmd_term_to",
@@ -1723,7 +1735,8 @@
             "ebs_volume_type",
             "drbd_skip_disk",
             "stordriver_lukscreate_options",
-            "stordriver_luksopen_options"
+            "stordriver_luksopen_options",
+            "luks_allow_discards"
         ],
         "resource-definition": [
             "autoplacer_min_thin_free_space",
@@ -1801,6 +1814,7 @@
             "zfs_delete_strat",
             "stordriver_lukscreate_options",
             "stordriver_luksopen_options",
+            "luks_allow_discards",
             "auto_block_size",
             "balance_after_clone",
             "balance_after_restore"
@@ -1823,7 +1837,8 @@
             "drbd_auto_diskful_allow_cleanup",
             "drbd_skip_disk",
             "stordriver_lukscreate_options",
-            "stordriver_luksopen_options"
+            "stordriver_luksopen_options",
+            "luks_allow_discards"
         ],
         "volume-definition": [
             "storage_pool_name",
@@ -1875,6 +1890,7 @@
             "encryption_passphrase",
             "stordriver_lukscreate_options",
             "stordriver_luksopen_options",
+            "luks_allow_discards",
             "auto_block_size",
             "freeze_block_size"
         ],
