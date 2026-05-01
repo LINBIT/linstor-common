@@ -3096,6 +3096,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_LVCREATE_PVS_OPTIONS",
+                "value": "LvcreatePvsOptions",
+                "type": "string"
+        },
+        {
                 "name": "KEY_STOR_POOL_LVCREATE_SNAPSHOT_OPTIONS",
                 "value": "LvcreateSnapshotOptions",
                 "type": "string"
