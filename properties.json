@@ -1642,6 +1642,7 @@
             "balance_after_restore"
         ],
         "node": [
+            "tcp_port_range",
             "preferred_nic",
             "outside_nic",
             "storage_pool_name",
