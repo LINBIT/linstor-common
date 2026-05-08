@@ -3096,8 +3096,8 @@
                 "type": "string"
         },
         {
-                "name": "KEY_STOR_POOL_LVCREATE_PVS_OPTIONS",
-                "value": "LvcreatePvsOptions",
+                "name": "KEY_STOR_POOL_LVCREATE_PV_SELECTION",
+                "value": "LvcreatePvSelection",
                 "type": "string"
         },
         {
