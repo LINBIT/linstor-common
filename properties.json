@@ -49,6 +49,15 @@
             "value": ".*",
             "info": "Additional parameters added to every 'lvcreate ... ' command"
         },
+        "stordriver_lvcreate_pv_selection": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_LVCREATE_PV_SELECTION"
+            ],
+            "type": "string",
+            "default": "--sort pv_used",
+            "info": "Parameters for 'pvsdisplay ...' command to add a PV list to every 'lvcreate ... ' command (default '--sort pv_used')"
+        },
         "stordriver_lvcreate_snapshot_options": {
             "key": [
                 "NAMESPC_STORAGE_DRIVER",
@@ -1542,6 +1551,7 @@
             "bcache_discard",
             "bcache_cache_replacement_policy",
             "stordriver_lvcreate_options",
+            "stordriver_lvcreate_pv_selection",
             "stordriver_lvcreate_snapshot_options",
             "stordriver_lvm_sizes_cache_time",
             "stordriver_zfs_create_options",
@@ -1633,6 +1643,7 @@
             "bcache_discard",
             "bcache_cache_replacement_policy",
             "stordriver_lvcreate_options",
+            "stordriver_lvcreate_pv_selection",
             "stordriver_lvcreate_snapshot_options",
             "stordriver_lvm_sizes_cache_time",
             "stordriver_zfs_create_options",
@@ -1688,6 +1699,7 @@
             "nvme_preferred_nic",
             "stordriver_lvcreate_type",
             "stordriver_lvcreate_options",
+            "stordriver_lvcreate_pv_selection",
             "stordriver_lvcreate_snapshot_options",
             "stordriver_zfs_create_options",
             "stordriver_zfs_snapshot_options",
@@ -1724,6 +1736,7 @@
             "nvme_port",
             "stordriver_lvcreate_type",
             "stordriver_lvcreate_options",
+            "stordriver_lvcreate_pv_selection",
             "stordriver_lvcreate_snapshot_options",
             "stordriver_zfs_create_options",
             "stordriver_zfs_snapshot_options",
@@ -1817,6 +1830,7 @@
             "fs_mkfsparameters",
             "stordriver_lvcreate_type",
             "stordriver_lvcreate_options",
+            "stordriver_lvcreate_pv_selection",
             "stordriver_lvcreate_snapshot_options",
             "stordriver_zfs_create_options",
             "stordriver_zfs_snapshot_options",
