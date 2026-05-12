@@ -41,7 +41,10 @@ _ObjectCategories = {
 def get_drbd_setup_xml(from_file):
     """
     To create the drbdsetup.xml file on another host:
-    { echo '<root>'; echo '<!--'; drbdadm --version; echo '-->'; for cmd in disk-options new-minor new-peer peer-device-options resource-options; do drbdsetup xml-help $cmd; done; echo '</root>'; } > drbdsetup.xml
+    { echo '<root>'; echo '<!--'; drbdadm --version; echo '-->'; \
+    for cmd in disk-options new-minor new-peer peer-device-options resource-options; do \
+      drbdsetup xml-help $cmd; \
+    done; echo '</root>'; } > drbdsetup.xml
     :param from_file:
     :return:
     """
