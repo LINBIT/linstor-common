@@ -3559,6 +3559,19 @@
                 "type": "string"
         },
         {
+                "blockcomment": "Toggle disk operations"
+        },
+        {
+                "name": "VAL_TOGGLE_DISK_OP_INTO_DRBD_DISKFUL",
+                "value": "INTO_DRBD_DISKFUL",
+                "type": "string"
+        },
+        {
+                "name": "VAL_TOGGLE_DISK_OP_INTO_DRBD_DISKLESS",
+                "value": "INTO_DRBD_DISKLESS",
+                "type": "string"
+        },
+        {
                 "blockcomment": "External commands keys"
         },
         {
