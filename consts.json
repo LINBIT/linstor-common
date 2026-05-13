@@ -985,6 +985,11 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_PORT_BLOCKED_DRBD_ADJUST",
+                "value": [970, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_SNAPSHOT_ROLLBACK_IN_PROGRESS",
                 "value": [971, "MASK_ERROR"],
                 "type": "BOR"
@@ -2310,6 +2315,11 @@
         {
                 "name": "KEY_TCP_PORTS_BLOCKED",
                 "value": "TcpPortsBlocked",
+                "type": "string"
+        },
+        {
+                "name": "KEY_BLOCKED_PORTS_LIST",
+                "value": "BlockedPortsList",
                 "type": "string"
         },
         {
