@@ -995,6 +995,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_DECRYPT_ERROR",
+                "value": [969, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_PORT_BLOCKED_DRBD_ADJUST",
                 "value": [970, "MASK_ERROR"],
                 "type": "BOR"
@@ -2219,6 +2224,16 @@
                 "type": "string"
         },
         {
+                "name": "KEY_ZONE_MODE",
+                "value": "ZoneMode",
+                "type": "string"
+        },
+        {
+                "name": "KEY_ZONES",
+                "value": "Zones",
+                "type": "string"
+        },
+        {
                 "name": "KEY_MINOR_NR_AUTO_RANGE",
                 "value": "MinorNrAutoRange",
                 "type": "string"
@@ -2938,6 +2953,11 @@
         {
                 "name": "NAMESPC_LINSTOR_DRBD",
                 "value": "Linstor/Drbd",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_WAAS",
+                "value": "Drbd/Waas",
                 "type": "string"
         },
         {
@@ -3920,6 +3940,11 @@
         {
                 "name": "FLAG_RESTORE_TARGET",
                 "value": "RESTORE_TARGET",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_WITNESS",
+                "value": "WITNESS",
                 "type": "string"
         },
         {
