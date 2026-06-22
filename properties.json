@@ -860,6 +860,33 @@
             "info": "Enables automatic management (creation and deletion) of tie breaking resource",
             "type": "boolean_true_false"
         },
+        "linstor_waas_remote": {
+            "internal": false,
+            "key": [
+                "NAMESPC_WAAS",
+                "KEY_DRBD_WAAS_REMOTE"
+            ],
+            "info": "The name of the WaaS remote to use as an endpoint. Use '-' to overridde a WaaS remote specified in a lower prioritized object to disable WaaS",
+            "type": "string"
+        },
+        "linstor_waas_zonemode": {
+            "internal": false,
+            "key": [
+                "NAMESPC_WAAS",
+                "KEY_DRBD_WAAS_ZONE_MODE"
+            ],
+            "info": "The zonemode used when creating a new witness resource",
+            "type": "string"
+        },
+        "linstor_waas_zones": {
+            "internal": false,
+            "key": [
+                "NAMESPC_WAAS",
+                "KEY_DRBD_WAAS_ZONES"
+            ],
+            "info": "Comma separated list of zones used when creating a new witness resource",
+            "type": "string"
+        },
         "drbd_auto_diskful": {
             "internal": false,
             "key": [
@@ -1607,6 +1634,9 @@
             "ext_cmd_wait_to_deprecated",
             "drbd_auto_quorum",
             "drbd_auto_add_quorum_tie_breaker",
+            "linstor_waas_remote",
+            "linstor_waas_zones",
+            "linstor_waas_zonemode",
             "drbd_auto_diskful",
             "drbd_auto_diskful_allow_cleanup",
             "drbd_auto_resync_after_disable",
@@ -1846,6 +1876,9 @@
             "sys_fs_blkio_throttle_write_iops",
             "drbd_auto_quorum",
             "drbd_auto_add_quorum_tie_breaker",
+            "linstor_waas_remote",
+            "linstor_waas_zones",
+            "linstor_waas_zonemode",
             "drbd_auto_diskful",
             "drbd_auto_diskful_allow_cleanup",
             "drbd_auto_verify_algo_disable",

@@ -995,6 +995,11 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_DECRYPT_ERROR",
+                "value": [969, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_PORT_BLOCKED_DRBD_ADJUST",
                 "value": [970, "MASK_ERROR"],
                 "type": "BOR"
@@ -2219,6 +2224,21 @@
                 "type": "string"
         },
         {
+                "name": "KEY_DRBD_WAAS_REMOTE",
+                "value": "WaasRemote",
+                "type": "string"
+        },
+        {
+                "name": "KEY_DRBD_WAAS_ZONE_MODE",
+                "value": "WaasZoneMode",
+                "type": "string"
+        },
+        {
+                "name": "KEY_DRBD_WAAS_ZONES",
+                "value": "WaasZones",
+                "type": "string"
+        },
+        {
                 "name": "KEY_MINOR_NR_AUTO_RANGE",
                 "value": "MinorNrAutoRange",
                 "type": "string"
@@ -2910,6 +2930,11 @@
         {
                 "name": "NAMESPC_LINSTOR_DRBD",
                 "value": "Linstor/Drbd",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_WAAS",
+                "value": "Drbd/Waas",
                 "type": "string"
         },
         {
