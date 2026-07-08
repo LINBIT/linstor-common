@@ -3648,6 +3648,14 @@
                 "type": "string"
         },
         {
+                "blockcomment": "Logging keys"
+        },
+        {
+                "name": "KEY_LOG_ARCHIVE_AGE_DAYS",
+                "value": "ArchiveAgeDays",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Default ports"
         },
         {

@@ -1563,6 +1563,16 @@
             "type": "boolean_true_false",
             "info": "After a snapshot restore is done, auto-place for an additional replica. The balance resource task will then remove the most allocated node resource.",
             "internal": false
+        },
+        "log_archive_age_days":
+        {
+            "key": ["NAMESPC_LOGGING", "KEY_LOG_ARCHIVE_AGE_DAYS"],
+            "type": "range",
+            "min": 0,
+            "max": 36500,
+            "default": "60",
+            "info": "Minimum age in days after which error-report log files are archived and compressed (whole months only); 0 disables archiving",
+            "internal": false
         }
     },
     "objects": {
@@ -1686,7 +1696,8 @@
             "token_authentication_enabled",
             "auto_block_size",
             "balance_after_clone",
-            "balance_after_restore"
+            "balance_after_restore",
+            "log_archive_age_days"
         ],
         "node": [
             "tcp_port_range",
