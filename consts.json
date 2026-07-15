@@ -985,6 +985,16 @@
                 "blockcomment": "Other failures"
         },
         {
+                "name": "FAIL_NOT_FOUND_LIVE_MIGRATE_SOURCE",
+                "value": [900, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_EXISTS_LIVE_MIGRATE",
+                "value": [901, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_PORT_BLOCKED_DRBD_ADJUST",
                 "value": [970, "MASK_ERROR"],
                 "type": "BOR"
@@ -1517,6 +1527,11 @@
         {
                 "name": "API_MAKE_RSC_AVAIL",
                 "value": "MakeRscAvail",
+                "type": "string"
+        },
+        {
+                "name": "API_UNMAKE_RSC_AVAIL",
+                "value": "UnmakeRscAvail",
                 "type": "string"
         },
         {
