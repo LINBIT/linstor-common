@@ -1716,6 +1716,11 @@
                 "type": "string"
         },
         {
+                "name": "API_TRUNCATE_RSC_DFN",
+                "value": "TruncateRscDfn",
+                "type": "string"
+        },
+        {
                 "name": "API_DEL_NET_IF",
                 "value": "DelNetIf",
                 "type": "string"
