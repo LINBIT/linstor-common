@@ -912,7 +912,7 @@
                 "KEY_DRBD_AUTO_RS_DISCARD_GRANULARITY"
             ],
             "info": "If set to false it will disable automatic setting of DRBD rs-discard-granularity. If not set or set to true, automatically setting the rs-discard-granularity property might override previously values specified by the user on volume-definition level",
-            "type": "string"
+            "type": "boolean_true_false"
         },
         "drbd_auto_discard_granularity": {
             "internal": false,
@@ -921,7 +921,7 @@
                 "KEY_DRBD_AUTO_DISCARD_GRANULARITY"
             ],
             "info": "If set to false it will disable automatic setting of DRBD discard-granularity. If not set or set to true, automatically setting the discard-granularity property might override previously values specified by the user on volume-definition level",
-            "type": "string"
+            "type": "boolean_true_false"
         },
         "drbd_skip_disk": {
             "internal": false,
@@ -1371,9 +1371,9 @@
                 "NAMESPC_BACKUP_SHIPPING",
                 "KEY_ALLOW_FORCE_RESTORE"
             ],
-            "type": "string",
+            "type": "boolean_true_false",
             "info": "If true, an existing resource can be deleted in order to restore a received backup",
-            "default": "false"
+            "default": "true"
         },
         "backup_shipping_recv_timeout_in_ms":
         {
@@ -1532,14 +1532,14 @@
         "auto_block_size":
         {
             "key": ["NAMESPC_LINSTOR_DRBD", "KEY_DRBD_AUTO_BLOCK_SIZE"],
-            "type": "string",
+            "type": "boolean_true_false",
             "info": "Enable/disable automatic management of the block-size DRBD option",
             "internal": false
         },
         "freeze_block_size":
         {
             "key": ["NAMESPC_LINSTOR_DRBD", "KEY_DRBD_FREEZE_BLOCK_SIZE"],
-            "type": "string",
+            "type": "boolean_true_false",
             "info": "Allow the block-size to change. block-size gets frozen automatically when a resource gets primary.",
             "internal": false
         },
