@@ -31,6 +31,7 @@ _ResfileSections = {
 _ObjectCategories = {
     "controller": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options', 'new-minor'],
     "resource-definition": ['disk-options', 'resource-options', 'new-peer', 'peer-device-options', 'new-minor'],
+    "node": ['resource-options'],
     "volume-definition": ['disk-options', 'new-minor'],  # TODO add volume connection -> 'peer-device-options'
     "rsc-conn": ['peer-device-options', 'new-peer'],
     "node-conn": ['peer-device-options', 'new-peer'],
@@ -106,6 +107,7 @@ def add_handlers(objects, properties):
         create_and_add_handlers_option(properties, h)
         objects["controller"].append(h)
         objects["resource-definition"].append(h)
+        objects["node"].append(h)
 
     return properties
 
