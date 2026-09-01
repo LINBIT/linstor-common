@@ -1,0 +1,138 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.linbit.linstor.api.grpc";
+option java_outer_classname = "ControllerDataProto";
+
+package linbit.linstor;
+
+import "common.proto";
+import "google/protobuf/field_mask.proto";
+
+message ControllerPropsListRequest {
+}
+
+message ControllerPropsListResponse {
+  // merged controller + satellite config properties
+  map<string, string> props = 1;
+}
+
+message ControllerPropsModifyRequest {
+  PropsModify props_mod = 1;
+}
+
+message ControllerVersionRequest {
+}
+
+message ControllerVersionResponse {
+  string version = 1;
+  string git_hash = 2;
+  string build_time = 3;
+  // version of this grpc API definition
+  string grpc_api_version = 4;
+  // version of the REST API of this controller, for clients that gate
+  // features on it
+  string rest_api_version = 5;
+}
+
+message ControllerConfigConfig {
+  optional string dir = 1;
+}
+
+message ControllerConfigDebug {
+  bool console_enabled = 1;
+}
+
+message ControllerConfigLog {
+  bool print_stack_trace = 1;
+  optional string directory = 2;
+  optional string level = 3;
+  optional string level_linstor = 4;
+  optional string rest_access_log_path = 5;
+  optional string rest_access_mode = 6;
+}
+
+message ControllerConfigDbK8s {
+  uint32 request_retries = 1;
+  uint32 max_rollback_entries = 2;
+}
+
+message ControllerConfigDb {
+  optional string connection_url = 1;
+  optional string ca_certificate = 2;
+  optional string client_certificate = 3;
+  optional string in_memory = 4;
+  bool version_check_disabled = 5;
+  ControllerConfigDbK8s k8s = 6;
+}
+
+// also used for the https configuration
+message ControllerConfigHttp {
+  bool enabled = 1;
+  optional string listen_address = 2;
+  optional uint32 port = 3;
+}
+
+message ControllerConfigLdap {
+  bool enabled = 1;
+  bool public_access_allowed = 2;
+  optional string uri = 3;
+  optional string dn = 4;
+  optional string search_base = 5;
+  optional string search_filter = 6;
+}
+
+message ControllerConfigGetRequest {
+}
+
+message ControllerConfigGetResponse {
+  ControllerConfigConfig config = 1;
+  ControllerConfigDebug debug = 2;
+  ControllerConfigLog log = 3;
+  ControllerConfigDb db = 4;
+  ControllerConfigHttp http = 5;
+  ControllerConfigHttp https = 6;
+  ControllerConfigLdap ldap = 7;
+}
+
+// Only the log levels can be changed at runtime, all other controller
+// configuration is read-only.
+message ControllerConfigModifyRequest {
+  optional string log_level = 1;
+  optional string log_level_global = 2;
+  optional string log_level_linstor = 3;
+  optional string log_level_linstor_global = 4;
+  // updatable paths: log_level, log_level_global, log_level_linstor,
+  // log_level_linstor_global (none can be cleared)
+  google.protobuf.FieldMask update_mask = 5;
+}
+
+message PropsInfo {
+  optional string info = 1;
+  optional string prop_type = 2;
+  optional string value = 3;
+  optional string dflt = 4;
+  optional string unit = 5;
+}
+
+message ControllerPropsInfoListRequest {
+  // LinStorObject names (e.g. "CTRL", "NODE", ...) to list the property
+  // rules for; empty lists all objects
+  repeated string objects = 1;
+}
+
+// helper message because proto3 cannot nest maps directly
+message PropsInfoMap {
+  map<string, PropsInfo> props_info = 1;
+}
+
+message ControllerPropsInfoListResponse {
+  // key: LinStorObject name (e.g. "CTRL", "NODE", ...)
+  map<string, PropsInfoMap> objects = 1;
+}
+
+message ControllerDatabaseExportRequest {
+  // file name below /var/lib/linstor/, ".json" is appended if missing;
+  // default: linstordb-backup-<utc-timestamp>.json
+  optional string backup_name = 1;
+}

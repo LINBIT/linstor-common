@@ -6,6 +6,8 @@ option java_outer_classname = "RscGrpProto";
 
 package linbit.linstor;
 
+import "common.proto";
+
 message RGAdjustReq {
 
 }
@@ -13,10 +15,8 @@ message RGAdjustReq {
 message ResourceGroupModifyRequest {
   string rsc_group_name = 1;
   optional string description = 2;
-  map<string, string> override_props = 3;
-  repeated string delete_props = 4;
-  repeated string delete_namespaces = 5;
-  optional uint32 peer_slots = 6;
-  repeated string snap_names = 7;
-  bool copy_all_snaps = 8;
+  PropsModify props_mod = 3;
+  optional uint32 peer_slots = 4;
+  repeated string snap_names = 5;
+  bool copy_all_snaps = 6;
 }
