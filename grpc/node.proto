@@ -92,11 +92,9 @@ message NodeCreateRequest {
 message NodeModifyRequest {
   string name = 1;
   optional NodeType node_type = 2;
-  map<string, string> override_props = 3;
-  repeated string delete_props = 4;
-  repeated string delete_namespaces = 5;
+  PropsModify props_mod = 3;
   // updatable paths: node_type (cannot be cleared)
-  google.protobuf.FieldMask update_mask = 6;
+  google.protobuf.FieldMask update_mask = 4;
 }
 
 message NodeDeleteRequest {

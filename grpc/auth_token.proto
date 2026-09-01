@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.linbit.linstor.api.grpc";
+option java_outer_classname = "AuthTokenProto";
+
+package linbit.linstor;
+
+import "google/protobuf/field_mask.proto";
+
+message AuthToken {
+  uint32 id = 1;
+  // milliseconds since unix epoch in UTC
+  uint64 created_at = 2;
+  bool is_active = 3;
+  // milliseconds since unix epoch in UTC, absent = never expires
+  optional uint64 expires_at = 4;
+  string description = 5;
+  optional string ip_filter = 6;
+  bool is_user_token = 7;
+}
+
+message AuthTokenInitializeRequest {
+  bool only_satellites = 1;
+  // defaults to "init-client" if empty
+  string description = 2;
+  bool no_https = 3;
+}
+
+message AuthTokenListRequest {
+}
+
+message AuthTokenListResponse {
+  repeated AuthToken tokens = 1;
+}
+
+message AuthTokenCreateRequest {
+  string description = 1;
+  // milliseconds since unix epoch in UTC; the controller only supports day
+  // granularity and rounds this up to the next start of a UTC day, so the
+  // token stays valid at least until the requested time; absent = never
+  // expires
+  optional uint64 expires_at = 2;
+  // single IPv4 or IPv6 address
+  optional string ip_filter = 3;
+}
+
+message AuthTokenModifyRequest {
+  uint32 id = 1;
+  optional string description = 2;
+  optional string ip_filter = 3;
+  optional bool is_active = 4;
+  // updatable paths: description, ip_filter (clearing removes the
+  // restriction), is_active (cannot be cleared)
+  google.protobuf.FieldMask update_mask = 5;
+}
+
+message AuthTokenRevokeRequest {
+  uint32 id = 1;
+}

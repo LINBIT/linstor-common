@@ -6,10 +6,13 @@ option java_outer_classname = "ControllerProto";
 
 package linbit.linstor;
 
+import "auth_token.proto";
 import "common.proto";
+import "controller_data.proto";
 import "node.proto";
 import "resource_group.proto";
 
+// grpc API version: 0.1.0
 service Controller {
   rpc NodeList(NodeListRequest) returns (NodeListResponse);
   rpc NodeCreate(NodeCreateRequest) returns (stream Answer);
@@ -18,4 +21,18 @@ service Controller {
   rpc NodeReconnect(NodeReconnectRequest) returns (stream Answer);
   rpc ResourceGroupAdjust(RGAdjustReq) returns (stream Answer);
   rpc ResourceGroupModify(ResourceGroupModifyRequest) returns (stream Answer);
+  rpc ControllerPropsList(ControllerPropsListRequest) returns (ControllerPropsListResponse);
+  rpc ControllerPropsModify(ControllerPropsModifyRequest) returns (stream Answer);
+  rpc ControllerVersion(ControllerVersionRequest) returns (ControllerVersionResponse);
+  rpc ControllerConfigGet(ControllerConfigGetRequest) returns (ControllerConfigGetResponse);
+  rpc ControllerConfigModify(ControllerConfigModifyRequest) returns (stream Answer);
+  rpc ControllerPropsInfoList(ControllerPropsInfoListRequest) returns (ControllerPropsInfoListResponse);
+  rpc ControllerDatabaseExport(ControllerDatabaseExportRequest) returns (stream Answer);
+  // the new token is returned in Answer.obj_refs["token"]
+  rpc AuthTokenInitialize(AuthTokenInitializeRequest) returns (stream Answer);
+  rpc AuthTokenList(AuthTokenListRequest) returns (AuthTokenListResponse);
+  // the new token is returned in Answer.obj_refs["token"]
+  rpc AuthTokenCreate(AuthTokenCreateRequest) returns (stream Answer);
+  rpc AuthTokenModify(AuthTokenModifyRequest) returns (stream Answer);
+  rpc AuthTokenRevoke(AuthTokenRevokeRequest) returns (stream Answer);
 }
