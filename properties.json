@@ -1573,6 +1573,34 @@
             "default": "60",
             "info": "Minimum age in days after which error-report log files are archived and compressed (whole months only); 0 disables archiving",
             "internal": false
+        },
+        "auto_db_export_cron":
+        {
+            "key": ["NAMESPC_AUTO_DB_EXPORT", "KEY_AUTO_DB_EXPORT_CRON"],
+            "type": "string",
+            "default": "0 4 * * *",
+            "info": "Cron syntax of when LINSTOR should export the database. Use 'off' to disable this feature"
+        },
+        "auto_db_export_keep":
+        {
+            "key": ["NAMESPC_AUTO_DB_EXPORT", "KEY_AUTO_DB_EXPORT_KEEP"],
+            "type": "long",
+            "default": "7",
+            "info": "How many old database exports should LINSTOR keep"
+        },
+        "auto_db_export_path":
+        {
+            "key": ["NAMESPC_AUTO_DB_EXPORT", "KEY_AUTO_DB_EXPORT_PATH"],
+            "type": "string",
+            "default": "/var/lib/linstor/",
+            "info": "The path where the exported database files should be placed. Must be an existing directory with write access"
+        },
+        "auto_db_export_compress":
+        {
+            "key": ["NAMESPC_AUTO_DB_EXPORT", "KEY_AUTO_DB_EXPORT_COMPRESS"],
+            "type": "boolean_true_false",
+            "default": "True",
+            "info": "Compress the database export"
         }
     },
     "objects": {
@@ -1697,7 +1725,11 @@
             "auto_block_size",
             "balance_after_clone",
             "balance_after_restore",
-            "log_archive_age_days"
+            "log_archive_age_days",
+            "auto_db_export_cron",
+            "auto_db_export_keep",
+            "auto_db_export_path",
+            "auto_db_export_compress"
         ],
         "node": [
             "tcp_port_range",

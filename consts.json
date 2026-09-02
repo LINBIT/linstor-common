@@ -2855,6 +2855,34 @@
                 "type": "string"
         },
         {
+                "blockcomment": "Database export constants"
+        },
+        {
+                "name": "KEY_AUTO_DB_EXPORT_CRON",
+                "value": "Cron",
+                "type": "string"
+        },
+        {
+                "name": "KEY_AUTO_DB_EXPORT_KEEP",
+                "value": "Keep",
+                "type": "string"
+        },
+        {
+                "name": "KEY_AUTO_DB_EXPORT_PATH",
+                "value": "Path",
+                "type": "string"
+        },
+        {
+                "name": "KEY_AUTO_DB_EXPORT_COMPRESS",
+                "value": "Compress",
+                "type": "string"
+        },
+        {
+                "name": "VAL_AUTO_DB_EXPORT_CRON_OFF",
+                "value": "off",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Property namespaces"
         },
         {
@@ -3100,6 +3128,11 @@
         {
                 "name": "NAMESPC_SNAPSHOT",
                 "value": "Snapshot",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_AUTO_DB_EXPORT",
+                "value": "AutoDbExport",
                 "type": "string"
         },
         {
