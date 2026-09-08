@@ -1456,6 +1456,13 @@
             "info": "Blocksize value for the dd command used during clone operations (e.g. 64k, 1M, 16M)",
             "default": "64k"
         },
+        "clone_allow_blocksize_change":
+        {
+            "key": ["NAMESPC_CLONE", "KEY_ALLOW_BLOCK_SIZE_CHANGE"],
+            "type": "boolean_true_false",
+            "info": "Allow clones to use a different DRBD block-size than their source. By default a clone inherits the source's block-size and is refused if its layer stack or storage pools require a larger minimum I/O size than the frozen value. When enabled, the clone does not inherit block-size and freeze and calculates them for its own stack, so the cloned data may be exposed with a larger sector size than it was written with. Only enable this for data that tolerates it (e.g. filesystems with 4k blocks on aligned partitions) and verify the cloned device before use.",
+            "default": "false"
+        },
         "zfs_rollback_strat":
         {
             "key": ["NAMESPC_STORAGE_DRIVER", "NAMESPC_ZFS", "KEY_ZFS_ROLLBACK_STRATEGY"],
@@ -1702,6 +1709,7 @@
             "copy_all_snaps_on_evac",
             "clone_use_zfs_clone",
             "clone_dd_blocksize",
+            "clone_allow_blocksize_change",
             "allow_mixing_device_kind",
             "auto_snapshot_run_every",
             "auto_snapshot_keep",
@@ -1916,6 +1924,7 @@
             "outside_nic",
             "clone_use_zfs_clone",
             "clone_dd_blocksize",
+            "clone_allow_blocksize_change",
             "allow_mixing_device_kind",
             "ebs_volume_type",
             "drbd_options_force_initial_sync",

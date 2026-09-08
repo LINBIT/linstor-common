@@ -2797,9 +2797,14 @@
                 "type": "string"
         },
         {
-            "name": "KEY_BALANCE_AFTER_RESTORE",
-            "value": "BalanceAfterRestore",
-            "type": "string"
+                "name": "KEY_BALANCE_AFTER_RESTORE",
+                "value": "BalanceAfterRestore",
+                "type": "string"
+        },
+        {
+                "name": "KEY_ALLOW_BLOCK_SIZE_CHANGE",
+                "value": "AllowBlockSizeChange",
+                "type": "string"
         },
         {
                 "blockcomment": "NetCom namespaces"
