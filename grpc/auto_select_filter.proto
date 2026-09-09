@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.linbit.linstor.api.grpc";
+option java_outer_classname = "AutoSelectFilterProto";
+
+package linbit.linstor;
+
+// Placement filter for the auto-placer. Used by resource groups (stored
+// filter), spawn/adjust and size queries; every field is optional and an
+// absent field means "not restricted" (or, on modify, "keep the current
+// value").
+message AutoSelectFilter {
+  // number of diskful replicas
+  optional uint32 place_count = 1;
+  // number of diskful replicas to add on top of the existing ones
+  optional uint32 additional_place_count = 2;
+  repeated string node_name_list = 3;
+  repeated string storage_pool_list = 4;
+  repeated string storage_pool_diskless_list = 5;
+  // do not place on nodes that already have one of these resources
+  repeated string not_place_with_rsc = 6;
+  optional string not_place_with_rsc_regex = 7;
+  // node property keys (optionally "key=value") replicas have to share
+  repeated string replicas_on_same = 8;
+  // node property keys (optionally "key=value") replicas must not share
+  repeated string replicas_on_different = 9;
+  // node property key -> max number of replicas sharing the same value
+  map<string, uint32> x_replicas_on_different_map = 10;
+  // layer names, e.g. "DRBD", "STORAGE"
+  repeated string layer_stack = 11;
+  // provider kinds, e.g. "LVM_THIN", "ZFS"
+  repeated string provider_list = 12;
+  optional bool diskless_on_remaining = 13;
+  // Resource flag name of the diskless type, e.g. "DRBD_DISKLESS", "NVME_INITIATOR"
+  optional string diskless_type = 14;
+  // number of DRBD ports to reserve for the resource
+  optional uint32 port_count = 15;
+}

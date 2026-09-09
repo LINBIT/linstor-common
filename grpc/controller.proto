@@ -19,8 +19,21 @@ service Controller {
   rpc NodeModify(NodeModifyRequest) returns (stream Answer);
   rpc NodeDelete(NodeDeleteRequest) returns (stream Answer);
   rpc NodeReconnect(NodeReconnectRequest) returns (stream Answer);
-  rpc ResourceGroupAdjust(RGAdjustReq) returns (stream Answer);
+  rpc ResourceGroupList(ResourceGroupListRequest) returns (ResourceGroupListResponse);
+  rpc ResourceGroupCreate(ResourceGroupCreateRequest) returns (stream Answer);
   rpc ResourceGroupModify(ResourceGroupModifyRequest) returns (stream Answer);
+  rpc ResourceGroupDelete(ResourceGroupDeleteRequest) returns (stream Answer);
+  rpc ResourceGroupSpawn(ResourceGroupSpawnRequest) returns (stream Answer);
+  rpc ResourceGroupAdjust(ResourceGroupAdjustRequest) returns (stream Answer);
+  rpc ResourceGroupAdjustAll(ResourceGroupAdjustAllRequest) returns (stream Answer);
+  // failures of the query itself are reported in QuerySizeInfoResponse.reports
+  rpc ResourceGroupQuerySizeInfo(ResourceGroupQuerySizeInfoRequest) returns (QuerySizeInfoResponse);
+  rpc ResourceGroupQueryAllSizeInfo(ResourceGroupQueryAllSizeInfoRequest)
+      returns (ResourceGroupQueryAllSizeInfoResponse);
+  rpc VolumeGroupList(VolumeGroupListRequest) returns (VolumeGroupListResponse);
+  rpc VolumeGroupCreate(VolumeGroupCreateRequest) returns (stream Answer);
+  rpc VolumeGroupModify(VolumeGroupModifyRequest) returns (stream Answer);
+  rpc VolumeGroupDelete(VolumeGroupDeleteRequest) returns (stream Answer);
   rpc ControllerPropsList(ControllerPropsListRequest) returns (ControllerPropsListResponse);
   rpc ControllerPropsModify(ControllerPropsModifyRequest) returns (stream Answer);
   rpc ControllerVersion(ControllerVersionRequest) returns (ControllerVersionResponse);
