@@ -17,9 +17,32 @@ message Paging {
   uint64 offset = 3;
 }
 
+// One sort key of a list request, see the sorting rules below.
+message SortField {
+  // field of the listed message, nested fields joined with '.', e.g. "name",
+  // "connection_status" or "select_filter.place_count"; a map field takes the
+  // key as last segment, e.g. "props.Aux/site"
+  string field = 1;
+  bool descending = 2;
+}
+
+// List requests take an optional PagingRequest. Sorting happens before
+// limit/offset are applied and follows these rules:
+//   * sort fields name fields of the listed message; scalar, string and enum
+//     fields are sortable, repeated fields are not; a map field is sorted by
+//     the value of the given key ("props.Aux/site")
+//   * strings compare case-insensitively (like LINSTOR object names), enums by
+//     their name, numbers numerically, booleans false before true
+//   * absent values (unset optional fields, missing map keys) sort last in
+//     both directions
+//   * ties keep the controller's default order, which is also the order of a
+//     request without sort fields
+//   * unknown or unsortable fields are rejected with INVALID_ARGUMENT; the
+//     error lists the sortable fields
 message PagingRequest {
   uint64 limit = 2;
   uint64 offset = 3;
+  repeated SortField sort = 4;
 }
 
 // Common property modification set, shared by all object modify requests.

@@ -6,6 +6,7 @@ option java_outer_classname = "AuthTokenProto";
 
 package linbit.linstor;
 
+import "common.proto";
 import "google/protobuf/field_mask.proto";
 
 message AuthToken {
@@ -28,10 +29,14 @@ message AuthTokenInitializeRequest {
 }
 
 message AuthTokenListRequest {
+  // only list the tokens created for users, not the satellite/system tokens
+  bool only_user_tokens = 1;
+  optional PagingRequest paging = 2;
 }
 
 message AuthTokenListResponse {
   repeated AuthToken tokens = 1;
+  Paging paging = 2;
 }
 
 message AuthTokenCreateRequest {
