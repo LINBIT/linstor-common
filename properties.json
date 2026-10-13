@@ -84,6 +84,15 @@
             "type": "long",
             "info": "How long LINSTOR should cache the results of lvs and vgs in milliseconds."
         },
+        "stordriver_discard_on_delete": {
+            "key": [
+                "NAMESPC_STORAGE_DRIVER",
+                "KEY_STOR_POOL_DISCARD_ON_DELETE"
+            ],
+            "type": "boolean_true_false",
+            "default": "false",
+            "info": "Discard LVM thin volumes before deleting them, so that the freed space is also released on the storage below the thin pool (e.g. VDO or thin-provisioned LUNs)"
+        },
         "stordriver_zpool": {
             "key": [
                 "NAMESPC_STORAGE_DRIVER",
@@ -1672,6 +1681,7 @@
             "stordriver_lvcreate_options",
             "stordriver_lvcreate_pv_selection",
             "stordriver_lvcreate_snapshot_options",
+            "stordriver_discard_on_delete",
             "stordriver_lvm_sizes_cache_time",
             "stordriver_zfs_create_options",
             "stordriver_zfs_snapshot_options",
@@ -1774,6 +1784,7 @@
             "stordriver_lvcreate_options",
             "stordriver_lvcreate_pv_selection",
             "stordriver_lvcreate_snapshot_options",
+            "stordriver_discard_on_delete",
             "stordriver_lvm_sizes_cache_time",
             "stordriver_zfs_create_options",
             "stordriver_zfs_snapshot_options",
@@ -1831,6 +1842,7 @@
             "stordriver_lvcreate_options",
             "stordriver_lvcreate_pv_selection",
             "stordriver_lvcreate_snapshot_options",
+            "stordriver_discard_on_delete",
             "stordriver_zfs_create_options",
             "stordriver_zfs_snapshot_options",
             "stordriver_wait_timeout_after_create",
@@ -1870,6 +1882,7 @@
             "stordriver_lvcreate_options",
             "stordriver_lvcreate_pv_selection",
             "stordriver_lvcreate_snapshot_options",
+            "stordriver_discard_on_delete",
             "stordriver_zfs_create_options",
             "stordriver_zfs_snapshot_options",
             "sys_fs_blkio_throttle_read",
@@ -1970,6 +1983,7 @@
             "stordriver_lvcreate_options",
             "stordriver_lvcreate_pv_selection",
             "stordriver_lvcreate_snapshot_options",
+            "stordriver_discard_on_delete",
             "stordriver_zfs_create_options",
             "stordriver_zfs_snapshot_options",
             "drbd_current_gi",

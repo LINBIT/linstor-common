@@ -3189,6 +3189,11 @@
                 "type": "string"
         },
         {
+                "name": "KEY_STOR_POOL_DISCARD_ON_DELETE",
+                "value": "DiscardOnDelete",
+                "type": "string"
+        },
+        {
                 "name": "KEY_STOR_POOL_ZPOOL",
                 "value": "ZPool",
                 "type": "string"
