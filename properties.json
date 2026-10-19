@@ -866,8 +866,10 @@
                 "NAMESPC_DRBD_OPTIONS",
                 "KEY_DRBD_AUTO_DISKFUL"
             ],
-            "info": "Makes a resource diskful if it was continuously diskless primary for X minutes",
-            "type": "long"
+            "info": "Makes a resource diskful if it was continuously diskless primary for X minutes, -1 disables it regardless of the value on higher levels",
+            "type": "range",
+            "min": -1,
+            "max": 9223372036854775807
         },
         "drbd_auto_diskful_allow_cleanup": {
             "internal": false,
@@ -1787,6 +1789,7 @@
             "autoplacer_allow_target",
             "proxy_auto_enable",
             "site",
+            "drbd_auto_diskful",
             "drbd_auto_diskful_allow_cleanup",
             "drbd_skip_disk",
             "ebs_volume_type",
@@ -1952,6 +1955,7 @@
             "sys_fs_blkio_throttle_write",
             "sys_fs_blkio_throttle_read_iops",
             "sys_fs_blkio_throttle_write_iops",
+            "drbd_auto_diskful",
             "drbd_auto_diskful_allow_cleanup",
             "drbd_skip_disk",
             "stordriver_lukscreate_options",
