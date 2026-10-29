@@ -995,6 +995,21 @@
                 "type": "BOR"
         },
         {
+                "name": "FAIL_CBT_FULL_BACKUP_REQUIRED",
+                "value": [967, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_CBT_START",
+                "value": [968, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
+                "name": "FAIL_CBT_NOT_SUPPORTED",
+                "value": [969, "MASK_ERROR"],
+                "type": "BOR"
+        },
+        {
                 "name": "FAIL_PORT_BLOCKED_DRBD_ADJUST",
                 "value": [970, "MASK_ERROR"],
                 "type": "BOR"
@@ -1435,6 +1450,11 @@
                 "type": "string"
         },
         {
+                "name": "API_CRT_CBT_SESSION",
+                "value": "CrtCbtSession",
+                "type": "string"
+        },
+        {
                 "name": "API_CRT_BACKUP",
                 "value": "CrtBackup",
                 "type": "string"
@@ -1776,6 +1796,11 @@
                 "type": "string"
         },
         {
+                "name": "API_DEL_CBT_SESSION",
+                "value": "DelCbtSession",
+                "type": "string"
+        },
+        {
                 "name": "API_DEL_KVS",
                 "value": "DelKvs",
                 "type": "string"
@@ -1905,6 +1930,16 @@
         {
                 "name": "API_LST_SNAPSHOT_DFN",
                 "value": "LstSnapshotDfn",
+                "type": "string"
+        },
+        {
+                "name": "API_LST_CBT_SESSION",
+                "value": "LstCbtSession",
+                "type": "string"
+        },
+        {
+                "name": "API_LST_CBT_EXTENTS",
+                "value": "LstCbtExtents",
                 "type": "string"
         },
         {
@@ -2726,6 +2761,14 @@
                 "type": "string"
         },
         {
+                "blockcomment": "Changed block tracking property keys (namespace NAMESPC_CBT)"
+        },
+        {
+                "name": "KEY_CBT_ID",
+                "value": "Id",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Backup shipping property keys"
         },
         {
@@ -3063,6 +3106,11 @@
         {
                 "name": "NAMESPC_AUTO_SNAPSHOT",
                 "value": "AutoSnapshot",
+                "type": "string"
+        },
+        {
+                "name": "NAMESPC_CBT",
+                "value": "Cbt",
                 "type": "string"
         },
         {
@@ -3930,6 +3978,11 @@
         {
                 "name": "FLAG_RESTORE_FROM_SNAPSHOT",
                 "value": "RESTORE_FROM_SNAPSHOT",
+                "type": "string"
+        },
+        {
+                "name": "FLAG_CBT",
+                "value": "CBT",
                 "type": "string"
         },
         {
