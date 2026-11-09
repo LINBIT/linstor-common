@@ -3928,6 +3928,11 @@
                 "type": "string"
         },
         {
+                "name": "FLAG_RESTORE_FROM_SNAPSHOT",
+                "value": "RESTORE_FROM_SNAPSHOT",
+                "type": "string"
+        },
+        {
                 "blockcomment": "Device layer kinds"
         },
         {
