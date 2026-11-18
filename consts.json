@@ -2096,6 +2096,11 @@
                 "type": "string"
         },
         {
+                "name": "API_QRY_ADVISE",
+                "value": "QryAdvise",
+                "type": "string"
+        },
+        {
                 "name": "API_RSCDFN_SYNC_STATUS",
                 "value": "RscDfnSyncStatus",
                 "type": "string"
