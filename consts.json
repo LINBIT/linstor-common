@@ -2792,6 +2792,31 @@
                 "type": "string"
         },
         {
+                "name": "KEY_CLONE_TOOL",
+                "value": "Tool",
+                "type": "string"
+        },
+        {
+                "name": "VAL_CLONE_TOOL_AUTO",
+                "value": "auto",
+                "type": "string"
+        },
+        {
+                "name": "VAL_CLONE_TOOL_QEMU_IMG",
+                "value": "qemu-img",
+                "type": "string"
+        },
+        {
+                "name": "VAL_CLONE_TOOL_DD",
+                "value": "dd",
+                "type": "string"
+        },
+        {
+                "name": "KEY_CLONE_PARALLEL_REQUESTS",
+                "value": "ParallelRequests",
+                "type": "string"
+        },
+        {
                 "name": "KEY_BALANCE_AFTER_CLONE",
                 "value": "BalanceAfterClone",
                 "type": "string"
