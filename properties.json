@@ -1467,6 +1467,23 @@
             "info": "Blocksize value for the dd command used during clone operations (e.g. 64k, 1M, 16M)",
             "default": "64k"
         },
+        "clone_tool":
+        {
+            "key": ["NAMESPC_CLONE", "KEY_CLONE_TOOL"],
+            "type": "symbol",
+            "values": ["auto", "qemu-img", "dd"],
+            "info": "Tool used to copy volume data for clones and thick LVM snapshot restores. 'auto' uses qemu-img if it is installed on the satellite, dd otherwise. Set 'dd' for storage that does not work with qemu-img",
+            "default": "auto"
+        },
+        "clone_parallel_requests":
+        {
+            "key": ["NAMESPC_CLONE", "KEY_CLONE_PARALLEL_REQUESTS"],
+            "type": "range",
+            "min": 1,
+            "max": 16,
+            "info": "Number of parallel requests qemu-img uses when copying volume data",
+            "default": "16"
+        },
         "zfs_rollback_strat":
         {
             "key": ["NAMESPC_STORAGE_DRIVER", "NAMESPC_ZFS", "KEY_ZFS_ROLLBACK_STRATEGY"],
@@ -1714,6 +1731,8 @@
             "copy_all_snaps_on_evac",
             "clone_use_zfs_clone",
             "clone_dd_blocksize",
+            "clone_tool",
+            "clone_parallel_requests",
             "allow_mixing_device_kind",
             "auto_snapshot_run_every",
             "auto_snapshot_keep",
@@ -1825,7 +1844,9 @@
             "sys_fs_blkio_throttle_write",
             "sys_fs_blkio_throttle_read_iops",
             "sys_fs_blkio_throttle_write_iops",
-            "clone_dd_blocksize"
+            "clone_dd_blocksize",
+            "clone_tool",
+            "clone_parallel_requests"
         ],
         "storagepool": [
             "autoplacer_min_thin_free_space",
@@ -1932,6 +1953,8 @@
             "outside_nic",
             "clone_use_zfs_clone",
             "clone_dd_blocksize",
+            "clone_tool",
+            "clone_parallel_requests",
             "allow_mixing_device_kind",
             "ebs_volume_type",
             "drbd_options_force_initial_sync",
